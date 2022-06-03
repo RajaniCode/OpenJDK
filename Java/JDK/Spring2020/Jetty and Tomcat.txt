@@ -1,0 +1,72 @@
+# Git Bash # Jetty
+export JAVA_HOME="/C/Program Files/Java/jdk-14.0.2"
+export M2_HOME="/C/Program Files/Apache Software Foundation/apache-maven-3.6.3"
+export M2="$M2_HOME/bin"
+export PATH=$PATH:"$M2:$JAVA_HOME/bin"
+export MAVEN_OPTS="-Xms256m -Xmx512m"
+java --version
+mvn -v
+
+cd
+mvn dependency:tree
+mvn -Djetty.port=5445 jetty:run
+
+# cmd # Jetty
+set JAVA_HOME=C:\Program Files\Java\jdk-14.0.2
+set M2_HOME=C:\Program Files\Apache Software Foundation\apache-maven-3.6.3
+set M2=%M2_HOME%\bin
+set path=%path%;%M2%;%JAVA_HOME%\bin
+set MAVEN_OPTS=-Xms256m -Xmx512m
+java --version
+mvn -v
+
+cd
+mvn dependency:tree
+mvn -Djetty.port=5445 jetty:run
+
+
+# Git Bash # Tomcat
+export JAVA_HOME="/C/Program Files/Java/jdk-14.0.2"
+export M2_HOME="/C/Program Files/Apache Software Foundation/apache-maven-3.6.3"
+export M2="$M2_HOME/bin"
+export PATH=$PATH:"$M2:$JAVA_HOME/bin"
+export MAVEN_OPTS="-Xms256m -Xmx512m"
+java --version
+mvn -v
+
+[
+cd "C:\Users\rajanis\Downloads\Java\Apache Tomcat\Tomcat 10.0\bin"
+]
+cd "C:\Users\rajanis\Downloads\Java\Apache Tomcat\Tomcat 9.0\bin"
+
+./startup.sh
+
+$ start http://localhost:5050/
+[
+$ start http://localhost:8080/
+]
+
+./shutdown.sh
+
+# cmd # Tomcat
+set JAVA_HOME=C:\Program Files\Java\jdk-14.0.2
+set M2_HOME=C:\Program Files\Apache Software Foundation\apache-maven-3.6.3
+set M2=%M2_HOME%\bin
+set path=%path%;%M2%;%JAVA_HOME%\bin
+set MAVEN_OPTS=-Xms256m -Xmx512m
+java --version
+mvn -v
+
+[
+cd "C:\Users\rajanis\Downloads\Java\Apache Tomcat\Tomcat 10.0\bin"
+]
+cd "C:\Users\rajanis\Downloads\Java\Apache Tomcat\Tomcat 9.0\bin"
+
+startup.bat
+
+http://localhost:5050/
+[
+http://localhost:8080/
+]
+
+shutdown.bat

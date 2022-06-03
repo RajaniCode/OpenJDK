@@ -1,0 +1,716 @@
+#jdbc:mysql://localhost:3306
+#root
+#My$ql@Server#5.7
+
+/*
+Root Account Password: My$ql@Server#5.7
+
+MySQL User Details
+Username: aspire
+Host: localhost
+Role: DB Admin
+Authentication: MySQL
+Password: My$ql@Server#5.7.14
+*/
+
+DROP DATABASE IF EXISTS `hibernatedb`;
+CREATE DATABASE `hibernatedb`;
+USE `hibernatedb`;
+
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE `users`
+(
+    `id` INT NOT NULL AUTO_INCREMENT,
+    `username` VARCHAR(50) NOT NULL, 
+    `login_date` DATE NOT NULL,
+    `login_time` TIME NOT NULL,
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    `updated_at` TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,    
+    CONSTRAINT `pk_id` PRIMARY KEY(`id`),
+    CONSTRAINT `idx_username` UNIQUE(`username`)    
+);
+
+SELECT * FROM users;
+
+/*
+
+INSERT INTO users(username, login_date, login_time, created_at, updated_at)
+VALUES('Foo', '2016-11-06', '10:49:35', '2016-11-06 10:49:35.0', '2016-11-06 10:49:35.0');
+
+SELECT * FROM users;
+
+*/
+
+# My$ql@Server#5.7
+$ winpty mysql -u root -p 
+
+mysql> SELECT VERSION();
+
+mysql> SHOW DATABASES;
+
+mysql> SELECT DATABASE() FROM DUAL; # SELECT DATABASE();
+
+mysql> DROP DATABASE IF EXISTS `hibernatedb`;
+
+mysql> CREATE DATABASE `hibernatedb`;
+
+mysql> USE `hibernatedb`;
+
+mysql> SELECT DATABASE(); # SELECT DATABASE() FROM DUAL;
+
+mysql> DROP TABLE IF EXISTS `users`;
+
+mysql> CREATE TABLE `users`
+(
+    `id` INT NOT NULL AUTO_INCREMENT,
+    `username` VARCHAR(50) NOT NULL, 
+    `login_date` DATE NOT NULL,
+    `login_time` TIME NOT NULL,
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    `updated_at` TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,    
+    CONSTRAINT `pk_id` PRIMARY KEY(`id`),
+    CONSTRAINT `idx_username` UNIQUE(`username`)    
+);
+
+mysql> SHOW TABLES;
+
+mysql> SELECT * FROM `users`;
+
+mysql> quit;
+
+Aspire@Acer MINGW64 /
+$ java -version
+java version "1.8.0_102"
+Java(TM) SE Runtime Environment (build 1.8.0_102-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.102-b14, mixed mode)
+
+Aspire@Acer MINGW64 /
+$ mvn -version
+Apache Maven 3.3.9 (bb52d8502b132ec0a5a3f4c09453c07478323dc5; 2015-11-10T22:11:47+05:30)
+Maven home: C:\Program Files\Apache Software Foundation\apache-maven-3.3.9
+Java version: 1.8.0_102, vendor: Oracle Corporation
+Java home: C:\Program Files\Java\jdk1.8.0_102\jre
+Default locale: en_US, platform encoding: Cp1252
+OS name: "windows 8.1", version: "6.3", arch: "amd64", family: "dos"
+
+$ cd "E:\Working\Java\Hibernate\MavenMySQLAnnotation"
+
+$ mvn archetype:generate -DgroupId="com.example.exercise" -DartifactId="HibernateMySQLAnnotationSample" -DarchetypeArtifactId="maven-archetype-quickstart" -DinteractiveMode=false
+
+$ cd HibernateMySQLAnnotationSample
+
+$ mvn eclipse:eclipse
+
+# pom.xml
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>5.2.3.Final</version>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>6.0.5</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.5.0</version>
+                <configuration>
+                    <mainClass>com.example.exercise.App</mainClass>
+                    <cleanupDaemonThreads>false</cleanupDaemonThreads>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+# MavenMySQLAnnotation/HibernateMySQLAnnotationSample/pom.xml
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.example.exercise</groupId>
+  <artifactId>HibernateMySQLAnnotationSample</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>HibernateMySQLAnnotationSample</name>
+  <url>http://maven.apache.org</url>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>5.2.3.Final</version>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>6.0.5</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.5.0</version>
+                <configuration>
+                    <mainClass>com.example.exercise.App</mainClass>
+                    <cleanupDaemonThreads>false</cleanupDaemonThreads>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
+
+$ mvn eclipse:eclipse
+
+# HibernateMySQLAnnotationSample/src/main/java/com/example/exercise/App.java
+package com.example.exercise;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import java.util.UUID;
+
+public class App 
+{
+    public static void main( String[] args ) throws ParseException {
+        SessionFactory sessionFactory;
+        sessionFactory = new Configuration()
+                .configure() // configures settings from hibernate.cfg.xml
+                .buildSessionFactory();
+ 
+        Session session = sessionFactory.openSession();
+   
+        Transaction tx = session.beginTransaction();
+        Users user = new Users();
+        String uid = UUID.randomUUID().toString();
+        user.setUsername("Foo " + uid); // Unique 
+
+        String strDate = new java.util.Date().toString(); // Sun Nov 06 10:31:54 IST 2016 // Default       
+        SimpleDateFormat format = new SimpleDateFormat("EEE MMM dd HH:mm:ss z yyyy");
+        java.util.Date parsed = format.parse(strDate);
+
+        // SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        // java.util.Date parsed = format.parse("2016-12-31 23:59:59");
+
+        java.sql.Date sqlDate = new java.sql.Date(parsed.getTime());
+        user.setLoginDate(sqlDate); 
+        java.sql.Time sqlTime = new java.sql.Time(parsed.getTime());
+        user.setLoginTime(sqlTime);  
+        java.sql.Timestamp sqlTimestamp = new java.sql.Timestamp(parsed.getTime());
+        user.setCreatedAt(sqlTimestamp);
+        user.setUpdatedAt(sqlTimestamp);
+
+        session.save(user);
+        tx.commit();
+        session.close();
+    }
+}
+
+$ touch src/main/java/com/example/exercise/Users.java
+# HibernateMySQLAnnotationSample/src/main/java/com/example/exercise/Users.java
+package com.example.exercise;
+
+import java.sql.Date;
+import java.sql.Time;
+import java.sql.Timestamp;
+
+// import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="users")
+public class Users {
+    
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @Column(name="id")
+    int id;
+
+    @Column(name="username")
+    String username;
+ 
+    @Column(name="login_date")
+    java.sql.Date loginDate;
+
+    @Column(name="login_time")
+    java.sql.Time loginTime;
+
+    @Column(name="created_at")
+    java.sql.Timestamp createdAt;
+
+    @Column(name="updated_at")
+    java.sql.Timestamp updatedAt;
+
+    public Users () { }
+ 
+    public Users(int id, String username, java.sql.Date loginDate, java.sql.Time loginTime, java.sql.Timestamp createdAt, java.sql.Timestamp updatedAt) {
+        this.id = id;
+        this.username = username;
+        this.loginDate = loginDate;
+        this.loginTime = loginTime;
+        this.createdAt = createdAt;
+	this.updatedAt = updatedAt;
+    }
+ 
+    public int getId() {
+        return id;
+    }
+ 
+    public String getUsername() {
+        return username;
+    }
+ 
+    public void setUsername(String username) {
+        this.username = username;
+    }
+ 
+    public java.sql.Date getLoginDate() {
+        return loginDate;
+    }
+ 
+    public void setLoginDate(java.sql.Date loginDate) {
+        this.loginDate = loginDate;
+    }
+
+    public java.sql.Time getLoginTime() {
+        return loginTime;
+    }
+ 
+    public void setLoginTime(java.sql.Time loginTime) {
+        this.loginTime = loginTime;
+    }
+   
+    public java.sql.Timestamp getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(java.sql.Timestamp createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public java.sql.Timestamp getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(java.sql.Timestamp updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+}
+
+$ mkdir src/main/resources
+$ touch src/main/resources/hibernate.cfg.xml
+# HibernateMySQLAnnotationSample/src/main/resources/hibernate.cfg.xml
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://localhost:3306/hibernatedb</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+ 
+        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+ 
+        <property name="connection.username">root</property>
+        <property name="connection.password">My$ql@Server#5.7</property>
+        <!-- DB schema will be updated if needed -->
+        <property name="hbm2ddl.auto">update</property>
+        <property name="show_sql">false</property>
+        <property name="format_sql">false</property>
+ 
+        <mapping class="com.example.exercise.Users"></mapping>
+ 
+    </session-factory>
+</hibernate-configuration>
+
+$ mvn eclipse:eclipse
+$ mvn package
+
+# <mainClass>com.example.exercise.App</mainClass> # pom.xml
+[
+$ java -cp target/HibernateMySQLAnnotationSample-1.0-SNAPSHOT.jar com.example.exercise.App
+]
+$ mvn exec:java
+
+
+# Git Bash # Maven
+
+Aspire@Acer MINGW64 /
+$ java -version
+java version "1.8.0_102"
+Java(TM) SE Runtime Environment (build 1.8.0_102-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.102-b14, mixed mode)
+
+Aspire@Acer MINGW64 /
+$ mvn -version
+Apache Maven 3.3.9 (bb52d8502b132ec0a5a3f4c09453c07478323dc5; 2015-11-10T22:11:47+05:30)
+Maven home: C:\Program Files\Apache Software Foundation\apache-maven-3.3.9
+Java version: 1.8.0_102, vendor: Oracle Corporation
+Java home: C:\Program Files\Java\jdk1.8.0_102\jre
+Default locale: en_US, platform encoding: Cp1252
+OS name: "windows 8.1", version: "6.3", arch: "amd64", family: "dos"
+
+Aspire@Acer MINGW64 /
+$ cd "E:\Working\Java\Hibernate\MavenMySQLAnnotation"
+
+Aspire@Acer MINGW64 /e/Working/Java/Hibernate/MavenMySQLAnnotation
+$ mvn archetype:generate -DgroupId="com.example.exercise" -DartifactId="HibernateMySQLAnnotationSample" -DarchetypeArtifactId="maven-archetype-quickstart" -DinteractiveMode=false
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Maven Stub Project (No POM) 1
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] >>> maven-archetype-plugin:2.4:generate (default-cli) > generate-sources @ standalone-pom >>>
+[INFO]
+[INFO] <<< maven-archetype-plugin:2.4:generate (default-cli) < generate-sources @ standalone-pom <<<
+[INFO]
+[INFO] --- maven-archetype-plugin:2.4:generate (default-cli) @ standalone-pom ---
+[INFO] Generating project in Batch mode
+[INFO] ----------------------------------------------------------------------------
+[INFO] Using following parameters for creating project from Old (1.x) Archetype: maven-archetype-quickstart:1.0
+[INFO] ----------------------------------------------------------------------------
+[INFO] Parameter: basedir, Value: E:\Working\Java\Hibernate\MavenMySQLAnnotation
+[INFO] Parameter: package, Value: com.example.exercise
+[INFO] Parameter: groupId, Value: com.example.exercise
+[INFO] Parameter: artifactId, Value: HibernateMySQLAnnotationSample
+[INFO] Parameter: packageName, Value: com.example.exercise
+[INFO] Parameter: version, Value: 1.0-SNAPSHOT
+[INFO] project created from Old (1.x) Archetype in dir: E:\Working\Java\Hibernate\MavenMySQLAnnotation\HibernateMySQLAnnotationSample
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 33.049 s
+[INFO] Finished at: 2016-11-06T11:28:14+05:30
+[INFO] Final Memory: 13M/245M
+[INFO] ------------------------------------------------------------------------
+
+Aspire@Acer MINGW64 /e/Working/Java/Hibernate/MavenMySQLAnnotation
+$ cd HibernateMySQLAnnotationSample
+
+Aspire@Acer MINGW64 /e/Working/Java/Hibernate/MavenMySQLAnnotation/HibernateMySQLAnnotationSample
+$ mvn eclipse:eclipse
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building HibernateMySQLAnnotationSample 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] >>> maven-eclipse-plugin:2.10:eclipse (default-cli) > generate-resources @ HibernateMySQLAnnotationSample >>>
+[INFO]
+[INFO] <<< maven-eclipse-plugin:2.10:eclipse (default-cli) < generate-resources @ HibernateMySQLAnnotationSample <<<
+[INFO]
+[INFO] --- maven-eclipse-plugin:2.10:eclipse (default-cli) @ HibernateMySQLAnnotationSample ---
+[INFO] Using Eclipse Workspace: null
+[INFO] Adding default classpath container: org.eclipse.jdt.launching.JRE_CONTAINER
+[INFO] Not writing settings - defaults suffice
+[INFO] Wrote Eclipse project for "HibernateMySQLAnnotationSample" to E:\Working\Java\Hibernate\MavenMySQLAnnotation\HibernateMySQLAnnotationSample.
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 2.672 s
+[INFO] Finished at: 2016-11-06T11:30:07+05:30
+[INFO] Final Memory: 12M/245M
+[INFO] ------------------------------------------------------------------------
+
+Aspire@Acer MINGW64 /e/Working/Java/Hibernate/MavenMySQLAnnotation/HibernateMySQLAnnotationSample
+$ mvn eclipse:eclipse
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building HibernateMySQLAnnotationSample 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] >>> maven-eclipse-plugin:2.10:eclipse (default-cli) > generate-resources @ HibernateMySQLAnnotationSample >>>
+[INFO]
+[INFO] <<< maven-eclipse-plugin:2.10:eclipse (default-cli) < generate-resources @ HibernateMySQLAnnotationSample <<<
+[INFO]
+[INFO] --- maven-eclipse-plugin:2.10:eclipse (default-cli) @ HibernateMySQLAnnotationSample ---
+[INFO] Using Eclipse Workspace: null
+[INFO] Adding default classpath container: org.eclipse.jdt.launching.JRE_CONTAINER
+[INFO] Not writing settings - defaults suffice
+[INFO] File E:\Working\Java\Hibernate\MavenMySQLAnnotation\HibernateMySQLAnnotationSample\.project already exists.
+       Additional settings will be preserved, run mvn eclipse:clean if you want old settings to be removed.
+[INFO] Wrote Eclipse project for "HibernateMySQLAnnotationSample" to E:\Working\Java\Hibernate\MavenMySQLAnnotation\HibernateMySQLAnnotationSample.
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3.109 s
+[INFO] Finished at: 2016-11-06T11:32:13+05:30
+[INFO] Final Memory: 12M/309M
+[INFO] ------------------------------------------------------------------------
+
+Aspire@Acer MINGW64 /e/Working/Java/Hibernate/MavenMySQLAnnotation/HibernateMySQLAnnotationSample
+$ touch src/main/java/com/example/exercise/Users.java
+
+Aspire@Acer MINGW64 /e/Working/Java/Hibernate/MavenMySQLAnnotation/HibernateMySQLAnnotationSample
+$ mkdir src/main/resources
+
+Aspire@Acer MINGW64 /e/Working/Java/Hibernate/MavenMySQLAnnotation/HibernateMySQLAnnotationSample
+$ touch src/main/resources/hibernate.cfg.xml
+
+Aspire@Acer MINGW64 /e/Working/Java/Hibernate/MavenMySQLAnnotation/HibernateMySQLAnnotationSample
+$ mvn eclipse:eclipse
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building HibernateMySQLAnnotationSample 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] >>> maven-eclipse-plugin:2.10:eclipse (default-cli) > generate-resources @ HibernateMySQLAnnotationSample >>>
+[INFO]
+[INFO] <<< maven-eclipse-plugin:2.10:eclipse (default-cli) < generate-resources @ HibernateMySQLAnnotationSample <<<
+[INFO]
+[INFO] --- maven-eclipse-plugin:2.10:eclipse (default-cli) @ HibernateMySQLAnnotationSample ---
+[INFO] Using Eclipse Workspace: null
+[INFO] Adding default classpath container: org.eclipse.jdt.launching.JRE_CONTAINER
+[INFO] Not writing settings - defaults suffice
+[INFO] File E:\Working\Java\Hibernate\MavenMySQLAnnotation\HibernateMySQLAnnotationSample\.project already exists.
+       Additional settings will be preserved, run mvn eclipse:clean if you want old settings to be removed.
+[INFO] Wrote Eclipse project for "HibernateMySQLAnnotationSample" to E:\Working\Java\Hibernate\MavenMySQLAnnotation\HibernateMySQLAnnotationSample.
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3.172 s
+[INFO] Finished at: 2016-11-06T11:33:57+05:30
+[INFO] Final Memory: 12M/309M
+[INFO] ------------------------------------------------------------------------
+
+Aspire@Acer MINGW64 /e/Working/Java/Hibernate/MavenMySQLAnnotation/HibernateMySQLAnnotationSample
+$ mvn package
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building HibernateMySQLAnnotationSample 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ HibernateMySQLAnnotationSample ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 1 resource
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ HibernateMySQLAnnotationSample ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 2 source files to E:\Working\Java\Hibernate\MavenMySQLAnnotation\HibernateMySQLAnnotationSample\target\classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ HibernateMySQLAnnotationSample ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory E:\Working\Java\Hibernate\MavenMySQLAnnotation\HibernateMySQLAnnotationSample\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ HibernateMySQLAnnotationSample ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to E:\Working\Java\Hibernate\MavenMySQLAnnotation\HibernateMySQLAnnotationSample\target\test-classes
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ HibernateMySQLAnnotationSample ---
+[INFO] Surefire report directory: E:\Working\Java\Hibernate\MavenMySQLAnnotation\HibernateMySQLAnnotationSample\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.example.exercise.AppTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.078 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ HibernateMySQLAnnotationSample ---
+[INFO] Building jar: E:\Working\Java\Hibernate\MavenMySQLAnnotation\HibernateMySQLAnnotationSample\target\HibernateMySQLAnnotationSample-1.0-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 5.952 s
+[INFO] Finished at: 2016-11-06T11:34:13+05:30
+[INFO] Final Memory: 19M/309M
+[INFO] ------------------------------------------------------------------------
+
+Aspire@Acer MINGW64 /e/Working/Java/Hibernate/MavenMySQLAnnotation/HibernateMySQLAnnotationSample
+$ mvn exec:java
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building HibernateMySQLAnnotationSample 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- exec-maven-plugin:1.5.0:java (default-cli) @ HibernateMySQLAnnotationSample ---
+Nov 06, 2016 11:34:30 AM org.hibernate.Version logVersion
+INFO: HHH000412: Hibernate Core {5.2.3.Final}
+Nov 06, 2016 11:34:30 AM org.hibernate.cfg.Environment <clinit>
+INFO: HHH000206: hibernate.properties not found
+Nov 06, 2016 11:34:30 AM org.hibernate.cfg.Environment buildBytecodeProvider
+INFO: HHH000021: Bytecode provider name : javassist
+Nov 06, 2016 11:34:31 AM org.hibernate.annotations.common.reflection.java.JavaReflectionManager <clinit>
+INFO: HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+Nov 06, 2016 11:34:31 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+WARN: HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+Nov 06, 2016 11:34:31 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/hibernatedb]
+Nov 06, 2016 11:34:31 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001001: Connection properties: {user=root, password=****}
+Nov 06, 2016 11:34:31 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001003: Autocommit mode: false
+Nov 06, 2016 11:34:31 AM org.hibernate.engine.jdbc.connections.internal.PooledConnections <init>
+INFO: HHH000115: Hibernate connection pool size: 20 (min=1)
+Sun Nov 06 11:34:32 IST 2016 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Nov 06, 2016 11:34:32 AM org.hibernate.dialect.Dialect <init>
+INFO: HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Nov 06, 2016 11:34:33 AM org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl getIsolatedConnection
+INFO: HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1af1659f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+
+
+Aspire@Acer MINGW64 /e/Working/Java/Hibernate/MavenMySQLAnnotation/HibernateMySQLAnnotationSample
+$
+
+
+# Git Bash # MySQL
+
+Aspire@Acer MINGW64 /
+$ winpty mysql -u root -p
+Enter password: ****************
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 10
+Server version: 5.7.14-log MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2016, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> SELECT VERSION();
++------------+
+| VERSION()  |
++------------+
+| 5.7.14-log |
++------------+
+1 row in set (0.03 sec)
+
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| classicmodels      |
+| customerdb         |
+| empdb              |
+| employeedb         |
+| hibernatedb        |
+| mysql              |
+| performance_schema |
+| pythondb           |
+| sakila             |
+| sampledb           |
+| sys                |
+| world              |
++--------------------+
+13 rows in set (0.00 sec)
+
+mysql> SELECT DATABASE() FROM DUAL; # SELECT DATABASE();
++------------+
+| DATABASE() |
++------------+
+| NULL       |
++------------+
+1 row in set (0.00 sec)
+
+mysql> DROP DATABASE IF EXISTS `hibernatedb`;
+Query OK, 1 row affected (0.28 sec)
+
+mysql> CREATE DATABASE `hibernatedb`;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> USE `hibernatedb`;
+Database changed
+mysql> SELECT DATABASE(); # SELECT DATABASE() FROM DUAL;
++-------------+
+| DATABASE()  |
++-------------+
+| hibernatedb |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> DROP TABLE IF EXISTS `users`;
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+mysql> CREATE TABLE `users`
+    -> (
+    ->     `id` INT NOT NULL AUTO_INCREMENT,
+    ->     `username` VARCHAR(50) NOT NULL,
+    ->     `login_date` DATE NOT NULL,
+    ->     `login_time` TIME NOT NULL,
+    ->     `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    ->     `updated_at` TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    ->     CONSTRAINT `pk_id` PRIMARY KEY(`id`),
+    ->     CONSTRAINT `idx_username` UNIQUE(`username`)
+    -> );
+Query OK, 0 rows affected (0.42 sec)
+
+mysql> SHOW TABLES;
++-----------------------+
+| Tables_in_hibernatedb |
++-----------------------+
+| users                 |
++-----------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT * FROM `users`;
+Empty set (0.00 sec)
+
+mysql> SELECT * FROM `users`;
++----+------------------------------------------+------------+------------+---------------------+---------------------+
+| id | username                                 | login_date | login_time | created_at          | updated_at          |
++----+------------------------------------------+------------+------------+---------------------+---------------------+
+|  1 | Foo a9e40255-d022-4ab8-a5be-e95d7e5dec80 | 2016-11-06 | 11:34:34   | 2016-11-06 11:34:34 | 2016-11-06 11:34:34 |
++----+------------------------------------------+------------+------------+---------------------+---------------------+
+1 row in set (0.00 sec)
+
+mysql> quit;
+Bye
+
+Aspire@Acer MINGW64 /
+$

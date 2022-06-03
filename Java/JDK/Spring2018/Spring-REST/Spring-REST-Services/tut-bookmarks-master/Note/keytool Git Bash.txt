@@ -1,0 +1,44 @@
+
+Aspire@Acer MINGW64 ~
+$ java -version
+java version "1.8.0_102"
+Java(TM) SE Runtime Environment (build 1.8.0_102-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.102-b14, mixed mode)
+
+Aspire@Acer MINGW64 ~
+$ mvn -v
+Apache Maven 3.3.9 (bb52d8502b132ec0a5a3f4c09453c07478323dc5; 2015-11-10T22:11:47+05:30)
+Maven home: C:\Program Files\Apache Software Foundation\apache-maven-3.3.9
+Java version: 1.8.0_102, vendor: Oracle Corporation
+Java home: C:\Program Files\Java\jdk1.8.0_102\jre
+Default locale: en_US, platform encoding: Cp1252
+OS name: "windows 8.1", version: "6.3", arch: "amd64", family: "dos"
+
+Aspire@Acer MINGW64 ~
+$ cd "E:\Working\Java\Spring\Spring-REST\Spring-REST-Services\tut-bookmarks-master\security"
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-REST/Spring-REST-Services/tut-bookmarks-master/security
+$ keytool -genkey -alias bookmarks -keyalg RSA -keystore src/main/resources/tomcat.keystore
+Enter keystore password:  password
+Re-enter new password: password
+What is your first and last name?
+  [Unknown]:  Josh Long
+What is the name of your organizational unit?
+  [Unknown]:  Spring Team
+What is the name of your organization?
+  [Unknown]:  Pivotal
+What is the name of your City or Locality?
+  [Unknown]:  IoT
+What is the name of your State or Province?
+  [Unknown]:  Earth
+What is the two-letter country code for this unit?
+  [Unknown]:  US
+Is CN=Josh Long, OU=Spring Team, O=Pivotal, L=IoT, ST=Earth, C=US correct?
+  [no]:  yes
+
+Enter key password for <bookmarks>
+        (RETURN if same as keystore password):
+
+
+Aspire@Acer MINGW64 ~
+$ 

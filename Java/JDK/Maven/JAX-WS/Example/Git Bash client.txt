@@ -1,0 +1,32 @@
+
+MINGW64 /
+$ cd "C:\R\Working\Java\JAX-WS\Example\WebServices\src"
+
+MINGW64 /c/R/Working/Java/JAX-WS/Example/WebServices/src
+$ javac "com\sample\client\HelloWorldClient.java"
+
+MINGW64 /c/R/Working/Java/JAX-WS/Example/WebServices/src
+$ java com.sample.client.HelloWorldClient
+Hello World JAX-WS Java Web Service Client
+
+MINGW64 /c/R/Working/Java/JAX-WS/Example/WebServices/src
+$ cd "C:\R\Working\Java\JAX-WS\Example\WebServicesStub\src"
+
+MINGW64 /c/R/Working/Java/JAX-WS/Example/WebServicesStub/src
+$ wsimport -keep http://localhost:9999/ws/hello?wsdl
+parsing WSDL...
+
+
+
+Generating code...
+
+
+Compiling code...
+
+
+MINGW64 /c/R/Working/Java/JAX-WS/Example/WebServicesStub/src
+$ javac "com\sample\client\HelloWorldClient.java"
+
+MINGW64 /c/R/Working/Java/JAX-WS/Example/WebServicesStub/src
+$ java com.sample.client.HelloWorldClient
+Hello World JAX-WS Java Web Service Client via wsimport

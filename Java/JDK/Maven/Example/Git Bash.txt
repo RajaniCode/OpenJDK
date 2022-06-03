@@ -1,0 +1,294 @@
+
+Rajani@RajaniDell MINGW64 ~
+$ cd "E:\Working\Java\Maven\Example"
+
+Rajani@RajaniDell MINGW64 /e/Working/Java/Maven/Example
+$ cd Exercise
+
+Rajani@RajaniDell MINGW64 /e/Working/Java/Maven/Example/Exercise
+$ mvn archetype:generate -DgroupId=com.sample -DartifactId=KeyGenerator -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Maven Stub Project (No POM) 1
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] >>> maven-archetype-plugin:2.4:generate (default-cli) > generate-sources @ standalone-pom >>>
+[INFO]
+[INFO] <<< maven-archetype-plugin:2.4:generate (default-cli) < generate-sources @ standalone-pom <<<
+[INFO]
+[INFO] --- maven-archetype-plugin:2.4:generate (default-cli) @ standalone-pom ---
+[INFO] Generating project in Batch mode
+[INFO] ----------------------------------------------------------------------------
+[INFO] Using following parameters for creating project from Old (1.x) Archetype: maven-archetype-quickstart:1.0
+[INFO] ----------------------------------------------------------------------------
+[INFO] Parameter: basedir, Value: E:\Working\Java\Maven\Example\Exercise
+[INFO] Parameter: package, Value: com.sample
+[INFO] Parameter: groupId, Value: com.sample
+[INFO] Parameter: artifactId, Value: KeyGenerator
+[INFO] Parameter: packageName, Value: com.sample
+[INFO] Parameter: version, Value: 1.0-SNAPSHOT
+[INFO] project created from Old (1.x) Archetype in dir: E:\Working\Java\Maven\Example\Exercise\KeyGenerator
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 03:39 min
+[INFO] Finished at: 2015-10-27T23:29:13+05:30
+[INFO] Final Memory: 14M/193M
+[INFO] ------------------------------------------------------------------------
+
+Rajani@RajaniDell MINGW64 /e/Working/Java/Maven/Example/Exercise
+$ cd KeyGenerator
+
+Rajani@RajaniDell MINGW64 /e/Working/Java/Maven/Example/Exercise/KeyGenerator
+$ mvn eclipse:eclipse
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building KeyGenerator 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] >>> maven-eclipse-plugin:2.10:eclipse (default-cli) > generate-resources @ KeyGenerator >>>
+[INFO]
+[INFO] --- maven-enforcer-plugin:1.4:enforce (enforce-java) @ KeyGenerator ---
+[INFO]
+[INFO] <<< maven-eclipse-plugin:2.10:eclipse (default-cli) < generate-resources @ KeyGenerator <<<
+[INFO]
+[INFO] --- maven-eclipse-plugin:2.10:eclipse (default-cli) @ KeyGenerator ---
+[INFO] Using Eclipse Workspace: null
+[INFO] Adding default classpath container: org.eclipse.jdt.launching.JRE_CONTAINER
+[INFO] Not writing settings - defaults suffice
+[INFO] Wrote Eclipse project for "KeyGenerator" to E:\Working\Java\Maven\Example\Exercise\KeyGenerator.
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 4.113 s
+[INFO] Finished at: 2015-10-27T23:41:38+05:30
+[INFO] Final Memory: 14M/155M
+[INFO] ------------------------------------------------------------------------
+
+Rajani@RajaniDell MINGW64 /e/Working/Java/Maven/Example/Exercise/KeyGenerator
+$ mvn eclipse:eclipse
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building KeyGenerator 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] >>> maven-eclipse-plugin:2.10:eclipse (default-cli) > generate-resources @ KeyGenerator >>>
+[INFO]
+[INFO] --- maven-enforcer-plugin:1.4:enforce (enforce-java) @ KeyGenerator ---
+[INFO]
+[INFO] <<< maven-eclipse-plugin:2.10:eclipse (default-cli) < generate-resources @ KeyGenerator <<<
+[INFO]
+[INFO] --- maven-eclipse-plugin:2.10:eclipse (default-cli) @ KeyGenerator ---
+[INFO] Using Eclipse Workspace: null
+[INFO] Adding default classpath container: org.eclipse.jdt.launching.JRE_CONTAINER
+[INFO] Not writing settings - defaults suffice
+[INFO] File E:\Working\Java\Maven\Example\Exercise\KeyGenerator\.project already exists.
+       Additional settings will be preserved, run mvn eclipse:clean if you want old settings to be removed.
+[INFO] Wrote Eclipse project for "KeyGenerator" to E:\Working\Java\Maven\Example\Exercise\KeyGenerator.
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 2.059 s
+[INFO] Finished at: 2015-10-27T23:54:01+05:30
+[INFO] Final Memory: 14M/155M
+[INFO] ------------------------------------------------------------------------
+
+Rajani@RajaniDell MINGW64 /e/Working/Java/Maven/Example/Exercise/KeyGenerator
+$ mvn package
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building KeyGenerator 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-enforcer-plugin:1.4:enforce (enforce-java) @ KeyGenerator ---
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ KeyGenerator ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory E:\Working\Java\Maven\Example\Exercise\KeyGenerator\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ KeyGenerator ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to E:\Working\Java\Maven\Example\Exercise\KeyGenerator\target\classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ KeyGenerator ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory E:\Working\Java\Maven\Example\Exercise\KeyGenerator\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ KeyGenerator ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to E:\Working\Java\Maven\Example\Exercise\KeyGenerator\target\test-classes
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ KeyGenerator ---
+[INFO] Surefire report directory: E:\Working\Java\Maven\Example\Exercise\KeyGenerator\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.sample.AppTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.202 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ KeyGenerator ---
+[INFO] Building jar: E:\Working\Java\Maven\Example\Exercise\KeyGenerator\target\KeyGenerator-1.0-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 6.835 s
+[INFO] Finished at: 2015-10-27T23:56:51+05:30
+[INFO] Final Memory: 17M/168M
+[INFO] ------------------------------------------------------------------------
+
+Rajani@RajaniDell MINGW64 /e/Working/Java/Maven/Example/Exercise/KeyGenerator
+$ java -cp target/KeyGenerator-1.0-SNAPSHOT.jar com.sample.App
+Hello World!
+Unique ID : 94061c48-e6e4-4f0a-bcc1-6b88e2bdc44a
+
+Rajani@RajaniDell MINGW64 /e/Working/Java/Maven/Example/Exercise/KeyGenerator
+$ mvn test
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building KeyGenerator 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-enforcer-plugin:1.4:enforce (enforce-java) @ KeyGenerator ---
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ KeyGenerator ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory E:\Working\Java\Maven\Example\Exercise\KeyGenerator\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ KeyGenerator ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ KeyGenerator ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory E:\Working\Java\Maven\Example\Exercise\KeyGenerator\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ KeyGenerator ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ KeyGenerator ---
+[INFO] Surefire report directory: E:\Working\Java\Maven\Example\Exercise\KeyGenerator\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.sample.AppTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.265 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 2.873 s
+[INFO] Finished at: 2015-10-27T23:57:42+05:30
+[INFO] Final Memory: 10M/155M
+[INFO] ------------------------------------------------------------------------
+
+Rajani@RajaniDell MINGW64 /e/Working/Java/Maven/Example/Exercise/KeyGenerator
+$ mvn -Dtest=AppTest test
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building KeyGenerator 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-enforcer-plugin:1.4:enforce (enforce-java) @ KeyGenerator ---
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ KeyGenerator ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory E:\Working\Java\Maven\Example\Exercise\KeyGenerator\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ KeyGenerator ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ KeyGenerator ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory E:\Working\Java\Maven\Example\Exercise\KeyGenerator\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ KeyGenerator ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ KeyGenerator ---
+[INFO] Surefire report directory: E:\Working\Java\Maven\Example\Exercise\KeyGenerator\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.sample.AppTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.249 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 2.795 s
+[INFO] Finished at: 2015-10-27T23:57:54+05:30
+[INFO] Final Memory: 10M/155M
+[INFO] ------------------------------------------------------------------------
+
+Rajani@RajaniDell MINGW64 /e/Working/Java/Maven/Example/Exercise/KeyGenerator
+$ mvn -Dtest=AppTest#testApp test
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building KeyGenerator 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-enforcer-plugin:1.4:enforce (enforce-java) @ KeyGenerator ---
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ KeyGenerator ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory E:\Working\Java\Maven\Example\Exercise\KeyGenerator\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ KeyGenerator ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ KeyGenerator ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory E:\Working\Java\Maven\Example\Exercise\KeyGenerator\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ KeyGenerator ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ KeyGenerator ---
+[INFO] Surefire report directory: E:\Working\Java\Maven\Example\Exercise\KeyGenerator\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.sample.AppTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.265 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 2.982 s
+[INFO] Finished at: 2015-10-27T23:58:17+05:30
+[INFO] Final Memory: 12M/220M
+[INFO] ------------------------------------------------------------------------
+
+Rajani@RajaniDell MINGW64 /e/Working/Java/Maven/Example/Exercise/KeyGenerator
+$

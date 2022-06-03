@@ -1,0 +1,170 @@
+
+Rajani@RajaniSamsungPC MINGW64 /
+$ java -version
+java version "10.0.2" 2018-07-17
+Java(TM) SE Runtime Environment 18.3 (build 10.0.2+13)
+Java HotSpot(TM) 64-Bit Server VM 18.3 (build 10.0.2+13, mixed mode)
+
+Rajani@RajaniSamsungPC MINGW64 /
+$ mvn -v
+Apache Maven 3.5.4 (1edded0938998edf8bf061f1ceb3cfdeccf443fe; 2018-06-18T00:03:14+05:30)
+Maven home: C:\Program Files\Apache Software Foundation\apache-maven-3.5.4
+Java version: 10.0.2, vendor: Oracle Corporation, runtime: C:\Program Files\Java\jdk-10.0.2
+Default locale: en_US, platform encoding: Cp1252
+OS name: "windows 8", version: "6.2", arch: "amd64", family: "windows"
+
+Rajani@RajaniSamsungPC MINGW64 /
+$ cd "C:\Users\Rajani\Desktop\2018\Working\Java\Spring\Samples\Spring4MVCCRUDRestServiceAndCORS\Spring4MVCCRUDRestServiceCORS"
+
+Rajani@RajaniSamsungPC MINGW64 ~/Desktop/2018/Working/Java/Spring/Samples/Spring4MVCCRUDRestServiceAndCORS/Spring4MVCCRUDRestServiceCORS
+$ mvn package
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ---------< com.rajani.springmvc:Spring4MVCCRUDRestServiceCORS >---------
+[INFO] Building Spring4MVCCRUDRestServiceCORS Maven Webapp 1.0.0
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ Spring4MVCCRUDRestServiceCORS ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ Spring4MVCCRUDRestServiceCORS ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 7 source files to C:\Users\Rajani\Desktop\2018\Working\Java\Spring\Samples\Spring4MVCCRUDRestServiceAndCORS\Spring4MVCCRUDRestServiceCORS\target\classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ Spring4MVCCRUDRestServiceCORS ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\Users\Rajani\Desktop\2018\Working\Java\Spring\Samples\Spring4MVCCRUDRestServiceAndCORS\Spring4MVCCRUDRestServiceCORS\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ Spring4MVCCRUDRestServiceCORS ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to C:\Users\Rajani\Desktop\2018\Working\Java\Spring\Samples\Spring4MVCCRUDRestServiceAndCORS\Spring4MVCCRUDRestServiceCORS\target\test-classes
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ Spring4MVCCRUDRestServiceCORS ---
+[INFO]
+[INFO] --- maven-war-plugin:2.4:war (default-war) @ Spring4MVCCRUDRestServiceCORS ---
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.thoughtworks.xstream.converters.collections.TreeMapConverter (file:/C:/Users/Rajani/.m2/repository/com/thoughtworks/xstream/xstream/1.4.2/xstream-1.4.2.jar) to field java.util.TreeMap.comparator
+WARNING: Please consider reporting this to the maintainers of com.thoughtworks.xstream.converters.collections.TreeMapConverter
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[INFO] Packaging webapp
+[INFO] Assembling webapp [Spring4MVCCRUDRestServiceCORS] in [C:\Users\Rajani\Desktop\2018\Working\Java\Spring\Samples\Spring4MVCCRUDRestServiceAndCORS\Spring4MVCCRUDRestServiceCORS\target\Spring4MVCCRUDRestServiceCORS]
+[INFO] Processing war project
+[INFO] Copying webapp resources [C:\Users\Rajani\Desktop\2018\Working\Java\Spring\Samples\Spring4MVCCRUDRestServiceAndCORS\Spring4MVCCRUDRestServiceCORS\src\main\webapp]
+[INFO] Webapp assembled in [687 msecs]
+[INFO] Building war: C:\Users\Rajani\Desktop\2018\Working\Java\Spring\Samples\Spring4MVCCRUDRestServiceAndCORS\Spring4MVCCRUDRestServiceCORS\target\Spring4MVCCRUDRestServiceCORS.war
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 5.375 s
+[INFO] Finished at: 2018-09-23T19:55:01+05:30
+[INFO] ------------------------------------------------------------------------
+
+Rajani@RajaniSamsungPC MINGW64 ~/Desktop/2018/Working/Java/Spring/Samples/Spring4MVCCRUDRestServiceAndCORS/Spring4MVCCRUDRestServiceCORS
+$ jar tvf target/Spring4MVCCRUDRestServiceCORS.war
+     0 Sun Sep 23 19:55:02 IST 2018 META-INF/
+   129 Sun Sep 23 19:55:00 IST 2018 META-INF/MANIFEST.MF
+     0 Sun Sep 23 19:55:02 IST 2018 WEB-INF/
+     0 Sun Sep 23 19:55:02 IST 2018 WEB-INF/classes/
+     0 Sun Sep 23 19:55:02 IST 2018 WEB-INF/classes/com/
+     0 Sun Sep 23 19:55:02 IST 2018 WEB-INF/classes/com/rajani/
+     0 Sun Sep 23 19:55:02 IST 2018 WEB-INF/classes/com/rajani/springmvc/
+     0 Sun Sep 23 19:55:02 IST 2018 WEB-INF/classes/com/rajani/springmvc/configuration/
+     0 Sun Sep 23 19:55:02 IST 2018 WEB-INF/classes/com/rajani/springmvc/controller/
+     0 Sun Sep 23 19:55:02 IST 2018 WEB-INF/classes/com/rajani/springmvc/model/
+     0 Sun Sep 23 19:55:02 IST 2018 WEB-INF/classes/com/rajani/springmvc/service/
+     0 Sun Sep 23 19:55:02 IST 2018 WEB-INF/lib/
+  1756 Sun Sep 23 19:55:00 IST 2018 WEB-INF/classes/com/rajani/springmvc/configuration/CORSFilter.class
+   639 Sun Sep 23 19:55:00 IST 2018 WEB-INF/classes/com/rajani/springmvc/configuration/HelloWorldConfiguration.class
+  1164 Sun Sep 23 19:55:00 IST 2018 WEB-INF/classes/com/rajani/springmvc/configuration/HelloWorldInitializer.class
+  5785 Sun Sep 23 19:55:00 IST 2018 WEB-INF/classes/com/rajani/springmvc/controller/HelloWorldRestController.class
+  2190 Sun Sep 23 19:55:00 IST 2018 WEB-INF/classes/com/rajani/springmvc/model/User.class
+   590 Sun Sep 23 19:55:00 IST 2018 WEB-INF/classes/com/rajani/springmvc/service/UserService.class
+  3348 Sun Sep 23 19:55:00 IST 2018 WEB-INF/classes/com/rajani/springmvc/service/UserServiceImpl.class
+  4467 Sun Sep 23 19:06:32 IST 2018 WEB-INF/lib/aopalliance-1.0.jar
+ 61829 Sun Sep 23 19:06:30 IST 2018 WEB-INF/lib/commons-logging-1.2.jar
+ 39815 Sun Sep 23 19:45:46 IST 2018 WEB-INF/lib/jackson-annotations-2.5.0.jar
+229998 Sun Sep 23 19:45:48 IST 2018 WEB-INF/lib/jackson-core-2.5.3.jar
+1143162 Sun Sep 23 19:45:46 IST 2018 WEB-INF/lib/jackson-databind-2.5.3.jar
+ 95806 Sun Sep 23 19:06:36 IST 2018 WEB-INF/lib/javax.servlet-api-3.1.0.jar
+363974 Sun Sep 23 19:45:44 IST 2018 WEB-INF/lib/spring-aop-4.2.0.RELEASE.jar
+729550 Sun Sep 23 19:45:44 IST 2018 WEB-INF/lib/spring-beans-4.2.0.RELEASE.jar
+1084471 Sun Sep 23 19:45:46 IST 2018 WEB-INF/lib/spring-context-4.2.0.RELEASE.jar
+1052383 Sun Sep 23 19:45:46 IST 2018 WEB-INF/lib/spring-core-4.2.0.RELEASE.jar
+262391 Sun Sep 23 19:45:46 IST 2018 WEB-INF/lib/spring-expression-4.2.0.RELEASE.jar
+262961 Sun Sep 23 19:45:46 IST 2018 WEB-INF/lib/spring-tx-4.2.0.RELEASE.jar
+765877 Sun Sep 23 19:45:46 IST 2018 WEB-INF/lib/spring-web-4.2.0.RELEASE.jar
+865404 Sun Sep 23 19:45:46 IST 2018 WEB-INF/lib/spring-webmvc-4.2.0.RELEASE.jar
+  2359 Sun Sep 23 18:55:08 IST 2018 META-INF/maven/com.rajani.springmvc/Spring4MVCCRUDRestServiceCORS/pom.xml
+   139 Sun Sep 23 19:55:02 IST 2018 META-INF/maven/com.rajani.springmvc/Spring4MVCCRUDRestServiceCORS/pom.properties
+
+Rajani@RajaniSamsungPC MINGW64 ~/Desktop/2018/Working/Java/Spring/Samples/Spring4MVCCRUDRestServiceAndCORS/Spring4MVCCRUDRestServiceCORS
+$ cp "C:\Users\Rajani\Desktop\2018\Working\Java\Spring\Samples\Spring4MVCCRUDRestServiceAndCORS\Spring4MVCCRUDRestServiceCORS\target\Spring4MVCCRUDRestServiceCORS.war" "C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps"
+
+Rajani@RajaniSamsungPC MINGW64 ~/Desktop/2018/Working/Java/Spring/Samples/Spring4MVCCRUDRestServiceAndCORS/Spring4MVCCRUDRestServiceCORS
+$ mvn -Dexec.mainClass=com.rajani.springmvc.SpringRestTestClient -Dexec.classpathScope=test test-compile exec:java
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ---------< com.rajani.springmvc:Spring4MVCCRUDRestServiceCORS >---------
+[INFO] Building Spring4MVCCRUDRestServiceCORS Maven Webapp 1.0.0
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ Spring4MVCCRUDRestServiceCORS ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ Spring4MVCCRUDRestServiceCORS ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ Spring4MVCCRUDRestServiceCORS ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\Users\Rajani\Desktop\2018\Working\Java\Spring\Samples\Spring4MVCCRUDRestServiceAndCORS\Spring4MVCCRUDRestServiceCORS\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ Spring4MVCCRUDRestServiceCORS ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- exec-maven-plugin:1.6.0:java (default-cli) @ Spring4MVCCRUDRestServiceCORS ---
+Testing listAllUsers API-----------
+User : id=1, Name=Sam, Age=30, Salary=70000.0
+User : id=2, Name=Tom, Age=40, Salary=50000.0
+User : id=3, Name=Jerome, Age=45, Salary=30000.0
+User : id=4, Name=Silvia, Age=50, Salary=40000.0
+Testing getUser API----------
+User [id=1, name=Sam, age=30, salary=70000.0]
+Testing create User API----------
+Location : http://localhost:8080/Spring4MVCCRUDRestService/user/5
+Testing listAllUsers API-----------
+User : id=1, Name=Sam, Age=30, Salary=70000.0
+User : id=2, Name=Tom, Age=40, Salary=50000.0
+User : id=3, Name=Jerome, Age=45, Salary=30000.0
+User : id=4, Name=Silvia, Age=50, Salary=40000.0
+User : id=5, Name=Sarah, Age=51, Salary=134.0
+Testing update User API----------
+User [id=1, name=Tomy, age=33, salary=70000.0]
+Testing listAllUsers API-----------
+User : id=1, Name=Tomy, Age=33, Salary=70000.0
+User : id=2, Name=Tom, Age=40, Salary=50000.0
+User : id=3, Name=Jerome, Age=45, Salary=30000.0
+User : id=4, Name=Silvia, Age=50, Salary=40000.0
+User : id=5, Name=Sarah, Age=51, Salary=134.0
+Testing delete User API----------
+Testing listAllUsers API-----------
+User : id=1, Name=Tomy, Age=33, Salary=70000.0
+User : id=2, Name=Tom, Age=40, Salary=50000.0
+User : id=4, Name=Silvia, Age=50, Salary=40000.0
+User : id=5, Name=Sarah, Age=51, Salary=134.0
+Testing all delete Users API----------
+Testing listAllUsers API-----------
+No user exist----------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3.906 s
+[INFO] Finished at: 2018-09-23T19:57:07+05:30
+[INFO] ------------------------------------------------------------------------
+
+Rajani@RajaniSamsungPC MINGW64 ~/Desktop/2018/Working/Java/Spring/Samples/Spring4MVCCRUDRestServiceAndCORS/Spring4MVCCRUDRestServiceCORS
+$

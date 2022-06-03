@@ -1,0 +1,265 @@
+
+Aspire@Acer MINGW64 ~
+$ java -version
+java version "1.8.0_102"
+Java(TM) SE Runtime Environment (build 1.8.0_102-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.102-b14, mixed mode)
+
+Aspire@Acer MINGW64 ~
+$ mvn -v
+Apache Maven 3.3.9 (bb52d8502b132ec0a5a3f4c09453c07478323dc5; 2015-11-10T22:11:47+05:30)
+Maven home: C:\Program Files\Apache Software Foundation\apache-maven-3.3.9
+Java version: 1.8.0_102, vendor: Oracle Corporation
+Java home: C:\Program Files\Java\jdk1.8.0_102\jre
+Default locale: en_US, platform encoding: Cp1252
+OS name: "windows 8.1", version: "6.3", arch: "amd64", family: "dos"
+
+Aspire@Acer MINGW64 ~
+$ cd "E:\Working\Java\Spring\Samples\Spring4MVCHibernateTestingExample\SpringHibernateExample"
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Samples/Spring4MVCHibernateTestingExample/SpringHibernateExample
+$ mvn eclipse:eclipse
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building SpringHibernateExample 1.0.0
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] >>> maven-eclipse-plugin:2.10:eclipse (default-cli) > generate-resources @ SpringHibernateExample >>>
+[INFO]
+[INFO] <<< maven-eclipse-plugin:2.10:eclipse (default-cli) < generate-resources @ SpringHibernateExample <<<
+[INFO]
+[INFO] --- maven-eclipse-plugin:2.10:eclipse (default-cli) @ SpringHibernateExample ---
+[INFO] Using Eclipse Workspace: null
+[INFO] Adding default classpath container: org.eclipse.jdt.launching.JRE_CONTAINER
+[WARNING] While downloading dbunit:dbunit:2.2
+  This artifact has been relocated to org.dbunit:dbunit:2.2.
+
+
+[INFO] Not writing settings - defaults suffice
+[INFO] Wrote Eclipse project for "SpringHibernateExample" to E:\Working\Java\Spring\Samples\Spring4MVCHibernateTestingExample\SpringHibernateExample.
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3.729 s
+[INFO] Finished at: 2016-12-07T20:28:54+05:30
+[INFO] Final Memory: 12M/309M
+[INFO] ------------------------------------------------------------------------
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Samples/Spring4MVCHibernateTestingExample/SpringHibernateExample
+$ mvn clean package
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building SpringHibernateExample 1.0.0
+[INFO] ------------------------------------------------------------------------
+[WARNING] The artifact dbunit:dbunit:jar:2.2 has been relocated to org.dbunit:dbunit:jar:2.2
+[INFO]
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ SpringHibernateExample ---
+[INFO] Deleting E:\Working\Java\Spring\Samples\Spring4MVCHibernateTestingExample\SpringHibernateExample\target
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ SpringHibernateExample ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 2 resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ SpringHibernateExample ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 10 source files to E:\Working\Java\Spring\Samples\Spring4MVCHibernateTestingExample\SpringHibernateExample\target\classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ SpringHibernateExample ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 1 resource
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ SpringHibernateExample ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 5 source files to E:\Working\Java\Spring\Samples\Spring4MVCHibernateTestingExample\SpringHibernateExample\target\test-classes
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ SpringHibernateExample ---
+[INFO] Surefire report directory: E:\Working\Java\Spring\Samples\Spring4MVCHibernateTestingExample\SpringHibernateExample\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running TestSuite
+Configuring TestNG with: org.apache.maven.surefire.testng.conf.TestNG652Configurator@2f333739
+Dec 07, 2016 8:29:22 PM org.springframework.context.support.GenericApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.context.support.GenericApplicationContext@6adbc9d: startup date [Wed Dec 07 20:29:22 IST 2016]; root of context hierarchy
+Dec 07, 2016 8:29:23 PM org.springframework.jdbc.datasource.DriverManagerDataSource setDriverClassName
+INFO: Loaded JDBC driver: org.h2.Driver
+Dec 07, 2016 8:29:23 PM org.hibernate.annotations.common.reflection.java.JavaReflectionManager <clinit>
+INFO: HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+Dec 07, 2016 8:29:23 PM org.hibernate.Version logVersion
+INFO: HHH000412: Hibernate Core {4.3.6.Final}
+Dec 07, 2016 8:29:23 PM org.hibernate.cfg.Environment <clinit>
+INFO: HHH000206: hibernate.properties not found
+Dec 07, 2016 8:29:23 PM org.hibernate.cfg.Environment buildBytecodeProvider
+INFO: HHH000021: Bytecode provider name : javassist
+Dec 07, 2016 8:29:24 PM org.hibernate.dialect.Dialect <init>
+INFO: HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Dec 07, 2016 8:29:25 PM org.hibernate.engine.transaction.internal.TransactionFactoryInitiator initiateService
+INFO: HHH000399: Using default transaction strategy (direct JDBC transactions)
+Dec 07, 2016 8:29:25 PM org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory <init>
+INFO: HHH000397: Using ASTQueryTranslatorFactory
+Dec 07, 2016 8:29:25 PM org.hibernate.validator.internal.util.Version <clinit>
+INFO: HV000001: Hibernate Validator 5.1.3.Final
+Dec 07, 2016 8:29:25 PM org.hibernate.tool.hbm2ddl.SchemaExport execute
+INFO: HHH000227: Running hbm2ddl schema export
+Dec 07, 2016 8:29:25 PM org.hibernate.tool.hbm2ddl.SchemaExport execute
+INFO: HHH000230: Schema export complete
+Dec 07, 2016 8:29:25 PM org.springframework.orm.hibernate4.HibernateTransactionManager afterPropertiesSet
+INFO: Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@63e5e5b4] of Hibernate SessionFactory for HibernateTransactionManager
+Dec 07, 2016 8:29:26 PM org.springframework.test.context.transaction.TransactionalTestExecutionListener startNewTransaction
+INFO: Began transaction (1) for test context [DefaultTestContext@37fdfb05 testClass = EmployeeDaoImplTest, testInstance = com.websystique.springmvc.dao.EmployeeDaoImplTest@4bbfb90a, testMethod = deleteEmployeeByInvalidSsn@EmployeeDaoImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@5e39850 testClass = EmployeeDaoImplTest, locations = '{}', classes = '{class com.websystique.springmvc.configuration.HibernateTestConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.hibernate4.HibernateTransactionManager@1603dc2f]; rollback [true]
+Dec 07, 2016 8:29:26 PM org.springframework.test.context.transaction.TransactionalTestExecutionListener endTransaction
+INFO: Rolled back transaction after test execution for test context [DefaultTestContext@37fdfb05 testClass = EmployeeDaoImplTest, testInstance = com.websystique.springmvc.dao.EmployeeDaoImplTest@4bbfb90a, testMethod = deleteEmployeeByInvalidSsn@EmployeeDaoImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@5e39850 testClass = EmployeeDaoImplTest, locations = '{}', classes = '{class com.websystique.springmvc.configuration.HibernateTestConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+Dec 07, 2016 8:29:26 PM org.springframework.test.context.transaction.TransactionalTestExecutionListener startNewTransaction
+INFO: Began transaction (2) for test context [DefaultTestContext@37fdfb05 testClass = EmployeeDaoImplTest, testInstance = com.websystique.springmvc.dao.EmployeeDaoImplTest@4bbfb90a, testMethod = deleteEmployeeBySsn@EmployeeDaoImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@5e39850 testClass = EmployeeDaoImplTest, locations = '{}', classes = '{class com.websystique.springmvc.configuration.HibernateTestConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.hibernate4.HibernateTransactionManager@1603dc2f]; rollback [true]
+Dec 07, 2016 8:29:26 PM org.springframework.test.context.transaction.TransactionalTestExecutionListener endTransaction
+INFO: Rolled back transaction after test execution for test context [DefaultTestContext@37fdfb05 testClass = EmployeeDaoImplTest, testInstance = com.websystique.springmvc.dao.EmployeeDaoImplTest@4bbfb90a, testMethod = deleteEmployeeBySsn@EmployeeDaoImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@5e39850 testClass = EmployeeDaoImplTest, locations = '{}', classes = '{class com.websystique.springmvc.configuration.HibernateTestConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+Dec 07, 2016 8:29:26 PM org.springframework.test.context.transaction.TransactionalTestExecutionListener startNewTransaction
+INFO: Began transaction (3) for test context [DefaultTestContext@37fdfb05 testClass = EmployeeDaoImplTest, testInstance = com.websystique.springmvc.dao.EmployeeDaoImplTest@4bbfb90a, testMethod = findAllEmployees@EmployeeDaoImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@5e39850 testClass = EmployeeDaoImplTest, locations = '{}', classes = '{class com.websystique.springmvc.configuration.HibernateTestConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.hibernate4.HibernateTransactionManager@1603dc2f]; rollback [true]
+Dec 07, 2016 8:29:26 PM org.springframework.test.context.transaction.TransactionalTestExecutionListener endTransaction
+INFO: Rolled back transaction after test execution for test context [DefaultTestContext@37fdfb05 testClass = EmployeeDaoImplTest, testInstance = com.websystique.springmvc.dao.EmployeeDaoImplTest@4bbfb90a, testMethod = findAllEmployees@EmployeeDaoImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@5e39850 testClass = EmployeeDaoImplTest, locations = '{}', classes = '{class com.websystique.springmvc.configuration.HibernateTestConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+Dec 07, 2016 8:29:26 PM org.springframework.test.context.transaction.TransactionalTestExecutionListener startNewTransaction
+INFO: Began transaction (4) for test context [DefaultTestContext@37fdfb05 testClass = EmployeeDaoImplTest, testInstance = com.websystique.springmvc.dao.EmployeeDaoImplTest@4bbfb90a, testMethod = findById@EmployeeDaoImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@5e39850 testClass = EmployeeDaoImplTest, locations = '{}', classes = '{class com.websystique.springmvc.configuration.HibernateTestConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.hibernate4.HibernateTransactionManager@1603dc2f]; rollback [true]
+Dec 07, 2016 8:29:26 PM org.springframework.test.context.transaction.TransactionalTestExecutionListener endTransaction
+INFO: Rolled back transaction after test execution for test context [DefaultTestContext@37fdfb05 testClass = EmployeeDaoImplTest, testInstance = com.websystique.springmvc.dao.EmployeeDaoImplTest@4bbfb90a, testMethod = findById@EmployeeDaoImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@5e39850 testClass = EmployeeDaoImplTest, locations = '{}', classes = '{class com.websystique.springmvc.configuration.HibernateTestConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+Dec 07, 2016 8:29:26 PM org.springframework.test.context.transaction.TransactionalTestExecutionListener startNewTransaction
+INFO: Began transaction (5) for test context [DefaultTestContext@37fdfb05 testClass = EmployeeDaoImplTest, testInstance = com.websystique.springmvc.dao.EmployeeDaoImplTest@4bbfb90a, testMethod = findEmployeeBySsn@EmployeeDaoImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@5e39850 testClass = EmployeeDaoImplTest, locations = '{}', classes = '{class com.websystique.springmvc.configuration.HibernateTestConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.hibernate4.HibernateTransactionManager@1603dc2f]; rollback [true]
+Dec 07, 2016 8:29:26 PM org.springframework.test.context.transaction.TransactionalTestExecutionListener endTransaction
+INFO: Rolled back transaction after test execution for test context [DefaultTestContext@37fdfb05 testClass = EmployeeDaoImplTest, testInstance = com.websystique.springmvc.dao.EmployeeDaoImplTest@4bbfb90a, testMethod = findEmployeeBySsn@EmployeeDaoImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@5e39850 testClass = EmployeeDaoImplTest, locations = '{}', classes = '{class com.websystique.springmvc.configuration.HibernateTestConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+Dec 07, 2016 8:29:26 PM org.springframework.test.context.transaction.TransactionalTestExecutionListener startNewTransaction
+INFO: Began transaction (6) for test context [DefaultTestContext@37fdfb05 testClass = EmployeeDaoImplTest, testInstance = com.websystique.springmvc.dao.EmployeeDaoImplTest@4bbfb90a, testMethod = saveEmployee@EmployeeDaoImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@5e39850 testClass = EmployeeDaoImplTest, locations = '{}', classes = '{class com.websystique.springmvc.configuration.HibernateTestConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.hibernate4.HibernateTransactionManager@1603dc2f]; rollback [true]
+Dec 07, 2016 8:29:27 PM org.springframework.test.context.transaction.TransactionalTestExecutionListener endTransaction
+INFO: Rolled back transaction after test execution for test context [DefaultTestContext@37fdfb05 testClass = EmployeeDaoImplTest, testInstance = com.websystique.springmvc.dao.EmployeeDaoImplTest@4bbfb90a, testMethod = saveEmployee@EmployeeDaoImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@5e39850 testClass = EmployeeDaoImplTest, locations = '{}', classes = '{class com.websystique.springmvc.configuration.HibernateTestConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+Tests run: 23, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.597 sec
+Dec 07, 2016 8:29:28 PM org.springframework.context.support.GenericApplicationContext doClose
+INFO: Closing org.springframework.context.support.GenericApplicationContext@6adbc9d: startup date [Wed Dec 07 20:29:22 IST 2016]; root of context hierarchy
+
+Results :
+
+Tests run: 23, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO]
+[INFO] --- maven-war-plugin:2.4:war (default-war) @ SpringHibernateExample ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [SpringHibernateExample] in [E:\Working\Java\Spring\Samples\Spring4MVCHibernateTestingExample\SpringHibernateExample\target\SpringHibernateExample]
+[INFO] Processing war project
+[INFO] Copying webapp resources [E:\Working\Java\Spring\Samples\Spring4MVCHibernateTestingExample\SpringHibernateExample\src\main\webapp]
+[INFO] Webapp assembled in [1449 msecs]
+[INFO] Building war: E:\Working\Java\Spring\Samples\Spring4MVCHibernateTestingExample\SpringHibernateExample\target\SpringHibernateExample.war
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 21.096 s
+[INFO] Finished at: 2016-12-07T20:29:32+05:30
+[INFO] Final Memory: 23M/324M
+[INFO] ------------------------------------------------------------------------
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Samples/Spring4MVCHibernateTestingExample/SpringHibernateExample
+$ mvn clean test
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building SpringHibernateExample 1.0.0
+[INFO] ------------------------------------------------------------------------
+[WARNING] The artifact dbunit:dbunit:jar:2.2 has been relocated to org.dbunit:dbunit:jar:2.2
+[INFO]
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ SpringHibernateExample ---
+[INFO] Deleting E:\Working\Java\Spring\Samples\Spring4MVCHibernateTestingExample\SpringHibernateExample\target
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ SpringHibernateExample ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 2 resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ SpringHibernateExample ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 10 source files to E:\Working\Java\Spring\Samples\Spring4MVCHibernateTestingExample\SpringHibernateExample\target\classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ SpringHibernateExample ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 1 resource
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ SpringHibernateExample ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 5 source files to E:\Working\Java\Spring\Samples\Spring4MVCHibernateTestingExample\SpringHibernateExample\target\test-classes
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ SpringHibernateExample ---
+[INFO] Surefire report directory: E:\Working\Java\Spring\Samples\Spring4MVCHibernateTestingExample\SpringHibernateExample\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running TestSuite
+Configuring TestNG with: org.apache.maven.surefire.testng.conf.TestNG652Configurator@2f333739
+Dec 07, 2016 8:30:03 PM org.springframework.context.support.GenericApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.context.support.GenericApplicationContext@6adbc9d: startup date [Wed Dec 07 20:30:03 IST 2016]; root of context hierarchy
+Dec 07, 2016 8:30:04 PM org.springframework.jdbc.datasource.DriverManagerDataSource setDriverClassName
+INFO: Loaded JDBC driver: org.h2.Driver
+Dec 07, 2016 8:30:04 PM org.hibernate.annotations.common.reflection.java.JavaReflectionManager <clinit>
+INFO: HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+Dec 07, 2016 8:30:04 PM org.hibernate.Version logVersion
+INFO: HHH000412: Hibernate Core {4.3.6.Final}
+Dec 07, 2016 8:30:04 PM org.hibernate.cfg.Environment <clinit>
+INFO: HHH000206: hibernate.properties not found
+Dec 07, 2016 8:30:04 PM org.hibernate.cfg.Environment buildBytecodeProvider
+INFO: HHH000021: Bytecode provider name : javassist
+Dec 07, 2016 8:30:05 PM org.hibernate.dialect.Dialect <init>
+INFO: HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Dec 07, 2016 8:30:06 PM org.hibernate.engine.transaction.internal.TransactionFactoryInitiator initiateService
+INFO: HHH000399: Using default transaction strategy (direct JDBC transactions)
+Dec 07, 2016 8:30:06 PM org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory <init>
+INFO: HHH000397: Using ASTQueryTranslatorFactory
+Dec 07, 2016 8:30:06 PM org.hibernate.validator.internal.util.Version <clinit>
+INFO: HV000001: Hibernate Validator 5.1.3.Final
+Dec 07, 2016 8:30:06 PM org.hibernate.tool.hbm2ddl.SchemaExport execute
+INFO: HHH000227: Running hbm2ddl schema export
+Dec 07, 2016 8:30:06 PM org.hibernate.tool.hbm2ddl.SchemaExport execute
+INFO: HHH000230: Schema export complete
+Dec 07, 2016 8:30:07 PM org.springframework.orm.hibernate4.HibernateTransactionManager afterPropertiesSet
+INFO: Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@63e5e5b4] of Hibernate SessionFactory for HibernateTransactionManager
+Dec 07, 2016 8:30:07 PM org.springframework.test.context.transaction.TransactionalTestExecutionListener startNewTransaction
+INFO: Began transaction (1) for test context [DefaultTestContext@37fdfb05 testClass = EmployeeDaoImplTest, testInstance = com.websystique.springmvc.dao.EmployeeDaoImplTest@4bbfb90a, testMethod = deleteEmployeeByInvalidSsn@EmployeeDaoImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@5e39850 testClass = EmployeeDaoImplTest, locations = '{}', classes = '{class com.websystique.springmvc.configuration.HibernateTestConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.hibernate4.HibernateTransactionManager@1603dc2f]; rollback [true]
+Dec 07, 2016 8:30:07 PM org.springframework.test.context.transaction.TransactionalTestExecutionListener endTransaction
+INFO: Rolled back transaction after test execution for test context [DefaultTestContext@37fdfb05 testClass = EmployeeDaoImplTest, testInstance = com.websystique.springmvc.dao.EmployeeDaoImplTest@4bbfb90a, testMethod = deleteEmployeeByInvalidSsn@EmployeeDaoImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@5e39850 testClass = EmployeeDaoImplTest, locations = '{}', classes = '{class com.websystique.springmvc.configuration.HibernateTestConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+Dec 07, 2016 8:30:07 PM org.springframework.test.context.transaction.TransactionalTestExecutionListener startNewTransaction
+INFO: Began transaction (2) for test context [DefaultTestContext@37fdfb05 testClass = EmployeeDaoImplTest, testInstance = com.websystique.springmvc.dao.EmployeeDaoImplTest@4bbfb90a, testMethod = deleteEmployeeBySsn@EmployeeDaoImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@5e39850 testClass = EmployeeDaoImplTest, locations = '{}', classes = '{class com.websystique.springmvc.configuration.HibernateTestConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.hibernate4.HibernateTransactionManager@1603dc2f]; rollback [true]
+Dec 07, 2016 8:30:07 PM org.springframework.test.context.transaction.TransactionalTestExecutionListener endTransaction
+INFO: Rolled back transaction after test execution for test context [DefaultTestContext@37fdfb05 testClass = EmployeeDaoImplTest, testInstance = com.websystique.springmvc.dao.EmployeeDaoImplTest@4bbfb90a, testMethod = deleteEmployeeBySsn@EmployeeDaoImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@5e39850 testClass = EmployeeDaoImplTest, locations = '{}', classes = '{class com.websystique.springmvc.configuration.HibernateTestConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+Dec 07, 2016 8:30:07 PM org.springframework.test.context.transaction.TransactionalTestExecutionListener startNewTransaction
+INFO: Began transaction (3) for test context [DefaultTestContext@37fdfb05 testClass = EmployeeDaoImplTest, testInstance = com.websystique.springmvc.dao.EmployeeDaoImplTest@4bbfb90a, testMethod = findAllEmployees@EmployeeDaoImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@5e39850 testClass = EmployeeDaoImplTest, locations = '{}', classes = '{class com.websystique.springmvc.configuration.HibernateTestConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.hibernate4.HibernateTransactionManager@1603dc2f]; rollback [true]
+Dec 07, 2016 8:30:07 PM org.springframework.test.context.transaction.TransactionalTestExecutionListener endTransaction
+INFO: Rolled back transaction after test execution for test context [DefaultTestContext@37fdfb05 testClass = EmployeeDaoImplTest, testInstance = com.websystique.springmvc.dao.EmployeeDaoImplTest@4bbfb90a, testMethod = findAllEmployees@EmployeeDaoImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@5e39850 testClass = EmployeeDaoImplTest, locations = '{}', classes = '{class com.websystique.springmvc.configuration.HibernateTestConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+Dec 07, 2016 8:30:07 PM org.springframework.test.context.transaction.TransactionalTestExecutionListener startNewTransaction
+INFO: Began transaction (4) for test context [DefaultTestContext@37fdfb05 testClass = EmployeeDaoImplTest, testInstance = com.websystique.springmvc.dao.EmployeeDaoImplTest@4bbfb90a, testMethod = findById@EmployeeDaoImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@5e39850 testClass = EmployeeDaoImplTest, locations = '{}', classes = '{class com.websystique.springmvc.configuration.HibernateTestConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.hibernate4.HibernateTransactionManager@1603dc2f]; rollback [true]
+Dec 07, 2016 8:30:07 PM org.springframework.test.context.transaction.TransactionalTestExecutionListener endTransaction
+INFO: Rolled back transaction after test execution for test context [DefaultTestContext@37fdfb05 testClass = EmployeeDaoImplTest, testInstance = com.websystique.springmvc.dao.EmployeeDaoImplTest@4bbfb90a, testMethod = findById@EmployeeDaoImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@5e39850 testClass = EmployeeDaoImplTest, locations = '{}', classes = '{class com.websystique.springmvc.configuration.HibernateTestConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+Dec 07, 2016 8:30:07 PM org.springframework.test.context.transaction.TransactionalTestExecutionListener startNewTransaction
+INFO: Began transaction (5) for test context [DefaultTestContext@37fdfb05 testClass = EmployeeDaoImplTest, testInstance = com.websystique.springmvc.dao.EmployeeDaoImplTest@4bbfb90a, testMethod = findEmployeeBySsn@EmployeeDaoImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@5e39850 testClass = EmployeeDaoImplTest, locations = '{}', classes = '{class com.websystique.springmvc.configuration.HibernateTestConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.hibernate4.HibernateTransactionManager@1603dc2f]; rollback [true]
+Dec 07, 2016 8:30:07 PM org.springframework.test.context.transaction.TransactionalTestExecutionListener endTransaction
+INFO: Rolled back transaction after test execution for test context [DefaultTestContext@37fdfb05 testClass = EmployeeDaoImplTest, testInstance = com.websystique.springmvc.dao.EmployeeDaoImplTest@4bbfb90a, testMethod = findEmployeeBySsn@EmployeeDaoImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@5e39850 testClass = EmployeeDaoImplTest, locations = '{}', classes = '{class com.websystique.springmvc.configuration.HibernateTestConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+Dec 07, 2016 8:30:07 PM org.springframework.test.context.transaction.TransactionalTestExecutionListener startNewTransaction
+INFO: Began transaction (6) for test context [DefaultTestContext@37fdfb05 testClass = EmployeeDaoImplTest, testInstance = com.websystique.springmvc.dao.EmployeeDaoImplTest@4bbfb90a, testMethod = saveEmployee@EmployeeDaoImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@5e39850 testClass = EmployeeDaoImplTest, locations = '{}', classes = '{class com.websystique.springmvc.configuration.HibernateTestConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.hibernate4.HibernateTransactionManager@1603dc2f]; rollback [true]
+Dec 07, 2016 8:30:08 PM org.springframework.test.context.transaction.TransactionalTestExecutionListener endTransaction
+INFO: Rolled back transaction after test execution for test context [DefaultTestContext@37fdfb05 testClass = EmployeeDaoImplTest, testInstance = com.websystique.springmvc.dao.EmployeeDaoImplTest@4bbfb90a, testMethod = saveEmployee@EmployeeDaoImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@5e39850 testClass = EmployeeDaoImplTest, locations = '{}', classes = '{class com.websystique.springmvc.configuration.HibernateTestConfiguration}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+Tests run: 23, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.612 sec
+
+Results :
+
+Tests run: 23, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 18.356 s
+[INFO] Finished at: 2016-12-07T20:30:09+05:30
+[INFO] Final Memory: 20M/322M
+[INFO] ------------------------------------------------------------------------
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Samples/Spring4MVCHibernateTestingExample/SpringHibernateExample
+$

@@ -1,0 +1,203 @@
+
+$ java -version
+
+$ mvn -v
+
+$ mkdir -p src/main/java/hello
+
+$ touch src/main/java/hello/HelloWorld.java
+
+# src/main/java/hello/HelloWorld.java
+package hello;
+
+public class HelloWorld {
+    public static void main(String[] args) {
+        Greeter greeter = new Greeter();
+        System.out.println(greeter.sayHello());
+    }
+}
+
+$ touch src/main/java/hello/Greeter.java
+
+# src/main/java/hello/Greeter.java
+package hello;
+
+public class Greeter {
+    public String sayHello() {
+        return "Hello world!";
+    }
+}
+
+$ touch pom.xml
+
+# pom.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.springframework</groupId>
+    <artifactId>gs-maven</artifactId>
+    <packaging>jar</packaging>
+    <version>0.1.0</version>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>2.1</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <transformers>
+                                <transformer
+                                    implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <mainClass>hello.HelloWorld</mainClass>
+                                </transformer>
+                            </transformers>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
+
+$ mvn compile
+
+$ mvn package
+
+$ mvn install
+
+$ jar tvf target/gs-maven-0.1.0.jar
+
+$ java -jar target/gs-maven-0.1.0.jar
+
+# Edit src/main/java/hello/HelloWorld.java
+# src/main/java/hello/HelloWorld.java
+package hello;
+
+import org.joda.time.LocalTime;
+
+public class HelloWorld {
+	public static void main(String[] args) {
+		LocalTime currentTime = new LocalTime();
+		System.out.println("The current local time is: " + currentTime);
+		Greeter greeter = new Greeter();
+		System.out.println(greeter.sayHello());
+	}
+}
+
+# Edit pom.xml
+    <dependencies>
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>2.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+# pom.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.springframework</groupId>
+	<artifactId>gs-maven</artifactId>
+	<packaging>jar</packaging>
+	<version>0.1.0</version>
+
+	<dependencies>
+		<!-- tag::joda[] -->
+		<dependency>
+			<groupId>joda-time</groupId>
+			<artifactId>joda-time</artifactId>
+			<version>2.2</version>
+		</dependency>
+		<!-- end::joda[] -->
+		<!-- tag::junit[] -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- end::junit[] -->
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-shade-plugin</artifactId>
+				<version>2.1</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>shade</goal>
+						</goals>
+						<configuration>
+							<transformers>
+								<transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+									<mainClass>hello.HelloWorld</mainClass>
+								</transformer>
+							</transformers>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>
+
+$ mkdir -p src/test/java/hello
+
+$ touch src/test/java/hello/GreeterTest.java
+package hello;
+
+import static org.hamcrest.CoreMatchers.containsString;
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class GreeterTest {
+
+	private Greeter greeter = new Greeter();
+
+	@Test
+	public void greeterSaysHello() {
+		assertThat(greeter.sayHello(), containsString("Hello"));
+	}
+
+}
+
+$ mvn test
+
+# OR
+
+$ mvn install
+
+$ jar tvf target/gs-maven-0.1.0.jar
+
+$ java -jar target/gs-maven-0.1.0.jar
+
+$ jar tvf target/gs-maven-0.1.0-shaded.jar
+
+$ java -jar target/gs-maven-0.1.0-shaded.jar
+
+$ jar tvf target/original-gs-maven-0.1.0.jar
+
+$ java -jar target/original-gs-maven-0.1.0.jar

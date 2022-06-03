@@ -1,0 +1,20 @@
+
+Aspire@Acer MINGW64 /
+$ mvn -version
+Apache Maven 3.3.9 (bb52d8502b132ec0a5a3f4c09453c07478323dc5; 2015-11-10T22:11:47+05:30)
+Maven home: C:\Program Files\Apache Software Foundation\apache-maven-3.3.9
+Java version: 1.8.0_102, vendor: Oracle Corporation
+Java home: C:\Program Files\Java\jdk1.8.0_102\jre
+Default locale: en_US, platform encoding: Cp1252
+OS name: "windows 8.1", version: "6.3", arch: "amd64", family: "dos"
+
+Aspire@Acer MINGW64 /
+$ cd "E:\Working\Java\Maven\Example\Exercise\KeyGenerator"
+
+Aspire@Acer MINGW64 /e/Working/Java/Maven/Example/Exercise/KeyGenerator
+$ java -cp target/KeyGenerator-1.0-SNAPSHOT.jar com.sample.App
+Hello World!
+Unique ID : 0d47299b-7184-4c1f-a680-4b6593de37f8
+
+Aspire@Acer MINGW64 /e/Working/Java/Maven/Example/Exercise/KeyGenerator
+$

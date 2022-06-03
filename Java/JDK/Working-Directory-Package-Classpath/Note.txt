@@ -1,0 +1,35 @@
+cd "E:\Working\Java\Working-Directory-Package-Classpath"
+
+[
+mkdir -p "E:\Working\Java\Working-Directory-Package-Classpath\classes"
+
+javac -d "E:\Working\Java\Working-Directory-Package-Classpath\classes" "E:\Working\Java\Working-Directory-Package-Classpath\src\com\greek\Omega.java"
+
+java -cp "E:\Working\Java\Working-Directory-Package-Classpath\classes" com.greek.Omega
+
+rm -rf "E:\Working\Java\Working-Directory-Package-Classpath\classes"
+
+# OR
+
+mkdir -p "classes"
+
+javac -d "classes" "src\com\greek\Omega.java"
+
+java -cp "classes" com.greek.Omega
+
+rm -rf "classes"
+]
+
+mkdir -p classes
+
+javac -d classes src/com/greek/Omega.java
+
+java -cp classes com.greek.Omega
+
+rm -rf classes
+
+# OR
+
+javac src/com/greek/Omega.java
+
+java -cp src com.greek.Omega

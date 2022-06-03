@@ -1,0 +1,8 @@
+https://code.google.com/archive/p/pysimplesoap/
+
+https://code.google.com/archive/p/pysimplesoap/downloads
+
+https://github.com/pysimplesoap/pysimplesoap
+
+http://pydoc.net/Python/PySimpleSOAP/1.02c/pysimplesoap.server/
+

@@ -1,0 +1,41 @@
+This directory contains the example code from the book _Java Examples in
+a Nutshell_, by David Flanagan, published by O'Reilly & Associates.
+
+If you don't already have a copy of the book, you should get one.  Visit
+http://www.oreilly.com/ to browse the O'Reilly & Associates catalog and
+to order on line.  Or call 1-800-998-9938 or 1-707-829-0515 to order by
+phone.
+
+This code is free for non-commercial use.  See the file LICENSE for
+information. 
+
+The examples from Chapter 11, Java Beans, are in the package
+oreilly.beans.yesno, and are therefore found in the oreilly/beans/yesno
+directory beneath this one.  All the other examples in the book are
+in the "default package", and are found in this directory itself.
+
+There are 127 Java source files in all.  Each has the same name as the
+example caption that appears in the book.  So, for example, Example 1-1
+in the book has the caption "Hello.java", and is found in the file
+Hello.java.
+
+Examples 14-6 and 14-8 are property files, not Java programs
+They are available in this directory under the names.
+
+	Menus.properties
+	Menus_en_GB.properties
+	Menus_fr.properties
+	Errors.properties
+
+The file index.html is an HTML file suitable for browsing the examples
+online. 
+
+Note that several of the Java examples here use deprecated APIs to
+retain compatibility with Web browsers that are not fully Java 1.1
+compliant.  Therefore, you will see some deprecation warnings when
+compiling those examples.  This is expected.  You will have to download
+and install the JFC "Swing" preview release to compile the examples in
+the appendix.  They've been tested with release 0.3 of Swing.  Also,
+HTMLWriter.java relies on the Netscape-specific class
+netscape.javascript.JSObject, so to compile this example, you'll have to
+add the appropriate Netscape JAR file to your classpath.

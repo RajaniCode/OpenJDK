@@ -1,0 +1,88 @@
+// Java 9
+/*
+1. Private Interface Methods
+2. Try-With-Resources on Final Variables
+3. Diamond Operator for Anonymous Inner Classes
+4. SafeVarargs Annotation on Private Methods
+5. Collection Factory Methods
+5.1 List Factory Method
+5.2 Set Interface Factory Methods
+5.3 Map Interface Factory Methods
+5.4 Map Interface ofEntries() Method
+*/
+
+Process API Improvement
+Version-String Scheme
+JShell (REPL)
+Module System
+Control Panel
+Stream API Improvement
+Underscore Keyword
+
+
+// Java 8
+/*
+1. Lambda Expression
+2. Method References
+3. Default Interface Methods
+4. Static Interface Methods
+5. Functional Interfaces
+6. Stream
+*/
+
+Java 8 Date/Time API (Java 8)
+Lambda Expressions (Java 8)
+Method References (Java 8)
+Functional Interfaces (Java 8)
+Stream ( Stream API, Stream Filter) (Java 8)
+Base64 Encode Decode (Java 8)
+Default Methods (Java 8)
+forEach method(Java 8)
+Collectors class (Java 8)
+StringJoiner class (Java 8)
+Optional class (Java 8)
+Nashorn JavaScript (Java 8)
+Parallel Array Sorting (Java 8)
+Type Inference (Java 8)
+Method Parameter Reflection (Java 8)
+Type annotations and repeating annotations (Java 8)
+Java JDBC Improvements (Java 8)
+Java IO Improvement (Java 8)
+Java Concurrency Improvement (Java 8)
+
+
+// Java 7
+/*
+*/
+
+String in switch statement (Java 7)
+Binary Literals (Java 7)
+The try-with-resources (Java 7) (Multi CatchTry with Resources)
+Caching Multiple Exceptions by single catch (Java 7)
+Underscores in Numeric Literals (Java 7)
+Type Inference
+Java 7 JDBC
+
+
+// Java 6
+/*
+*/
+
+Instrumentation (premain method) (Java 6)
+
+
+// Java 5
+/*
+*/
+
+For-each loop (Java 5)
+Varargs (Java 5)
+Static Import (Java 5)
+Autoboxing and Unboxing (Java 5)
+Enum (Java 5)
+Covariant Return Type (Java 5)
+Annotation (Java 5)
+Generics (Java 5)
+
+Assertion
+Custom Annotation

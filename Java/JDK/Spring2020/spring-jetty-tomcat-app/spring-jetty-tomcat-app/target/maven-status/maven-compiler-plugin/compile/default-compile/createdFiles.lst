@@ -1,0 +1,3 @@
+com\sample\web\WebInitializer.class
+com\sample\web\config\SpringConfig.class
+com\sample\web\controller\WelcomeController.class

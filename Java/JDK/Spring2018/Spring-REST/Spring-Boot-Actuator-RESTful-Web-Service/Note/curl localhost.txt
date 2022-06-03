@@ -1,0 +1,25 @@
+
+Aspire@Acer MINGW64 /
+$ curl localhost:8080/health
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   104    0   104    0     0    162      0 --:--:-- --:--:-- --:--:--   162{"status":"UP","diskSpace":{"status":"UP","total":268434403328,"free":30208815104,"threshold":10485760}}
+
+Aspire@Acer MINGW64 /
+$ curl localhost:8080/hello-world
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    37    0    37    0     0     71      0 --:--:-- --:--:-- --:--:--    71{"id":1,"content":"Hello, Stranger!"}
+
+Aspire@Acer MINGW64 /
+$ curl localhost:9000/hello-world
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    37    0    37    0     0     81      0 --:--:-- --:--:-- --:--:--    84{"id":1,"content":"Hello, Stranger!"}
+
+Aspire@Acer MINGW64 /
+$ curl localhost:9000/hello-world
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    37    0    37    0     0     51      0 --:--:-- --:--:-- --:--:--    52{"id":1,"content":"Hello, Stranger!"}
+

@@ -1,0 +1,13 @@
+package com.ps.springm1;
+
+import org.springframework.context.annotation.Bean;
+
+import com.ps.springm1.model.CreditCard;
+
+public class BankAppConfig {
+
+    @Bean
+    public CreditCard creditCard() {
+    	return new CreditCard();
+    }
+}

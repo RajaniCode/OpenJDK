@@ -1,0 +1,30 @@
+
+Aspire@Acer MINGW64 /
+$ java -version
+java version "1.8.0_102"
+Java(TM) SE Runtime Environment (build 1.8.0_102-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.102-b14, mixed mode)
+
+Aspire@Acer MINGW64 /
+$ cd "E:\Working\Java\TODO\smtp"
+
+Aspire@Acer MINGW64 /e/Working/Java/TODO/smtp
+$ export CLASSPATH="Download\javax.mail.jar;.;"
+
+Aspire@Acer MINGW64 /e/Working/Java/TODO/smtp
+$ echo $CLASSPATH
+Download\javax.mail.jar;.;
+
+Aspire@Acer MINGW64 /e/Working/Java/TODO/smtp
+$ javac SMTPGmail.java
+
+Aspire@Acer MINGW64 /e/Working/Java/TODO/smtp
+$ java SMTPGmail
+Sent message successfully.
+
+Aspire@Acer MINGW64 /e/Working/Java/TODO/smtp
+$ javac SMTPOutlook.java
+
+Aspire@Acer MINGW64 /e/Working/Java/TODO/smtp
+$ java SMTPOutlook
+Sent message successfully.

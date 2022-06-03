@@ -1,0 +1,371 @@
+***********************************************************************************************************************************************************
+
+1.Apache Maven 3.3.3
+2.Eclipse 4.5.0
+3.JDK 1.8.0_51
+
+***********************************************************************************************************************************************************
+
+1.Maven Project Template
+
+#mvn archetype:generate -DgroupId={project-packaging} -DartifactId={project-name} -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+#NOTE: Directory Should Be Empty
+
+$ cd Exercise
+$ mvn archetype:generate -DgroupId=com.sample -DartifactId=KeyGenerator -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+***********************************************************************************************************************************************************
+
+2.Maven Standard Directory Layout
+
+#mvn archetype Default Standard Directory Layout
+
+KeyGenerator
+   |-src
+   |---main
+   |-----java
+   |-------com
+   |---------sample
+   |-----------App.java
+   |---test
+   |-----java
+   |-------com
+   |---------sample
+   |-----------AppTest.java
+   |-pom.xml
+
+#mvn archetype Default pom.xml
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.sample</groupId>
+  <artifactId>KeyGenerator</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>KeyGenerator</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
+
+########################################################################################################
+
+#mvn archetype Default AppTest.java
+
+package com.sample;
+
+import junit.framework.Test;
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
+
+/**
+ * Unit test for simple App.
+ */
+public class AppTest 
+    extends TestCase
+{
+    /**
+     * Create the test case
+     *
+     * @param testName name of the test case
+     */
+    public AppTest( String testName )
+    {
+        super( testName );
+    }
+
+    /**
+     * @return the suite of tests being tested
+     */
+    public static Test suite()
+    {
+        return new TestSuite( AppTest.class );
+    }
+
+    /**
+     * Rigourous Test :-)
+     */
+    public void testApp()
+    {
+        assertTrue( true );
+    }
+}
+
+########################################################################################################
+
+#mvn archetype Default App.java
+
+package com.sample;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+    }
+}
+
+
+
+***********************************************************************************************************************************************************
+
+3.Eclipse IDE
+
+$ cd KeyGenerator
+$ mvn eclipse:eclipse
+
+***********************************************************************************************************************************************************
+
+4. pom.xml - Edit JUnit from 3.8.1 to 4.12 as on date (JUnit - Version: 4.12 - Last Published: October 22, 2015), Add maven-compiler-plugin, Java 1.8
+
+#Edit
+
+#JUnit 3.8.1
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+#JUnit 4.12
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+########################################################################################################
+
+#Add 
+
+#maven-compiler-plugin, Java 1.8
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <version>1.4</version>
+        <executions>
+          <execution>
+            <id>enforce-java</id>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <requireJavaVersion>
+                  <version>1.8.0</version>
+                </requireJavaVersion>
+              </rules>    
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+########################################################################################################
+
+#Updated pom.xml
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.sample</groupId>
+  <artifactId>KeyGenerator</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>KeyGenerator</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <version>1.4</version>
+        <executions>
+          <execution>
+            <id>enforce-java</id>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <requireJavaVersion>
+                  <version>1.8.0</version>
+                </requireJavaVersion>
+              </rules>    
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
+
+########################################################################################################
+
+$ mvn eclipse:eclipse
+
+***********************************************************************************************************************************************************
+
+5. AppTest.java, App.java - Edit
+
+#Edit AppTest.java
+
+    public void testApp()
+    {
+        String message = "Hello Wolrd!";
+        App obj = new App();
+        assertTrue(message == "Hello Wolrd!");
+        assertTrue(36 == obj.generateUniqueKey().length());
+    }
+
+########################################################################################################
+
+#Updated AppTest.java
+
+package com.sample;
+
+import junit.framework.Test;
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
+
+/**
+ * Unit test for simple App.
+ */
+public class AppTest 
+    extends TestCase
+{
+    /**
+     * Create the test case
+     *
+     * @param testName name of the test case
+     */
+    public AppTest( String testName )
+    {
+        super( testName );
+    }
+
+    /**
+     * @return the suite of tests being tested
+     */
+    public static Test suite()
+    {
+        return new TestSuite( AppTest.class );
+    }
+
+    /**
+     * Rigourous Test :-)
+     */
+    public void testApp()
+    {
+        String message = "Hello Wolrd!";
+        App obj = new App();
+        assertTrue(message == "Hello Wolrd!");
+        assertTrue(36 == obj.generateUniqueKey().length());
+    }
+}
+
+########################################################################################################
+
+#Edit App.java
+
+import java.util.UUID;
+
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+        App obj = new App();
+        System.out.println("Unique ID : " + obj.generateUniqueKey());
+    }
+
+    public String generateUniqueKey() 
+    {
+        String id = UUID.randomUUID().toString();
+        return id;
+    }
+
+########################################################################################################
+
+#Updated App.java
+
+package com.sample;
+
+import java.util.UUID;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+        App obj = new App();
+        System.out.println("Unique ID : " + obj.generateUniqueKey());
+    }
+
+    public String generateUniqueKey() 
+    {
+        String id = UUID.randomUUID().toString();
+        return id;
+    }
+}
+
+########################################################################################################
+
+$ mvn eclipse:eclipse
+
+***********************************************************************************************************************************************************
+
+6. Maven Package
+
+$ mvn package
+
+***********************************************************************************************************************************************************
+
+7. Run target jar
+
+$ java -cp target/KeyGenerator-1.0-SNAPSHOT.jar com.sample.App
+
+***********************************************************************************************************************************************************
+
+#Optional:
+
+mvn test
+
+mvn -Dtest=AppTest test
+
+mvn -Dtest=AppTest#testApp test
+
+***********************************************************************************************************************************************************

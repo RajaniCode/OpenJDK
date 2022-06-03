@@ -1,0 +1,146 @@
+
+Aspire@Acer MINGW64 ~
+$ cd "E:\Working\Java\Gradle\SDKMAN"
+
+Aspire@Acer MINGW64 /e/Working/Java/Gradle/SDKMAN
+$ curl -s "https://get.sdkman.io" | bash
+
+Thanks for using...
+
+
+     SSSSSSSSSSSSSSS DDDDDDDDDDDDD       KKKKKKKKK    KKKKKKK
+   SS:::::::::::::::SD::::::::::::DDD    K:::::::K    K:::::K
+  S:::::SSSSSS::::::SD:::::::::::::::DD  K:::::::K    K:::::K
+  S:::::S     SSSSSSSDDD:::::DDDDD:::::D K:::::::K   K::::::K
+  S:::::S              D:::::D    D:::::DKK::::::K  K:::::KKK
+  S:::::S              D:::::D     D:::::D K:::::K K:::::K
+   S::::SSSS           D:::::D     D:::::D K::::::K:::::K
+    SS::::::SSSSS      D:::::D     D:::::D K:::::::::::K
+      SSS::::::::SS    D:::::D     D:::::D K:::::::::::K
+         SSSSSS::::S   D:::::D     D:::::D K::::::K:::::K
+              S:::::S  D:::::D     D:::::D K:::::K K:::::K
+              S:::::S  D:::::D    D:::::DKK::::::K  K:::::KKK
+  SSSSSSS     S:::::SDDD:::::DDDDD:::::D K:::::::K   K::::::K
+  S::::::SSSSSS:::::SD:::::::::::::::DD  K:::::::K    K:::::K
+  S:::::::::::::::SS D::::::::::::DDD    K:::::::K    K:::::K
+   SSSSSSSSSSSSSSS   DDDDDDDDDDDDD       KKKKKKKKK    KKKKKKK
+
+
+                      mmmmmmm    mmmmmmm     aaaaaaaaaaaaa  nnnn  nnnnnnnn
+                    mm:::::::m  m:::::::mm   a::::::::::::a n:::nn::::::::nn
+                   m::::::::::mm::::::::::m  aaaaaaaaa:::::an::::::::::::::nn
+                   m::::::::::::::::::::::m           a::::ann:::::::::::::::n
+                   m:::::mmm::::::mmm:::::m    aaaaaaa:::::a  n:::::nnnn:::::n
+                   m::::m   m::::m   m::::m  aa::::::::::::a  n::::n    n::::n
+                   m::::m   m::::m   m::::m a::::aaaa::::::a  n::::n    n::::n
+                   m::::m   m::::m   m::::ma::::a    a:::::a  n::::n    n::::n
+                   m::::m   m::::m   m::::ma::::a    a:::::a  n::::n    n::::n
+                   m::::m   m::::m   m::::ma:::::aaaa::::::a  n::::n    n::::n
+                   m::::m   m::::m   m::::m a::::::::::aa:::a n::::n    n::::n
+                   mmmmmm   mmmmmm   mmmmmm  aaaaaaaaaa  aaaa nnnnnn    nnnnnn
+
+
+                                                 Now attempting installation...
+
+Looking for a previous installation of SDKMAN...
+Looking for unzip...
+Looking for zip...
+Looking for curl...
+Looking for sed...
+Installing SDKMAN scripts...
+Create distribution directories...
+Getting available candidates...
+Prime the config file...
+Download script archive...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0
+100 20670  100 20670    0     0   4020      0  0:00:05  0:00:05 --:--:-- 12720
+Extract script archive...
+Install scripts...
+Set version to 5.5.4+199 ...
+Attempt update of bash profiles...
+Created and initialised /c/Users/Aspire/.bash_profile
+Created and initialised /c/Users/Aspire/.bashrc
+Attempt update of zsh profiles...
+Created and initialised /c/Users/Aspire/.zshrc
+
+
+
+All done!
+
+
+Please open a new terminal, or run the following in the existing one:
+
+    source "/c/Users/Aspire/.sdkman/bin/sdkman-init.sh"
+
+Then issue the following command:
+
+    sdk help
+
+Enjoy!!!
+
+Aspire@Acer MINGW64 /e/Working/Java/Gradle/SDKMAN
+$ source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+Aspire@Acer MINGW64 /e/Working/Java/Gradle/SDKMAN
+$ sdk version
+==== INTERNET NOT REACHABLE! ===================================================
+
+ Some functionality is disabled or only partially available.
+ If this persists, please enable the offline mode:
+
+   $ sdk offline
+
+================================================================================
+
+
+SDKMAN 5.5.4+199
+
+Aspire@Acer MINGW64 /e/Working/Java/Gradle/SDKMAN
+$ sdk selfupdate force
+
+Updating SDKMAN...
+######################################################################## 100.0%
+
+
+Successfully upgraded SDKMAN!
+
+Open a new terminal to start using SDKMAN 5.5.4+199.
+
+To join our BETA channel, simply follow the instructions on:
+
+   http://sdkman.io/install.html
+
+Enjoy!!!
+
+
+Aspire@Acer MINGW64 /e/Working/Java/Gradle/SDKMAN
+$
+
+
+# New Terminal # New Git Bash
+
+Aspire@Acer MINGW64 ~
+$ sdk version
+==== INTERNET NOT REACHABLE! ===================================================
+
+ Some functionality is disabled or only partially available.
+ If this persists, please enable the offline mode:
+
+   $ sdk offline
+
+================================================================================
+
+
+SDKMAN 5.5.4+199
+
+Aspire@Acer MINGW64 ~
+$ sdk offline disable
+Online mode re-enabled!
+
+Aspire@Acer MINGW64 ~
+$ sdk version
+
+SDKMAN 5.5.4+199

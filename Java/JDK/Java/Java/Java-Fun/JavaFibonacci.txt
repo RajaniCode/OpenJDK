@@ -1,0 +1,23 @@
+import static java.lang.System.out;
+import java.util.stream.Stream;
+import java.math.BigInteger;
+
+class Fibonacci {
+    public void print() {
+        // long
+        // Stream.iterate(new long[]{ 1, 1 }, p->new long[]{ p[1], p[0]+p[1] }).limit(92).forEach(p->out.println(p[0]));
+
+        // BigInteger
+        Stream.iterate(new BigInteger[]{ BigInteger.ONE, BigInteger.ONE }, p->new BigInteger[]{ p[1], p[0].add(p[1]) }).forEach(p->System.out.println(p[0]));
+        
+        // nth element from the stream
+        // out.println(Stream.iterate(new long[]{1, 1}, p -> new long[]{p[1], p[0] + p[1]}).limit(91).skip(90).findFirst().get()[1]);
+    }
+}
+
+public class Program {
+    public static void main(String... args) {
+        Fibonacci fib = new Fibonacci();
+        fib.print();
+    }
+}

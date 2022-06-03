@@ -1,0 +1,4 @@
+C:\xampp\php\php.ini
+
+# Uncomment
+extension=php_soap.dll

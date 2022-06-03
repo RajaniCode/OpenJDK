@@ -1,0 +1,34 @@
+bookmarks
+model
+rest
+security
+
+[services.msc Stop Tomcat]
+
+http://localhost:8080/jlong/bookmarks
+
+http://localhost:52292/oauth/token
+
+http://localhost:52292/jlong/bookmarks
+
+src/test/java/bookmarks/BookmarkRestControllerTest.java
+private String userName = "bdussault";
+
+{username=[jlong], password=[password], grant_type=[password]}
+
+POST http://localhost:8080/<x>/oauth/token?token?grant_type=refresh_token&refresh_token=4c48f7a6-eeac-4de2-a0b0-e14445645f4c
+
+request###############################################################################################
+{username=[jlong], password=[password], grant_type=[password]}
+request###############################################################################################
+
+
+http://localhost:8080/oauth/token
+
+{access_token=2a47b2f3-4a29-48f1-96fc-605d0a51ae22, token_type=bearer, refresh_token=6184153b-ddad-46c2-922f-7cdd46106cb7, expires_in=43199, scope=write}
+
+http://localhost:8080/oauth/token?grant_type=refresh_token&refresh_token=6184153b-ddad-46c2-922f-7cdd46106cb7
+
+https://devutilsonline.com/json/convert-http-query-string-to-json
+
+curl -X POST -vu android-bookmarks:123456 http://localhost:8080/oauth/token -H "Accept: application/json" -d "password=password&username=jlong&grant_type=password&scope=write&client_secret=123456&client_id=android-bookmarks"

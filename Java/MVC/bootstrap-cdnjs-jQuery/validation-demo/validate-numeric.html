@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Makes "field" required and a decimal number only.</title>
+   
+        <!--
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
+        -->
+
+        <script src="jQuery/jQuery-3.x/jquery-3.3.1.min.js"></script>
+        <script src="cdnjs/cdnjs/jquery.validate.min.js"></script>       
+        <!--<script src="cdnjs/cdnjs/additional-methods.min.js"></script>-->
+
+    </head>
+    <body>
+        <form id="myform">
+            <label for="field">Required, decimal number: </label>
+            <input type="text" id="field" name="field" />
+            <br/>
+            <input type="submit" value="Validate!" />
+        </form>
+
+        <script>
+            // just for the demos, avoids form submit
+            jQuery.validator.setDefaults({
+                debug: true,
+                success: "valid"
+            });
+            $( "#myform" ).validate({
+                rules: {
+                    field: {
+                        required: true,
+                        number: true
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>

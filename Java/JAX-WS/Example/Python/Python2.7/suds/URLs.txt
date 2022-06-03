@@ -1,0 +1,7 @@
+https://pypi.python.org/pypi/suds
+
+https://fedorahosted.org/suds/
+
+https://svn.fedorahosted.org/svn/suds/
+
+wget -r --no-parent https://svn.fedorahosted.org/svn/suds/

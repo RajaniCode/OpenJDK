@@ -1,0 +1,203 @@
+
+$ java -version
+
+$ mvn -v
+
+$ mkdir -p src/main/java/hello
+
+$ touch pom.xml
+
+# touch pom.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.springframework</groupId>
+    <artifactId>gs-actuator-service</artifactId>
+    <version>0.1.0</version>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.4.2.RELEASE</version>
+    </parent>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
+
+$ touch src/main/java/hello/HelloWorldConfiguration.java
+
+# src/main/java/hello/HelloWorldConfiguration.java
+package hello;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class HelloWorldConfiguration {
+
+    public static void main(String[] args) {
+        SpringApplication.run(HelloWorldConfiguration.class, args);
+    }
+
+}
+
+$ mvn clean package && java -jar target/gs-actuator-service-0.1.0.jar
+
+# Git Bash 2
+
+[
+
+$ curl localhost:8080
+
+http://localhost:8080/
+
+]
+
+$ curl localhost:8080/health
+
+http://localhost:8080/health
+
+cd "E:\Working\Java\Spring\Spring-Boot-Actuator-RESTful\Spring-Boot-Actuator-RESTful-Web-Service"
+
+$ touch src/main/java/hello/Greeting.java
+
+# src/main/java/hello/Greeting.java
+package hello;
+
+public class Greeting {
+
+    private final long id;
+    private final String content;
+
+    public Greeting(long id, String content) {
+        this.id = id;
+        this.content = content;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+}
+
+$ touch src/main/java/hello/HelloWorldController.java
+
+# src/main/java/hello/HelloWorldController.java
+package hello;
+
+import java.util.concurrent.atomic.AtomicLong;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+@Controller
+@RequestMapping("/hello-world")
+public class HelloWorldController {
+
+    private static final String template = "Hello, %s!";
+    private final AtomicLong counter = new AtomicLong();
+
+    @RequestMapping(method=RequestMethod.GET)
+    public @ResponseBody Greeting sayHello(@RequestParam(value="name", required=false, defaultValue="Stranger") String name) {
+        return new Greeting(counter.incrementAndGet(), String.format(template, name));
+    }
+
+}
+
+[
+# src/main/java/hello/HelloWorldConfiguration.java
+package hello;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class HelloWorldConfiguration {
+
+	public static void main(String[] args) {
+		SpringApplication.run(HelloWorldConfiguration.class, args);
+	}
+
+}
+]
+
+$ mvn spring-boot:run
+
+# Git Bash 2
+
+curl localhost:8080/hello-world
+
+http://localhost:8080/hello-world
+
+
+# Jar
+
+$ mvn clean package
+
+$ java -jar target/gs-actuator-service-0.1.0.jar
+
+$ mkdir -p src/main/resources
+
+$ touch src/main/resources/application.properties
+
+# src/main/resources/application.properties
+server.port: 9000
+management.port: 9001
+management.address: 127.0.0.1
+
+$ mvn clean package && java -jar target/gs-actuator-service-0.1.0.jar
+
+[
+curl localhost:8080/hello-world
+]
+
+$ curl localhost:9000/hello-world
+
+localhost:9000/hello-world
+
+$ mkdir -p src/test/java/hello
+
+$ touch src/test/java/hello/HelloWorldConfigurationTests.java
+
+$ mvn clean package && java -jar target/gs-actuator-service-0.1.0.jar
+
+$ curl localhost:9000/hello-world
+
+localhost:9000/hello-world

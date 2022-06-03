@@ -1,0 +1,5 @@
+package com.ps.springmvc.psbankapp.aop;
+
+public class PSBankLoggingAspect {
+
+}

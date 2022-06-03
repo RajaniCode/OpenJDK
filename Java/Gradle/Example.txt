@@ -1,0 +1,130 @@
+https://spring.io/guides/gs/gradle/
+
+$ java -version
+
+[
+$ sdk offline disable
+]
+
+$ sdk version
+
+$ gradle --version
+
+$ cd "E:\Working\Java\Gradle\Example"
+
+$ git clone https://github.com/spring-guides/gs-gradle.git
+
+$ cd gs-gradle/initial
+
+[
+$ mkdir -p src/main/java/hello
+]
+
+$ ls src/main/java/hello
+
+$ cat src/main/java/hello/HelloWorld.java
+
+$ cat src/main/java/hello/Greeter.java
+
+$ gradle tasks
+
+$ gradle build
+
+# build.gradle # repositories # sourceCompatibility # dependencies # jar
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile "joda-time:joda-time:2.2"
+    testCompile "junit:junit:4.12"
+}
+
+jar {
+    baseName = 'gs-gradle'
+    version =  '0.1.0'
+}
+
+$ cat build.gradle
+
+$ gradle build
+
+
+# Gradle Wrapper
+
+$ gradle wrapper --gradle-version 2.13
+
+$ ./gradlew build
+
+$ jar tvf build/libs/gs-gradle-0.1.0.jar
+
+$ jar tvf build/libs/initial.jar
+
+# build.gradle # apply plugin: 'application' # mainClassName = 'hello.HelloWorld'
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'hello.HelloWorld'
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile "joda-time:joda-time:2.2"
+    testCompile "junit:junit:4.12"
+}
+
+jar {
+    baseName = 'gs-gradle'
+    version =  '0.1.0'
+}
+
+$ cat build.gradle
+
+$ ./gradlew run
+
+# build.gradle # apply plugin: 'eclipse'
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'application'
+
+mainClassName = 'hello.HelloWorld'
+
+// tag::repositories[]
+repositories {
+    mavenCentral()
+}
+// end::repositories[]
+
+// tag::jar[]
+jar {
+    baseName = 'gs-gradle'
+    version =  '0.1.0'
+}
+// end::jar[]
+
+// tag::dependencies[]
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile "joda-time:joda-time:2.2"
+    testCompile "junit:junit:4.12"
+}
+// end::dependencies[]
+
+// tag::wrapper[]
+// end::wrapper[]
+
+$ cat build.gradle
+
+$ ./gradlew run

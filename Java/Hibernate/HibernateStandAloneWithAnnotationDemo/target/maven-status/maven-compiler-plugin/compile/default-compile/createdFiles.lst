@@ -1,0 +1,3 @@
+com\websystique\hibernate\HibernateUtil.class
+com\websystique\hibernate\model\Student.class
+com\websystique\hibernate\HibernateStandAloneDemo.class

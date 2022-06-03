@@ -1,0 +1,57 @@
+SOAP client libraries exist for Python
+
+http://stackoverflow.com/questions/206154/what-soap-client-libraries-exist-for-python-and-where-is-the-documentation-for
+
+Older libraries:
+
+SOAPy[http://soapy.sourceforge.net/]: Was the "best," but no longer maintained. Does not work on Python 2.5+
+
+ZSI[http://pywebsvcs.sourceforge.net/]: Very painful to use, and development is slow. Has a module called "SOAPpy", which is different than SOAPy (above).
+
+"Newer" libraries:
+
+SUDS[https://fedorahosted.org/suds/]: Very Pythonic, and easy to create WSDL-consuming SOAP clients. Creating SOAP servers is a little bit more difficult. (This package does not work with python3.)
+
+spyne[https://github.com/arskom/spyne]: Creating servers is easy, creating clients a little bit more challenging. Documentation is somewhat lacking.
+
+ladon[https://pypi.python.org/pypi/ladon]: Creating servers is much like in soaplib (using a decorator). Ladon exposes more interfaces than SOAP at the same time without extra user code needed.
+
+pysimplesoap[https://code.google.com/archive/p/pysimplesoap/]: very lightweight but useful for both client and server - includes a web2py server integration that ships with web2py.
+
+SOAPpy[https://github.com/kiorky/SOAPpy]: Distinct from the abandoned SOAPpy that's hosted at the ZSI link above, this version was actually maintained until 2011, now it seems to be abandoned too.
+
+soaplib[https://pypi.python.org/pypi/soaplib?]: Easy to use python library for writing and calling soap web services. Webservices written with soaplib are simple, lightweight, work well with other SOAP implementations, and can be deployed as WSGI applications.
+
+osa[https://bitbucket.org/sboz/osa/wiki/Home]: A fast/slim easy to use SOAP python client library.
+
+
+
+Check:
+
+https://www.reddit.com/r/Python/comments/2i330i/python_wsdl/
+
+https://pypi.python.org/pypi/Flask-Spyne
+
+http://www.ebi.ac.uk/Tools/webservices/tutorials/06_programming/python/soap/soappy
+
+http://spyne.io/#inprot=HttpRpc&outprot=JsonDocument&s=rpc&tpt=WsgiApplication&validator=true
+
+http://ladonize.org/index.php/Main_About
+
+https://pypi.python.org/pypi/Flask-Spyne/0.2
+
+http://soaplib.github.io/soaplib/2_0/
+
+https://github.com/soaplib/soaplib/tree/1_0
+
+http://web2py.com/books/default/chapter/29/10/services#SOAP
+
+http://stackoverflow.com/questions/206154/what-soap-client-libraries-exist-for-python-and-where-is-the-documentation-for
+
+http://flylib.com/books/en/2.243.1.111/1/
+
+http://stackoverflow.com/questions/32134362/python-install-xmlrpclib
+
+http://effbot.org
+
+http://effbot.org/downloads/#xmlrpclib

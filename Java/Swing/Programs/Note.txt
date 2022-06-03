@@ -1,0 +1,18 @@
+cd /Users/rajaniapple/Desktop/GitHub/JavaUpdate/Swing/Programs
+
+java start/Program.java
+
+javac start/Program.java
+
+java start.Program
+
+
+java start/JavaxSwing.java
+
+javac start/JavaxSwing.java
+
+java start.JavaxSwing
+
+
+
+

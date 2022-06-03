@@ -1,0 +1,314 @@
+
+rajanis@MSSPLLAP165 MINGW64 /
+$ export JAVA_HOME="/C/Program Files/Java/jdk-14.0.2"
+
+rajanis@MSSPLLAP165 MINGW64 /
+$ export M2_HOME="/C/Program Files/Apache Software Foundation/apache-maven-3.6.3"
+
+rajanis@MSSPLLAP165 MINGW64 /
+$ export M2="$M2_HOME/bin"
+
+rajanis@MSSPLLAP165 MINGW64 /
+$ export PATH=$PATH:"$M2:$JAVA_HOME/bin"
+
+rajanis@MSSPLLAP165 MINGW64 /
+$ export MAVEN_OPTS="-Xms256m -Xmx512m"
+
+rajanis@MSSPLLAP165 MINGW64 /
+$ java --version
+java 14.0.2 2020-07-14
+Java(TM) SE Runtime Environment (build 14.0.2+12-46)
+Java HotSpot(TM) 64-Bit Server VM (build 14.0.2+12-46, mixed mode, sharing)
+
+rajanis@MSSPLLAP165 MINGW64 /
+$ mvn -v
+Apache Maven 3.6.3 (cecedd343002696d0abb50b32b541b8a6ba2883f)
+Maven home: C:\Program Files\Apache Software Foundation\apache-maven-3.6.3
+Java version: 14.0.2, vendor: Oracle Corporation, runtime: C:\Program Files\Java\jdk-14.0.2
+Default locale: en_GB, platform encoding: Cp1252
+OS name: "windows 10", version: "10.0", arch: "amd64", family: "windows"
+
+rajanis@MSSPLLAP165 MINGW64 /
+$ cd "D:\RajaniS Master Folder\Java\Spring\2020\Spring4MVCCRUDRestServiceCORS\Spring4MVCCRUDRestServiceCORS"
+
+rajanis@MSSPLLAP165 MINGW64 /d/RajaniS Master Folder/Java/Spring/2020/Spring4MVCCRUDRestServiceCORS/Spring4MVCCRUDRestServiceCORS
+$ mvn package
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ---------< com.rajani.springmvc:Spring4MVCCRUDRestServiceCORS >---------
+[INFO] Building Spring4MVCCRUDRestServiceCORS Maven Webapp 1.0.0
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ Spring4MVCCRUDRestServiceCORS ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ Spring4MVCCRUDRestServiceCORS ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 7 source files to D:\RajaniS Master Folder\Java\Spring\2020\Spring4MVCCRUDRestServiceCORS\Spring4MVCCRUDRestServiceCORS\target\classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ Spring4MVCCRUDRestServiceCORS ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory D:\RajaniS Master Folder\Java\Spring\2020\Spring4MVCCRUDRestServiceCORS\Spring4MVCCRUDRestServiceCORS\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ Spring4MVCCRUDRestServiceCORS ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to D:\RajaniS Master Folder\Java\Spring\2020\Spring4MVCCRUDRestServiceCORS\Spring4MVCCRUDRestServiceCORS\target\test-classes
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ Spring4MVCCRUDRestServiceCORS ---
+[INFO]
+[INFO] --- maven-war-plugin:2.4:war (default-war) @ Spring4MVCCRUDRestServiceCORS ---
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.thoughtworks.xstream.converters.collections.TreeMapConverter (file:/C:/Users/rajanis/.m2/repository/com/thoughtworks/xstream/xstream/1.4.2/xstream-1.4.2.jar) to field java.util.TreeMap.comparator
+WARNING: Please consider reporting this to the maintainers of com.thoughtworks.xstream.converters.collections.TreeMapConverter
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[INFO] Packaging webapp
+[INFO] Assembling webapp [Spring4MVCCRUDRestServiceCORS] in [D:\RajaniS Master Folder\Java\Spring\2020\Spring4MVCCRUDRestServiceCORS\Spring4MVCCRUDRestServiceCORS\target\Spring4MVCCRUDRestServiceCORS]
+[INFO] Processing war project
+[INFO] Copying webapp resources [D:\RajaniS Master Folder\Java\Spring\2020\Spring4MVCCRUDRestServiceCORS\Spring4MVCCRUDRestServiceCORS\src\main\webapp]
+[INFO] Webapp assembled in [96 msecs]
+[INFO] Building war: D:\RajaniS Master Folder\Java\Spring\2020\Spring4MVCCRUDRestServiceCORS\Spring4MVCCRUDRestServiceCORS\target\Spring4MVCCRUDRestServiceCORS.war
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.674 s
+[INFO] Finished at: 2020-09-29T18:36:57+05:30
+[INFO] ------------------------------------------------------------------------
+
+rajanis@MSSPLLAP165 MINGW64 /d/RajaniS Master Folder/Java/Spring/2020/Spring4MVCCRUDRestServiceCORS/Spring4MVCCRUDRestServiceCORS
+$ jar tvf target/Spring4MVCCRUDRestServiceCORS.war
+     0 Tue Sep 29 18:36:58 IST 2020 META-INF/
+   130 Tue Sep 29 18:36:56 IST 2020 META-INF/MANIFEST.MF
+     0 Tue Sep 29 18:36:58 IST 2020 WEB-INF/
+     0 Tue Sep 29 18:36:58 IST 2020 WEB-INF/classes/
+     0 Tue Sep 29 18:36:58 IST 2020 WEB-INF/classes/com/
+     0 Tue Sep 29 18:36:58 IST 2020 WEB-INF/classes/com/rajani/
+     0 Tue Sep 29 18:36:58 IST 2020 WEB-INF/classes/com/rajani/springmvc/
+     0 Tue Sep 29 18:36:58 IST 2020 WEB-INF/classes/com/rajani/springmvc/configuration/
+     0 Tue Sep 29 18:36:58 IST 2020 WEB-INF/classes/com/rajani/springmvc/controller/
+     0 Tue Sep 29 18:36:58 IST 2020 WEB-INF/classes/com/rajani/springmvc/model/
+     0 Tue Sep 29 18:36:58 IST 2020 WEB-INF/classes/com/rajani/springmvc/service/
+     0 Tue Sep 29 18:36:58 IST 2020 WEB-INF/lib/
+  1756 Tue Sep 29 18:36:58 IST 2020 WEB-INF/classes/com/rajani/springmvc/configuration/CORSFilter.class
+   639 Tue Sep 29 18:36:58 IST 2020 WEB-INF/classes/com/rajani/springmvc/configuration/HelloWorldConfiguration.class
+  1164 Tue Sep 29 18:36:58 IST 2020 WEB-INF/classes/com/rajani/springmvc/configuration/HelloWorldInitializer.class
+  5785 Tue Sep 29 18:36:58 IST 2020 WEB-INF/classes/com/rajani/springmvc/controller/HelloWorldRestController.class
+  2190 Tue Sep 29 18:36:58 IST 2020 WEB-INF/classes/com/rajani/springmvc/model/User.class
+   590 Tue Sep 29 18:36:58 IST 2020 WEB-INF/classes/com/rajani/springmvc/service/UserService.class
+  3348 Tue Sep 29 18:36:58 IST 2020 WEB-INF/classes/com/rajani/springmvc/service/UserServiceImpl.class
+  4467 Tue Sep 29 00:22:48 IST 2020 WEB-INF/lib/aopalliance-1.0.jar
+ 61829 Tue Sep 29 18:07:44 IST 2020 WEB-INF/lib/commons-logging-1.2.jar
+ 39815 Tue Sep 29 18:08:28 IST 2020 WEB-INF/lib/jackson-annotations-2.5.0.jar
+229998 Tue Sep 29 18:08:48 IST 2020 WEB-INF/lib/jackson-core-2.5.3.jar
+1143162 Tue Sep 29 18:09:32 IST 2020 WEB-INF/lib/jackson-databind-2.5.3.jar
+ 95806 Tue Sep 29 00:23:40 IST 2020 WEB-INF/lib/javax.servlet-api-3.1.0.jar
+363974 Tue Sep 29 18:07:38 IST 2020 WEB-INF/lib/spring-aop-4.2.0.RELEASE.jar
+729550 Tue Sep 29 18:08:10 IST 2020 WEB-INF/lib/spring-beans-4.2.0.RELEASE.jar
+1084471 Tue Sep 29 18:08:24 IST 2020 WEB-INF/lib/spring-context-4.2.0.RELEASE.jar
+1052383 Tue Sep 29 18:08:26 IST 2020 WEB-INF/lib/spring-core-4.2.0.RELEASE.jar
+262391 Tue Sep 29 18:08:02 IST 2020 WEB-INF/lib/spring-expression-4.2.0.RELEASE.jar
+262961 Tue Sep 29 18:08:28 IST 2020 WEB-INF/lib/spring-tx-4.2.0.RELEASE.jar
+765877 Tue Sep 29 18:09:00 IST 2020 WEB-INF/lib/spring-web-4.2.0.RELEASE.jar
+865404 Tue Sep 29 18:08:10 IST 2020 WEB-INF/lib/spring-webmvc-4.2.0.RELEASE.jar
+  2359 Tue Sep 29 18:35:30 IST 2020 META-INF/maven/com.rajani.springmvc/Spring4MVCCRUDRestServiceCORS/pom.xml
+   139 Tue Sep 29 18:36:58 IST 2020 META-INF/maven/com.rajani.springmvc/Spring4MVCCRUDRestServiceCORS/pom.properties
+
+rajanis@MSSPLLAP165 MINGW64 /d/RajaniS Master Folder/Java/Spring/2020/Spring4MVCCRUDRestServiceCORS/Spring4MVCCRUDRestServiceCORS
+$ cp "D:\RajaniS Master Folder\Java\Spring\2020\Spring4MVCCRUDRestServiceCORS\Spring4MVCCRUDRestServiceCORS\target\Spring4MVCCRUDRestServiceCORS.war" "C:\Users\rajanis\Downloads\Java\Apache Tomcat\Tomcat 9.0\webapps"
+
+rajanis@MSSPLLAP165 MINGW64 /d/RajaniS Master Folder/Java/Spring/2020/Spring4MVCCRUDRestServiceCORS/Spring4MVCCRUDRestServiceCORS
+$ cp -r "D:\RajaniS Master Folder\Java\Spring\2020\Spring4MVCCRUDRestServiceCORS\Spring4MVCCRUDRestServiceCORS\target\Spring4MVCCRUDRestServiceCORS" "C:\Users\rajanis\Downloads\Java\Apache Tomcat\Tomcat 9.0\webapps\Spring4MVCCRUDRestServiceCORS"
+
+rajanis@MSSPLLAP165 MINGW64 /d/RajaniS Master Folder/Java/Spring/2020/Spring4MVCCRUDRestServiceCORS/Spring4MVCCRUDRestServiceCORS
+$ cd "C:\Users\rajanis\Downloads\Java\Apache Tomcat\Tomcat 9.0\bin"
+
+rajanis@MSSPLLAP165 MINGW64 ~/Downloads/Java/Apache Tomcat/Tomcat 9.0/bin
+$ ./startup.sh
+Using CATALINA_BASE:   /c/Users/rajanis/Downloads/Java/Apache Tomcat/Tomcat 9.0
+Using CATALINA_HOME:   /c/Users/rajanis/Downloads/Java/Apache Tomcat/Tomcat 9.0
+Using CATALINA_TMPDIR: /c/Users/rajanis/Downloads/Java/Apache Tomcat/Tomcat 9.0/temp
+Using JRE_HOME:        /C/Program Files/Java/jdk-14.0.2
+Using CLASSPATH:       /c/Users/rajanis/Downloads/Java/Apache Tomcat/Tomcat 9.0/bin/bootstrap.jar:/c/Users/rajanis/Downloads/Java/Apache Tomcat/Tomcat 9.0/bin/tomcat-juli.jar
+Using CATALINA_OPTS:
+Tomcat started.
+
+rajanis@MSSPLLAP165 MINGW64 ~/Downloads/Java/Apache Tomcat/Tomcat 9.0/bin
+$ start http://localhost:5050/
+
+rajanis@MSSPLLAP165 MINGW64 ~/Downloads/Java/Apache Tomcat/Tomcat 9.0/bin
+$ cd "D:\RajaniS Master Folder\Java\Spring\2020\Spring4MVCCRUDRestServiceCORS\Spring4MVCCRUDRestServiceCORS"
+
+rajanis@MSSPLLAP165 MINGW64 /d/RajaniS Master Folder/Java/Spring/2020/Spring4MVCCRUDRestServiceCORS/Spring4MVCCRUDRestServiceCORS
+$ vim "D:\RajaniS Master Folder\Java\Spring\2020\Spring4MVCCRUDRestServiceCORS\Spring4MVCCRUDRestServiceCORS\src\test\java\com\rajani\springmvc\SpringRestTestClient.java"
+
+rajanis@MSSPLLAP165 MINGW64 /d/RajaniS Master Folder/Java/Spring/2020/Spring4MVCCRUDRestServiceCORS/Spring4MVCCRUDRestServiceCORS
+$ cat "D:\RajaniS Master Folder\Java\Spring\2020\Spring4MVCCRUDRestServiceCORS\Spring4MVCCRUDRestServiceCORS\src\test\java\com\rajani\springmvc\SpringRestTestClient.java"
+package com.rajani.springmvc;
+
+import java.net.URI;
+import java.util.LinkedHashMap;
+import java.util.List;
+
+import org.springframework.web.client.RestTemplate;
+
+import com.rajani.springmvc.model.User;
+
+public class SpringRestTestClient {
+
+    // public static final String REST_SERVICE_URI = "http://localhost:8080/Spring4MVCCRUDRestServiceCORS";
+    public static final String REST_SERVICE_URI = "http://localhost:5050/Spring4MVCCRUDRestServiceCORS";
+
+    /* GET */
+    @SuppressWarnings("unchecked")
+    private static void listAllUsers(){
+        System.out.println("Testing listAllUsers API-----------");
+
+        RestTemplate restTemplate = new RestTemplate();
+        List<LinkedHashMap<String, Object>> usersMap = restTemplate.getForObject(REST_SERVICE_URI+"/user/", List.class);
+
+        if(usersMap!=null){
+            for(LinkedHashMap<String, Object> map : usersMap){
+                System.out.println("User : id="+map.get("id")+", Name="+map.get("name")+", Age="+map.get("age")+", Salary="+map.get("salary"));;
+            }
+        }else{
+            System.out.println("No user exist----------");
+        }
+    }
+
+    /* GET */
+    private static void getUser(){
+        System.out.println("Testing getUser API----------");
+        RestTemplate restTemplate = new RestTemplate();
+        User user = restTemplate.getForObject(REST_SERVICE_URI+"/user/1", User.class);
+        System.out.println(user);
+    }
+
+    /* POST */
+    private static void createUser() {
+        System.out.println("Testing create User API----------");
+        RestTemplate restTemplate = new RestTemplate();
+        User user = new User(0,"Sarah",51,134);
+        URI uri = restTemplate.postForLocation(REST_SERVICE_URI+"/user/", user, User.class);
+        System.out.println("Location : "+uri.toASCIIString());
+    }
+
+    /* PUT */
+    private static void updateUser() {
+        System.out.println("Testing update User API----------");
+        RestTemplate restTemplate = new RestTemplate();
+        User user  = new User(1,"Tomy",33, 70000);
+        restTemplate.put(REST_SERVICE_URI+"/user/1", user);
+        System.out.println(user);
+    }
+
+    /* DELETE */
+    private static void deleteUser() {
+        System.out.println("Testing delete User API----------");
+        RestTemplate restTemplate = new RestTemplate();
+        restTemplate.delete(REST_SERVICE_URI+"/user/3");
+    }
+
+
+    /* DELETE */
+    private static void deleteAllUsers() {
+        System.out.println("Testing all delete Users API----------");
+        RestTemplate restTemplate = new RestTemplate();
+        restTemplate.delete(REST_SERVICE_URI+"/user/");
+    }
+
+    public static void main(String args[]){
+        listAllUsers();
+        getUser();
+        createUser();
+        listAllUsers();
+        updateUser();
+        listAllUsers();
+        deleteUser();
+        listAllUsers();
+        deleteAllUsers();
+        listAllUsers();
+    }
+}
+
+rajanis@MSSPLLAP165 MINGW64 /d/RajaniS Master Folder/Java/Spring/2020/Spring4MVCCRUDRestServiceCORS/Spring4MVCCRUDRestServiceCORS
+$ mvn -Dexec.mainClass=com.rajani.springmvc.SpringRestTestClient -Dexec.classpathScope=test test-compile exec:java
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ---------< com.rajani.springmvc:Spring4MVCCRUDRestServiceCORS >---------
+[INFO] Building Spring4MVCCRUDRestServiceCORS Maven Webapp 1.0.0
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ Spring4MVCCRUDRestServiceCORS ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ Spring4MVCCRUDRestServiceCORS ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ Spring4MVCCRUDRestServiceCORS ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory D:\RajaniS Master Folder\Java\Spring\2020\Spring4MVCCRUDRestServiceCORS\Spring4MVCCRUDRestServiceCORS\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ Spring4MVCCRUDRestServiceCORS ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to D:\RajaniS Master Folder\Java\Spring\2020\Spring4MVCCRUDRestServiceCORS\Spring4MVCCRUDRestServiceCORS\target\test-classes
+[INFO]
+[INFO] --- exec-maven-plugin:3.0.0:java (default-cli) @ Spring4MVCCRUDRestServiceCORS ---
+Testing listAllUsers API-----------
+User : id=1, Name=Sam, Age=30, Salary=70000.0
+User : id=2, Name=Tom, Age=40, Salary=50000.0
+User : id=3, Name=Jerome, Age=45, Salary=30000.0
+User : id=4, Name=Silvia, Age=50, Salary=40000.0
+Testing getUser API----------
+User [id=1, name=Sam, age=30, salary=70000.0]
+Testing create User API----------
+Location : http://localhost:5050/Spring4MVCCRUDRestServiceCORS/user/5
+Testing listAllUsers API-----------
+User : id=1, Name=Sam, Age=30, Salary=70000.0
+User : id=2, Name=Tom, Age=40, Salary=50000.0
+User : id=3, Name=Jerome, Age=45, Salary=30000.0
+User : id=4, Name=Silvia, Age=50, Salary=40000.0
+User : id=5, Name=Sarah, Age=51, Salary=134.0
+Testing update User API----------
+User [id=1, name=Tomy, age=33, salary=70000.0]
+Testing listAllUsers API-----------
+User : id=1, Name=Tomy, Age=33, Salary=70000.0
+User : id=2, Name=Tom, Age=40, Salary=50000.0
+User : id=3, Name=Jerome, Age=45, Salary=30000.0
+User : id=4, Name=Silvia, Age=50, Salary=40000.0
+User : id=5, Name=Sarah, Age=51, Salary=134.0
+Testing delete User API----------
+Testing listAllUsers API-----------
+User : id=1, Name=Tomy, Age=33, Salary=70000.0
+User : id=2, Name=Tom, Age=40, Salary=50000.0
+User : id=4, Name=Silvia, Age=50, Salary=40000.0
+User : id=5, Name=Sarah, Age=51, Salary=134.0
+Testing all delete Users API----------
+Testing listAllUsers API-----------
+No user exist----------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.553 s
+[INFO] Finished at: 2020-09-29T19:13:40+05:30
+[INFO] ------------------------------------------------------------------------
+
+rajanis@MSSPLLAP165 MINGW64 /d/RajaniS Master Folder/Java/Spring/2020/Spring4MVCCRUDRestServiceCORS/Spring4MVCCRUDRestServiceCORS
+$ cd "C:\Users\rajanis\Downloads\Java\Apache Tomcat\Tomcat 9.0\bin"
+
+rajanis@MSSPLLAP165 MINGW64 ~/Downloads/Java/Apache Tomcat/Tomcat 9.0/bin
+$ ./shutdown.sh
+Using CATALINA_BASE:   /c/Users/rajanis/Downloads/Java/Apache Tomcat/Tomcat 9.0
+Using CATALINA_HOME:   /c/Users/rajanis/Downloads/Java/Apache Tomcat/Tomcat 9.0
+Using CATALINA_TMPDIR: /c/Users/rajanis/Downloads/Java/Apache Tomcat/Tomcat 9.0/temp
+Using JRE_HOME:        /C/Program Files/Java/jdk-14.0.2
+Using CLASSPATH:       /c/Users/rajanis/Downloads/Java/Apache Tomcat/Tomcat 9.0/bin/bootstrap.jar:/c/Users/rajanis/Downloads/Java/Apache Tomcat/Tomcat 9.0/bin/tomcat-juli.jar
+Using CATALINA_OPTS:
+NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+
+rajanis@MSSPLLAP165 MINGW64 ~/Downloads/Java/Apache Tomcat/Tomcat 9.0/bin
+$

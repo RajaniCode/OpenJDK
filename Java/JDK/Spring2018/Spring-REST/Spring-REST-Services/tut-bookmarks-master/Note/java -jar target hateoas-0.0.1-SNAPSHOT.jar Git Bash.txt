@@ -1,0 +1,226 @@
+
+Aspire@Acer MINGW64 ~
+$ java -version
+java version "1.8.0_102"
+Java(TM) SE Runtime Environment (build 1.8.0_102-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.102-b14, mixed mode)
+
+Aspire@Acer MINGW64 ~
+$ mvn -v
+Apache Maven 3.3.9 (bb52d8502b132ec0a5a3f4c09453c07478323dc5; 2015-11-10T22:11:47+05:30)
+Maven home: C:\Program Files\Apache Software Foundation\apache-maven-3.3.9
+Java version: 1.8.0_102, vendor: Oracle Corporation
+Java home: C:\Program Files\Java\jdk1.8.0_102\jre
+Default locale: en_US, platform encoding: Cp1252
+OS name: "windows 8.1", version: "6.3", arch: "amd64", family: "dos"
+
+Aspire@Acer MINGW64 ~
+$ cd "E:\Working\Java\Spring\Spring-REST\Spring-REST-Services\tut-bookmarks-master\hateoas"
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-REST/Spring-REST-Services/tut-bookmarks-master/hateoas
+$ jar tvf target/hateoas-0.0.1-SNAPSHOT.jar
+     0 Thu Dec 08 21:21:50 IST 2016 META-INF/
+   416 Thu Dec 08 21:21:50 IST 2016 META-INF/MANIFEST.MF
+     0 Thu Dec 08 21:21:34 IST 2016 bookmarks/
+  3136 Thu Dec 08 21:21:34 IST 2016 bookmarks/Application.class
+  1185 Thu Dec 08 21:21:34 IST 2016 bookmarks/BookmarkControllerAdvice.class
+  1688 Thu Dec 08 21:21:34 IST 2016 bookmarks/BookmarkResource.class
+  5776 Thu Dec 08 21:21:34 IST 2016 bookmarks/BookmarkRestController.class
+   595 Thu Dec 08 21:21:34 IST 2016 bookmarks/UserNotFoundException.class
+     0 Thu Dec 08 21:21:52 IST 2016 META-INF/maven/
+     0 Thu Dec 08 21:21:52 IST 2016 META-INF/maven/bookmarks/
+     0 Thu Dec 08 21:21:52 IST 2016 META-INF/maven/bookmarks/hateoas/
+  1423 Fri Nov 04 20:49:40 IST 2016 META-INF/maven/bookmarks/hateoas/pom.xml
+   115 Thu Dec 08 21:21:52 IST 2016 META-INF/maven/bookmarks/hateoas/pom.properties
+     0 Thu Dec 08 21:21:50 IST 2016 lib/
+ 19896 Thu Mar 05 02:12:12 IST 2015 lib/spring-plugin-core-1.2.0.RELEASE.jar
+731562 Fri May 06 07:26:12 IST 2016 lib/spring-beans-4.2.6.RELEASE.jar
+1096730 Fri May 06 07:26:38 IST 2016 lib/spring-context-4.2.6.RELEASE.jar
+262993 Fri May 06 07:26:18 IST 2016 lib/spring-expression-4.2.6.RELEASE.jar
+371197 Fri May 06 07:26:16 IST 2016 lib/spring-aop-4.2.6.RELEASE.jar
+  4467 Fri Mar 19 14:57:02 IST 2004 lib/aopalliance-1.0.jar
+ 41071 Mon Apr 04 20:36:42 IST 2016 lib/slf4j-api-1.7.21.jar
+177048 Tue Sep 01 00:09:50 IST 2015 lib/spring-hateoas-0.19.0.RELEASE.jar
+1096425 Fri May 06 07:26:02 IST 2016 lib/spring-core-4.2.6.RELEASE.jar
+767148 Fri May 06 07:27:36 IST 2016 lib/spring-web-4.2.6.RELEASE.jar
+877630 Fri May 06 07:28:58 IST 2016 lib/spring-webmvc-4.2.6.RELEASE.jar
+  4070 Thu Dec 08 21:20:34 IST 2016 lib/model-0.0.1-SNAPSHOT.jar
+1762629 Thu Jan 21 17:48:28 IST 2016 lib/h2-1.4.191.jar
+  2370 Tue May 10 05:04:48 IST 2016 lib/spring-boot-starter-data-jpa-1.3.5.RELEASE.jar
+  2182 Tue May 10 05:04:34 IST 2016 lib/spring-boot-starter-aop-1.3.5.RELEASE.jar
+1864922 Mon Mar 14 14:18:26 IST 2016 lib/aspectjweaver-1.8.9.jar
+  2192 Tue May 10 05:04:46 IST 2016 lib/spring-boot-starter-jdbc-1.3.5.RELEASE.jar
+135947 Fri Mar 18 20:32:34 IST 2016 lib/tomcat-jdbc-8.0.33.jar
+ 40845 Fri Mar 18 20:32:26 IST 2016 lib/tomcat-juli-8.0.33.jar
+423724 Fri May 06 07:26:46 IST 2016 lib/spring-jdbc-4.2.6.RELEASE.jar
+648087 Wed Aug 05 20:58:50 IST 2015 lib/hibernate-entitymanager-4.3.11.Final.jar
+ 66802 Thu May 28 09:49:34 IST 2015 lib/jboss-logging-3.3.0.Final.jar
+ 11558 Tue Jun 18 18:41:54 IST 2013 lib/jboss-logging-annotations-1.2.0.Beta1.jar
+5283651 Wed Aug 05 20:54:46 IST 2015 lib/hibernate-core-4.3.11.Final.jar
+445288 Wed Sep 06 11:15:06 IST 2006 lib/antlr-2.7.7.jar
+ 76551 Wed May 22 14:55:26 IST 2013 lib/jandex-1.1.0.Final.jar
+313898 Mon May 16 14:19:12 IST 2005 lib/dom4j-1.6.1.jar
+109318 Sun Dec 01 11:57:26 IST 2002 lib/xml-apis-1.0.b2.jar
+ 75324 Fri Jul 11 23:23:42 IST 2014 lib/hibernate-commons-annotations-4.0.5.Final.jar
+113371 Fri Jul 26 12:01:34 IST 2013 lib/hibernate-jpa-2.1-api-1.0.0.Final.jar
+714194 Fri Aug 30 13:01:18 IST 2013 lib/javassist-3.18.1-GA.jar
+ 30724 Mon May 13 15:11:34 IST 2013 lib/javax.transaction-api-1.2.jar
+256353 Tue Feb 23 04:49:10 IST 2016 lib/spring-data-jpa-1.9.4.RELEASE.jar
+638920 Tue Feb 23 04:33:42 IST 2016 lib/spring-data-commons-1.11.4.RELEASE.jar
+466616 Fri May 06 07:28:02 IST 2016 lib/spring-orm-4.2.6.RELEASE.jar
+265182 Fri May 06 07:26:42 IST 2016 lib/spring-tx-4.2.6.RELEASE.jar
+ 16431 Mon Apr 04 20:38:46 IST 2016 lib/jcl-over-slf4j-1.7.21.jar
+ 58363 Fri May 06 07:29:40 IST 2016 lib/spring-aspects-4.2.6.RELEASE.jar
+  2226 Tue May 10 05:03:24 IST 2016 lib/spring-boot-starter-web-1.3.5.RELEASE.jar
+  2218 Tue May 10 05:03:20 IST 2016 lib/spring-boot-starter-1.3.5.RELEASE.jar
+548397 Tue May 10 04:56:00 IST 2016 lib/spring-boot-1.3.5.RELEASE.jar
+757978 Tue May 10 05:00:14 IST 2016 lib/spring-boot-autoconfigure-1.3.5.RELEASE.jar
+  2253 Tue May 10 05:03:20 IST 2016 lib/spring-boot-starter-logging-1.3.5.RELEASE.jar
+304075 Tue Mar 29 22:24:50 IST 2016 lib/logback-classic-1.1.7.jar
+470782 Tue Mar 29 22:23:42 IST 2016 lib/logback-core-1.1.7.jar
+  4597 Mon Apr 04 20:39:24 IST 2016 lib/jul-to-slf4j-1.7.21.jar
+ 23646 Mon Apr 04 20:39:02 IST 2016 lib/log4j-over-slf4j-1.7.21.jar
+269579 Tue Aug 18 22:07:32 IST 2015 lib/snakeyaml-1.16.jar
+  2218 Tue May 10 05:03:22 IST 2016 lib/spring-boot-starter-tomcat-1.3.5.RELEASE.jar
+2843460 Fri Mar 18 20:32:44 IST 2016 lib/tomcat-embed-core-8.0.33.jar
+238295 Fri Mar 18 20:32:46 IST 2016 lib/tomcat-embed-el-8.0.33.jar
+ 40845 Fri Mar 18 20:32:46 IST 2016 lib/tomcat-embed-logging-juli-8.0.33.jar
+247613 Fri Mar 18 20:32:46 IST 2016 lib/tomcat-embed-websocket-8.0.33.jar
+  2243 Tue May 10 05:03:22 IST 2016 lib/spring-boot-starter-validation-1.3.5.RELEASE.jar
+704465 Wed Feb 17 16:15:16 IST 2016 lib/hibernate-validator-5.2.4.Final.jar
+ 63777 Wed Apr 10 15:02:44 IST 2013 lib/validation-api-1.1.0.Final.jar
+ 62873 Tue Aug 19 17:21:32 IST 2014 lib/classmate-1.1.0.jar
+1170626 Mon Apr 04 18:23:08 IST 2016 lib/jackson-databind-2.6.6.jar
+ 46988 Mon Apr 04 18:17:58 IST 2016 lib/jackson-annotations-2.6.6.jar
+258917 Mon Apr 04 18:17:16 IST 2016 lib/jackson-core-2.6.6.jar
+450757 Sat Feb 20 16:21:40 IST 2016 lib/spring-security-oauth2-2.0.9.RELEASE.jar
+357254 Thu Feb 25 13:53:16 IST 2016 lib/spring-security-core-4.0.4.RELEASE.jar
+473345 Thu Feb 25 13:53:40 IST 2016 lib/spring-security-config-4.0.4.RELEASE.jar
+326872 Thu Feb 25 13:53:30 IST 2016 lib/spring-security-web-4.0.4.RELEASE.jar
+263965 Fri Dec 20 22:57:08 IST 2013 lib/commons-codec-1.9.jar
+780664 Sun Jul 14 20:03:06 IST 2013 lib/jackson-mapper-asl-1.9.13.jar
+232248 Sun Jul 14 20:03:06 IST 2013 lib/jackson-core-asl-1.9.13.jar
+     0 Thu Dec 08 21:21:50 IST 2016 org/
+     0 Thu Dec 08 21:21:50 IST 2016 org/springframework/
+     0 Thu Dec 08 21:21:50 IST 2016 org/springframework/boot/
+     0 Thu Dec 08 21:21:50 IST 2016 org/springframework/boot/loader/
+  1257 Tue May 10 04:53:50 IST 2016 org/springframework/boot/loader/LaunchedURLClassLoader$Java7LockProvider.class
+  1680 Tue May 10 04:53:50 IST 2016 org/springframework/boot/loader/PropertiesLauncher$ArchiveEntryFilter.class
+  1964 Tue May 10 04:53:50 IST 2016 org/springframework/boot/loader/PropertiesLauncher$PrefixMatchingArchiveFilter.class
+  1165 Tue May 10 04:53:48 IST 2016 org/springframework/boot/loader/ExecutableArchiveLauncher$1.class
+ 19056 Tue May 10 04:53:50 IST 2016 org/springframework/boot/loader/PropertiesLauncher.class
+  1588 Tue May 10 04:53:50 IST 2016 org/springframework/boot/loader/LaunchedURLClassLoader$ResourceEnumeration.class
+     0 Thu Dec 08 21:21:50 IST 2016 org/springframework/boot/loader/data/
+  1531 Tue May 10 04:53:50 IST 2016 org/springframework/boot/loader/data/ByteArrayRandomAccessData.class
+  3526 Tue May 10 04:53:48 IST 2016 org/springframework/boot/loader/data/RandomAccessDataFile$DataInputStream.class
+   551 Tue May 10 04:53:48 IST 2016 org/springframework/boot/loader/data/RandomAccessData.class
+  2231 Tue May 10 04:53:48 IST 2016 org/springframework/boot/loader/data/RandomAccessDataFile$FilePool.class
+  3390 Tue May 10 04:53:48 IST 2016 org/springframework/boot/loader/data/RandomAccessDataFile.class
+  1341 Tue May 10 04:53:48 IST 2016 org/springframework/boot/loader/data/RandomAccessData$ResourceAccess.class
+     0 Thu Dec 08 21:21:50 IST 2016 org/springframework/boot/loader/util/
+  4947 Tue May 10 04:53:50 IST 2016 org/springframework/boot/loader/util/SystemPropertyUtils.class
+  3700 Tue May 10 04:53:48 IST 2016 org/springframework/boot/loader/util/AsciiBytes.class
+  2126 Tue May 10 04:53:50 IST 2016 org/springframework/boot/loader/LaunchedURLClassLoader$1.class
+  3373 Tue May 10 04:53:50 IST 2016 org/springframework/boot/loader/InputArgumentsJavaAgentDetector.class
+  5749 Tue May 10 04:53:48 IST 2016 org/springframework/boot/loader/Launcher.class
+  6372 Tue May 10 04:53:50 IST 2016 org/springframework/boot/loader/LaunchedURLClassLoader.class
+  2120 Tue May 10 04:53:50 IST 2016 org/springframework/boot/loader/JarLauncher.class
+     0 Thu Dec 08 21:21:50 IST 2016 org/springframework/boot/loader/jar/
+   314 Tue May 10 04:53:48 IST 2016 org/springframework/boot/loader/jar/JarEntryFilter.class
+  6853 Tue May 10 04:53:48 IST 2016 org/springframework/boot/loader/jar/JarURLConnection.class
+  2365 Tue May 10 04:53:48 IST 2016 org/springframework/boot/loader/jar/JarEntry.class
+  2161 Tue May 10 04:53:48 IST 2016 org/springframework/boot/loader/jar/Bytes.class
+  2943 Tue May 10 04:53:48 IST 2016 org/springframework/boot/loader/jar/CentralDirectoryEndRecord.class
+  1563 Tue May 10 04:53:48 IST 2016 org/springframework/boot/loader/jar/JarFile$2.class
+  1629 Tue May 10 04:53:48 IST 2016 org/springframework/boot/loader/jar/ZipInflaterInputStream.class
+ 16414 Tue May 10 04:53:48 IST 2016 org/springframework/boot/loader/jar/JarFile.class
+  1302 Tue May 10 04:53:48 IST 2016 org/springframework/boot/loader/jar/JarFile$1.class
+   672 Tue May 10 04:53:48 IST 2016 org/springframework/boot/loader/jar/JarURLConnection$1.class
+  6365 Tue May 10 04:53:50 IST 2016 org/springframework/boot/loader/jar/Handler.class
+  2825 Tue May 10 04:53:48 IST 2016 org/springframework/boot/loader/jar/JarURLConnection$JarEntryName.class
+  6433 Tue May 10 04:53:48 IST 2016 org/springframework/boot/loader/jar/JarEntryData.class
+  2329 Tue May 10 04:53:50 IST 2016 org/springframework/boot/loader/MainMethodRunner.class
+  1082 Tue May 10 04:53:50 IST 2016 org/springframework/boot/loader/InputArgumentsJavaAgentDetector$1.class
+  1952 Tue May 10 04:53:50 IST 2016 org/springframework/boot/loader/WarLauncher.class
+   266 Tue May 10 04:53:50 IST 2016 org/springframework/boot/loader/PropertiesLauncher$1.class
+  4798 Tue May 10 04:53:48 IST 2016 org/springframework/boot/loader/ExecutableArchiveLauncher.class
+  1054 Tue May 10 04:53:50 IST 2016 org/springframework/boot/loader/LaunchedURLClassLoader$LockProvider.class
+     0 Thu Dec 08 21:21:50 IST 2016 org/springframework/boot/loader/archive/
+  1191 Tue May 10 04:53:48 IST 2016 org/springframework/boot/loader/archive/JarFileArchive$JarFileEntry.class
+  8561 Tue May 10 04:53:48 IST 2016 org/springframework/boot/loader/archive/JarFileArchive.class
+  3733 Tue May 10 04:53:50 IST 2016 org/springframework/boot/loader/archive/FilteredArchive.class
+  1948 Tue May 10 04:53:48 IST 2016 org/springframework/boot/loader/archive/JarFileArchive$1.class
+  8553 Tue May 10 04:53:50 IST 2016 org/springframework/boot/loader/archive/ExplodedArchive.class
+  2002 Tue May 10 04:53:50 IST 2016 org/springframework/boot/loader/archive/FilteredArchive$2.class
+   333 Tue May 10 04:53:48 IST 2016 org/springframework/boot/loader/archive/Archive$Entry.class
+   273 Tue May 10 04:53:50 IST 2016 org/springframework/boot/loader/archive/ExplodedArchive$1.class
+   399 Tue May 10 04:53:48 IST 2016 org/springframework/boot/loader/archive/Archive$EntryFilter.class
+  1549 Tue May 10 04:53:50 IST 2016 org/springframework/boot/loader/archive/FilteredArchive$1.class
+  1310 Tue May 10 04:53:50 IST 2016 org/springframework/boot/loader/archive/ExplodedArchive$FileEntry.class
+  2415 Tue May 10 04:53:48 IST 2016 org/springframework/boot/loader/archive/Archive.class
+   506 Tue May 10 04:53:48 IST 2016 org/springframework/boot/loader/archive/Archive$EntryRenameFilter.class
+  2217 Tue May 10 04:53:50 IST 2016 org/springframework/boot/loader/archive/ExplodedArchive$FilteredURLStreamHandler.class
+   884 Tue May 10 04:53:50 IST 2016 org/springframework/boot/loader/archive/ExplodedArchive$FileNotFoundURLConnection.class
+   192 Tue May 10 04:53:48 IST 2016 org/springframework/boot/loader/JavaAgentDetector.class
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-REST/Spring-REST-Services/tut-bookmarks-master/hateoas
+$ java -jar target/hateoas-0.0.1-SNAPSHOT.jar
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.3.5.RELEASE)
+
+2016-12-10 00:09:13.637  INFO 7120 --- [           main] bookmarks.Application                    : Starting Application v0.0.1-SNAPSHOT on Acer with PID 7120 (E:\Working\Java\Spring\Spring-REST\Spring-REST-Services\tut-bookmarks-master\hateoas\target\hateoas-0.0.1-SNAPSHOT.jar started by Aspire in E:\Working\Java\Spring\Spring-REST\Spring-REST-Services\tut-bookmarks-master\hateoas)
+2016-12-10 00:09:13.637  INFO 7120 --- [           main] bookmarks.Application                    : No active profile set, falling back to default profiles: default
+2016-12-10 00:09:13.855  INFO 7120 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@71e627b2: startup date [Sat Dec 10 00:09:13 IST 2016]; root of context hierarchy
+2016-12-10 00:09:18.807  INFO 7120 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e7017608] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-12-10 00:09:20.510  INFO 7120 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-12-10 00:09:20.573  INFO 7120 --- [           main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-12-10 00:09:20.573  INFO 7120 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.33
+2016-12-10 00:09:20.917  INFO 7120 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-12-10 00:09:20.917  INFO 7120 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 7077 ms
+2016-12-10 00:09:22.386  INFO 7120 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-12-10 00:09:22.386  INFO 7120 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-12-10 00:09:22.386  INFO 7120 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-12-10 00:09:22.386  INFO 7120 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'requestContextFilter' to: [/*]
+2016-12-10 00:09:22.401  INFO 7120 --- [ost-startStop-1] .e.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2016-12-10 00:09:22.401  INFO 7120 --- [ost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2016-12-10 00:09:23.214  INFO 7120 --- [ost-startStop-1] b.a.s.AuthenticationManagerConfiguration :
+
+Using default security password: 4a9848fc-ef06-4b85-91c3-c06c57205343
+
+2016-12-10 00:09:23.448  INFO 7120 --- [ost-startStop-1] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/css/**'], []
+2016-12-10 00:09:23.448  INFO 7120 --- [ost-startStop-1] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/js/**'], []
+2016-12-10 00:09:23.448  INFO 7120 --- [ost-startStop-1] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/images/**'], []
+2016-12-10 00:09:23.448  INFO 7120 --- [ost-startStop-1] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**/favicon.ico'], []
+2016-12-10 00:09:23.448  INFO 7120 --- [ost-startStop-1] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/error'], []
+2016-12-10 00:09:23.745  INFO 7120 --- [ost-startStop-1] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@383fa5f6, org.springframework.security.web.context.SecurityContextPersistenceFilter@7456feda, org.springframework.security.web.header.HeaderWriterFilter@7b210c7b, org.springframework.security.web.authentication.logout.LogoutFilter@3c292034, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3b669a93, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4ed4c944, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@48ec3cbf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1681ef0a, org.springframework.security.web.session.SessionManagementFilter@c019681, org.springframework.security.web.access.ExceptionTranslationFilter@1b89259a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1ec6ecd5]
+2016-12-10 00:09:24.745  INFO 7120 --- [           main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-12-10 00:09:24.776  INFO 7120 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+        name: default
+        ...]
+2016-12-10 00:09:24.979  INFO 7120 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {4.3.11.Final}
+2016-12-10 00:09:24.995  INFO 7120 --- [           main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-12-10 00:09:24.995  INFO 7120 --- [           main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-12-10 00:09:25.917  INFO 7120 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-12-10 00:09:26.104  INFO 7120 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-12-10 00:09:26.401  INFO 7120 --- [           main] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory
+2016-12-10 00:09:27.011  INFO 7120 --- [           main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-12-10 00:09:27.058  INFO 7120 --- [           main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-12-10 00:09:28.511  INFO 7120 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@71e627b2: startup date [Sat Dec 10 00:09:13 IST 2016]; root of context hierarchy
+2016-12-10 00:09:28.730  INFO 7120 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{userId}/bookmarks],methods=[POST]}" onto org.springframework.http.ResponseEntity<?> bookmarks.BookmarkRestController.add(java.lang.String,bookmarks.Bookmark)
+2016-12-10 00:09:28.730  INFO 7120 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{userId}/bookmarks],methods=[GET]}" onto org.springframework.hateoas.Resources<bookmarks.BookmarkResource> bookmarks.BookmarkRestController.readBookmarks(java.lang.String)
+2016-12-10 00:09:28.730  INFO 7120 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{userId}/bookmarks/{bookmarkId}],methods=[GET]}" onto bookmarks.BookmarkResource bookmarks.BookmarkRestController.readBookmark(java.lang.String,java.lang.Long)
+2016-12-10 00:09:28.745  INFO 7120 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-12-10 00:09:28.745  INFO 7120 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-12-10 00:09:28.839  INFO 7120 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-10 00:09:28.839  INFO 7120 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-10 00:09:28.901  INFO 7120 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in bookmarkControllerAdvice
+2016-12-10 00:09:28.995  INFO 7120 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-10 00:09:29.823  INFO 7120 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-12-10 00:09:30.027  INFO 7120 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-12-10 00:09:30.323  INFO 7120 --- [           main] bookmarks.Application                    : Started Application in 17.577 seconds (JVM running for 18.786)

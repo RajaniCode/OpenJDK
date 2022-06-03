@@ -1,0 +1,65 @@
+$ ll
+
+$ winpty openssl pkcs12 -export -in localhost.crt -inkey localhost.key -out localhost.p12
+Enter Export Password: jdk 1.8.0_102
+Verifying - Enter Export Password: jdk 1.8.0_102
+
+$ ll
+
+$ keytool -importkeystore -destkeystore ~/.keystore -srckeystore localhost.p12 -srcstoretype PKCS12 -alias 1
+Enter destination keystore password:  jre 1.8.0_102
+Re-enter new password: jre 1.8.0_102
+Enter source keystore password:  jdk 1.8.0_102
+
+$ jarsigner -keystore ~/.keystore program.jar 1
+Enter Passphrase for keystore: jre 1.8.0_102
+Enter key password for 1: jdk 1.8.0_102
+[
+jar signed.
+
+Warning:
+No -tsa or -tsacert is provided and this jar is not timestamped. Without a timestamp, users may not be able to validate this jar after the signer certificate's expiration date (2018-03-03) or after any future revocation date.
+]
+$ jarsigner -verify program.jar
+
+
+# Git Bash 
+
+Aspire@Acer MINGW64 ~
+$ java -version
+java version "1.8.0_102"
+Java(TM) SE Runtime Environment (build 1.8.0_102-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.102-b14, mixed mode)
+
+Aspire@Acer MINGW64 ~
+$ cd "E:\Working\Java\TODO\Jar\Self-Signed-SSL-Certificate"
+
+Aspire@Acer MINGW64 /e/Working/Java/TODO/Jar/Self-Signed-SSL-Certificate
+$ keytool -importkeystore -destkeystore ~/.keystore -srckeystore localhost.p12 -srcstoretype PKCS12 -alias 1
+Enter destination keystore password:  jre 1.8.0_102
+Re-enter new password: jre 1.8.0_102
+Enter source keystore password:  jdk 1.8.0_102
+
+Aspire@Acer MINGW64 /e/Working/Java/TODO/Jar/Self-Signed-SSL-Certificate
+$ cd "E:\Working\Java\TODO\Jar"
+
+Aspire@Acer MINGW64 /e/Working/Java/TODO/Jar
+$ jarsigner -keystore ~/.keystore program.jar 1
+Enter Passphrase for keystore: jre 1.8.0_102
+Enter key password for 1: jdk 1.8.0_102
+jar signed.
+
+Warning:
+No -tsa or -tsacert is provided and this jar is not timestamped. Without a timestamp, users may not be able to validate this jar after the signer certificate's expiration date (2018-03-03) or after any future revocation date.
+
+Aspire@Acer MINGW64 /e/Working/Java/TODO/Jar
+$ jarsigner -verify program.jar
+jar verified.
+
+Warning:
+This jar contains signatures that does not include a timestamp. Without a timestamp, users may not be able to validate this jar after the signer certificate's expiration date (2018-03-03) or after any future revocation date.
+
+Re-run with the -verbose and -certs options for more details.
+
+Aspire@Acer MINGW64 /e/Working/Java/TODO/Jar
+$

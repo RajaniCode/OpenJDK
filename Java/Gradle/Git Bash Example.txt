@@ -1,0 +1,319 @@
+
+Aspire@Acer MINGW64 ~
+$ java -version
+java version "1.8.0_102"
+Java(TM) SE Runtime Environment (build 1.8.0_102-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.102-b14, mixed mode)
+
+Aspire@Acer MINGW64 ~
+$ sdk version
+
+SDKMAN 5.5.4+199
+
+Aspire@Acer MINGW64 ~
+$ gradle --version
+
+------------------------------------------------------------
+Gradle 3.4.1
+------------------------------------------------------------
+
+Build time:   2017-03-03 19:45:41 UTC
+Revision:     9eb76efdd3d034dc506c719dac2955efb5ff9a93
+
+Groovy:       2.4.7
+Ant:          Apache Ant(TM) version 1.9.6 compiled on June 29 2015
+JVM:          1.8.0_102 (Oracle Corporation 25.102-b14)
+OS:           Windows 8.1 6.3 amd64
+
+
+Aspire@Acer MINGW64 ~
+$ cd "E:\Working\Java\Gradle\Example"
+
+Aspire@Acer MINGW64 /e/Working/Java/Gradle/Example
+$ git clone https://github.com/spring-guides/gs-gradle.git
+Cloning into 'gs-gradle'...
+remote: Counting objects: 438, done.
+remote: Total 438 (delta 0), reused 0 (delta 0), pack-reused 438
+Receiving objects: 100% (438/438), 277.55 KiB | 154.00 KiB/s, done.
+Resolving deltas: 100% (227/227), done.
+
+Aspire@Acer MINGW64 /e/Working/Java/Gradle/Example
+$ ls src/main/java/hello
+ls: cannot access 'src/main/java/hello': No such file or directory
+
+Aspire@Acer MINGW64 /e/Working/Java/Gradle/Example
+$ cd gs-gradle/initial
+
+Aspire@Acer MINGW64 /e/Working/Java/Gradle/Example/gs-gradle/initial (master)
+$ ls src/main/java/hello
+Greeter.java  HelloWorld.java
+
+Aspire@Acer MINGW64 /e/Working/Java/Gradle/Example/gs-gradle/initial (master)
+$ cat src/main/java/hello/HelloWorld.java
+package hello;
+
+public class HelloWorld {
+  public static void main(String[] args) {
+    Greeter greeter = new Greeter();
+    System.out.println(greeter.sayHello());
+  }
+}
+Aspire@Acer MINGW64 /e/Working/Java/Gradle/Example/gs-gradle/initial (master)
+$ cat src/main/java/hello/Greeter.java
+package hello;
+
+public class Greeter {
+  public String sayHello() {
+    return "Hello world!";
+  }
+}
+Aspire@Acer MINGW64 /e/Working/Java/Gradle/Example/gs-gradle/initial (master)
+$ gradle tasks
+Starting a Gradle Daemon, 1 incompatible and 1 stopped Daemons could not be reused, use --status for details
+:tasks
+
+------------------------------------------------------------
+All tasks runnable from root project
+------------------------------------------------------------
+
+Build tasks
+-----------
+assemble - Assembles the outputs of this project.
+build - Assembles and tests this project.
+buildDependents - Assembles and tests this project and all projects that depend on it.
+buildNeeded - Assembles and tests this project and all projects it depends on.
+classes - Assembles main classes.
+clean - Deletes the build directory.
+jar - Assembles a jar archive containing the main classes.
+testClasses - Assembles test classes.
+
+Build Setup tasks
+-----------------
+init - Initializes a new Gradle build. [incubating]
+wrapper - Generates Gradle wrapper files. [incubating]
+
+Documentation tasks
+-------------------
+javadoc - Generates Javadoc API documentation for the main source code.
+
+Help tasks
+----------
+buildEnvironment - Displays all buildscript dependencies declared in root project 'initial'.
+components - Displays the components produced by root project 'initial'. [incubating]
+dependencies - Displays all dependencies declared in root project 'initial'.
+dependencyInsight - Displays the insight into a specific dependency in root project 'initial'.
+dependentComponents - Displays the dependent components of components in root project 'initial'. [incubating]
+help - Displays a help message.
+model - Displays the configuration model of root project 'initial'. [incubating]
+projects - Displays the sub-projects of root project 'initial'.
+properties - Displays the properties of root project 'initial'.
+tasks - Displays the tasks runnable from root project 'initial'.
+
+Verification tasks
+------------------
+check - Runs all checks.
+test - Runs the unit tests.
+
+Rules
+-----
+Pattern: clean<TaskName>: Cleans the output files of a task.
+Pattern: build<ConfigurationName>: Assembles the artifacts of a configuration.
+Pattern: upload<ConfigurationName>: Assembles and uploads the artifacts belonging to a configuration.
+
+To see all tasks and more detail, run gradle tasks --all
+
+To see more detail about a task, run gradle help --task <task>
+
+BUILD SUCCESSFUL
+
+Total time: 33.526 secs
+
+Aspire@Acer MINGW64 /e/Working/Java/Gradle/Example/gs-gradle/initial (master)
+$ gradle build
+:compileJava
+:processResources NO-SOURCE
+:classes
+:jar
+:assemble
+:compileTestJava NO-SOURCE
+:processTestResources NO-SOURCE
+:testClasses UP-TO-DATE
+:test NO-SOURCE
+:check UP-TO-DATE
+:build
+
+BUILD SUCCESSFUL
+
+Total time: 6.208 secs
+
+Aspire@Acer MINGW64 /e/Working/Java/Gradle/Example/gs-gradle/initial (master)
+$ cat build.gradle
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile "joda-time:joda-time:2.2"
+    testCompile "junit:junit:4.12"
+}
+
+jar {
+    baseName = 'gs-gradle'
+    version =  '0.1.0'
+}
+
+Aspire@Acer MINGW64 /e/Working/Java/Gradle/Example/gs-gradle/initial (master)
+$ gradle build
+:compileJava
+Download https://repo1.maven.org/maven2/joda-time/joda-time/2.2/joda-time-2.2.pom
+Download https://repo1.maven.org/maven2/joda-time/joda-time/2.2/joda-time-2.2.jar
+:processResources NO-SOURCE
+:classes
+:jar
+:assemble
+:compileTestJava NO-SOURCE
+:processTestResources NO-SOURCE
+:testClasses UP-TO-DATE
+:test NO-SOURCE
+:check UP-TO-DATE
+:build
+
+BUILD SUCCESSFUL
+
+Total time: 15.852 secs
+
+Aspire@Acer MINGW64 /e/Working/Java/Gradle/Example/gs-gradle/initial (master)
+$ gradle wrapper --gradle-version 2.13
+:wrapper
+
+BUILD SUCCESSFUL
+
+Total time: 3.485 secs
+
+Aspire@Acer MINGW64 /e/Working/Java/Gradle/Example/gs-gradle/initial (master)
+$ ./gradlew build
+Downloading https://services.gradle.org/distributions/gradle-2.13-bin.zip
+..................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Unzipping C:\Users\Aspire\.gradle\wrapper\dists\gradle-2.13-bin\4xsgxlfjcxvrea7akf941nvc7\gradle-2.13-bin.zip to C:\Users\Aspire\.gradle\wrapper\dists\gradle-2.13-bin\4xsgxlfjcxvrea7akf941nvc7
+:compileJava
+:processResources UP-TO-DATE
+:classes
+:jar
+:assemble
+:compileTestJava UP-TO-DATE
+:processTestResources UP-TO-DATE
+:testClasses UP-TO-DATE
+:test UP-TO-DATE
+:check UP-TO-DATE
+:build
+
+BUILD SUCCESSFUL
+
+Total time: 2 mins 14.439 secs
+
+Aspire@Acer MINGW64 /e/Working/Java/Gradle/Example/gs-gradle/initial (master)
+$ jar tvf build/libs/gs-gradle-0.1.0.jar
+     0 Fri Mar 24 16:13:30 IST 2017 META-INF/
+    25 Fri Mar 24 16:01:22 IST 2017 META-INF/MANIFEST.MF
+     0 Fri Mar 24 16:06:52 IST 2017 hello/
+   369 Fri Mar 24 16:13:30 IST 2017 hello/Greeter.class
+   988 Fri Mar 24 16:13:30 IST 2017 hello/HelloWorld.class
+
+Aspire@Acer MINGW64 /e/Working/Java/Gradle/Example/gs-gradle/initial (master)
+$ jar tvf build/libs/initial.jar
+     0 Fri Mar 24 16:01:24 IST 2017 META-INF/
+    25 Fri Mar 24 16:01:22 IST 2017 META-INF/MANIFEST.MF
+     0 Fri Mar 24 16:01:22 IST 2017 hello/
+   369 Fri Mar 24 16:01:22 IST 2017 hello/Greeter.class
+   648 Fri Mar 24 16:01:22 IST 2017 hello/HelloWorld.class
+
+Aspire@Acer MINGW64 /e/Working/Java/Gradle/Example/gs-gradle/initial (master)
+$ cat build.gradle
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'hello.HelloWorld'
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile "joda-time:joda-time:2.2"
+    testCompile "junit:junit:4.12"
+}
+
+jar {
+    baseName = 'gs-gradle'
+    version =  '0.1.0'
+}
+
+Aspire@Acer MINGW64 /e/Working/Java/Gradle/Example/gs-gradle/initial (master)
+$ ./gradlew run
+:compileJava UP-TO-DATE
+:processResources UP-TO-DATE
+:classes UP-TO-DATE
+:run
+The current local time is: 16:19:37.195
+Hello world!
+
+BUILD SUCCESSFUL
+
+Total time: 10.814 secs
+
+Aspire@Acer MINGW64 /e/Working/Java/Gradle/Example/gs-gradle/initial (master)
+$ cat build.gradle
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'application'
+
+mainClassName = 'hello.HelloWorld'
+
+// tag::repositories[]
+repositories {
+    mavenCentral()
+}
+// end::repositories[]
+
+// tag::jar[]
+jar {
+    baseName = 'gs-gradle'
+    version =  '0.1.0'
+}
+// end::jar[]
+
+// tag::dependencies[]
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile "joda-time:joda-time:2.2"
+    testCompile "junit:junit:4.12"
+}
+// end::dependencies[]
+
+// tag::wrapper[]
+// end::wrapper[]
+Aspire@Acer MINGW64 /e/Working/Java/Gradle/Example/gs-gradle/initial (master)
+$ ./gradlew run
+:compileJava UP-TO-DATE
+:processResources UP-TO-DATE
+:classes UP-TO-DATE
+:run
+The current local time is: 16:22:12.493
+Hello world!
+
+BUILD SUCCESSFUL
+
+Total time: 11.476 secs
+
+Aspire@Acer MINGW64 /e/Working/Java/Gradle/Example/gs-gradle/initial (master)
+$

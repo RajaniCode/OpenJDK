@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>submit demo</title>
+        <style>
+            p {
+                margin: 0;
+                color: blue;
+            }
+            div,p {
+                margin-left: 10px;
+            }
+            span {
+                color: red;
+            }
+        </style>
+        <!--
+        <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/themes/base/jquery-ui.css" rel="stylesheet" />
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+        -->
+
+        <!--
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        -->
+
+        <link rel="stylesheet" href="jQuery/jquery-ui/jquery-ui-themes-1.12.1/themes/base/jquery-ui.css" />  
+        <script src="jQuery/jQuery-1.x/jquery-1.12.4.js"></script>
+        <script src="jQuery/jquery-ui/jquery-ui-1.12.1/jquery-ui.js"></script>
+    </head>
+    <body>
+        <form id="inputForm" action="javascript:alert( 'success!' );">
+            <div>
+                <input type="text" id="title">
+                <input type="text" id="genre">
+                <input type="text" id="rating">
+                <input type="submit">
+            </div>
+        </form>
+        <span></span> 
+        <script>
+            $(document).submit(function( event ) {
+                if ( $('input[id$=title]').val().replace(/^\s+|\s+$/g, "").length != 0
+                    && $('input[id$=genre]').val().replace(/^\s+|\s+$/g, "").length != 0
+                    && $('input[id$=rating]').val().replace(/^\s+|\s+$/g, "").length != 0 ) {
+                    // $( "span" ).text( "Validated..." ).show();
+                    return;
+                }
+                $( "span" ).text( "Please enter values in all the fields!" ).show().fadeOut( 1000 );
+                event.preventDefault();
+            });
+        </script>
+    </body>
+</html>

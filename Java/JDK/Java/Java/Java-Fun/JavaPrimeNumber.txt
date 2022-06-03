@@ -1,0 +1,50 @@
+import static java.lang.System.out;
+import java.util.Set;
+import java.util.TreeSet;
+import java.util.Objects;
+import java.util.function.IntPredicate;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+import static java.util.stream.Collectors.toList;
+
+class PrimeNumber {
+
+    private static boolean isPrime(int number) {
+    IntPredicate isDivisible = index -> number % index == 0;
+    return number > 1 && IntStream.range(2, number - 1).noneMatch(isDivisible);
+  }
+
+    public void print() {
+        out.printf("Is 2 a Prime Number: %b", isPrime(2));
+        out.println("\n");
+        
+        Set<Integer> setTree = new TreeSet<>();
+        Stream.iterate(2, i -> ++i) // > 2
+                .filter(i -> i %2 != 0)
+                .filter(i -> {
+                    setTree.add(i);
+                    return 0 == setTree.stream()
+                            .filter(p -> p != 1)
+                            .filter(p -> !Objects.equals(p, i))
+                            .filter(p -> i % p == 0)
+                            .count();
+                })
+                .limit(167) // < 1000
+                .collect(toList()).forEach(out::println);
+        out.println();
+
+        IntStream.rangeClosed(2, 1000)
+            .filter(i -> IntStream.rangeClosed(2, (int)Math.sqrt(i)).allMatch(j -> i%j != 0)).forEach(out::println);
+        out.println();
+        
+        out.println(IntStream.rangeClosed(2, 1000).filter(i -> IntStream.rangeClosed(2, (int)Math.sqrt(i)).allMatch(j -> i%j != 0)).count());
+        out.println();
+    }
+}
+
+public class Program {
+    public static void main(String... args) {
+        PrimeNumber prime = new PrimeNumber();
+        prime.print();
+    }
+}

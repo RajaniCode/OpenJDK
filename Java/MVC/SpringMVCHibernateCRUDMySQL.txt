@@ -1,0 +1,296 @@
+/*
+Root Account Password: My$ql@Server#8.0.12
+
+
+MySQL User Details
+Username: rajani
+Host: localhost
+Role: DB Admin
+Authentication: MySQL
+Password: My$ql@Server#8.0
+*/
+
+
+/*
+DROP DATABASE IF EXISTS `springdb`;
+DELIMITER $$
+CREATE DATABASE `springdb`;$$
+DELIMITER ;
+
+USE `springdb`;
+
+DROP TABLE IF EXISTS `Movie`;
+DELIMITER $$
+CREATE TABLE `Movie`
+(
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `title` varchar(50) NOT NULL, 
+  `release_date` date NOT NULL,
+  `price` double NOT NULL,
+  `genre` varchar(50) NOT NULL,
+  `rating` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+);$$
+DELIMITER ;
+
+SELECT * FROM Movie;
+
+INSERT INTO Movie(title, release_date, price, genre, rating)
+VALUES('The Post', '2017-12-14', 2.17, 'Historical Political Thriller', 'G');
+
+INSERT INTO Movie(title, release_date, price, genre, rating)
+VALUES('Swordfish', '2001-06-08', 2.01, 'Action Crime Thriller', 'PG');
+
+INSERT INTO Movie(title, release_date, price, genre, rating)
+VALUES('The Net', '1995-07-28', 1.95, 'Cyber Mystery Thriller', 'PG');
+
+SELECT * FROM Movie;
+
+USE `springdb`;
+
+SELECT * FROM Movie;
+*/
+
+[
+$ mvn archetype:generate -DgroupId=com.rajani.spring -DartifactId=SpringMVCHibernateCRUD -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
+]
+
+$ cd SpringMVCHibernateCRUD
+
+[
+$ mvn eclipse:eclipse
+]
+
+$ mvn clean compile
+
+$ mvn package
+
+
+$ jar tvf target/SpringMVCHibernateCRUD.war
+
+$ cp "target\SpringMVCHibernateCRUD.war" "C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps"
+
+$ start http://localhost:8080/SpringMVCHibernateCRUD
+
+$ rm -rf target
+
+$ rm -rf "C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps\SpringMVCHibernateCRUD.war"
+
+$ cp "target\SpringMVCHibernateCRUD.war" "C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps"
+
+[
+# When war file is copied to Tomcat webapps, the corresponding folder is also copied to Tomcat webapps
+]
+# start http://localhost:8080/SpringMVCHibernateCRUD
+
+
+# stylesheet and script (css and js)
+src/main/webapp/resources/theme1/css/*.css
+src/main/webapp/resources/theme1/js/*.js
+# src/main/webapp/WEB-INF/pages/*.jsp
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/js/jquery-ui-themes-1.12.1/themes/base/jquery-ui.css" />  
+        <script src="${pageContext.request.contextPath}/resources/js/jquery-1.12.4.js"></script>
+        <script src="${pageContext.request.contextPath}/resources/js/jquery-ui-1.12.1/jquery-ui.js"></script>
+# src/main/webapp/WEB-INF/spring-servlet.xml 
+	<mvc:resources mapping="/resources/**" location="/resources/theme1/" />
+
+# pom.xml # project.build.sourceEncoding # mysql.version
+<properties>  
+
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>  
+    ...
+    <mysql.version>8.0.12</mysql.version>
+    ...  
+</properties>
+ 
+# pom.xml # project.build.sourceEncoding # mysql.version # 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-surefire-plugin 
+       <build>
+              <finalName>SpringMVCHibernateCRUD</finalName>
+              <plugins>
+              <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.0</version 
+                ...
+          </plugin>
+        </plugins>
+             
+       </build>
+
+# pom.xml
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.rajani.spring</groupId>
+    <artifactId>SpringMVCHibernateCRUD</artifactId>
+    <packaging>war</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <name>SpringMVCHibernateCRUD Maven Webapp</name>
+    <url>http://maven.apache.org</url>
+    <!-- Specifying the Versions of Spring, Hiberante, MySQL etc -->
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring.version>4.1.5.RELEASE</spring.version>
+        <hibernate.version>4.3.8.Final</hibernate.version>
+        <mysql.version>8.0.12</mysql.version>
+        <junit-version>4.11</junit-version>
+        <servlet-api-version>3.1.0</servlet-api-version>
+        <jsp-version>2.1</jsp-version>
+        <jstl-version>1.2</jstl-version>
+        <java.version>1.7</java.version>       
+    </properties>
+       <dependencies>
+              <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+ 
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+ 
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+ 
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+ 
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+ 
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring.version}</version>
+            <scope>test</scope>
+        </dependency>
+ 
+        <!-- Hibernate 4 dependencies -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+ 
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-c3p0</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+ 
+        <!--MySQL Connector -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
+        </dependency>
+ 
+        <!-- Servlet and JSP -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${servlet-api-version}</version>
+        </dependency>
+ 
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>jsp-api</artifactId>
+            <version>${jsp-version}</version>
+            <scope>provided</scope>
+        </dependency>
+ 
+        <!-- JSTL dependency -->
+        <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+            <version>${jstl-version}</version>
+        </dependency>
+ 
+        <!-- JUnit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit-version}</version>
+            <scope>test</scope>
+        </dependency>
+             
+       </dependencies>
+       <build>
+              <finalName>SpringMVCHibernateCRUD</finalName>
+              <plugins>
+              <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.0</version>
+                <configuration>
+                    <includes>
+                        <include>**/*Tests.java</include>
+                    </includes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+             
+       </build>
+</project>
+
+
+# src/main/webapp/WEB-INF/spring-servlet.xml
+
+	<!-- Specifying base package of the Components like Controller, Service, 
+		DAO -->
+	<context:component-scan base-package="com.rajani" />
+
+	<!-- Getting Database Properties -->
+	<context:property-placeholder location="classpath:application.properties" />
+
+	<mvc:annotation-driven />
+
+	<!-- Specifying the Resource Location to load JS, CSS, Images etc -->
+	<mvc:resources mapping="/resources/**" location="/resources/theme1/" />
+
+	<!-- Hibernate SessionFactory -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
+				<prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
+				<prop key="hibernate.format_sql">${hibernate.format_sql}</prop>
+				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+			</props>
+		</property>
+		<property name="packagesToScan" value="com.rajani.model"></property>
+	</bean>
+
+
+# src/main/resources/application.properties
+#Database related properties
+database.driver=com.mysql.jdbc.Driver
+database.url=jdbc:mysql://localhost:3306/springdb
+database.user=root
+database.password=My$ql@Server#8.0.12
+
+#Hibernate related properties
+hibernate.dialect=org.hibernate.dialect.MySQLDialect
+hibernate.show_sql=true
+hibernate.format_sql=true
+hibernate.hbm2ddl.auto=update

@@ -1,0 +1,241 @@
+
+Rajani@RajaniSamsungPC MINGW64 /
+$ java -version
+java version "10.0.2" 2018-07-17
+Java(TM) SE Runtime Environment 18.3 (build 10.0.2+13)
+Java HotSpot(TM) 64-Bit Server VM 18.3 (build 10.0.2+13, mixed mode)
+
+Rajani@RajaniSamsungPC MINGW64 /
+$ mvn -v
+Apache Maven 3.5.4 (1edded0938998edf8bf061f1ceb3cfdeccf443fe; 2018-06-18T00:03:14+05:30)
+Maven home: C:\Program Files\Apache Software Foundation\apache-maven-3.5.4
+Java version: 10.0.2, vendor: Oracle Corporation, runtime: C:\Program Files\Java\jdk-10.0.2
+Default locale: en_US, platform encoding: Cp1252
+OS name: "windows 8", version: "6.2", arch: "amd64", family: "windows"
+
+Rajani@RajaniSamsungPC MINGW64 /
+$ cd "C:\Users\Rajani\Desktop\2018\Working\Java\Spring\Samples\Spring4MVCCRUDRestServiceAndCORS\Spring4MVCCRUDRestService"
+
+Rajani@RajaniSamsungPC MINGW64 ~/Desktop/2018/Working/Java/Spring/Samples/Spring4MVCCRUDRestServiceAndCORS/Spring4MVCCRUDRestService
+$ mvn package
+[INFO] Scanning for projects...
+[INFO]
+[INFO] -----------< com.rajani.springmvc:Spring4MVCCRUDRestService >-----------
+[INFO] Building Spring4MVCCRUDRestService Maven Webapp 1.0.0
+[INFO] --------------------------------[ war ]---------------------------------
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.1/maven-compiler-plugin-3.1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.1/maven-compiler-plugin-3.1.pom (10 kB at 5.0 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.1/maven-compiler-plugin-3.1.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.1/maven-compiler-plugin-3.1.jar (43 kB at 39 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-webmvc/4.2.0.RELEASE/spring-webmvc-4.2.0.RELEASE.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-webmvc/4.2.0.RELEASE/spring-webmvc-4.2.0.RELEASE.pom (12 kB at 17 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-beans/4.2.0.RELEASE/spring-beans-4.2.0.RELEASE.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-beans/4.2.0.RELEASE/spring-beans-4.2.0.RELEASE.pom (2.5 kB at 4.1 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-core/4.2.0.RELEASE/spring-core-4.2.0.RELEASE.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-core/4.2.0.RELEASE/spring-core-4.2.0.RELEASE.pom (2.5 kB at 4.1 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-context/4.2.0.RELEASE/spring-context-4.2.0.RELEASE.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-context/4.2.0.RELEASE/spring-context-4.2.0.RELEASE.pom (5.0 kB at 7.8 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-aop/4.2.0.RELEASE/spring-aop-4.2.0.RELEASE.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-aop/4.2.0.RELEASE/spring-aop-4.2.0.RELEASE.pom (2.9 kB at 4.6 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-expression/4.2.0.RELEASE/spring-expression-4.2.0.RELEASE.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-expression/4.2.0.RELEASE/spring-expression-4.2.0.RELEASE.pom (1.7 kB at 2.8 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-web/4.2.0.RELEASE/spring-web-4.2.0.RELEASE.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-web/4.2.0.RELEASE/spring-web-4.2.0.RELEASE.pom (7.7 kB at 12 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-tx/4.2.0.RELEASE/spring-tx-4.2.0.RELEASE.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-tx/4.2.0.RELEASE/spring-tx-4.2.0.RELEASE.pom (3.4 kB at 5.5 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.5.3/jackson-databind-2.5.3.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.5.3/jackson-databind-2.5.3.pom (5.9 kB at 9.4 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-parent/2.5.1/jackson-parent-2.5.1.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-parent/2.5.1/jackson-parent-2.5.1.pom (7.8 kB at 12 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/19/oss-parent-19.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/19/oss-parent-19.pom (19 kB at 27 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.5.0/jackson-annotations-2.5.0.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.5.0/jackson-annotations-2.5.0.pom (1.2 kB at 2.0 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-parent/2.5/jackson-parent-2.5.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-parent/2.5/jackson-parent-2.5.pom (7.8 kB at 12 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/18/oss-parent-18.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/18/oss-parent-18.pom (19 kB at 30 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.5.3/jackson-core-2.5.3.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.5.3/jackson-core-2.5.3.pom (4.8 kB at 8.3 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-webmvc/4.2.0.RELEASE/spring-webmvc-4.2.0.RELEASE.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-beans/4.2.0.RELEASE/spring-beans-4.2.0.RELEASE.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-core/4.2.0.RELEASE/spring-core-4.2.0.RELEASE.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-aop/4.2.0.RELEASE/spring-aop-4.2.0.RELEASE.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-context/4.2.0.RELEASE/spring-context-4.2.0.RELEASE.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-aop/4.2.0.RELEASE/spring-aop-4.2.0.RELEASE.jar (364 kB at 132 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-expression/4.2.0.RELEASE/spring-expression-4.2.0.RELEASE.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-beans/4.2.0.RELEASE/spring-beans-4.2.0.RELEASE.jar (730 kB at 241 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-web/4.2.0.RELEASE/spring-web-4.2.0.RELEASE.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-expression/4.2.0.RELEASE/spring-expression-4.2.0.RELEASE.jar (262 kB at 75 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-tx/4.2.0.RELEASE/spring-tx-4.2.0.RELEASE.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-tx/4.2.0.RELEASE/spring-tx-4.2.0.RELEASE.jar (263 kB at 62 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.5.3/jackson-databind-2.5.3.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-web/4.2.0.RELEASE/spring-web-4.2.0.RELEASE.jar (766 kB at 178 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.5.0/jackson-annotations-2.5.0.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-core/4.2.0.RELEASE/spring-core-4.2.0.RELEASE.jar (1.1 MB at 211 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.5.3/jackson-core-2.5.3.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-context/4.2.0.RELEASE/spring-context-4.2.0.RELEASE.jar (1.1 MB at 214 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-webmvc/4.2.0.RELEASE/spring-webmvc-4.2.0.RELEASE.jar (865 kB at 168 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.5.0/jackson-annotations-2.5.0.jar (40 kB at 7.5 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.5.3/jackson-databind-2.5.3.jar (1.1 MB at 211 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.5.3/jackson-core-2.5.3.jar (230 kB at 37 kB/s)
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ Spring4MVCCRUDRestService ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ Spring4MVCCRUDRestService ---
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.2/plexus-compiler-api-2.2.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.2/plexus-compiler-api-2.2.pom (865 B at 1.3 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler/2.2/plexus-compiler-2.2.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler/2.2/plexus-compiler-2.2.pom (3.6 kB at 6.1 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.2/plexus-compiler-manager-2.2.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.2/plexus-compiler-manager-2.2.pom (690 B at 1.2 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.2/plexus-compiler-javac-2.2.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.2/plexus-compiler-javac-2.2.pom (769 B at 1.3 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compilers/2.2/plexus-compilers-2.2.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compilers/2.2/plexus-compilers-2.2.pom (1.2 kB at 2.0 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.2/plexus-compiler-api-2.2.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.2/plexus-compiler-javac-2.2.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.2/plexus-compiler-manager-2.2.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.2/plexus-compiler-manager-2.2.jar (4.6 kB at 6.6 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.2/plexus-compiler-javac-2.2.jar (19 kB at 26 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.2/plexus-compiler-api-2.2.jar (25 kB at 29 kB/s)
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 6 source files to C:\Users\Rajani\Desktop\2018\Working\Java\Spring\Samples\Spring4MVCCRUDRestServiceAndCORS\Spring4MVCCRUDRestService\target\classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ Spring4MVCCRUDRestService ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\Users\Rajani\Desktop\2018\Working\Java\Spring\Samples\Spring4MVCCRUDRestServiceAndCORS\Spring4MVCCRUDRestService\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ Spring4MVCCRUDRestService ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to C:\Users\Rajani\Desktop\2018\Working\Java\Spring\Samples\Spring4MVCCRUDRestServiceAndCORS\Spring4MVCCRUDRestService\target\test-classes
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ Spring4MVCCRUDRestService ---
+[INFO]
+[INFO] --- maven-war-plugin:2.4:war (default-war) @ Spring4MVCCRUDRestService ---
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.thoughtworks.xstream.converters.collections.TreeMapConverter (file:/C:/Users/Rajani/.m2/repository/com/thoughtworks/xstream/xstream/1.4.2/xstream-1.4.2.jar) to field java.util.TreeMap.comparator
+WARNING: Please consider reporting this to the maintainers of com.thoughtworks.xstream.converters.collections.TreeMapConverter
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[INFO] Packaging webapp
+[INFO] Assembling webapp [Spring4MVCCRUDRestService] in [C:\Users\Rajani\Desktop\2018\Working\Java\Spring\Samples\Spring4MVCCRUDRestServiceAndCORS\Spring4MVCCRUDRestService\target\Spring4MVCCRUDRestService]
+[INFO] Processing war project
+[INFO] Copying webapp resources [C:\Users\Rajani\Desktop\2018\Working\Java\Spring\Samples\Spring4MVCCRUDRestServiceAndCORS\Spring4MVCCRUDRestService\src\main\webapp]
+[INFO] Webapp assembled in [609 msecs]
+[INFO] Building war: C:\Users\Rajani\Desktop\2018\Working\Java\Spring\Samples\Spring4MVCCRUDRestServiceAndCORS\Spring4MVCCRUDRestService\target\Spring4MVCCRUDRestService.war
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 29.346 s
+[INFO] Finished at: 2018-09-23T19:45:56+05:30
+[INFO] ------------------------------------------------------------------------
+
+Rajani@RajaniSamsungPC MINGW64 ~/Desktop/2018/Working/Java/Spring/Samples/Spring4MVCCRUDRestServiceAndCORS/Spring4MVCCRUDRestService
+$ jar tvf target/Spring4MVCCRUDRestService.war
+     0 Sun Sep 23 19:45:56 IST 2018 META-INF/
+   129 Sun Sep 23 19:45:54 IST 2018 META-INF/MANIFEST.MF
+     0 Sun Sep 23 19:45:56 IST 2018 WEB-INF/
+     0 Sun Sep 23 19:45:56 IST 2018 WEB-INF/classes/
+     0 Sun Sep 23 19:45:56 IST 2018 WEB-INF/classes/com/
+     0 Sun Sep 23 19:45:56 IST 2018 WEB-INF/classes/com/rajani/
+     0 Sun Sep 23 19:45:56 IST 2018 WEB-INF/classes/com/rajani/springmvc/
+     0 Sun Sep 23 19:45:56 IST 2018 WEB-INF/classes/com/rajani/springmvc/configuration/
+     0 Sun Sep 23 19:45:56 IST 2018 WEB-INF/classes/com/rajani/springmvc/controller/
+     0 Sun Sep 23 19:45:56 IST 2018 WEB-INF/classes/com/rajani/springmvc/model/
+     0 Sun Sep 23 19:45:56 IST 2018 WEB-INF/classes/com/rajani/springmvc/service/
+     0 Sun Sep 23 19:45:56 IST 2018 WEB-INF/lib/
+   639 Sun Sep 23 19:45:54 IST 2018 WEB-INF/classes/com/rajani/springmvc/configuration/HelloWorldConfiguration.class
+   909 Sun Sep 23 19:45:54 IST 2018 WEB-INF/classes/com/rajani/springmvc/configuration/HelloWorldInitializer.class
+  5785 Sun Sep 23 19:45:54 IST 2018 WEB-INF/classes/com/rajani/springmvc/controller/HelloWorldRestController.class
+  2190 Sun Sep 23 19:45:54 IST 2018 WEB-INF/classes/com/rajani/springmvc/model/User.class
+   590 Sun Sep 23 19:45:54 IST 2018 WEB-INF/classes/com/rajani/springmvc/service/UserService.class
+  3348 Sun Sep 23 19:45:54 IST 2018 WEB-INF/classes/com/rajani/springmvc/service/UserServiceImpl.class
+  4467 Sun Sep 23 19:06:32 IST 2018 WEB-INF/lib/aopalliance-1.0.jar
+ 61829 Sun Sep 23 19:06:30 IST 2018 WEB-INF/lib/commons-logging-1.2.jar
+ 39815 Sun Sep 23 19:45:46 IST 2018 WEB-INF/lib/jackson-annotations-2.5.0.jar
+229998 Sun Sep 23 19:45:48 IST 2018 WEB-INF/lib/jackson-core-2.5.3.jar
+1143162 Sun Sep 23 19:45:46 IST 2018 WEB-INF/lib/jackson-databind-2.5.3.jar
+ 95806 Sun Sep 23 19:06:36 IST 2018 WEB-INF/lib/javax.servlet-api-3.1.0.jar
+363974 Sun Sep 23 19:45:44 IST 2018 WEB-INF/lib/spring-aop-4.2.0.RELEASE.jar
+729550 Sun Sep 23 19:45:44 IST 2018 WEB-INF/lib/spring-beans-4.2.0.RELEASE.jar
+1084471 Sun Sep 23 19:45:46 IST 2018 WEB-INF/lib/spring-context-4.2.0.RELEASE.jar
+1052383 Sun Sep 23 19:45:46 IST 2018 WEB-INF/lib/spring-core-4.2.0.RELEASE.jar
+262391 Sun Sep 23 19:45:46 IST 2018 WEB-INF/lib/spring-expression-4.2.0.RELEASE.jar
+262961 Sun Sep 23 19:45:46 IST 2018 WEB-INF/lib/spring-tx-4.2.0.RELEASE.jar
+765877 Sun Sep 23 19:45:46 IST 2018 WEB-INF/lib/spring-web-4.2.0.RELEASE.jar
+865404 Sun Sep 23 19:45:46 IST 2018 WEB-INF/lib/spring-webmvc-4.2.0.RELEASE.jar
+  2257 Sun Sep 23 19:04:12 IST 2018 META-INF/maven/com.rajani.springmvc/Spring4MVCCRUDRestService/pom.xml
+   135 Sun Sep 23 19:45:56 IST 2018 META-INF/maven/com.rajani.springmvc/Spring4MVCCRUDRestService/pom.properties
+
+Rajani@RajaniSamsungPC MINGW64 ~/Desktop/2018/Working/Java/Spring/Samples/Spring4MVCCRUDRestServiceAndCORS/Spring4MVCCRUDRestService
+$ cp "C:\Users\Rajani\Desktop\2018\Working\Java\Spring\Samples\Spring4MVCCRUDRestServiceAndCORS\Spring4MVCCRUDRestService\target\Spring4MVCCRUDRestService.war" "C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps"
+
+Rajani@RajaniSamsungPC MINGW64 ~/Desktop/2018/Working/Java/Spring/Samples/Spring4MVCCRUDRestServiceAndCORS/Spring4MVCCRUDRestService
+$ mvn -Dexec.mainClass=com.rajani.springmvc.SpringRestTestClient -Dexec.classpathScope=test test-compile exec:java
+[INFO] Scanning for projects...
+[INFO]
+[INFO] -----------< com.rajani.springmvc:Spring4MVCCRUDRestService >-----------
+[INFO] Building Spring4MVCCRUDRestService Maven Webapp 1.0.0
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ Spring4MVCCRUDRestService ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ Spring4MVCCRUDRestService ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ Spring4MVCCRUDRestService ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\Users\Rajani\Desktop\2018\Working\Java\Spring\Samples\Spring4MVCCRUDRestServiceAndCORS\Spring4MVCCRUDRestService\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ Spring4MVCCRUDRestService ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- exec-maven-plugin:1.6.0:java (default-cli) @ Spring4MVCCRUDRestService ---
+Testing listAllUsers API-----------
+User : id=1, Name=Sam, Age=30, Salary=70000.0
+User : id=2, Name=Tom, Age=40, Salary=50000.0
+User : id=3, Name=Jerome, Age=45, Salary=30000.0
+User : id=4, Name=Silvia, Age=50, Salary=40000.0
+Testing getUser API----------
+User [id=1, name=Sam, age=30, salary=70000.0]
+Testing create User API----------
+Location : http://localhost:8080/Spring4MVCCRUDRestService/user/5
+Testing listAllUsers API-----------
+User : id=1, Name=Sam, Age=30, Salary=70000.0
+User : id=2, Name=Tom, Age=40, Salary=50000.0
+User : id=3, Name=Jerome, Age=45, Salary=30000.0
+User : id=4, Name=Silvia, Age=50, Salary=40000.0
+User : id=5, Name=Sarah, Age=51, Salary=134.0
+Testing update User API----------
+User [id=1, name=Tomy, age=33, salary=70000.0]
+Testing listAllUsers API-----------
+User : id=1, Name=Tomy, Age=33, Salary=70000.0
+User : id=2, Name=Tom, Age=40, Salary=50000.0
+User : id=3, Name=Jerome, Age=45, Salary=30000.0
+User : id=4, Name=Silvia, Age=50, Salary=40000.0
+User : id=5, Name=Sarah, Age=51, Salary=134.0
+Testing delete User API----------
+Testing listAllUsers API-----------
+User : id=1, Name=Tomy, Age=33, Salary=70000.0
+User : id=2, Name=Tom, Age=40, Salary=50000.0
+User : id=4, Name=Silvia, Age=50, Salary=40000.0
+User : id=5, Name=Sarah, Age=51, Salary=134.0
+Testing all delete Users API----------
+Testing listAllUsers API-----------
+No user exist----------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3.641 s
+[INFO] Finished at: 2018-09-23T19:47:35+05:30
+[INFO] ------------------------------------------------------------------------
+
+Rajani@RajaniSamsungPC MINGW64 ~/Desktop/2018/Working/Java/Spring/Samples/Spring4MVCCRUDRestServiceAndCORS/Spring4MVCCRUDRestService
+$

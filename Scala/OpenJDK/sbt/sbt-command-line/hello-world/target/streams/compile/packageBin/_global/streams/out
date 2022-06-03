@@ -1,0 +1,13 @@
+[debug] Packaging C:\Tech2021\Scala\sbt-command-line\hello-world\target\scala-3.1.0\hello-world_3-0.1.0-SNAPSHOT.jar ...
+[debug] Input file mappings:
+[debug] 	hello.class
+[debug] 	  C:\Tech2021\Scala\sbt-command-line\hello-world\target\scala-3.1.0\classes\hello.class
+[debug] 	hello.tasty
+[debug] 	  C:\Tech2021\Scala\sbt-command-line\hello-world\target\scala-3.1.0\classes\hello.tasty
+[debug] 	Main$package$.class
+[debug] 	  C:\Tech2021\Scala\sbt-command-line\hello-world\target\scala-3.1.0\classes\Main$package$.class
+[debug] 	Main$package.class
+[debug] 	  C:\Tech2021\Scala\sbt-command-line\hello-world\target\scala-3.1.0\classes\Main$package.class
+[debug] 	Main$package.tasty
+[debug] 	  C:\Tech2021\Scala\sbt-command-line\hello-world\target\scala-3.1.0\classes\Main$package.tasty
+[debug] Done packaging.

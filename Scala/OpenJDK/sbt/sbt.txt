@@ -1,0 +1,53 @@
+[
+https://github.com/sbt/sbt/releases/download/v1.5.6/sbt-1.5.6.zip
+sbt-1.5.6.zip
+]
+
+# Scala # Java # sbt $ java --version $ sbt --version
+$ export PATH=$PATH:"/C/Users/Rajani/Downloads/Java/JDK/OpenJDK/openjdk-17.0.1_windows-x64_bin/jdk-17.0.1/bin/:/C/Users/Rajani/Downloads/Scala/Scala3/sbt/sbt-1.5.6/sbt/bin/"
+
+# Scala # Java # Apache Maven # sbt $ java --version $ mvn --version $ sbt --version
+$ export PATH=$PATH:"/C/Users/Rajani/Downloads/Java/JDK/OpenJDK/openjdk-17.0.1_windows-x64_bin/jdk-17.0.1/bin/:/C/Users/Rajani/Downloads/Java/Apache Maven/apache-maven-3.8.4-bin/apache-maven-3.8.4/bin/:/C/Users/Rajani/Downloads/Scala/Scala3/sbt/sbt-1.5.6/sbt/bin/"
+
+
+# Scala # Java # sbt > java --version > sbt --version
+> set path=%path%;C:\Users\Rajani\Downloads\Java\JDK\OpenJDK\openjdk-17.0.1_windows-x64_bin\jdk-17.0.1\bin\;C:\Users\Rajani\Downloads\Scala\Scala3\sbt\sbt-1.5.6\sbt\bin\
+
+# Scala # Java # Apache Maven # sbt > java --version > mvn --version > sbt --version
+> set path=%path%;C:\Users\Rajani\Downloads\Java\JDK\OpenJDK\openjdk-17.0.1_windows-x64_bin\jdk-17.0.1\bin\;C:\Users\Rajani\Downloads\Java\Apache Maven\apache-maven-3.8.4-bin\apache-maven-3.8.4\bin\;C:\Users\Rajani\Downloads\Scala\Scala3\sbt\sbt-1.5.6\sbt\bin\
+
+java --version
+
+[
+mvn --v
+]
+
+# C:/Users/Rajani/.sbt/
+sbt --version
+
+# Using the command line
+mkdir sbt-command-line
+
+cd sbt-command-line
+
+# C:/Users/Rajani/AppData/Local/Temp/
+# Scala 2 project
+# sbt new scala/hello-world.g8
+# Scala 3 project
+sbt new scala/scala3.g8
+
+# When prompted
+# Scala 2 project
+# hello-world-2
+# Scala 3 project
+hello-world
+
+# cd
+# Scala 2 project
+# cd hello-world-2
+# Scala 3 project
+cd hello-world
+
+sbt compile
+
+sbt run

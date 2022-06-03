@@ -1,0 +1,55 @@
+# Tomcat
+# Git Bash # Java and Maven # Note # Maven is not required for Tomcat
+
+export JAVA_HOME="/C/Users/rajanis/Downloads/Java/JDK/jdk-15.0.1"
+
+export M2_HOME="/C/Users/rajanis/Downloads/Java/Apache Maven/Apache Maven 3.6.3/apache-maven-3.6.3"
+
+export M2="$M2_HOME/bin"
+
+export PATH=$PATH:"$M2:$JAVA_HOME/bin"
+
+export MAVEN_OPTS="-Xms256m -Xmx512m"
+
+java --version
+
+mvn -v
+
+cd "C:\Users\rajanis\Downloads\Java\Apache Tomcat\Tomcat 9.0\bin"
+
+./startup.sh
+
+[
+start http://localhost:8080/
+]
+start http://localhost:5050/
+
+./shutdown.sh
+
+
+# cmd # Java and Maven # Note # Maven is not required for Tomcat
+
+set JAVA_HOME=C:\Users\rajanis\Downloads\Java\JDK\jdk-15.0.1
+
+set M2_HOME=C:\Users\rajanis\Downloads\Java\Apache Maven\Apache Maven 3.6.3\apache-maven-3.6.3
+
+set M2=%M2_HOME%\bin
+
+set path=%path%;%M2%;%JAVA_HOME%\bin
+
+set MAVEN_OPTS=-Xms256m -Xmx512m
+
+java --version
+
+mvn -v
+
+cd "C:\Users\rajanis\Downloads\Java\Apache Tomcat\Tomcat 9.0\bin"
+
+startup.bat
+
+[
+start http://localhost:8080/
+]
+start  http://localhost:5050/
+
+shutdown.bat

@@ -1,0 +1,317 @@
+#jdbc:mysql://localhost:3306
+#root
+#My$ql@Server#5.7
+
+/*
+Root Account Password: My$ql@Server#5.7
+
+MySQL User Details
+Username: aspire
+Host: localhost
+Role: DB Admin
+Authentication: MySQL
+Password: My$ql@Server#5.7.14
+*/
+
+DROP DATABASE IF EXISTS `tutorials`;
+CREATE DATABASE `tutorials`;
+USE `tutorials`;
+
+DROP TABLE IF EXISTS `student`;
+CREATE TABLE `student` (
+    `STUDENT_ID` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+    `STUDENT_NAME` VARCHAR(10) NOT NULL,
+    `STUDENT_AGE` VARCHAR(20) NOT NULL,
+    PRIMARY KEY (`STUDENT_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+SELECT * FROM `STUDENT`;
+
+$ cd "E:\Working\Java\Hibernate\Samples\HibernateMySQLAnnotationExample\HibernateMySQLExample"
+
+$ mvn eclipse:eclipse
+
+$ mvn package
+
+
+# HibernateMySQLExample/pom.xml
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.5.0</version>
+                <configuration>
+                    <mainClass>com.javacodegeeks.enterprise.hibernate.App</mainClass>
+                    <cleanupDaemonThreads>false</cleanupDaemonThreads>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+# HibernateMySQLExample/src/main/resources/hibernate.cfg.xml # <property name="show_sql">true</property>
+
+<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/tutorials</property>
+<property name="hibernate.connection.username">root</property>
+<property name="hibernate.connection.password">My$ql@Server#5.7</property>
+
+<mapping class="com.javacodegeeks.enterprise.hibernate.App"></mapping>
+
+$ mvn eclipse:eclipse
+
+
+$ mvn package
+
+
+$ mvn exec:java
+
+
+# Git Bash
+
+Aspire@Acer MINGW64 /
+$ java -version
+java version "1.8.0_102"
+Java(TM) SE Runtime Environment (build 1.8.0_102-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.102-b14, mixed mode)
+
+Aspire@Acer MINGW64 /
+$ mvn -version
+Apache Maven 3.3.9 (bb52d8502b132ec0a5a3f4c09453c07478323dc5; 2015-11-10T22:11:47+05:30)
+Maven home: C:\Program Files\Apache Software Foundation\apache-maven-3.3.9
+Java version: 1.8.0_102, vendor: Oracle Corporation
+Java home: C:\Program Files\Java\jdk1.8.0_102\jre
+Default locale: en_US, platform encoding: Cp1252
+OS name: "windows 8.1", version: "6.3", arch: "amd64", family: "dos"
+
+Aspire@Acer MINGW64 /
+$ winpty mysql -u root -p
+Enter password: ****************
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 31
+Server version: 5.7.14-log MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2016, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> SELECT VERSION();
++------------+
+| VERSION()  |
++------------+
+| 5.7.14-log |
++------------+
+1 row in set (0.00 sec)
+
+mysql> quit;
+Bye
+
+Aspire@Acer MINGW64 /
+$ cd "E:\Working\Java\Hibernate\Samples\HibernateMySQLAnnotationExample\HibernateMySQLExample"
+
+Aspire@Acer MINGW64 /e/Working/Java/Hibernate/Samples/HibernateMySQLAnnotationExample/HibernateMySQLExample
+$ mvn eclipse:eclipse
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building HibernateMySQLExample 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] >>> maven-eclipse-plugin:2.10:eclipse (default-cli) > generate-resources @ HibernateMySQLExample >>>
+[INFO]
+[INFO] <<< maven-eclipse-plugin:2.10:eclipse (default-cli) < generate-resources @ HibernateMySQLExample <<<
+[INFO]
+[INFO] --- maven-eclipse-plugin:2.10:eclipse (default-cli) @ HibernateMySQLExample ---
+[INFO] Using Eclipse Workspace: null
+[INFO] Adding default classpath container: org.eclipse.jdt.launching.JRE_CONTAINER
+[INFO] Not writing settings - defaults suffice
+[INFO] File E:\Working\Java\Hibernate\Samples\HibernateMySQLAnnotationExample\HibernateMySQLExample\.project already exists.
+       Additional settings will be preserved, run mvn eclipse:clean if you want old settings to be removed.
+[INFO] Wrote Eclipse project for "HibernateMySQLExample" to E:\Working\Java\Hibernate\Samples\HibernateMySQLAnnotationExample\HibernateMySQLExample.
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 2.969 s
+[INFO] Finished at: 2016-11-06T15:01:04+05:30
+[INFO] Final Memory: 12M/245M
+[INFO] ------------------------------------------------------------------------
+
+Aspire@Acer MINGW64 /e/Working/Java/Hibernate/Samples/HibernateMySQLAnnotationExample/HibernateMySQLExample
+$ mvn package
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building HibernateMySQLExample 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ HibernateMySQLExample ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 3 resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ HibernateMySQLExample ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 3 source files to E:\Working\Java\Hibernate\Samples\HibernateMySQLAnnotationExample\HibernateMySQLExample\target\classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ HibernateMySQLExample ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory E:\Working\Java\Hibernate\Samples\HibernateMySQLAnnotationExample\HibernateMySQLExample\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ HibernateMySQLExample ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ HibernateMySQLExample ---
+[INFO] Surefire report directory: E:\Working\Java\Hibernate\Samples\HibernateMySQLAnnotationExample\HibernateMySQLExample\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+
+Results :
+
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ HibernateMySQLExample ---
+[INFO] Building jar: E:\Working\Java\Hibernate\Samples\HibernateMySQLAnnotationExample\HibernateMySQLExample\target\HibernateMySQLExample-1.0-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 6.255 s
+[INFO] Finished at: 2016-11-06T15:01:16+05:30
+[INFO] Final Memory: 16M/257M
+[INFO] ------------------------------------------------------------------------
+
+Aspire@Acer MINGW64 /e/Working/Java/Hibernate/Samples/HibernateMySQLAnnotationExample/HibernateMySQLExample
+$ mvn eclipse:eclipse
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building HibernateMySQLExample 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] >>> maven-eclipse-plugin:2.10:eclipse (default-cli) > generate-resources @ HibernateMySQLExample >>>
+[INFO]
+[INFO] <<< maven-eclipse-plugin:2.10:eclipse (default-cli) < generate-resources @ HibernateMySQLExample <<<
+[INFO]
+[INFO] --- maven-eclipse-plugin:2.10:eclipse (default-cli) @ HibernateMySQLExample ---
+[INFO] Using Eclipse Workspace: null
+[INFO] Adding default classpath container: org.eclipse.jdt.launching.JRE_CONTAINER
+[INFO] Not writing settings - defaults suffice
+[INFO] File E:\Working\Java\Hibernate\Samples\HibernateMySQLAnnotationExample\HibernateMySQLExample\.project already exists.
+       Additional settings will be preserved, run mvn eclipse:clean if you want old settings to be removed.
+[INFO] Wrote Eclipse project for "HibernateMySQLExample" to E:\Working\Java\Hibernate\Samples\HibernateMySQLAnnotationExample\HibernateMySQLExample.
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 2.813 s
+[INFO] Finished at: 2016-11-06T15:04:25+05:30
+[INFO] Final Memory: 12M/245M
+[INFO] ------------------------------------------------------------------------
+
+Aspire@Acer MINGW64 /e/Working/Java/Hibernate/Samples/HibernateMySQLAnnotationExample/HibernateMySQLExample
+$ mvn package
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building HibernateMySQLExample 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ HibernateMySQLExample ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 3 resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ HibernateMySQLExample ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ HibernateMySQLExample ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory E:\Working\Java\Hibernate\Samples\HibernateMySQLAnnotationExample\HibernateMySQLExample\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ HibernateMySQLExample ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ HibernateMySQLExample ---
+[INFO] Surefire report directory: E:\Working\Java\Hibernate\Samples\HibernateMySQLAnnotationExample\HibernateMySQLExample\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+
+Results :
+
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ HibernateMySQLExample ---
+[INFO] Building jar: E:\Working\Java\Hibernate\Samples\HibernateMySQLAnnotationExample\HibernateMySQLExample\target\HibernateMySQLExample-1.0-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3.986 s
+[INFO] Finished at: 2016-11-06T15:04:33+05:30
+[INFO] Final Memory: 10M/245M
+[INFO] ------------------------------------------------------------------------
+
+Aspire@Acer MINGW64 /e/Working/Java/Hibernate/Samples/HibernateMySQLAnnotationExample/HibernateMySQLExample
+$ mvn exec:java
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building HibernateMySQLExample 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- exec-maven-plugin:1.5.0:java (default-cli) @ HibernateMySQLExample ---
+Nov 06, 2016 3:04:49 PM org.hibernate.annotations.common.Version <clinit>
+INFO: HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+Nov 06, 2016 3:04:50 PM org.hibernate.Version logVersion
+INFO: HHH000412: Hibernate Core {4.2.3.Final}
+Nov 06, 2016 3:04:50 PM org.hibernate.cfg.Environment <clinit>
+INFO: HHH000206: hibernate.properties not found
+Nov 06, 2016 3:04:50 PM org.hibernate.cfg.Environment buildBytecodeProvider
+INFO: HHH000021: Bytecode provider name : javassist
+Nov 06, 2016 3:04:50 PM org.hibernate.cfg.Configuration configure
+INFO: HHH000043: Configuring from resource: /hibernate.cfg.xml
+Nov 06, 2016 3:04:50 PM org.hibernate.cfg.Configuration getConfigurationInputStream
+INFO: HHH000040: Configuration resource: /hibernate.cfg.xml
+Nov 06, 2016 3:04:50 PM org.hibernate.internal.util.xml.DTDEntityResolver resolveEntity
+WARN: HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+Nov 06, 2016 3:04:50 PM org.hibernate.cfg.Configuration addResource
+INFO: HHH000221: Reading mappings from resource: com/javacodegeeks/enterprise/hibernate/Student.hbm.xml
+Nov 06, 2016 3:04:50 PM org.hibernate.internal.util.xml.DTDEntityResolver resolveEntity
+WARN: HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+Nov 06, 2016 3:04:50 PM org.hibernate.cfg.Configuration doConfigure
+INFO: HHH000041: Configured SessionFactory: null
+Nov 06, 2016 3:04:50 PM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000402: Using Hibernate built-in connection pool (not for production use!)
+Nov 06, 2016 3:04:50 PM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000115: Hibernate connection pool size: 20
+Nov 06, 2016 3:04:50 PM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000006: Autocommit mode: false
+Nov 06, 2016 3:04:50 PM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/tutorials]
+Nov 06, 2016 3:04:50 PM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000046: Connection properties: {user=root, password=****}
+Nov 06, 2016 3:04:51 PM org.hibernate.dialect.Dialect <init>
+INFO: HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+Nov 06, 2016 3:04:51 PM org.hibernate.engine.jdbc.internal.LobCreatorBuilder useContextualLobCreation
+INFO: HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+Nov 06, 2016 3:04:51 PM org.hibernate.engine.transaction.internal.TransactionFactoryInitiator initiateService
+INFO: HHH000399: Using default transaction strategy (direct JDBC transactions)
+Nov 06, 2016 3:04:51 PM org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory <init>
+INFO: HHH000397: Using ASTQueryTranslatorFactory
+Hibernate: insert into tutorials.student (STUDENT_NAME, STUDENT_Age) values (?, ?)
+Great! Student was saved
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 4.516 s
+[INFO] Finished at: 2016-11-06T15:04:52+05:30
+[INFO] Final Memory: 12M/268M
+[INFO] ------------------------------------------------------------------------

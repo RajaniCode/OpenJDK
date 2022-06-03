@@ -1,0 +1,11 @@
+https://docs.oracle.com/javase/8/docs/technotes/tools/unix/wsimport.html
+
+wsimport -p stockquote http://stockquote.example.com/quote?wsdl
+
+wsimport -p stockquote http://www.webservicex.com/stockquote.asmx?WSDL
+
+https://docs.oracle.com/javase/8/docs/technotes/tools/unix/wsgen.html
+
+Examples:
+  wsgen -cp . example.Stock
+  wsgen -cp . example.Stock -wsdl -servicename {http://mynamespace}MyService

@@ -1,0 +1,16 @@
+
+Rajani@RajaniDell MINGW64 ~
+$ cd "E:\Working\Java\Import"
+
+Rajani@RajaniDell MINGW64 /e/Working/Java/Import
+$ shopt -s globstar
+
+Rajani@RajaniDell MINGW64 /e/Working/Java/Import
+$ javac **/*.java
+
+Rajani@RajaniDell MINGW64 /e/Working/Java/Import
+$ java -cp "src" Calculate
+Root 3 of 216 = 6
+
+Rajani@RajaniDell MINGW64 /e/Working/Java/Import
+$

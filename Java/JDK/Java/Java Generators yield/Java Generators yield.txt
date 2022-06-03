@@ -1,0 +1,40 @@
+Java equivalent to C#'s yield
+
+Aviad Ben Dov's infomancers-collections library from 2007 [https://code.google.com/archive/p/infomancers-collections/]
+Jim Blackler's YieldAdapter library from 2008 [https://code.google.com/archive/p/infomancers-collections/]
+
+Both will allow to write code with yield return-like construct in Java, so both will satisfy your request. The notable differences between the two are:
+
+Mechanics
+
+Aviad's library is using bytecode manipulation while Jim's uses multithreading. Depending on your needs, each may have its own advantages and disadvantages. It's likely Aviad's solution is faster, while Jim's is more portable (for example, I don't think Aviad's library will work on Android).
+
+Interface
+
+Aviad's library has a cleaner interface - here's an example:
+
+Iterable<Integer> it = new Yielder<Integer>() {
+    @Override protected void yieldNextCore() {
+        for (int i = 0; i < 10; i++) {
+            yieldReturn(i);
+            if (i == 5) yieldBreak();
+        }
+    }
+};
+
+While Jim's is way more complicated, requiring you to adept a generic Collector which has a collect(ResultHandler) method... ugh. However, you could use something like this wrapper around Jim's code by Zoom Information [https://github.com/domlachowicz/java-generators] which greatly simplifies that:
+
+Iterable<Integer> it = new Generator<Integer>() {
+    @Override protected void run() {
+        for (int i = 0; i < 10; i++) {
+            yield(i);
+            if (i == 5) return;
+        }
+    }
+};
+
+License
+
+Aviad's solution is BSD.
+
+Jim's solution is public domain, and so is its wrapper mentioned above.

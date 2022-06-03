@@ -1,0 +1,14 @@
+
+https://docs.jboss.org/hibernate/orm/4.2/quickstart/en-US/html_single/
+
+https://docs.jboss.org/hibernate/orm/4.3/javadocs/allclasses-noframe.html
+
+https://examples.javacodegeeks.com/enterprise-java/hibernate/hibernate-3-with-maven-2-and-mysql-5-example-xml-mapping-and-annotation/
+
+http://websystique.com/hibernate/hibernate-mysql-maven-hello-world-example-xml/
+
+http://websystique.com/hibernate/hibernate-mysql-maven-hello-world-example-annotation/
+
+http://websystique.com/spring/spring4-hibernate4-mysql-maven-integration-example-using-annotations/
+
+http://websystique.com/springmvc/spring-4-mvc-and-hibernate4-integration-testing-example-using-annotations/

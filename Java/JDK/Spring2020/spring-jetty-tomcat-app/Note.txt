@@ -1,0 +1,18 @@
+    <!-- Some containers like Tomcat don't have jstl library -->
+    <!-- # [WARNING] # scanned from multiple locations # jar --> 
+    <!-- # Fix # <scope>provided</scope> # Download # jstl-1.2.jar # target/spring-jetty-tomcat-app/WEB-INF/lib/jstl-1.2.jar -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>jstl</artifactId>
+      <version>1.2</version>
+      <scope>provided</scope>
+    </dependency>
+
+
+      <!-- http://www.eclipse.org/jetty/documentation/current/jetty-maven-plugin.html -->
+      <!-- # Fix # jetty-9.4.12 [WARNING] Unknown asm implementation version, assuming version 393216 -->
+      <plugin>
+        <groupId>org.eclipse.jetty</groupId>
+        <artifactId>jetty-maven-plugin</artifactId>
+        <version>9.4.31.v20200723</version>
+      </plugin>

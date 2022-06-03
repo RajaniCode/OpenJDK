@@ -1,0 +1,40 @@
+
+Aspire@Acer MINGW64 ~
+$ java -version
+java version "1.8.0_102"
+Java(TM) SE Runtime Environment (build 1.8.0_102-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.102-b14, mixed mode)
+
+Aspire@Acer MINGW64 ~
+$ mvn -v
+Apache Maven 3.3.9 (bb52d8502b132ec0a5a3f4c09453c07478323dc5; 2015-11-10T22:11:47+05:30)
+Maven home: C:\Program Files\Apache Software Foundation\apache-maven-3.3.9
+Java version: 1.8.0_102, vendor: Oracle Corporation
+Java home: C:\Program Files\Java\jdk1.8.0_102\jre
+Default locale: en_US, platform encoding: Cp1252
+OS name: "windows 8.1", version: "6.3", arch: "amd64", family: "dos"
+
+Aspire@Acer MINGW64 ~
+$ cd "E:\Working\Java\Spring\Spring-REST\Spring-REST-Services\tut-bookmarks-master\model"
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-REST/Spring-REST-Services/tut-bookmarks-master/model
+$ jar tvf target/model-0.0.1-SNAPSHOT.jar
+     0 Thu Dec 08 21:20:36 IST 2016 META-INF/
+   285 Thu Dec 08 21:20:34 IST 2016 META-INF/MANIFEST.MF
+     0 Thu Dec 08 21:20:32 IST 2016 bookmarks/
+  1395 Thu Dec 08 21:20:32 IST 2016 bookmarks/Account.class
+   459 Thu Dec 08 21:20:32 IST 2016 bookmarks/AccountRepository.class
+  1227 Thu Dec 08 21:20:32 IST 2016 bookmarks/Bookmark.class
+   474 Thu Dec 08 21:20:32 IST 2016 bookmarks/BookmarkRepository.class
+     0 Thu Dec 08 21:20:36 IST 2016 META-INF/maven/
+     0 Thu Dec 08 21:20:36 IST 2016 META-INF/maven/bookmarks/
+     0 Thu Dec 08 21:20:36 IST 2016 META-INF/maven/bookmarks/model/
+   881 Fri Nov 04 20:49:40 IST 2016 META-INF/maven/bookmarks/model/pom.xml
+   113 Thu Dec 08 21:20:36 IST 2016 META-INF/maven/bookmarks/model/pom.properties
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-REST/Spring-REST-Services/tut-bookmarks-master/model
+$ java -jar target/model-0.0.1-SNAPSHOT.jar
+no main manifest attribute, in target/model-0.0.1-SNAPSHOT.jar
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-REST/Spring-REST-Services/tut-bookmarks-master/model
+$

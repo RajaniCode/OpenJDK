@@ -1,0 +1,71 @@
+import java.util.List;
+import java.util.stream.Stream;
+
+import java.lang.Math;
+
+import static java.util.stream.Collectors.toList;
+
+class ArmstrongSeries {
+
+    public List<Integer> armstrong(int seed, int limit, double power) {
+        return Stream.iterate(seed, i -> ++i)
+                .filter(i -> i == Stream.of(String.valueOf(i).split(""))
+                        .map(Integer::valueOf)
+                        .map(n -> (Math.pow(n, power)))
+                        .mapToDouble(n -> n)
+                        .sum())
+                        .limit(limit) // Note
+                .collect(toList());
+    }
+
+    public void Print() {
+        System.out.println("3 Digit Armstrong Numbers");
+        List<Integer> armstrongList = armstrong(100, 4, 3d);
+        System.out.println(armstrongList);
+
+        System.out.println("4 Digit Armstrong Numbers");
+        armstrongList = armstrong(1000, 3, 4d);
+        System.out.println(armstrongList);
+
+        System.out.println("5 Digit Armstrong Numbers");
+        armstrongList = armstrong(10000, 3, 5d);
+        System.out.println(armstrongList);
+    }
+}
+
+public class Program {
+    public static void main(String... args) {
+        ArmstrongSeries armstrong = new ArmstrongSeries();
+        armstrong.Print();
+    }
+}
+
+/*
+// int[] armstrong = { 1, 153, 370, 371, 407, 1634, 8208, 9474, 54748, 92727, 93084 };
+
+// 3 Digit Armstrong Numbers
+
+1 + 125 + 27 = 153
+
+27 + 343 + 0 = 370
+
+27 + 343 + 1 = 371
+
+64 + 0 + 343 = 407
+
+// 4 Digit Armstrong Numbers
+
+1 + 1296 + 81 + 256 = 1634
+
+4096 + 16 + 0 + 4096 = 8208
+
+6561 + 256 + 2401 + 256 = 9474
+
+// 5 Digit Armstrong Numbers
+
+3125 + 1024 + 16807 + 1024 + 32768 = 54748
+
+59049 + 32 + 16807 + 32 + 16807 = 92727
+
+59049 + 243 + 0 + 32768 + 1024 = 93084
+*/

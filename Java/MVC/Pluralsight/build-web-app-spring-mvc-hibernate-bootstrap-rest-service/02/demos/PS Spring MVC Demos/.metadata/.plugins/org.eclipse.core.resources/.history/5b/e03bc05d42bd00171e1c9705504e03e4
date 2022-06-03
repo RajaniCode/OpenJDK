@@ -1,0 +1,10 @@
+package com.ps.springm1;
+
+public class BankAppUsingAnnotations {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

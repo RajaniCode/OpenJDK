@@ -1,0 +1,68 @@
+$ openssl version
+
+$ openssl req -new -newkey rsa:2048 -nodes -keyout localhost.key -out localhost.csr
+
+$ ll
+
+$ openssl x509 -req -days 365 -in localhost.csr -signkey localhost.key -out localhost.crt
+
+
+# Git Bash
+
+Aspire@Acer MINGW64 ~
+$ openssl version
+OpenSSL 1.0.2j  26 Sep 2016
+
+Aspire@Acer MINGW64 ~
+$ cd "E:\Working\Java\TODO\Jar\Self-Signed-SSL-Certificate"
+
+Aspire@Acer MINGW64 /e/Working/Java/TODO/Jar/Self-Signed-SSL-Certificate
+$ openssl req -new -newkey rsa:2048 -nodes -keyout localhost.key -out localhost.csr
+Generating a 2048 bit RSA private key
+............+++
+.....................+++
+writing new private key to 'localhost.key'
+-----
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
+Country Name (2 letter code) [AU]:IN
+State or Province Name (full name) [Some-State]:Tamil Nadu
+Locality Name (eg, city) []:Chennai
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:IT
+Organizational Unit Name (eg, section) []:Software
+Common Name (e.g. server FQDN or YOUR name) []:localhost
+Email Address []:#####@gmail.com
+
+Please enter the following 'extra' attributes
+to be sent with your certificate request
+A challenge password []:Java 1.8.0_102
+An optional company name []:IT
+
+Aspire@Acer MINGW64 /e/Working/Java/TODO/Jar/Self-Signed-SSL-Certificate
+$ ll
+total 8
+-rw-r--r-- 1 Aspire 197121 1147 Mar  3 15:07 localhost.csr
+-rw-r--r-- 1 Aspire 197121 1704 Mar  3 15:07 localhost.key
+-rw-r--r-- 1 Aspire 197121    0 Mar  3 14:58 Self-Signed-SSL-Certificate.txt
+
+Aspire@Acer MINGW64 /e/Working/Java/TODO/Jar/Self-Signed-SSL-Certificate
+$ openssl x509 -req -days 365 -in localhost.csr -signkey localhost.key -out localhost.crt
+Signature ok
+subject=/C=IN/ST=Tamil Nadu/L=Chennai/O=IT/OU=Software/CN=localhost/emailAddress=\x1B[2~#####@gmail.com
+Getting Private key
+
+Aspire@Acer MINGW64 /e/Working/Java/TODO/Jar/Self-Signed-SSL-Certificate
+$ ll
+total 13
+-rw-r--r-- 1 Aspire 197121 1354 Mar  3 15:12 localhost.crt
+-rw-r--r-- 1 Aspire 197121 1147 Mar  3 15:07 localhost.csr
+-rw-r--r-- 1 Aspire 197121 1704 Mar  3 15:07 localhost.key
+-rw-r--r-- 1 Aspire 197121  186 Mar  3 15:12 Self-Signed-SSL-Certificate.txt
+
+Aspire@Acer MINGW64 /e/Working/Java/TODO/Jar/Self-Signed-SSL-Certificate
+$

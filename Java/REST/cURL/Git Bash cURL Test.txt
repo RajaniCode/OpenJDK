@@ -1,0 +1,72 @@
+
+Aspire@Acer MINGW64 /
+$ java -version
+java version "1.8.0_102"
+Java(TM) SE Runtime Environment (build 1.8.0_102-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.102-b14, mixed mode)
+
+Aspire@Acer MINGW64 /
+$ mvn -version
+Apache Maven 3.3.9 (bb52d8502b132ec0a5a3f4c09453c07478323dc5; 2015-11-10T22:11:47+05:30)
+Maven home: C:\Program Files\Apache Software Foundation\apache-maven-3.3.9
+Java version: 1.8.0_102, vendor: Oracle Corporation
+Java home: C:\Program Files\Java\jdk1.8.0_102\jre
+Default locale: en_US, platform encoding: Cp1252
+OS name: "windows 8.1", version: "6.3", arch: "amd64", family: "dos"
+
+Aspire@Acer MINGW64 /
+$ cd "E:\Working\Java\REST-Web-Service\cURL"
+
+Aspire@Acer MINGW64 /e/Working/Java/REST-Web-Service/cURL
+$ curl -X GET -i http://localhost:8080/myapp/customers/all
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   552  100   552    0     0   2083      0 --:--:-- --:--:-- --:--:--  2358HTTP/1.1 200 OK
+Content-Type: text/plain
+Date: Thu, 10 Nov 2016 14:24:20 GMT
+Content-Length: 552
+
+---Customer List---
+ID: 100 First: George Last: Washington
+EMail: gwash@example.com
+City: Mt Vernon State: VA Birthday 1732-02-23
+ID: 101 First: John Last: Adams
+EMail: jadams@example.com
+City: Braintree State: MA Birthday 1735-10-30
+ID: 102 First: Thomas Last: Jefferson
+EMail: tjeff@example.com
+City: CharlottesVille State: VA Birthday 1743-04-13
+ID: 103 First: James Last: Madison
+EMail: jmad@example.com
+City: Orange State: VA Birthday 1751-03-16
+ID: 104 First: James Last: Monroe
+EMail: jmo@example.com
+City: New York State: NY Birthday 1758-04-28
+
+Aspire@Acer MINGW64 /e/Working/Java/REST-Web-Service/cURL
+$ curl -X GET -i http://localhost:8080/myapp/customers/101
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   118  100   118    0     0    581      0 --:--:-- --:--:-- --:--:--   581HTTP/1.1 200 OK
+Content-Type: text/plain
+Date: Thu, 10 Nov 2016 14:24:43 GMT
+Content-Length: 118
+
+---Customer---
+ID: 101 First: John Last: Adams
+EMail: jadams@example.com
+City: Braintree State: MA Birthday 1735-10-30
+
+Aspire@Acer MINGW64 /e/Working/Java/REST-Web-Service/cURL
+$ curl -X GET -i http://localhost:8080/myapp/customers/109
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    18  100    18    0     0     88      0 --:--:-- --:--:-- --:--:--    88HTTP/1.1 200 OK
+Content-Type: text/plain
+Date: Thu, 10 Nov 2016 14:24:54 GMT
+Content-Length: 18
+
+Customer not found
+
+Aspire@Acer MINGW64 /e/Working/Java/REST-Web-Service/cURL
+$

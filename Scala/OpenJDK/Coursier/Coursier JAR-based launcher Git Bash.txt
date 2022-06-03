@@ -1,0 +1,223 @@
+
+Rajani@Samsung MINGW64 /c/Tech2021/Scala/Coursier
+$ mkdir -p "C:\Users\Rajani\Downloads\Scala\Scala3\Bitsadmin\JAR"
+
+Rajani@Samsung MINGW64 /c/Tech2021/Scala/Coursier
+$ cmd
+Microsoft Windows [Version 6.3.9600]
+(c) 2013 Microsoft Corporation. All rights reserved.
+
+C:\Tech2021\Scala\Coursier>bitsadmin /transfer downloadCoursierCli https://git.io/coursier-cli "C:\Users\Rajani\Downloads\Scala\Scala3\Bitsadmin\JAR\coursier"
+bitsadmin /transfer downloadCoursierCli https://git.io/coursier-cli "C:\Users\Rajani\Downloads\Scala\Scala3\Bitsadmin\JAR\coursier"
+
+BITSADMIN version 3.0 [ 7.7.9600 ]
+BITS administration utility.
+(C) Copyright 2000-2006 Microsoft Corp.
+
+BITSAdmin is deprecated and is not guaranteed to be available in future versions of Windows.
+Administrative tools for the BITS service are now provided by BITS PowerShell cmdlets.
+
+Transfer complete.
+
+C:\Tech2021\Scala\Coursier>bitsadmin /transfer downloadCoursierBat https://git.io/coursier-bat "C:\Users\Rajani\Downloads\Scala\Scala3\Bitsadmin\JAR\coursier.bat"
+bitsadmin /transfer downloadCoursierBat https://git.io/coursier-bat "C:\Users\Rajani\Downloads\Scala\Scala3\Bitsadmin\JAR\coursier.bat"
+
+BITSADMIN version 3.0 [ 7.7.9600 ]
+BITS administration utility.
+(C) Copyright 2000-2006 Microsoft Corp.
+
+BITSAdmin is deprecated and is not guaranteed to be available in future versions of Windows.
+Administrative tools for the BITS service are now provided by BITS PowerShell cmdlets.
+
+Transfer complete.
+
+C:\Tech2021\Scala\Coursier>set path=%path%;C:\Users\Rajani\Downloads\Java\JDK\OpenJDK\openjdk-17.0.1_windows-x64_bin\jdk-17.0.1\bin\;C:\Users\Rajani\Downloads\Java\Apache Maven\apache-maven-3.8.4-bin\apache-maven-3.8.4\bin\
+set path=%path%;C:\Users\Rajani\Downloads\Java\JDK\OpenJDK\openjdk-17.0.1_windows-x64_bin\jdk-17.0.1\bin\;C:\Users\Rajani\Downloads\Java\Apache Maven\apache-maven-3.8.4-bin\apache-maven-3.8.4\bin\
+
+C:\Tech2021\Scala\Coursier>java -version
+java -version
+openjdk version "17.0.1" 2021-10-19
+OpenJDK Runtime Environment (build 17.0.1+12-39)
+OpenJDK 64-Bit Server VM (build 17.0.1+12-39, mixed mode, sharing)
+
+C:\Tech2021\Scala\Coursier>mvn -v
+mvn -v
+Apache Maven 3.8.4 (9b656c72d54e5bacbed989b64718c159fe39b537)
+Maven home: C:\Users\Rajani\Downloads\Java\Apache Maven\apache-maven-3.8.4-bin\apache-maven-3.8.4
+Java version: 17.0.1, vendor: Oracle Corporation, runtime: C:\Users\Rajani\Downloads\Java\JDK\OpenJDK\openjdk-17.0.1_windows-x64_bin\jdk-17.0.1
+Default locale: en_IN, platform encoding: Cp1252
+OS name: "windows 8.1", version: "6.3", arch: "amd64", family: "windows"
+
+C:\Tech2021\Scala\Coursier>set path=%path%;C:\Users\Rajani\Downloads\Java\JDK\OpenJDK\openjdk-17.0.1_windows-x64_bin\jdk-17.0.1\bin\;C:\Users\Rajani\Downloads\Java\Apache Maven\apache-maven-3.8.4-bin\apache-maven-3.8.4\bin\;C:\Users\Rajani\Downloads\Scala\Scala3\Bitsadmin\JAR\
+set path=%path%;C:\Users\Rajani\Downloads\Java\JDK\OpenJDK\openjdk-17.0.1_windows-x64_bin\jdk-17.0.1\bin\;C:\Users\Rajani\Downloads\Java\Apache Maven\apache-maven-3.8.4-bin\apache-maven-3.8.4\bin\;C:\Users\Rajani\Downloads\Scala\Scala3\Bitsadmin\JAR\
+
+C:\Tech2021\Scala\Coursier>java -version
+java -version
+openjdk version "17.0.1" 2021-10-19
+OpenJDK Runtime Environment (build 17.0.1+12-39)
+OpenJDK 64-Bit Server VM (build 17.0.1+12-39, mixed mode, sharing)
+
+C:\Tech2021\Scala\Coursier>mvn -v
+mvn -v
+Apache Maven 3.8.4 (9b656c72d54e5bacbed989b64718c159fe39b537)
+Maven home: C:\Users\Rajani\Downloads\Java\Apache Maven\apache-maven-3.8.4-bin\apache-maven-3.8.4
+Java version: 17.0.1, vendor: Oracle Corporation, runtime: C:\Users\Rajani\Downloads\Java\JDK\OpenJDK\openjdk-17.0.1_windows-x64_bin\jdk-17.0.1
+Default locale: en_IN, platform encoding: Cp1252
+OS name: "windows 8.1", version: "6.3", arch: "amd64", family: "windows"
+
+C:\Tech2021\Scala\Coursier>coursier resolve io.circe:circe-core_2.12:0.10.0
+coursier resolve io.circe:circe-core_2.12:0.10.0
+Downloaded 1 missing file(s) / 54
+Downloaded 2 missing file(s) / 54
+Downloaded 3 missing file(s) / 54
+Downloaded 4 missing file(s) / 54
+Downloaded 5 missing file(s) / 54
+Downloaded 6 missing file(s) / 54
+Downloaded 7 missing file(s) / 54
+Downloaded 8 missing file(s) / 54
+Downloaded 9 missing file(s) / 54
+Downloaded 10 missing file(s) / 54
+Downloaded 11 missing file(s) / 54
+Downloaded 12 missing file(s) / 54
+Downloaded 13 missing file(s) / 54
+Downloaded 14 missing file(s) / 54
+Downloaded 15 missing file(s) / 54
+Downloaded 16 missing file(s) / 54
+Downloaded 17 missing file(s) / 54
+Downloaded 18 missing file(s) / 54
+Downloaded 19 missing file(s) / 54
+Downloaded 20 missing file(s) / 54
+Downloaded 21 missing file(s) / 54
+Downloaded 22 missing file(s) / 54
+Downloaded 23 missing file(s) / 54
+Downloaded 24 missing file(s) / 54
+Downloaded 25 missing file(s) / 54
+Downloaded 26 missing file(s) / 54
+Downloaded 27 missing file(s) / 54
+Downloaded 28 missing file(s) / 54
+Downloaded 29 missing file(s) / 54
+Downloaded 30 missing file(s) / 54
+Downloaded 31 missing file(s) / 54
+Downloaded 32 missing file(s) / 54
+Downloaded 33 missing file(s) / 54
+Downloaded 34 missing file(s) / 54
+Downloaded 35 missing file(s) / 54
+Downloaded 36 missing file(s) / 54
+Downloaded 37 missing file(s) / 54
+Downloaded 38 missing file(s) / 54
+Downloaded 39 missing file(s) / 54
+Downloaded 40 missing file(s) / 54
+Downloaded 41 missing file(s) / 54
+Downloaded 42 missing file(s) / 54
+Downloaded 43 missing file(s) / 54
+Downloaded 44 missing file(s) / 54
+Downloaded 45 missing file(s) / 54
+Downloaded 46 missing file(s) / 54
+Downloaded 47 missing file(s) / 54
+Downloaded 48 missing file(s) / 54
+Downloaded 49 missing file(s) / 54
+Downloaded 50 missing file(s) / 54
+Downloaded 51 missing file(s) / 54
+Downloaded 52 missing file(s) / 54
+Downloaded 53 missing file(s) / 54
+Downloaded 54 missing file(s) / 54
+Downloading https://repo1.maven.org/maven2/io/circe/circe-core_2.12/0.10.0/circe-core_2.12-0.10.0.pom
+Downloaded https://repo1.maven.org/maven2/io/circe/circe-core_2.12/0.10.0/circe-core_2.12-0.10.0.pom
+Downloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.6/scala-library-2.12.6.pom
+Downloading https://repo1.maven.org/maven2/io/circe/circe-numbers_2.12/0.10.0/circe-numbers_2.12-0.10.0.pom
+Downloading https://repo1.maven.org/maven2/org/typelevel/cats-core_2.12/1.4.0/cats-core_2.12-1.4.0.pom
+Downloaded https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.6/scala-library-2.12.6.pom
+Downloaded https://repo1.maven.org/maven2/io/circe/circe-numbers_2.12/0.10.0/circe-numbers_2.12-0.10.0.pom
+Downloaded https://repo1.maven.org/maven2/org/typelevel/cats-core_2.12/1.4.0/cats-core_2.12-1.4.0.pom
+Downloading https://repo1.maven.org/maven2/org/typelevel/machinist_2.12/0.6.5/machinist_2.12-0.6.5.pom
+Downloading https://repo1.maven.org/maven2/org/typelevel/cats-macros_2.12/1.4.0/cats-macros_2.12-1.4.0.pom
+Downloading https://repo1.maven.org/maven2/org/typelevel/cats-kernel_2.12/1.4.0/cats-kernel_2.12-1.4.0.pom
+Downloaded https://repo1.maven.org/maven2/org/typelevel/cats-macros_2.12/1.4.0/cats-macros_2.12-1.4.0.pom
+Downloaded https://repo1.maven.org/maven2/org/typelevel/machinist_2.12/0.6.5/machinist_2.12-0.6.5.pom
+Downloaded https://repo1.maven.org/maven2/org/typelevel/cats-kernel_2.12/1.4.0/cats-kernel_2.12-1.4.0.pom
+Downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.12.6/scala-reflect-2.12.6.pom
+Downloaded https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.12.6/scala-reflect-2.12.6.pom
+io.circe:circe-core_2.12:0.10.0:default
+io.circe:circe-numbers_2.12:0.10.0:default
+org.scala-lang:scala-library:2.12.6:default
+org.scala-lang:scala-reflect:2.12.6:default
+org.typelevel:cats-core_2.12:1.4.0:default
+org.typelevel:cats-kernel_2.12:1.4.0:default
+org.typelevel:cats-macros_2.12:1.4.0:default
+org.typelevel:machinist_2.12:0.6.5:default
+
+C:\Tech2021\Scala\Coursier>coursier --version
+coursier --version
+2.0.16
+
+C:\Tech2021\Scala\Coursier>exit
+exit
+
+Rajani@Samsung MINGW64 /c/Tech2021/Scala/Coursier
+$ export PATH=$PATH:"/C/Users/Rajani/Downloads/Java/JDK/OpenJDK/openjdk-17.0.1_windows-x64_bin/jdk-17.0.1/bin/:/C/Users/Rajani/Downloads/Java/Apache Maven/apache-maven-3.8.4-bin/apache-maven-3.8.4/bin/:/C/Users/Rajani/Downloads/Scala/Scala3/Bitsadmin/JAR/"
+
+Rajani@Samsung MINGW64 /c/Tech2021/Scala/Coursier
+$ java -version
+openjdk version "17.0.1" 2021-10-19
+OpenJDK Runtime Environment (build 17.0.1+12-39)
+OpenJDK 64-Bit Server VM (build 17.0.1+12-39, mixed mode, sharing)
+
+Rajani@Samsung MINGW64 /c/Tech2021/Scala/Coursier
+$ mvn -v
+Apache Maven 3.8.4 (9b656c72d54e5bacbed989b64718c159fe39b537)
+Maven home: C:\Users\Rajani\Downloads\Java\Apache Maven\apache-maven-3.8.4-bin\apache-maven-3.8.4
+Java version: 17.0.1, vendor: Oracle Corporation, runtime: C:\Users\Rajani\Downloads\Java\JDK\OpenJDK\openjdk-17.0.1_windows-x64_bin\jdk-17.0.1
+Default locale: en_IN, platform encoding: Cp1252
+OS name: "windows 8.1", version: "6.3", arch: "amd64", family: "windows"
+
+Rajani@Samsung MINGW64 /c/Tech2021/Scala/Coursier
+$ coursier --version
+2.0.16
+
+Rajani@Samsung MINGW64 /c/Tech2021/Scala/Coursier
+$ coursier install scala3-compiler
+Checking https://repo1.maven.org/maven2/io/get-coursier/apps/maven-metadata.xml
+Checked https://repo1.maven.org/maven2/io/get-coursier/apps/maven-metadata.xml
+Checking https://repo1.maven.org/maven2/org/scala-lang/scala3-compiler_3/maven-metadata.xml
+Checked https://repo1.maven.org/maven2/org/scala-lang/scala3-compiler_3/maven-metadata.xml
+Warning: C:\Users\Rajani\AppData\Local\Coursier\data\bin is not in your PATH
+
+Rajani@Samsung MINGW64 /c/Tech2021/Scala/Coursier
+$ export PATH=$PATH:"/C/Users/Rajani/Downloads/Java/JDK/OpenJDK/openjdk-17.0.1_windows-x64_bin/jdk-17.0.1/bin/:/C/Users/Rajani/Downloads/Java/Apache Maven/apache-maven-3.8.4-bin/apache-maven-3.8.4/bin/:/C/Users/Rajani/Downloads/Scala/Scala3/Bitsadmin/JAR/:/C/Users/Rajani/AppData/Local/Coursier/data/bin/"
+
+Rajani@Samsung MINGW64 /c/Tech2021/Scala/Coursier
+$ echo $PATH
+/c/Users/Rajani/bin:/mingw64/bin:/usr/local/bin:/usr/bin:/bin:/mingw64/bin:/usr/bin:/c/Users/Rajani/bin:/c/Program Files (x86)/Intel/iCLS Client:/c/Program Files/Intel/iCLS Client:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/c/Program Files/Intel/Intel(R) Management Engine Components/IPT:/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT:/c/Program Files (x86)/Intel/OpenCL SDK/2.0/bin/x86:/c/Program Files (x86)/Intel/OpenCL SDK/2.0/bin/x64:/c/Program Files/Intel/WiFi/bin:/c/Program Files/Common Files/Intel/WirelessCommon:/c/Users/Rajani/Desktop/2019/Downloads/Wget/wget-1.20.3-win64:/c/Python38/Scripts:/c/Python38:/c/ProgramData/chocolatey/bin:/c/Program Files/dotnet:/c/Program Files/Microsoft SQL Server/130/Tools/Binn:/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn:/c/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/Roslyn:/c/Users/Rajani/Desktop/2019/Downloads/CS/NuGet/5.3.1:/c/Program Files/MongoDB/Server/4.2/bin:/c/Program Files (x86)/Microsoft SQL Server/150/DTS/Binn:/cmd:/c/Program Files/PowerShell/7:/c/Program Files/Azure Data Studio/bin:/c/Program Files/Microsoft SQL Server/150/Tools/Binn:/c/Program Files (x86)/dotnet:/c/Users/Rajani/AppData/Local/Programs/Python/Launcher:/c/Users/Rajani/scoop/shims:/c/Ruby30-x64/bin:/c/Users/Rajani/.dotnet/tools:/c/Users/Rajani/AppData/Local/Programs/Fiddler:/c/Users/Rajani/.dotnet/tools:/c/Program Files/Azure Data Studio/bin:/c/Users/Rajani/Downloads/MongoDB/mongosh-1.1.2-x64:/c/Users/Rajani/.dotnet/tools:/c/Users/Rajani/AppData/Local/atom/bin:/usr/bin/vendor_perl:/usr/bin/core_perl:/C/Users/Rajani/Downloads/Java/JDK/OpenJDK/openjdk-17.0.1_windows-x64_bin/jdk-17.0.1/bin/:/C/Users/Rajani/Downloads/Java/Apache Maven/apache-maven-3.8.4-bin/apache-maven-3.8.4/bin/:/C/Users/Rajani/Downloads/Scala/Scala3/Bitsadmin/JAR/:/C/Users/Rajani/Downloads/Java/JDK/OpenJDK/openjdk-17.0.1_windows-x64_bin/jdk-17.0.1/bin/:/C/Users/Rajani/Downloads/Java/Apache Maven/apache-maven-3.8.4-bin/apache-maven-3.8.4/bin/:/C/Users/Rajani/Downloads/Scala/Scala3/Bitsadmin/JAR/:/C/Users/Rajani/AppData/Local/Coursier/data/bin/
+
+Rajani@Samsung MINGW64 /c/Tech2021/Scala/Coursier
+$ coursier install scala3
+Checking https://repo1.maven.org/maven2/io/get-coursier/apps/maven-metadata.xml
+Checked https://repo1.maven.org/maven2/io/get-coursier/apps/maven-metadata.xml
+Checking https://repo1.maven.org/maven2/org/scala-lang/scala3-compiler_3/maven-metadata.xml
+Checked https://repo1.maven.org/maven2/org/scala-lang/scala3-compiler_3/maven-metadata.xml
+Warning: C:\Users\Rajani\AppData\Local\Coursier\data\bin is not in your PATH
+
+Rajani@Samsung MINGW64 /c/Tech2021/Scala/Coursier
+$ scala3.bat
+Welcome to Scala 3.1.2-RC1-bin-20211208-d6fe4b4-NIGHTLY-git-d6fe4b4 (17.0.1, Java OpenJDK 64-Bit Server VM).
+Type in expressions for evaluation. Or try :help.
+
+scala> :help
+The REPL has several commands available:
+
+:help                    print this summary
+:load <path>             interpret lines in a file
+:quit                    exit the interpreter
+:type <expression>       evaluate the type of the given expression
+:doc <expression>        print the documentation for the given expression
+:imports                 show import history
+:reset                   reset the repl to its initial state, forgetting all session entries
+
+
+scala> println("Hello, world!")
+Hello, world!
+
+scala> :exit
+
+Rajani@Samsung MINGW64 /c/Tech2021/Scala/Coursier
+$

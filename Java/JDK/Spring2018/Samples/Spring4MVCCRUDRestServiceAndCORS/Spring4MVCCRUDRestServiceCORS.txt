@@ -1,0 +1,249 @@
+# Note # Spring4MVCCRUDRestServiceCORS/src/main/java/com/rajani/springmvc/configuration/CORSFilter.java
+
+$ java -version
+
+$ mvn -v
+
+$ cd "C:\Users\Rajani\Desktop\2018\Working\Java\Spring\Samples\Spring4MVCCRUDRestServiceAndCORS\Spring4MVCCRUDRestServiceCORS"
+
+# Spring4MVCCRUDRestServiceCORS/pom.xml
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.rajani.springmvc</groupId>
+    <artifactId>Spring4MVCCRUDRestServiceCORS</artifactId>
+    <packaging>war</packaging>
+    <version>1.0.0</version>
+    <name>Spring4MVCCRUDRestServiceCORS Maven Webapp</name>
+
+    <properties>
+        <springframework.version>4.2.0.RELEASE</springframework.version>
+        <jackson.version>2.5.3</jackson.version>
+        <maven.compiler.source>1.6</maven.compiler.source>
+        <maven.compiler.target>1.6</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${springframework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>${springframework.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+        </dependency>            
+    </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>2.4</version>
+                    <configuration>
+                        <warSourceDirectory>src/main/webapp</warSourceDirectory>
+                        <warName>Spring4MVCCRUDRestServiceCORS</warName>
+                        <failOnMissingWebXml>false</failOnMissingWebXml>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <finalName>Spring4MVCCRUDRestServiceCORS</finalName>
+    </build>
+</project>
+
+
+[
+$ mvn eclipse:eclipse
+]
+
+$ mvn package
+
+$ jar tvf target/Spring4MVCCRUDRestServiceCORS.war
+
+# Copy File
+$ cp "C:\Users\Rajani\Desktop\2018\Working\Java\Spring\Samples\Spring4MVCCRUDRestServiceAndCORS\Spring4MVCCRUDRestServiceCORS\target\Spring4MVCCRUDRestServiceCORS.war" "C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps"
+
+# When war file is copied to Tomcat webapps, the corresponding folder is also copied to Tomcat webapps
+[
+# Copy Folder 
+$ cp -r "C:\Users\Rajani\Desktop\2018\Working\Java\Spring\Samples\Spring4MVCCRUDRestServiceAndCORS\Spring4MVCCRUDRestServiceCORS\target\Spring4MVCCRUDRestServiceCORS" "C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps\Spring4MVCCRUDRestServiceCORS"
+]
+
+# Restart Tomcat server [services.msc]
+# SpringRestTestClient
+$ mvn -Dexec.mainClass=com.rajani.springmvc.SpringRestTestClient -Dexec.classpathScope=test test-compile exec:java
+
+
+# Browser
+http://localhost:8080/Spring4MVCCRUDRestServiceCORS/user/
+[{"id":1,"name":"Sam","age":30,"salary":70000.0},{"id":2,"name":"Tom","age":40,"salary":50000.0},{"id":3,"name":"Jerome","age":45,"salary":30000.0},{"id":4,"name":"Silvia","age":50,"salary":40000.0}]
+
+
+# Postman
+# Request name:
+Spring4MVCCRUDRestServiceCORS
+# Select a collection or folder to save to:
+Spring4MVCCRUDRestServiceCORS
+[Retrieve all users]
+# GET 
+http://localhost:8080/Spring4MVCCRUDRestServiceCORS/user/
+
+# Status: 200 OK
+
+# Response
+# Body
+# Pretty
+[
+    {
+        "id": 1,
+        "name": "Sam",
+        "age": 30,
+        "salary": 70000
+    },
+    {
+        "id": 2,
+        "name": "Tom",
+        "age": 40,
+        "salary": 50000
+    },
+    {
+        "id": 3,
+        "name": "Jerome",
+        "age": 45,
+        "salary": 30000
+    },
+    {
+        "id": 4,
+        "name": "Silvia",
+        "age": 50,
+        "salary": 40000
+    }
+]
+
+
+# Postman
+[Retrieve Single User]
+# GET 
+http://localhost:8080/Spring4MVCCRUDRestServiceCORS/user/1
+
+# Status: 200 OK
+
+# Response
+# Body
+# Pretty
+{
+    "id": 1,
+    "name": "Sam",
+    "age": 30,
+    "salary": 70000
+}
+
+
+# Postman
+[Try to send a GET with invalid identifier, and receive a HTTP 404.]
+# GET
+http://localhost:8080/Spring4MVCCRUDRestServiceCORS/user/67
+
+# Status: 404 Not Found
+
+
+# Postman
+[Create a User. Select the method as POST, specify uri as /user/, specify body in POSTMAN body tab, select the type [application/json].]
+# POST
+http://localhost:8080/Spring4MVCCRUDRestServiceCORS/user/
+# Request
+# Body
+# raw
+# JSON (application/json)
+{
+    "name": "Sarah",
+    "age": 51,
+    "salary": 134
+}
+
+# Status: 201 Created
+
+
+# Postman
+[Fetch the newly created user.]
+# GET
+http://localhost:8080/Spring4MVCCRUDRestServiceCORS/user/5
+
+# Status: 200 OK
+
+# Response
+# Body
+# Pretty
+{
+    "id": 5,
+    "name": "Sarah",
+    "age": 51,
+    "salary": 134
+}
+
+
+# Postman
+[Update a User. Send a HTTP PUT request to update a user. Send along the new user details to be put in. Select the type [application/json].]
+# PUT 
+http://localhost:8080/Spring4MVCCRUDRestServiceCORS/user/1
+# Request
+# Body
+# raw
+# JSON (application/json)
+{
+  "name": "Tomy",
+  "age": 33,
+  "salary": 70000
+}
+
+# Status: 200 OK
+
+# Response
+# Body
+# Pretty
+{
+    "id": 1,
+    "name": "Tomy",
+    "age": 33,
+    "salary": 70000
+}
+
+
+# Postman
+[Delete a User.]
+# DELETE 
+http://localhost:8080/Spring4MVCCRUDRestServiceCORS/user/3
+
+# Status: 204 No Content
+
+
+# Postman
+[Delete All Users.]
+# DELETE 
+http://localhost:8080/Spring4MVCCRUDRestServiceCORS/user/
+
+# Status: 204 No Content
+
+
+# Postman
+[Verify users after delete-all.]
+# GET 
+http://localhost:8080/Spring4MVCCRUDRestServiceCORS/user/
+
+# Status: 204 No Content

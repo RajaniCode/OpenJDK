@@ -1,0 +1,1 @@
+http://stackoverflow.com/questions/8655252/node-js-how-to-consume-soap-xml-web-service

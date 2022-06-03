@@ -1,0 +1,12 @@
+127.0.0.1 - - [16/Dec/2017:21:54:11 +0530] "GET / HTTP/1.1" 404 1069
+0:0:0:0:0:0:0:1 - - [16/Dec/2017:21:54:12 +0530] "GET /PSBankApp/WEB-INF/classes/com/ps/springmvc/psbankapp/aop/PSBankLoggingAspect.java HTTP/1.1" 404 1046
+0:0:0:0:0:0:0:1 - - [16/Dec/2017:21:54:32 +0530] "GET /PSBankApp/list HTTP/1.1" 200 971
+127.0.0.1 - - [16/Dec/2017:22:53:30 +0530] "GET / HTTP/1.1" 404 1069
+0:0:0:0:0:0:0:1 - - [16/Dec/2017:22:53:31 +0530] "GET /PSBankApp/WEB-INF/Views/account-form.jsp HTTP/1.1" 404 1046
+0:0:0:0:0:0:0:1 - - [16/Dec/2017:22:53:41 +0530] "GET /PSBankApp/new HTTP/1.1" 200 1590
+0:0:0:0:0:0:0:1 - - [16/Dec/2017:22:54:04 +0530] "POST /PSBankApp/saveAccount HTTP/1.1" 200 1658
+0:0:0:0:0:0:0:1 - - [16/Dec/2017:22:54:25 +0530] "POST /PSBankApp/saveAccount HTTP/1.1" 200 1660
+0:0:0:0:0:0:0:1 - - [16/Dec/2017:22:54:30 +0530] "POST /PSBankApp/saveAccount HTTP/1.1" 200 1660
+127.0.0.1 - - [16/Dec/2017:22:58:30 +0530] "GET / HTTP/1.1" 404 1069
+0:0:0:0:0:0:0:1 - - [16/Dec/2017:22:59:22 +0530] "POST /PSBankApp/saveAccount HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [16/Dec/2017:22:59:23 +0530] "GET /PSBankApp/list HTTP/1.1" 200 1212

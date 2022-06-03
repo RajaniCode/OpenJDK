@@ -1,0 +1,13 @@
+export CLASSPATH="E:\Working\Clojure\clojure-1.8.0\clojure-1.8.0.jar;.;"
+
+cd "E:\Working\Clojure\clojure-1.8.0"
+
+java clojure.main
+
+
+OR
+
+
+cd "E:\Working\Clojure\clojure-1.8.0"
+
+java -cp clojure-1.8.0.jar clojure.main

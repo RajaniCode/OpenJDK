@@ -1,0 +1,580 @@
+Aspire@Acer MINGW64 /
+$ java -version
+java version "1.8.0_102"
+Java(TM) SE Runtime Environment (build 1.8.0_102-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.102-b14, mixed mode)
+
+Aspire@Acer MINGW64 /
+$ mvn -v
+Apache Maven 3.3.9 (bb52d8502b132ec0a5a3f4c09453c07478323dc5; 2015-11-10T22:11:47+05:30)
+Maven home: C:\Program Files\Apache Software Foundation\apache-maven-3.3.9
+Java version: 1.8.0_102, vendor: Oracle Corporation
+Java home: C:\Program Files\Java\jdk1.8.0_102\jre
+Default locale: en_US, platform encoding: Cp1252
+OS name: "windows 8.1", version: "6.3", arch: "amd64", family: "dos"
+
+Aspire@Acer MINGW64 /
+$ cd "E:\Working\Java\Spring\Spring-Boot\Spring-Boot-application"
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-Boot/Spring-Boot-application
+$ touch pom.xml
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-Boot/Spring-Boot-application
+$ mvn package
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building myproject 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ myproject ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory E:\Working\Java\Spring\Spring-Boot\Spring-Boot-application\src\main\resources
+[INFO] skip non existing resourceDirectory E:\Working\Java\Spring\Spring-Boot\Spring-Boot-application\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ myproject ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ myproject ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory E:\Working\Java\Spring\Spring-Boot\Spring-Boot-application\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ myproject ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ myproject ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:2.6:jar (default-jar) @ myproject ---
+[WARNING] JAR will be empty - no content was marked for inclusion!
+[INFO] Building jar: E:\Working\Java\Spring\Spring-Boot\Spring-Boot-application\target\myproject-0.0.1-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 4.284 s
+[INFO] Finished at: 2016-12-07T08:53:45+05:30
+[INFO] Final Memory: 14M/245M
+[INFO] ------------------------------------------------------------------------
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-Boot/Spring-Boot-application
+$ mvn dependency:tree
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building myproject 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-dependency-plugin:2.10:tree (default-cli) @ myproject ---
+[INFO] com.example:myproject:jar:0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3.680 s
+[INFO] Finished at: 2016-12-07T08:54:40+05:30
+[INFO] Final Memory: 18M/309M
+[INFO] ------------------------------------------------------------------------
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-Boot/Spring-Boot-application
+$ mkdir -p src/main/java
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-Boot/Spring-Boot-application
+$ touch src/main/java/Example.java
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-Boot/Spring-Boot-application
+$ mvn spring-boot:run
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building myproject 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] >>> spring-boot-maven-plugin:1.4.2.RELEASE:run (default-cli) > test-compile @ myproject >>>
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ myproject ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory E:\Working\Java\Spring\Spring-Boot\Spring-Boot-application\src\main\resources
+[INFO] skip non existing resourceDirectory E:\Working\Java\Spring\Spring-Boot\Spring-Boot-application\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ myproject ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to E:\Working\Java\Spring\Spring-Boot\Spring-Boot-application\target\classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ myproject ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory E:\Working\Java\Spring\Spring-Boot\Spring-Boot-application\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ myproject ---
+[INFO] No sources to compile
+[INFO]
+[INFO] <<< spring-boot-maven-plugin:1.4.2.RELEASE:run (default-cli) < test-compile @ myproject <<<
+[INFO]
+[INFO] --- spring-boot-maven-plugin:1.4.2.RELEASE:run (default-cli) @ myproject ---
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.4.2.RELEASE)
+
+2016-12-07 08:59:43.324  INFO 1212 --- [           main] Example                                  : Starting Example on Acer with PID 1212 (E:\Working\Java\Spring\Spring-Boot\Spring-Boot-application\target\classes started by Aspire in E:\Working\Java\Spring\Spring-Boot\Spring-Boot-application)
+2016-12-07 08:59:43.339  INFO 1212 --- [           main] Example                                  : No active profile set, falling back to default profiles: default
+2016-12-07 08:59:43.480  INFO 1212 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@53b8a0ad: startup date [Wed Dec 07 08:59:43 IST 2016]; root of context hierarchy
+2016-12-07 08:59:47.731  INFO 1212 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-12-07 08:59:47.778  INFO 1212 --- [           main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-12-07 08:59:47.778  INFO 1212 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-12-07 08:59:48.042  INFO 1212 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-12-07 08:59:48.042  INFO 1212 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4578 ms
+2016-12-07 08:59:48.476  INFO 1212 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-12-07 08:59:48.491  INFO 1212 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-12-07 08:59:48.491  INFO 1212 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-12-07 08:59:48.491  INFO 1212 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-12-07 08:59:48.491  INFO 1212 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-12-07 08:59:49.531  INFO 1212 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@53b8a0ad: startup date [Wed Dec 07 08:59:43 IST 2016]; root of context hierarchy
+2016-12-07 08:59:49.844  INFO 1212 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto java.lang.String Example.home()
+2016-12-07 08:59:49.867  INFO 1212 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-12-07 08:59:49.868  INFO 1212 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-12-07 08:59:49.967  INFO 1212 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-07 08:59:49.968  INFO 1212 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-07 08:59:50.099  INFO 1212 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-07 08:59:50.563  INFO 1212 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-12-07 08:59:50.833  INFO 1212 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-12-07 08:59:50.882  INFO 1212 --- [           main] Example                                  : Started Example in 8.932 seconds (JVM running for 19.956)
+2016-12-07 08:59:51.031  INFO 1212 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-12-07 08:59:51.031  INFO 1212 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-12-07 08:59:51.072  INFO 1212 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 40 ms
+
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-Boot/Spring-Boot-application
+$ mvn package
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building myproject 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ myproject ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory E:\Working\Java\Spring\Spring-Boot\Spring-Boot-application\src\main\resources
+[INFO] skip non existing resourceDirectory E:\Working\Java\Spring\Spring-Boot\Spring-Boot-application\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ myproject ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ myproject ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory E:\Working\Java\Spring\Spring-Boot\Spring-Boot-application\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ myproject ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ myproject ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:2.6:jar (default-jar) @ myproject ---
+[INFO] Building jar: E:\Working\Java\Spring\Spring-Boot\Spring-Boot-application\target\myproject-0.0.1-SNAPSHOT.jar
+[INFO]
+[INFO] --- spring-boot-maven-plugin:1.4.2.RELEASE:repackage (default) @ myproject ---
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 5.814 s
+[INFO] Finished at: 2016-12-07T09:04:33+05:30
+[INFO] Final Memory: 17M/309M
+[INFO] ------------------------------------------------------------------------
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-Boot/Spring-Boot-application
+$ jar tvf target/myproject-0.0.1-SNAPSHOT.jar
+     0 Wed Dec 07 09:04:32 IST 2016 META-INF/
+   548 Wed Dec 07 09:04:32 IST 2016 META-INF/MANIFEST.MF
+     0 Wed Dec 07 09:04:32 IST 2016 BOOT-INF/
+     0 Wed Dec 07 09:04:32 IST 2016 BOOT-INF/classes/
+   957 Wed Dec 07 08:59:40 IST 2016 BOOT-INF/classes/Example.class
+     0 Wed Dec 07 09:04:30 IST 2016 META-INF/maven/
+     0 Wed Dec 07 09:04:30 IST 2016 META-INF/maven/com.example/
+     0 Wed Dec 07 09:04:30 IST 2016 META-INF/maven/com.example/myproject/
+  1106 Wed Dec 07 09:03:36 IST 2016 META-INF/maven/com.example/myproject/pom.xml
+   126 Wed Dec 07 08:53:44 IST 2016 META-INF/maven/com.example/myproject/pom.properties
+     0 Wed Dec 07 09:04:32 IST 2016 BOOT-INF/lib/
+813854 Mon Nov 07 21:16:16 IST 2016 BOOT-INF/lib/spring-web-4.3.4.RELEASE.jar
+  4597 Mon Apr 04 20:39:24 IST 2016 BOOT-INF/lib/jul-to-slf4j-1.7.21.jar
+  2295 Tue Nov 08 16:30:36 IST 2016 BOOT-INF/lib/spring-boot-starter-tomcat-1.4.2.RELEASE.jar
+704465 Wed Feb 17 16:15:16 IST 2016 BOOT-INF/lib/hibernate-validator-5.2.4.Final.jar
+239734 Thu Oct 06 21:16:28 IST 2016 BOOT-INF/lib/tomcat-embed-el-8.5.6.jar
+380082 Mon Nov 07 21:14:40 IST 2016 BOOT-INF/lib/spring-aop-4.3.4.RELEASE.jar
+241565 Thu Oct 06 21:16:28 IST 2016 BOOT-INF/lib/tomcat-embed-websocket-8.5.6.jar
+273599 Fri Feb 19 13:13:32 IST 2016 BOOT-INF/lib/snakeyaml-1.17.jar
+2990538 Thu Oct 06 21:16:26 IST 2016 BOOT-INF/lib/tomcat-embed-core-8.5.6.jar
+761236 Mon Nov 07 21:14:36 IST 2016 BOOT-INF/lib/spring-beans-4.3.4.RELEASE.jar
+  2311 Tue Nov 08 16:30:22 IST 2016 BOOT-INF/lib/spring-boot-starter-logging-1.4.2.RELEASE.jar
+ 41071 Mon Apr 04 20:36:42 IST 2016 BOOT-INF/lib/slf4j-api-1.7.21.jar
+913505 Mon Nov 07 21:16:56 IST 2016 BOOT-INF/lib/spring-webmvc-4.3.4.RELEASE.jar
+  2347 Tue Nov 08 16:30:36 IST 2016 BOOT-INF/lib/spring-boot-starter-web-1.4.2.RELEASE.jar
+1112602 Mon Nov 07 21:14:30 IST 2016 BOOT-INF/lib/spring-core-4.3.4.RELEASE.jar
+1135493 Mon Nov 07 21:15:02 IST 2016 BOOT-INF/lib/spring-context-4.3.4.RELEASE.jar
+1234984 Fri Oct 14 03:51:36 IST 2016 BOOT-INF/lib/jackson-databind-2.8.4.jar
+  2290 Tue Nov 08 16:30:22 IST 2016 BOOT-INF/lib/spring-boot-starter-1.4.2.RELEASE.jar
+968499 Tue Nov 08 16:21:38 IST 2016 BOOT-INF/lib/spring-boot-autoconfigure-1.4.2.RELEASE.jar
+304075 Tue Mar 29 22:24:50 IST 2016 BOOT-INF/lib/logback-classic-1.1.7.jar
+281079 Thu Oct 13 20:48:04 IST 2016 BOOT-INF/lib/jackson-core-2.8.4.jar
+658888 Tue Nov 08 16:15:50 IST 2016 BOOT-INF/lib/spring-boot-1.4.2.RELEASE.jar
+263392 Mon Nov 07 21:14:50 IST 2016 BOOT-INF/lib/spring-expression-4.3.4.RELEASE.jar
+470782 Tue Mar 29 22:23:42 IST 2016 BOOT-INF/lib/logback-core-1.1.7.jar
+ 63777 Wed Apr 10 15:02:44 IST 2013 BOOT-INF/lib/validation-api-1.1.0.Final.jar
+ 64982 Tue Sep 27 22:24:16 IST 2016 BOOT-INF/lib/classmate-1.3.3.jar
+ 16431 Mon Apr 04 20:38:46 IST 2016 BOOT-INF/lib/jcl-over-slf4j-1.7.21.jar
+ 23646 Mon Apr 04 20:39:02 IST 2016 BOOT-INF/lib/log4j-over-slf4j-1.7.21.jar
+ 66802 Thu May 28 09:49:34 IST 2015 BOOT-INF/lib/jboss-logging-3.3.0.Final.jar
+ 55785 Thu Oct 13 20:45:36 IST 2016 BOOT-INF/lib/jackson-annotations-2.8.4.jar
+     0 Wed Dec 07 09:04:32 IST 2016 org/
+     0 Wed Dec 07 09:04:32 IST 2016 org/springframework/
+     0 Wed Dec 07 09:04:32 IST 2016 org/springframework/boot/
+     0 Wed Dec 07 09:04:32 IST 2016 org/springframework/boot/loader/
+  2468 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/LaunchedURLClassLoader$1.class
+  1454 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/PropertiesLauncher$ArchiveEntryFilter.class
+  1807 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/PropertiesLauncher$PrefixMatchingArchiveFilter.class
+  4599 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/Launcher.class
+  1165 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/ExecutableArchiveLauncher$1.class
+     0 Wed Dec 07 09:04:32 IST 2016 org/springframework/boot/loader/jar/
+  2002 Tue Nov 08 16:11:14 IST 2016 org/springframework/boot/loader/jar/JarFile$1.class
+  8856 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/jar/Handler.class
+  3350 Tue Nov 08 16:11:14 IST 2016 org/springframework/boot/loader/jar/JarEntry.class
+  1427 Tue Nov 08 16:11:14 IST 2016 org/springframework/boot/loader/jar/JarFile$3.class
+  2943 Tue Nov 08 16:11:14 IST 2016 org/springframework/boot/loader/jar/CentralDirectoryEndRecord.class
+   430 Tue Nov 08 16:11:14 IST 2016 org/springframework/boot/loader/jar/CentralDirectoryVisitor.class
+  1300 Tue Nov 08 16:11:14 IST 2016 org/springframework/boot/loader/jar/JarFile$JarFileType.class
+ 10924 Tue Nov 08 16:11:14 IST 2016 org/springframework/boot/loader/jar/JarFileEntries.class
+ 12697 Tue Nov 08 16:11:14 IST 2016 org/springframework/boot/loader/jar/JarFile.class
+  1540 Tue Nov 08 16:11:14 IST 2016 org/springframework/boot/loader/jar/JarFileEntries$1.class
+   672 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/jar/JarURLConnection$1.class
+  1199 Tue Nov 08 16:11:14 IST 2016 org/springframework/boot/loader/jar/JarFile$2.class
+   262 Tue Nov 08 16:11:14 IST 2016 org/springframework/boot/loader/jar/JarEntryFilter.class
+  4470 Tue Nov 08 16:11:14 IST 2016 org/springframework/boot/loader/jar/AsciiBytes.class
+  4602 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/jar/CentralDirectoryParser.class
+  2169 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/jar/Bytes.class
+  1629 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/jar/ZipInflaterInputStream.class
+  1967 Tue Nov 08 16:11:14 IST 2016 org/springframework/boot/loader/jar/JarFileEntries$EntryIterator.class
+   306 Tue Nov 08 16:11:14 IST 2016 org/springframework/boot/loader/jar/FileHeader.class
+  3655 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/jar/JarURLConnection$JarEntryName.class
+  9111 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/jar/JarURLConnection.class
+  5449 Tue Nov 08 16:11:14 IST 2016 org/springframework/boot/loader/jar/CentralDirectoryFileHeader.class
+  1704 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/PropertiesLauncher$FilteredArchive$1.class
+     0 Wed Dec 07 09:04:32 IST 2016 org/springframework/boot/loader/data/
+  1531 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/data/ByteArrayRandomAccessData.class
+  3534 Tue Nov 08 16:11:14 IST 2016 org/springframework/boot/loader/data/RandomAccessDataFile$DataInputStream.class
+  2051 Tue Nov 08 16:11:14 IST 2016 org/springframework/boot/loader/data/RandomAccessDataFile$FilePool.class
+  1341 Tue Nov 08 16:11:14 IST 2016 org/springframework/boot/loader/data/RandomAccessData$ResourceAccess.class
+  3390 Tue Nov 08 16:11:14 IST 2016 org/springframework/boot/loader/data/RandomAccessDataFile.class
+   551 Tue Nov 08 16:11:14 IST 2016 org/springframework/boot/loader/data/RandomAccessData.class
+  4698 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/LaunchedURLClassLoader.class
+  2052 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/JarLauncher.class
+  1468 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/MainMethodRunner.class
+  2382 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/PropertiesLauncher$FilteredArchive.class
+  1382 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/PropertiesLauncher$1.class
+  3128 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/ExecutableArchiveLauncher.class
+  1669 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/WarLauncher.class
+     0 Wed Dec 07 09:04:32 IST 2016 org/springframework/boot/loader/archive/
+  1749 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/archive/JarFileArchive$EntryIterator.class
+  3792 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/archive/ExplodedArchive$FileEntryIterator.class
+  1068 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/archive/ExplodedArchive$FileEntry.class
+  1097 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/archive/JarFileArchive$JarFileEntry.class
+   302 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/archive/Archive$Entry.class
+  7016 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/archive/JarFileArchive.class
+  4974 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/archive/ExplodedArchive.class
+   906 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/archive/Archive.class
+  1438 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/archive/ExplodedArchive$FileEntryIterator$EntryComparator.class
+   399 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/archive/Archive$EntryFilter.class
+   273 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/archive/ExplodedArchive$1.class
+ 16257 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/PropertiesLauncher.class
+     0 Wed Dec 07 09:04:32 IST 2016 org/springframework/boot/loader/util/
+  4947 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/util/SystemPropertyUtils.class
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-Boot/Spring-Boot-application
+$ java -jar target/myproject-0.0.1-SNAPSHOT.jar
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.4.2.RELEASE)
+
+2016-12-07 09:06:21.299  INFO 5832 --- [           main] Example                                  : Starting Example on Acer with PID 5832 (E:\Working\Java\Spring\Spring-Boot\Spring-Boot-application\target\myproject-0.0.1-SNAPSHOT.jar started by Aspire in E:\Working\Java\Spring\Spring-Boot\Spring-Boot-application)
+2016-12-07 09:06:21.330  INFO 5832 --- [           main] Example                                  : No active profile set, falling back to default profiles: default
+2016-12-07 09:06:21.580  INFO 5832 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@69663380: startup date [Wed Dec 07 09:06:21 IST 2016]; root of context hierarchy
+2016-12-07 09:06:27.637  INFO 5832 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-12-07 09:06:27.715  INFO 5832 --- [           main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-12-07 09:06:27.715  INFO 5832 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-12-07 09:06:29.264  INFO 5832 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-12-07 09:06:29.264  INFO 5832 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 7715 ms
+2016-12-07 09:06:29.779  INFO 5832 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-12-07 09:06:29.779  INFO 5832 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-12-07 09:06:29.779  INFO 5832 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-12-07 09:06:29.779  INFO 5832 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-12-07 09:06:29.779  INFO 5832 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-12-07 09:06:30.654  INFO 5832 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@69663380: startup date [Wed Dec 07 09:06:21 IST 2016]; root of context hierarchy
+2016-12-07 09:06:30.842  INFO 5832 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto java.lang.String Example.home()
+2016-12-07 09:06:30.857  INFO 5832 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-12-07 09:06:30.857  INFO 5832 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-12-07 09:06:30.967  INFO 5832 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-07 09:06:30.967  INFO 5832 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-07 09:06:31.092  INFO 5832 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-07 09:06:31.587  INFO 5832 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-12-07 09:06:31.915  INFO 5832 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-12-07 09:06:31.962  INFO 5832 --- [           main] Example                                  : Started Example in 12.512 seconds (JVM running for 15.012)
+2016-12-07 09:07:36.626  INFO 5832 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-12-07 09:07:36.627  INFO 5832 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-12-07 09:07:36.671  INFO 5832 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 44 ms
+
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-Boot/Spring-Boot-application
+$ mvn package
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building myproject 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ myproject ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 0 resource
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ myproject ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to E:\Working\Java\Spring\Spring-Boot\Spring-Boot-application\target\classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ myproject ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory E:\Working\Java\Spring\Spring-Boot\Spring-Boot-application\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ myproject ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ myproject ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:2.6:jar (default-jar) @ myproject ---
+[INFO] Building jar: E:\Working\Java\Spring\Spring-Boot\Spring-Boot-application\target\myproject-0.0.1-SNAPSHOT.jar
+[INFO]
+[INFO] --- spring-boot-maven-plugin:1.4.2.RELEASE:repackage (default) @ myproject ---
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 7.472 s
+[INFO] Finished at: 2016-12-09T13:42:30+05:30
+[INFO] Final Memory: 27M/331M
+[INFO] ------------------------------------------------------------------------
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-Boot/Spring-Boot-application
+$ mvn spring-boot:run
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building myproject 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] >>> spring-boot-maven-plugin:1.4.2.RELEASE:run (default-cli) > test-compile @ myproject >>>
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ myproject ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 0 resource
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ myproject ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ myproject ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory E:\Working\Java\Spring\Spring-Boot\Spring-Boot-application\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ myproject ---
+[INFO] No sources to compile
+[INFO]
+[INFO] <<< spring-boot-maven-plugin:1.4.2.RELEASE:run (default-cli) < test-compile @ myproject <<<
+[INFO]
+[INFO] --- spring-boot-maven-plugin:1.4.2.RELEASE:run (default-cli) @ myproject ---
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.4.2.RELEASE)
+
+2016-12-09 13:42:43.000  INFO 4016 --- [           main] Example                                  : Starting Example on Acer with PID 4016 (E:\Working\Java\Spring\Spring-Boot\Spring-Boot-application\target\classes started by Aspire in E:\Working\Java\Spring\Spring-Boot\Spring-Boot-application)
+2016-12-09 13:42:43.000  INFO 4016 --- [           main] Example                                  : No active profile set, falling back to default profiles: default
+2016-12-09 13:42:43.141  INFO 4016 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@607ae012: startup date [Fri Dec 09 13:42:43 IST 2016]; root of context hierarchy
+2016-12-09 13:42:47.016  INFO 4016 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8181 (http)
+2016-12-09 13:42:47.048  INFO 4016 --- [           main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-12-09 13:42:47.048  INFO 4016 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-12-09 13:42:47.298  INFO 4016 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-12-09 13:42:47.298  INFO 4016 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4157 ms
+2016-12-09 13:42:47.735  INFO 4016 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-12-09 13:42:47.751  INFO 4016 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-12-09 13:42:47.751  INFO 4016 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-12-09 13:42:47.751  INFO 4016 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-12-09 13:42:47.751  INFO 4016 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-12-09 13:42:48.470  INFO 4016 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@607ae012: startup date [Fri Dec 09 13:42:43 IST 2016]; root of context hierarchy
+2016-12-09 13:42:48.688  INFO 4016 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto java.lang.String Example.home()
+2016-12-09 13:42:48.704  INFO 4016 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-12-09 13:42:48.704  INFO 4016 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-12-09 13:42:48.798  INFO 4016 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-09 13:42:48.798  INFO 4016 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-09 13:42:48.907  INFO 4016 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-09 13:42:49.313  INFO 4016 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-12-09 13:42:49.548  INFO 4016 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8181 (http)
+2016-12-09 13:42:49.563  INFO 4016 --- [           main] Example                                  : Started Example in 7.923 seconds (JVM running for 15.321)
+2016-12-09 13:43:07.110  INFO 4016 --- [nio-8181-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-12-09 13:43:07.111  INFO 4016 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-12-09 13:43:07.153  INFO 4016 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 41 ms
+
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-Boot/Spring-Boot-application
+$ jar tvf target/myproject-0.0.1-SNAPSHOT.jar
+     0 Fri Dec 09 13:42:30 IST 2016 META-INF/
+   548 Fri Dec 09 13:42:30 IST 2016 META-INF/MANIFEST.MF
+     0 Fri Dec 09 13:42:30 IST 2016 BOOT-INF/
+     0 Fri Dec 09 13:42:30 IST 2016 BOOT-INF/classes/
+    16 Fri Dec 09 13:42:24 IST 2016 BOOT-INF/classes/application.properties
+   957 Fri Dec 09 13:42:26 IST 2016 BOOT-INF/classes/Example.class
+     0 Fri Dec 09 13:42:28 IST 2016 META-INF/maven/
+     0 Fri Dec 09 13:42:28 IST 2016 META-INF/maven/com.example/
+     0 Fri Dec 09 13:42:28 IST 2016 META-INF/maven/com.example/myproject/
+  1106 Wed Dec 07 09:03:36 IST 2016 META-INF/maven/com.example/myproject/pom.xml
+   126 Wed Dec 07 08:53:44 IST 2016 META-INF/maven/com.example/myproject/pom.properties
+     0 Fri Dec 09 13:42:30 IST 2016 BOOT-INF/lib/
+813854 Mon Nov 07 21:16:16 IST 2016 BOOT-INF/lib/spring-web-4.3.4.RELEASE.jar
+  4597 Mon Apr 04 20:39:24 IST 2016 BOOT-INF/lib/jul-to-slf4j-1.7.21.jar
+  2295 Tue Nov 08 16:30:36 IST 2016 BOOT-INF/lib/spring-boot-starter-tomcat-1.4.2.RELEASE.jar
+704465 Wed Feb 17 16:15:16 IST 2016 BOOT-INF/lib/hibernate-validator-5.2.4.Final.jar
+239734 Thu Oct 06 21:16:28 IST 2016 BOOT-INF/lib/tomcat-embed-el-8.5.6.jar
+380082 Mon Nov 07 21:14:40 IST 2016 BOOT-INF/lib/spring-aop-4.3.4.RELEASE.jar
+241565 Thu Oct 06 21:16:28 IST 2016 BOOT-INF/lib/tomcat-embed-websocket-8.5.6.jar
+273599 Fri Feb 19 13:13:32 IST 2016 BOOT-INF/lib/snakeyaml-1.17.jar
+2990538 Thu Oct 06 21:16:26 IST 2016 BOOT-INF/lib/tomcat-embed-core-8.5.6.jar
+761236 Mon Nov 07 21:14:36 IST 2016 BOOT-INF/lib/spring-beans-4.3.4.RELEASE.jar
+  2311 Tue Nov 08 16:30:22 IST 2016 BOOT-INF/lib/spring-boot-starter-logging-1.4.2.RELEASE.jar
+ 41071 Mon Apr 04 20:36:42 IST 2016 BOOT-INF/lib/slf4j-api-1.7.21.jar
+913505 Mon Nov 07 21:16:56 IST 2016 BOOT-INF/lib/spring-webmvc-4.3.4.RELEASE.jar
+  2347 Tue Nov 08 16:30:36 IST 2016 BOOT-INF/lib/spring-boot-starter-web-1.4.2.RELEASE.jar
+1112602 Mon Nov 07 21:14:30 IST 2016 BOOT-INF/lib/spring-core-4.3.4.RELEASE.jar
+1135493 Mon Nov 07 21:15:02 IST 2016 BOOT-INF/lib/spring-context-4.3.4.RELEASE.jar
+1234984 Fri Oct 14 03:51:36 IST 2016 BOOT-INF/lib/jackson-databind-2.8.4.jar
+  2290 Tue Nov 08 16:30:22 IST 2016 BOOT-INF/lib/spring-boot-starter-1.4.2.RELEASE.jar
+968499 Tue Nov 08 16:21:38 IST 2016 BOOT-INF/lib/spring-boot-autoconfigure-1.4.2.RELEASE.jar
+304075 Tue Mar 29 22:24:50 IST 2016 BOOT-INF/lib/logback-classic-1.1.7.jar
+281079 Thu Oct 13 20:48:04 IST 2016 BOOT-INF/lib/jackson-core-2.8.4.jar
+658888 Tue Nov 08 16:15:50 IST 2016 BOOT-INF/lib/spring-boot-1.4.2.RELEASE.jar
+263392 Mon Nov 07 21:14:50 IST 2016 BOOT-INF/lib/spring-expression-4.3.4.RELEASE.jar
+470782 Tue Mar 29 22:23:42 IST 2016 BOOT-INF/lib/logback-core-1.1.7.jar
+ 63777 Wed Apr 10 15:02:44 IST 2013 BOOT-INF/lib/validation-api-1.1.0.Final.jar
+ 64982 Tue Sep 27 22:24:16 IST 2016 BOOT-INF/lib/classmate-1.3.3.jar
+ 16431 Mon Apr 04 20:38:46 IST 2016 BOOT-INF/lib/jcl-over-slf4j-1.7.21.jar
+ 23646 Mon Apr 04 20:39:02 IST 2016 BOOT-INF/lib/log4j-over-slf4j-1.7.21.jar
+ 66802 Thu May 28 09:49:34 IST 2015 BOOT-INF/lib/jboss-logging-3.3.0.Final.jar
+ 55785 Thu Oct 13 20:45:36 IST 2016 BOOT-INF/lib/jackson-annotations-2.8.4.jar
+     0 Fri Dec 09 13:42:30 IST 2016 org/
+     0 Fri Dec 09 13:42:30 IST 2016 org/springframework/
+     0 Fri Dec 09 13:42:30 IST 2016 org/springframework/boot/
+     0 Fri Dec 09 13:42:30 IST 2016 org/springframework/boot/loader/
+  2468 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/LaunchedURLClassLoader$1.class
+  1454 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/PropertiesLauncher$ArchiveEntryFilter.class
+  1807 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/PropertiesLauncher$PrefixMatchingArchiveFilter.class
+  4599 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/Launcher.class
+  1165 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/ExecutableArchiveLauncher$1.class
+     0 Fri Dec 09 13:42:30 IST 2016 org/springframework/boot/loader/jar/
+  2002 Tue Nov 08 16:11:14 IST 2016 org/springframework/boot/loader/jar/JarFile$1.class
+  8856 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/jar/Handler.class
+  3350 Tue Nov 08 16:11:14 IST 2016 org/springframework/boot/loader/jar/JarEntry.class
+  1427 Tue Nov 08 16:11:14 IST 2016 org/springframework/boot/loader/jar/JarFile$3.class
+  2943 Tue Nov 08 16:11:14 IST 2016 org/springframework/boot/loader/jar/CentralDirectoryEndRecord.class
+   430 Tue Nov 08 16:11:14 IST 2016 org/springframework/boot/loader/jar/CentralDirectoryVisitor.class
+  1300 Tue Nov 08 16:11:14 IST 2016 org/springframework/boot/loader/jar/JarFile$JarFileType.class
+ 10924 Tue Nov 08 16:11:14 IST 2016 org/springframework/boot/loader/jar/JarFileEntries.class
+ 12697 Tue Nov 08 16:11:14 IST 2016 org/springframework/boot/loader/jar/JarFile.class
+  1540 Tue Nov 08 16:11:14 IST 2016 org/springframework/boot/loader/jar/JarFileEntries$1.class
+   672 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/jar/JarURLConnection$1.class
+  1199 Tue Nov 08 16:11:14 IST 2016 org/springframework/boot/loader/jar/JarFile$2.class
+   262 Tue Nov 08 16:11:14 IST 2016 org/springframework/boot/loader/jar/JarEntryFilter.class
+  4470 Tue Nov 08 16:11:14 IST 2016 org/springframework/boot/loader/jar/AsciiBytes.class
+  4602 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/jar/CentralDirectoryParser.class
+  2169 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/jar/Bytes.class
+  1629 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/jar/ZipInflaterInputStream.class
+  1967 Tue Nov 08 16:11:14 IST 2016 org/springframework/boot/loader/jar/JarFileEntries$EntryIterator.class
+   306 Tue Nov 08 16:11:14 IST 2016 org/springframework/boot/loader/jar/FileHeader.class
+  3655 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/jar/JarURLConnection$JarEntryName.class
+  9111 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/jar/JarURLConnection.class
+  5449 Tue Nov 08 16:11:14 IST 2016 org/springframework/boot/loader/jar/CentralDirectoryFileHeader.class
+  1704 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/PropertiesLauncher$FilteredArchive$1.class
+     0 Fri Dec 09 13:42:30 IST 2016 org/springframework/boot/loader/data/
+  1531 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/data/ByteArrayRandomAccessData.class
+  3534 Tue Nov 08 16:11:14 IST 2016 org/springframework/boot/loader/data/RandomAccessDataFile$DataInputStream.class
+  2051 Tue Nov 08 16:11:14 IST 2016 org/springframework/boot/loader/data/RandomAccessDataFile$FilePool.class
+  1341 Tue Nov 08 16:11:14 IST 2016 org/springframework/boot/loader/data/RandomAccessData$ResourceAccess.class
+  3390 Tue Nov 08 16:11:14 IST 2016 org/springframework/boot/loader/data/RandomAccessDataFile.class
+   551 Tue Nov 08 16:11:14 IST 2016 org/springframework/boot/loader/data/RandomAccessData.class
+  4698 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/LaunchedURLClassLoader.class
+  2052 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/JarLauncher.class
+  1468 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/MainMethodRunner.class
+  2382 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/PropertiesLauncher$FilteredArchive.class
+  1382 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/PropertiesLauncher$1.class
+  3128 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/ExecutableArchiveLauncher.class
+  1669 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/WarLauncher.class
+     0 Fri Dec 09 13:42:30 IST 2016 org/springframework/boot/loader/archive/
+  1749 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/archive/JarFileArchive$EntryIterator.class
+  3792 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/archive/ExplodedArchive$FileEntryIterator.class
+  1068 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/archive/ExplodedArchive$FileEntry.class
+  1097 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/archive/JarFileArchive$JarFileEntry.class
+   302 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/archive/Archive$Entry.class
+  7016 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/archive/JarFileArchive.class
+  4974 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/archive/ExplodedArchive.class
+   906 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/archive/Archive.class
+  1438 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/archive/ExplodedArchive$FileEntryIterator$EntryComparator.class
+   399 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/archive/Archive$EntryFilter.class
+   273 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/archive/ExplodedArchive$1.class
+ 16257 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/PropertiesLauncher.class
+     0 Fri Dec 09 13:42:30 IST 2016 org/springframework/boot/loader/util/
+  4947 Tue Nov 08 16:11:16 IST 2016 org/springframework/boot/loader/util/SystemPropertyUtils.class
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-Boot/Spring-Boot-application
+$ java -jar target/myproject-0.0.1-SNAPSHOT.jar
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.4.2.RELEASE)
+
+2016-12-09 13:43:39.098  INFO 5124 --- [           main] Example                                  : Starting Example on Acer with PID 5124 (E:\Working\Java\Spring\Spring-Boot\Spring-Boot-application\target\myproject-0.0.1-SNAPSHOT.jar started by Aspire in E:\Working\Java\Spring\Spring-Boot\Spring-Boot-application)
+2016-12-09 13:43:39.114  INFO 5124 --- [           main] Example                                  : No active profile set, falling back to default profiles: default
+2016-12-09 13:43:39.380  INFO 5124 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5b37e0d2: startup date [Fri Dec 09 13:43:39 IST 2016]; root of context hierarchy
+2016-12-09 13:43:45.088  INFO 5124 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8181 (http)
+2016-12-09 13:43:45.135  INFO 5124 --- [           main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-12-09 13:43:45.135  INFO 5124 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-12-09 13:43:45.463  INFO 5124 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-12-09 13:43:45.463  INFO 5124 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6115 ms
+2016-12-09 13:43:46.150  INFO 5124 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-12-09 13:43:46.166  INFO 5124 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-12-09 13:43:46.166  INFO 5124 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-12-09 13:43:46.166  INFO 5124 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-12-09 13:43:46.166  INFO 5124 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-12-09 13:43:47.057  INFO 5124 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5b37e0d2: startup date [Fri Dec 09 13:43:39 IST 2016]; root of context hierarchy
+2016-12-09 13:43:47.338  INFO 5124 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto java.lang.String Example.home()
+2016-12-09 13:43:47.353  INFO 5124 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-12-09 13:43:47.353  INFO 5124 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-12-09 13:43:47.479  INFO 5124 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-09 13:43:47.479  INFO 5124 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-09 13:43:47.604  INFO 5124 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-09 13:43:47.979  INFO 5124 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-12-09 13:43:48.166  INFO 5124 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8181 (http)
+2016-12-09 13:43:48.182  INFO 5124 --- [           main] Example                                  : Started Example in 10.771 seconds (JVM running for 11.96)
+2016-12-09 13:43:51.595  INFO 5124 --- [nio-8181-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-12-09 13:43:51.596  INFO 5124 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-12-09 13:43:51.646  INFO 5124 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 49 ms
+

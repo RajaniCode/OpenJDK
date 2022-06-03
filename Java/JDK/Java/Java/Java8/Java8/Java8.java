@@ -1,0 +1,467 @@
+// Java 8
+/*
+1. Lambda Expression
+2. Method References
+3. Default Interface Methods
+4. Static Interface Methods
+5. Functional Interfaces
+6. Stream
+*/
+
+import static java.lang.System.out;
+import java.util.Arrays;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Set;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
+import java.util.stream.Stream; 
+import java.time.LocalDate;
+import java.time.Month;
+
+// 1. Lambda Expression
+class LambdaExpression {
+    interface Mathematics {
+        int maths(int x, int y);
+    }
+    interface Greetings {
+        void greeting(String message);
+    } 
+    int calculation(int x, int y, Mathematics m) {
+        return m.maths(x, y);
+    }
+    public void print() {
+        out.println("1. Lambda Expression");
+        // Lambda Expression
+        Mathematics addition = (int x, int y) -> x + y;
+        Mathematics subtraction = (x, y) -> x - y;
+        Mathematics multiplication = (x, y) -> { return x * y; };
+        Mathematics division = (x, y) -> x / y;
+        out.println("10 + 5 = " + calculation(10, 5, addition));
+        out.println("10 - 5 = " + calculation(10, 5, subtraction));
+        out.println("10 * 5 = " + calculation(10, 5, multiplication));
+        out.println("10 / 5 = " + calculation(10, 5, division));
+        // Lambda Expression
+        Greetings greet1 = (message) -> out.println("Hello " + message);
+        Greetings greet2 = message -> out.println("What's " + message);
+        greet1.greeting("World!");
+        greet2.greeting("up?");
+        out.println();
+        List<String> names1 = new ArrayList<String>();
+        names1.add("Delta");
+        names1.add("Alpha");
+        names1.add("Epsilon");
+        names1.add("Beta");
+        names1.add("Gamma");
+        List<String> names2 = new ArrayList<String>();
+        names2.add("Delta");
+        names2.add("Alpha");
+        names2.add("Epsilon");
+        names2.add("Beta");
+        names2.add("Gamma");
+        out.println("Sort using Java 7 syntax:");
+        sortUsingJava7(names1);
+        out.println(names1);
+        out.println("Sort using Java 8 syntax:");
+        sortUsingJava8(names2);
+        out.println(names2);
+        out.println();
+    }
+    // Sort using Java 7
+    private void sortUsingJava7(List<String> names) {
+        Collections.sort(names, new Comparator<String>() {
+            @Override
+            public int compare(String s1, String s2) {
+                return s1.compareTo(s2);
+            }
+        });
+    }
+   // Sort using Java 8
+   private void sortUsingJava8(List<String> names) {
+      Collections.sort(names, (s1, s2) -> s1.compareTo(s2));
+       }
+    }
+
+// 2. Method References
+interface ReverseFunc {
+    String func(String str);
+}
+class StringReverse {
+    // static String reverse(String str) { 
+    String reverse(String str) {
+        String result = "";
+        for(int i = str.length() - 1; i >= 0; i--) {
+	          result += str.charAt(i);            
+   	   }
+        return result;
+    }   
+}
+class MethodReferences {
+    String stringFunc(ReverseFunc revFunc, String str) {
+        return revFunc.func(str);
+    }
+    public void print() {
+        out.println("2. Method References");
+        String str = "Hello World!";
+        String rstr = "";
+        StringReverse srev = new StringReverse(); //
+        // Method References
+        // rstr = stringFunc(StringRevers::reverse, str);
+        // Method References
+        rstr = stringFunc(srev::reverse, str);
+        out.println(rstr);
+        out.println();
+        List<String> names = new ArrayList<String>();
+        names.add("Delta");
+        names.add("Alpha");
+        names.add("Epsilon");
+        names.add("Beta");
+        names.add("Gamma");
+        out.println("Print using forEach");
+        names.forEach(out::println);
+        out.println();
+   }
+}
+
+// 3. Default Interface Methods
+interface DefaultService {
+    int getNumber();
+    // Default Method
+    default String getString() {
+        return "This is the return from Default Interface Method";
+    }
+}
+class DefaultImplementation implements DefaultService {
+    public int getNumber() {
+        return 100;
+    }   
+}
+class DefaultInterfaceMethods {
+    public void print() {
+        out.println("3. Default Interface Methods");
+        DefaultImplementation defimp = new DefaultImplementation();
+        out.println(defimp.getNumber());
+        out.println(defimp.getString());
+        out.println();
+    }
+}
+
+// 4. Static Interface Methods
+interface StaticService {
+    int getNumber();
+    // Static Method In Interface
+    static String getString() {
+        return "This is the return from Static Method In Interface";
+    }
+}
+class StaticImplementation implements StaticService {
+    public int getNumber() {
+        return 100;
+    }   
+}
+class StaticInterfaceMethods {
+    public void print() {
+        out.println("4. Static Interface Methods");
+        StaticImplementation statimp = new StaticImplementation();
+	      out.println(statimp.getNumber());
+        out.println(StaticService.getString());
+        out.println();
+    }
+}
+
+// 5. Functional Interfaces
+interface FunctionalNumber {
+    double getNumber();
+}
+class FunctionalInterfaces {
+    private static int sum = 0;
+    public void print() {
+        out.println("5. Functional Interfaces");
+        FunctionalNumber number;
+        number = () -> 123.45D;
+        out.println("Number: " + number.getNumber());
+        number = () -> Math.random() * 100;
+        out.println("Random Number: " + number.getNumber());
+        // int sum = 100;
+        List<Integer> listp = new ArrayList<Integer>();
+        listp.add(555);
+        listp.add(77);
+        listp.add(3);
+        out.println("List");
+        listp.forEach(out::println);
+        out.println("Sum");
+        // listp.forEach(n -> out.printf("%d ", (sum += n)));	
+        listp.forEach(n -> out.printf("%d%n", (sum += n)));
+        out.println();
+        List<Integer> lst = Arrays.asList(555, 77, 3); 	
+        out.println("forEach printf:");       
+        lst.forEach(i -> out.printf("%d ", i));  // lst.forEach(i -> System.out.printf("%d, ", i));
+        out.println();
+        out.println("forEach format:");
+        lst.forEach(i -> out.format("%d ", i));  // lst.forEach(i -> System.out.format("%d, ", i));	
+        out.println();
+        out.println("format:");
+        int i = 123;
+        int j = 456;
+        out.format("i = %d, j = %d",  i, j); 
+        out.println();
+        out.println("printf:");
+        out.printf("i = %d, j = %d",  i, j);
+        out.println("\n");
+    }
+}
+
+// Predicate
+// Predicate exists from before Java 8
+class PredicateInterface {
+    public void print() {
+        out.println("Predicate predates Java 8");
+        List<Integer> lst = Arrays.asList(1, 2, 3, 4, 5);
+        out.println("Integers");
+	      evaluate(lst, n -> true);	
+	      out.println("Odd Integers");
+        evaluate(lst, n -> n % 2 != 0 );
+	      out.println("Even Integers");
+	      evaluate(lst, n -> n % 2 == 0);
+        List<Integer> ilst = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9);
+        // Predicate<Integer> predicate = n -> true
+        // n is passed as parameter to test method of Predicate interface
+        // Test method will always return true no matter what value n has
+        out.println("Print all numbers:");
+        // pass n as parameter
+        eval(ilst, n->true);
+        // Predicate<Integer> predicate1 = n -> n%2 == 0
+        // n is passed as parameter to test method of Predicate interface
+        // Test method will return true if n%2 comes to be zero
+        out.println("Print even numbers:");
+        eval(ilst, n-> n%2 == 0 );
+        // Predicate<Integer> predicate2 = n -> n > 3
+        // n is passed as parameter to test method of Predicate interface
+        // Test method will return true if n is greater than 3
+        out.println("Print numbers greater than 3:");
+        eval(ilst, n-> n > 3 );
+        out.println();
+    }
+    private void evaluate(List<Integer> lst, Predicate<Integer> pred) {
+        for(int i: lst) {
+            if(pred.test(i)) {
+                out.println(i);
+            }
+        }
+        out.println();
+    }
+    private void eval(List<Integer> list, Predicate<Integer> predicate) {
+        for(Integer n: list) {
+            if(predicate.test(n)) {
+                out.println(n + " ");
+            }
+        }
+    }
+}
+
+// 6. Stream (Java 8)
+class UtilStream {
+    public void print() {
+        Person per = new Person();
+        List<Person> personList = per.getPersons();
+        out.println("Person List");
+        personList.forEach(p -> out.printf("Id: %d, Name: %s, Gender: %s, Date of birth: %s, Income: %.2f\n", p.getId(), p.getName(), p.getGender().toString(), p.getDob().toString(), p.getIncome()));
+        out.println();
+        out.println("Filtering by Stream");
+        List<Person> listPerson = personList.stream().filter(p -> p.getIncome() > 50000.0d).collect(Collectors.toList());
+        out.println("Person Income > 50000");
+        for(Person p : listPerson) {
+            out.printf("Id: %d, Name: %s, Gender: %s, Date of birth: %s, Income: %.2f\n", p.getId(), p.getName(), p.getGender().toString(), p.getDob().toString(), p.getIncome());
+        }
+        out.println();
+        out.println("Stream Iterating");
+        out.println("Alphabet");
+        Stream.iterate(65, x -> x + 1)
+        .filter(x -> (x < 91  | x > 96))
+        .limit(52)
+        .forEach(x -> out.printf("%c ", x));
+        out.println("\n");
+        out.println("Filtering and Iterating by Stream");
+        out.println("Person Income > 50000");
+        personList.stream().filter(p -> p.getIncome() > 50000.0d).forEach(p -> out.printf("Id: %d, Name: %s, Gender: %s, Date of birth: %s, Income: %.2f\n", p.getId(), p.getName(), p.getGender().toString(), p.getDob().toString(), p.getIncome()));
+        out.println();
+        out.println("Stream reduce() Method");
+        double total = personList.stream()  
+                    .map(p -> p.getIncome())  
+                    .reduce(0.0d, (x, y) -> x + y);
+        out.printf("Sum Person Income: %.2f\n", total);
+        out.println();
+        out.println("Stream reduce() Method by referring sum method of Double class"); 
+        total = personList.stream()  
+                .map(p -> p.getIncome())  
+                .reduce(0.0d, Double::sum);
+        out.printf("Sum Person Income: %.2f\n", total);
+        out.println();
+        out.println("Stream Collectors summingDouble() Method");
+        total = personList.stream().collect(Collectors.summingDouble(p -> p.getIncome()));  
+        out.printf("Sum Person Income: %.2f\n", total);
+        out.println();
+        out.println("Stream Max, Min, and Count");
+        out.println("Stream max() method");  
+        Person personIncomeMax = personList.stream().max((x, y) -> x.getIncome() > y.getIncome() ? 1: -1).get(); 
+        out.printf("Maximum Person Income: %.2f\n", personIncomeMax.getIncome());
+        out.println();
+        out.println("Stream min() method");  
+        Person personIncomeMin = personList.stream().min((x, y) -> x.getIncome() > y.getIncome() ? 1: -1).get(); 
+        out.printf("Minimum Person Income: %.2f\n", personIncomeMin.getIncome());
+        out.println();
+        out.println("Stream count() Method");
+        long counter = personList.stream().filter(p -> p.getIncome() > 50000.0d).count();  
+        out.printf("Count Person Income > 50000: %d\n", counter);
+        out.println();
+        out.println("List Stream To Set");
+        out.println("Person Set");
+        personList.stream().collect(Collectors.toSet()) .forEach(p -> out.printf("Id: %d, Name: %s, Gender: %s, Date of birth: %s, Income: %.2f\n", p.getId(), p.getName(), p.getGender().toString(), p.getDob().toString(), p.getIncome()));
+        out.println();
+        out.println("List Stream into Map");
+        Map<Long, Person> personIdMap =   
+            personList.stream().collect(Collectors.toMap(p->p.getId(), p->p));
+        out.println("Person Id - Map Entry");
+        for(Entry<Long, Person> mapEntry : personIdMap.entrySet()) {
+            Long id = mapEntry.getKey();
+            Person pr = mapEntry.getValue();
+            out.printf("Id: %d - Id: %d, Name: %s, Gender: %s, Date of birth: %s, Income: %.2f\n", id, pr.getId(), pr.getName(), pr.getGender().toString(), pr.getDob().toString(), pr.getIncome());
+        }
+        out.println();
+        out.println("Person Id - Map");
+        personList.stream().collect(Collectors.toMap(p->p.getId(), p->p)).forEach((x, y) -> out.printf("Id: %d - Id: %d, Name: %s, Gender: %s, Date of birth: %s, Income: %.2f\n", x, y.getId(), y.getName(), y.getGender().toString(), y.getDob().toString(), y.getIncome()));
+        out.println();
+        out.println("Stream Method Reference by referring getIncome method of Person class");
+        out.println("Person Income List");
+        personList.stream().map(Person::getIncome).collect(Collectors.toList()).forEach(x -> out.printf("%.2f\n", x));
+        out.println();
+        // Note
+        // Method Reference by referring getPersons method of Person class will Map to List<List<Person>>
+        out.println("Stream Method Reference by referring getPerson method of Person class");
+        out.println("Person List ");
+        personList.stream().map(Person::getPerson).collect(Collectors.toList()) .forEach(p -> out.printf("Id: %d, Name: %s, Gender: %s, Date of birth: %s, Income: %.2f\n", p.getId(), p.getName(), p.getGender().toString(), p.getDob().toString(), p.getIncome()));
+        out.println();
+        out.println("Parallel Stream");
+        String namesParallel = personList.parallelStream().filter(Person::isMale).map(Person::getName).collect(Collectors.joining(", "));
+        out.println(namesParallel);
+        out.println();
+        out.println("Mixed Mode: Serial and Parallel Streams");
+        String namesMixed = personList.stream().filter(Person::isMale).parallel().map(Person::getName).collect(Collectors.joining(", "));
+        out.println(namesMixed);
+    } 
+}
+
+class Person {
+    public static enum Gender {MALE, FEMALE}
+    private long id;
+    private String name;
+    private Gender gen;
+    private LocalDate dob;
+    private double income;
+    public Person() { }
+    public Person(long id, String name, Gender gen, LocalDate dob, double income) {
+        this.id = id;
+        this.name = name;
+        this.gen = gen;
+        this.dob = dob;
+        this.income = income;
+    }
+    public long getId() {
+        return id;
+    }
+    public void setId(long id) {
+        this.id = id;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public Gender getGender() {
+        return gen;
+    }
+    public boolean isMale() {
+        return this.gen == Gender.MALE;
+    }
+    public boolean isFemale() {
+        return this.gen == Gender.FEMALE;
+    }
+    public void setGender(Gender gen) {
+        this.gen = gen;
+    }
+    public LocalDate getDob() {
+        return dob;
+    }
+    public void setDob(LocalDate dob) {
+        this.dob = dob;
+    }
+    public double getIncome() {
+        return income;
+    }
+    public void setIncome(double income) {
+        this.income = income;
+    }
+    public Person getPerson() {
+        Person per = new Person(id, name, gen, dob, income);
+        return per;
+    }
+    public List<Person> getPersons() {
+        Person arete = new Person(1L, "Arete", Gender.MALE, LocalDate.of(1990, Month.JANUARY, 1), 10000.0d);
+        Person ersa = new Person(2L, "Ersa", Gender.FEMALE, LocalDate.of(1989, Month.FEBRUARY, 2), 20000.0d);
+        Person hera = new Person(3L, "Hera", Gender.FEMALE, LocalDate.of(1988, Month.MARCH, 3), 30000.0d);
+        Person elpis = new Person(4L, "Elpis", Gender.MALE, LocalDate.of(1987, Month.APRIL, 4), 40000.0d);
+        Person soter = new Person(5L, "Soter", Gender.MALE, LocalDate.of(1986, Month.MAY, 5), 50000.0d);
+        Person nyx = new Person(6L, "Nyx", Gender.FEMALE,
+LocalDate.of(1985, Month.JUNE, 6), 60000.0d);
+        Person aura = new Person(7L, "Aura", Gender.FEMALE, LocalDate.of(1984, Month.JULY, 7), 70000.0d);
+        Person selene = new Person(8L, "Selene", Gender.FEMALE,
+LocalDate.of(1983, Month.AUGUST, 8), 80000.0d);
+        Person gelos = new Person(9L, "Gelos", Gender.MALE,
+LocalDate.of(1982, Month.SEPTEMBER, 9), 90000.0d);
+        Person techne = new Person(10L, "Techne", Gender.MALE, LocalDate.of(1981, Month.OCTOBER, 10), 1000000.0d);
+        List<Person> persons = Arrays.asList(arete, ersa, hera, elpis, soter, nyx, aura, selene, gelos, techne);
+        return persons;
+   }
+   @Override
+   public String toString() {
+        String str = String.format("(%d, %s, %s, %s, %.2f)", id, name, gen, dob, income);
+            return str;
+    }
+}
+
+public class Java8 {
+    public static void main(String... args) {
+        LambdaExpression lambExpression = new LambdaExpression();
+        lambExpression.print();
+
+        MethodReferences methReferences = new MethodReferences();
+        methReferences.print();
+        
+        DefaultInterfaceMethods defInterfaceMethods = new DefaultInterfaceMethods();
+        defInterfaceMethods.print();
+
+        StaticInterfaceMethods stInterfaceMethods = new StaticInterfaceMethods();
+        stInterfaceMethods.print();
+        
+        FunctionalInterfaces funcInterfaces = new FunctionalInterfaces();
+        funcInterfaces.print();
+
+        PredicateInterface predictInterface = new PredicateInterface();
+        predictInterface.print();
+        
+        UtilStream utlStream = new UtilStream();
+        utlStream.print();
+    }
+}
+
+
+/*
+Courtesies:
+Java The Complete Reference by Herbert Schildt
+https://docs.oracle.com
+*/

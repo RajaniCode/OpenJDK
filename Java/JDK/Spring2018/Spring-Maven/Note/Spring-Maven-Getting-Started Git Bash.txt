@@ -1,0 +1,1728 @@
+
+Aspire@Acer MINGW64 /
+$ java -version
+java version "1.8.0_102"
+Java(TM) SE Runtime Environment (build 1.8.0_102-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.102-b14, mixed mode)
+
+Aspire@Acer MINGW64 /
+$ mvn -v
+Apache Maven 3.3.9 (bb52d8502b132ec0a5a3f4c09453c07478323dc5; 2015-11-10T22:11:47+05:30)
+Maven home: C:\Program Files\Apache Software Foundation\apache-maven-3.3.9
+Java version: 1.8.0_102, vendor: Oracle Corporation
+Java home: C:\Program Files\Java\jdk1.8.0_102\jre
+Default locale: en_US, platform encoding: Cp1252
+OS name: "windows 8.1", version: "6.3", arch: "amd64", family: "dos"
+
+Aspire@Acer MINGW64 /
+$ cd "E:\Working\Java\Spring\Spring-Maven\Spring-Maven-Getting-Started"
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-Maven/Spring-Maven-Getting-Started
+$ mkdir -p src/main/java/hello
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-Maven/Spring-Maven-Getting-Started
+$ touch src/main/java/hello/HelloWorld.java
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-Maven/Spring-Maven-Getting-Started
+$ touch src/main/java/hello/Greeter.java
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-Maven/Spring-Maven-Getting-Started
+$ touch pom.xml
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-Maven/Spring-Maven-Getting-Started
+$ mvn compile
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building gs-maven 0.1.0
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory E:\Working\Java\Spring\Spring-Maven\Spring-Maven-Getting-Started\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ gs-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 2 source files to E:\Working\Java\Spring\Spring-Maven\Spring-Maven-Getting-Started\target\classes
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 2.937 s
+[INFO] Finished at: 2016-12-07T13:15:35+05:30
+[INFO] Final Memory: 12M/245M
+[INFO] ------------------------------------------------------------------------
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-Maven/Spring-Maven-Getting-Started
+$ mvn package
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building gs-maven 0.1.0
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory E:\Working\Java\Spring\Spring-Maven\Spring-Maven-Getting-Started\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ gs-maven ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory E:\Working\Java\Spring\Spring-Maven\Spring-Maven-Getting-Started\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ gs-maven ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ gs-maven ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ gs-maven ---
+[INFO] Building jar: E:\Working\Java\Spring\Spring-Maven\Spring-Maven-Getting-Started\target\gs-maven-0.1.0.jar
+[INFO]
+[INFO] --- maven-shade-plugin:2.1:shade (default) @ gs-maven ---
+[INFO] Replacing original artifact with shaded artifact.
+[INFO] Replacing E:\Working\Java\Spring\Spring-Maven\Spring-Maven-Getting-Started\target\gs-maven-0.1.0.jar with E:\Working\Java\Spring\Spring-Maven\Spring-Maven-Getting-Started\target\gs-maven-0.1.0-shaded.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 4.203 s
+[INFO] Finished at: 2016-12-07T13:15:47+05:30
+[INFO] Final Memory: 11M/309M
+[INFO] ------------------------------------------------------------------------
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-Maven/Spring-Maven-Getting-Started
+$ mvn install
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building gs-maven 0.1.0
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory E:\Working\Java\Spring\Spring-Maven\Spring-Maven-Getting-Started\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ gs-maven ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory E:\Working\Java\Spring\Spring-Maven\Spring-Maven-Getting-Started\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ gs-maven ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ gs-maven ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ gs-maven ---
+[INFO]
+[INFO] --- maven-shade-plugin:2.1:shade (default) @ gs-maven ---
+[INFO] Replacing original artifact with shaded artifact.
+[INFO] Replacing E:\Working\Java\Spring\Spring-Maven\Spring-Maven-Getting-Started\target\gs-maven-0.1.0.jar with E:\Working\Java\Spring\Spring-Maven\Spring-Maven-Getting-Started\target\gs-maven-0.1.0-shaded.jar
+[INFO]
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ gs-maven ---
+[INFO] Installing E:\Working\Java\Spring\Spring-Maven\Spring-Maven-Getting-Started\target\gs-maven-0.1.0.jar to C:\Users\Aspire\.m2\repository\org\springframework\gs-maven\0.1.0\gs-maven-0.1.0.jar
+[INFO] Installing E:\Working\Java\Spring\Spring-Maven\Spring-Maven-Getting-Started\pom.xml to C:\Users\Aspire\.m2\repository\org\springframework\gs-maven\0.1.0\gs-maven-0.1.0.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 4.211 s
+[INFO] Finished at: 2016-12-07T13:15:59+05:30
+[INFO] Final Memory: 11M/309M
+[INFO] ------------------------------------------------------------------------
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-Maven/Spring-Maven-Getting-Started
+$ jar tvf target/gs-maven-0.1.0.jar
+   162 Wed Dec 07 13:15:58 IST 2016 META-INF/MANIFEST.MF
+     0 Wed Dec 07 13:15:58 IST 2016 META-INF/
+     0 Wed Dec 07 13:15:58 IST 2016 hello/
+   369 Wed Dec 07 13:15:58 IST 2016 hello/Greeter.class
+   648 Wed Dec 07 13:15:58 IST 2016 hello/HelloWorld.class
+     0 Wed Dec 07 13:15:58 IST 2016 META-INF/maven/
+     0 Wed Dec 07 13:15:58 IST 2016 META-INF/maven/org.springframework/
+     0 Wed Dec 07 13:15:58 IST 2016 META-INF/maven/org.springframework/gs-maven/
+  1475 Wed Dec 07 13:15:58 IST 2016 META-INF/maven/org.springframework/gs-maven/pom.xml
+   117 Wed Dec 07 13:15:58 IST 2016 META-INF/maven/org.springframework/gs-maven/pom.properties
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-Maven/Spring-Maven-Getting-Started
+$ java -jar target/gs-maven-0.1.0.jar
+Hello world!
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-Maven/Spring-Maven-Getting-Started
+$ mkdir -p src/test/java/hello
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-Maven/Spring-Maven-Getting-Started
+$ touch src/test/java/hello/GreeterTest.java
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-Maven/Spring-Maven-Getting-Started
+$ mvn test
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building gs-maven 0.1.0
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory E:\Working\Java\Spring\Spring-Maven\Spring-Maven-Getting-Started\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ gs-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 2 source files to E:\Working\Java\Spring\Spring-Maven\Spring-Maven-Getting-Started\target\classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory E:\Working\Java\Spring\Spring-Maven\Spring-Maven-Getting-Started\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ gs-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to E:\Working\Java\Spring\Spring-Maven\Spring-Maven-Getting-Started\target\test-classes
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ gs-maven ---
+[INFO] Surefire report directory: E:\Working\Java\Spring\Spring-Maven\Spring-Maven-Getting-Started\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running hello.GreeterTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.141 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 5.376 s
+[INFO] Finished at: 2016-12-07T13:20:03+05:30
+[INFO] Final Memory: 14M/258M
+[INFO] ------------------------------------------------------------------------
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-Maven/Spring-Maven-Getting-Started
+$ mvn install
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building gs-maven 0.1.0
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory E:\Working\Java\Spring\Spring-Maven\Spring-Maven-Getting-Started\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ gs-maven ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory E:\Working\Java\Spring\Spring-Maven\Spring-Maven-Getting-Started\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ gs-maven ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ gs-maven ---
+[INFO] Surefire report directory: E:\Working\Java\Spring\Spring-Maven\Spring-Maven-Getting-Started\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running hello.GreeterTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.157 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ gs-maven ---
+[INFO] Building jar: E:\Working\Java\Spring\Spring-Maven\Spring-Maven-Getting-Started\target\gs-maven-0.1.0.jar
+[INFO]
+[INFO] --- maven-shade-plugin:2.1:shade (default) @ gs-maven ---
+[INFO] Including joda-time:joda-time:jar:2.2 in the shaded jar.
+[INFO] Replacing original artifact with shaded artifact.
+[INFO] Replacing E:\Working\Java\Spring\Spring-Maven\Spring-Maven-Getting-Started\target\gs-maven-0.1.0.jar with E:\Working\Java\Spring\Spring-Maven\Spring-Maven-Getting-Started\target\gs-maven-0.1.0-shaded.jar
+[INFO] Dependency-reduced POM written at: E:\Working\Java\Spring\Spring-Maven\Spring-Maven-Getting-Started\dependency-reduced-pom.xml
+[INFO] Dependency-reduced POM written at: E:\Working\Java\Spring\Spring-Maven\Spring-Maven-Getting-Started\dependency-reduced-pom.xml
+[INFO]
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ gs-maven ---
+[INFO] Installing E:\Working\Java\Spring\Spring-Maven\Spring-Maven-Getting-Started\target\gs-maven-0.1.0.jar to C:\Users\Aspire\.m2\repository\org\springframework\gs-maven\0.1.0\gs-maven-0.1.0.jar
+[INFO] Installing E:\Working\Java\Spring\Spring-Maven\Spring-Maven-Getting-Started\dependency-reduced-pom.xml to C:\Users\Aspire\.m2\repository\org\springframework\gs-maven\0.1.0\gs-maven-0.1.0.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 6.068 s
+[INFO] Finished at: 2016-12-07T13:20:17+05:30
+[INFO] Final Memory: 11M/309M
+[INFO] ------------------------------------------------------------------------
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-Maven/Spring-Maven-Getting-Started
+$ jar tvf target/gs-maven-0.1.0.jar
+   162 Wed Dec 07 13:20:16 IST 2016 META-INF/MANIFEST.MF
+     0 Wed Dec 07 13:20:16 IST 2016 META-INF/
+     0 Wed Dec 07 13:20:16 IST 2016 hello/
+   369 Wed Dec 07 13:20:16 IST 2016 hello/Greeter.class
+   988 Wed Dec 07 13:20:16 IST 2016 hello/HelloWorld.class
+     0 Wed Dec 07 13:20:16 IST 2016 META-INF/maven/
+     0 Wed Dec 07 13:20:16 IST 2016 META-INF/maven/org.springframework/
+     0 Wed Dec 07 13:20:16 IST 2016 META-INF/maven/org.springframework/gs-maven/
+  1482 Wed Dec 07 13:20:16 IST 2016 META-INF/maven/org.springframework/gs-maven/pom.xml
+   117 Wed Dec 07 13:20:16 IST 2016 META-INF/maven/org.springframework/gs-maven/pom.properties
+ 11560 Wed Dec 07 13:20:16 IST 2016 META-INF/LICENSE.txt
+   316 Wed Dec 07 13:20:16 IST 2016 META-INF/NOTICE.txt
+     0 Wed Dec 07 13:20:16 IST 2016 org/
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/base/
+  3886 Wed Dec 07 13:20:16 IST 2016 org/joda/time/base/AbstractDateTime.class
+  2026 Wed Dec 07 13:20:16 IST 2016 org/joda/time/base/AbstractDuration.class
+  4505 Wed Dec 07 13:20:16 IST 2016 org/joda/time/base/AbstractInstant.class
+  4039 Wed Dec 07 13:20:16 IST 2016 org/joda/time/base/AbstractInterval.class
+  4352 Wed Dec 07 13:20:16 IST 2016 org/joda/time/base/AbstractPartial.class
+  2274 Wed Dec 07 13:20:16 IST 2016 org/joda/time/base/AbstractPeriod.class
+  2878 Wed Dec 07 13:20:16 IST 2016 org/joda/time/base/BaseDateTime.class
+  2843 Wed Dec 07 13:20:16 IST 2016 org/joda/time/base/BaseDuration.class
+  3353 Wed Dec 07 13:20:16 IST 2016 org/joda/time/base/BaseInterval.class
+   328 Wed Dec 07 13:20:16 IST 2016 org/joda/time/base/BaseLocal.class
+  3740 Wed Dec 07 13:20:16 IST 2016 org/joda/time/base/BasePartial.class
+   523 Wed Dec 07 13:20:16 IST 2016 org/joda/time/base/BasePeriod$1.class
+  8038 Wed Dec 07 13:20:16 IST 2016 org/joda/time/base/BasePeriod.class
+  5017 Wed Dec 07 13:20:16 IST 2016 org/joda/time/base/BaseSingleFieldPeriod.class
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/
+  3166 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/AssembledChronology$Fields.class
+  6842 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/AssembledChronology.class
+  6647 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/BaseChronology.class
+  1295 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/BasicChronology$HalfdayField.class
+   418 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/BasicChronology$YearInfo.class
+ 10647 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/BasicChronology.class
+  2106 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/BasicDayOfMonthDateTimeField.class
+  1962 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/BasicDayOfYearDateTimeField.class
+  1844 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/BasicFixedMonthChronology.class
+  2391 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/BasicGJChronology.class
+  4799 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/BasicMonthOfYearDateTimeField.class
+  2183 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/BasicSingleEraDateTimeField.class
+  2169 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/BasicWeekOfWeekyearDateTimeField.class
+  2864 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/BasicWeekyearDateTimeField.class
+  2472 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/BasicYearDateTimeField.class
+  4347 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/BuddhistChronology.class
+  4462 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/CopticChronology.class
+  4461 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/EthiopicChronology.class
+  5792 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/GJChronology$CutoverField.class
+  2626 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/GJChronology$ImpreciseCutoverField.class
+  1164 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/GJChronology$LinkedDurationField.class
+  9797 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/GJChronology.class
+  1953 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/GJDayOfWeekDateTimeField.class
+  2621 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/GJEraDateTimeField.class
+  5882 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/GJLocaleSymbols.class
+  1231 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/GJMonthOfYearDateTimeField.class
+  2036 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/GJYearOfEraDateTimeField.class
+  3886 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/GregorianChronology.class
+   956 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/IslamicChronology$LeapYearPatternType.class
+  7280 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/IslamicChronology.class
+  1112 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/ISOChronology$Stub.class
+  4004 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/ISOChronology.class
+  2078 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/ISOYearOfEraDateTimeField.class
+  4570 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/JulianChronology.class
+  3248 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/LenientChronology.class
+  3634 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/LimitChronology$LimitDateTimeField.class
+  1655 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/LimitChronology$LimitDurationField.class
+  1949 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/LimitChronology$LimitException.class
+  6949 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/LimitChronology.class
+  3127 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/StrictChronology.class
+  5124 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/ZonedChronology$ZonedDateTimeField.class
+  2546 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/ZonedChronology$ZonedDurationField.class
+  6016 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/ZonedChronology.class
+  1617 Wed Dec 07 13:20:16 IST 2016 org/joda/time/Chronology.class
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/
+  1990 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/AbstractConverter.class
+  2467 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/CalendarConverter.class
+   215 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/Converter.class
+  7859 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/ConverterManager.class
+   606 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/ConverterSet$Entry.class
+  3713 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/ConverterSet.class
+   770 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/DateConverter.class
+   228 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/DurationConverter.class
+   435 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/InstantConverter.class
+   359 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/IntervalConverter.class
+   903 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/LongConverter.class
+  1451 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/NullConverter.class
+   597 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/PartialConverter.class
+   347 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/PeriodConverter.class
+  1282 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/ReadableDurationConverter.class
+  1610 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/ReadableInstantConverter.class
+  1941 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/ReadableIntervalConverter.class
+  1612 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/ReadablePartialConverter.class
+  1023 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/ReadablePeriodConverter.class
+  5005 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/StringConverter.class
+  3125 Wed Dec 07 13:20:16 IST 2016 org/joda/time/DateMidnight$Property.class
+  9414 Wed Dec 07 13:20:16 IST 2016 org/joda/time/DateMidnight.class
+  3587 Wed Dec 07 13:20:16 IST 2016 org/joda/time/DateTime$Property.class
+ 12739 Wed Dec 07 13:20:16 IST 2016 org/joda/time/DateTime.class
+  3374 Wed Dec 07 13:20:16 IST 2016 org/joda/time/DateTimeComparator.class
+  1503 Wed Dec 07 13:20:16 IST 2016 org/joda/time/DateTimeConstants.class
+  1750 Wed Dec 07 13:20:16 IST 2016 org/joda/time/DateTimeField.class
+  3195 Wed Dec 07 13:20:16 IST 2016 org/joda/time/DateTimeFieldType$StandardDateTimeFieldType.class
+  6406 Wed Dec 07 13:20:16 IST 2016 org/joda/time/DateTimeFieldType.class
+   508 Wed Dec 07 13:20:16 IST 2016 org/joda/time/DateTimeUtils$FixedMillisProvider.class
+   243 Wed Dec 07 13:20:16 IST 2016 org/joda/time/DateTimeUtils$MillisProvider.class
+   566 Wed Dec 07 13:20:16 IST 2016 org/joda/time/DateTimeUtils$OffsetMillisProvider.class
+   509 Wed Dec 07 13:20:16 IST 2016 org/joda/time/DateTimeUtils$SystemMillisProvider.class
+  6593 Wed Dec 07 13:20:16 IST 2016 org/joda/time/DateTimeUtils.class
+   830 Wed Dec 07 13:20:16 IST 2016 org/joda/time/DateTimeZone$1.class
+  1039 Wed Dec 07 13:20:16 IST 2016 org/joda/time/DateTimeZone$Stub.class
+ 12933 Wed Dec 07 13:20:16 IST 2016 org/joda/time/DateTimeZone.class
+  5624 Wed Dec 07 13:20:16 IST 2016 org/joda/time/Days.class
+  3334 Wed Dec 07 13:20:16 IST 2016 org/joda/time/Duration.class
+  1065 Wed Dec 07 13:20:16 IST 2016 org/joda/time/DurationField.class
+  1994 Wed Dec 07 13:20:16 IST 2016 org/joda/time/DurationFieldType$StandardDurationFieldType.class
+  2662 Wed Dec 07 13:20:16 IST 2016 org/joda/time/DurationFieldType.class
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/
+  3062 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/AbstractPartialFieldProperty.class
+  4267 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/AbstractReadableInstantFieldProperty.class
+  6424 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/BaseDateTimeField.class
+  1870 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/BaseDurationField.class
+  1471 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/DecoratedDateTimeField.class
+  1416 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/DecoratedDurationField.class
+  5121 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/DelegatedDateTimeField.class
+  2888 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/DelegatedDurationField.class
+  2918 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/DividedDateTimeField.class
+  3178 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/FieldUtils.class
+  1346 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/ImpreciseDateTimeField$LinkedDurationField.class
+  1494 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/ImpreciseDateTimeField.class
+  1560 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/LenientDateTimeField.class
+  2174 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/MillisDurationField.class
+  2632 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/OffsetDateTimeField.class
+  1657 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/PreciseDateTimeField.class
+  1744 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/PreciseDurationDateTimeField.class
+  1383 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/PreciseDurationField.class
+  2794 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/RemainderDateTimeField.class
+  2210 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/ScaledDurationField.class
+  1679 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/SkipDateTimeField.class
+  1420 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/SkipUndoDateTimeField.class
+  1003 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/StrictDateTimeField.class
+  5220 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/UnsupportedDateTimeField.class
+  3164 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/UnsupportedDurationField.class
+  2642 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/ZeroIsMaxDateTimeField.class
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/
+  3548 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeFormat$StyleFormatter.class
+  7872 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeFormat.class
+ 10131 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeFormatter.class
+  1773 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeFormatterBuilder$CharacterLiteral.class
+  3545 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeFormatterBuilder$Composite.class
+   878 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeFormatterBuilder$FixedNumber.class
+  4726 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeFormatterBuilder$Fraction.class
+  1379 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeFormatterBuilder$MatchingParser.class
+  1677 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeFormatterBuilder$NumberFormatter.class
+  2236 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeFormatterBuilder$PaddedNumber.class
+  1684 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeFormatterBuilder$StringLiteral.class
+  5137 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeFormatterBuilder$TextField.class
+  3271 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeFormatterBuilder$TimeZoneId.class
+  2915 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeFormatterBuilder$TimeZoneName.class
+  4397 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeFormatterBuilder$TimeZoneOffset.class
+  3797 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeFormatterBuilder$TwoDigitYear.class
+  2137 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeFormatterBuilder$UnpaddedNumber.class
+ 12269 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeFormatterBuilder.class
+   255 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeParser.class
+  1597 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeParserBucket$SavedField.class
+  1984 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeParserBucket$SavedState.class
+  7467 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeParserBucket.class
+   620 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimePrinter.class
+  4008 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/FormatUtils.class
+ 14577 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/ISODateTimeFormat.class
+  1923 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/ISOPeriodFormat.class
+   650 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/messages.properties
+   621 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/messages_da.properties
+   660 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/messages_de.properties
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/messages_en.properties
+   645 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/messages_es.properties
+   660 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/messages_fr.properties
+   658 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/messages_ja.properties
+   649 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/messages_nl.properties
+   647 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/messages_pt.properties
+  2916 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/PeriodFormat.class
+  3973 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/PeriodFormatter.class
+  2729 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/PeriodFormatterBuilder$Composite.class
+  1310 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/PeriodFormatterBuilder$CompositeAffix.class
+  7455 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/PeriodFormatterBuilder$FieldFormatter.class
+  1617 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/PeriodFormatterBuilder$Literal.class
+   486 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/PeriodFormatterBuilder$PeriodFieldAffix.class
+  1584 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/PeriodFormatterBuilder$PluralAffix.class
+  3993 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/PeriodFormatterBuilder$Separator.class
+  1421 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/PeriodFormatterBuilder$SimpleAffix.class
+  9756 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/PeriodFormatterBuilder.class
+   223 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/PeriodParser.class
+   521 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/PeriodPrinter.class
+  5691 Wed Dec 07 13:20:16 IST 2016 org/joda/time/Hours.class
+  4218 Wed Dec 07 13:20:16 IST 2016 org/joda/time/IllegalFieldValueException.class
+  1406 Wed Dec 07 13:20:16 IST 2016 org/joda/time/IllegalInstantException.class
+  3223 Wed Dec 07 13:20:16 IST 2016 org/joda/time/Instant.class
+  4055 Wed Dec 07 13:20:16 IST 2016 org/joda/time/Interval.class
+   324 Wed Dec 07 13:20:16 IST 2016 org/joda/time/JodaTimePermission.class
+  3035 Wed Dec 07 13:20:16 IST 2016 org/joda/time/LocalDate$Property.class
+ 16389 Wed Dec 07 13:20:16 IST 2016 org/joda/time/LocalDate.class
+  3158 Wed Dec 07 13:20:16 IST 2016 org/joda/time/LocalDateTime$Property.class
+ 16831 Wed Dec 07 13:20:16 IST 2016 org/joda/time/LocalDateTime.class
+  3449 Wed Dec 07 13:20:16 IST 2016 org/joda/time/LocalTime$Property.class
+ 12577 Wed Dec 07 13:20:16 IST 2016 org/joda/time/LocalTime.class
+  5433 Wed Dec 07 13:20:16 IST 2016 org/joda/time/Minutes.class
+  1846 Wed Dec 07 13:20:16 IST 2016 org/joda/time/MonthDay$Property.class
+  8824 Wed Dec 07 13:20:16 IST 2016 org/joda/time/MonthDay.class
+  4905 Wed Dec 07 13:20:16 IST 2016 org/joda/time/Months.class
+  2916 Wed Dec 07 13:20:16 IST 2016 org/joda/time/MutableDateTime$Property.class
+ 11732 Wed Dec 07 13:20:16 IST 2016 org/joda/time/MutableDateTime.class
+  3895 Wed Dec 07 13:20:16 IST 2016 org/joda/time/MutableInterval.class
+  8411 Wed Dec 07 13:20:16 IST 2016 org/joda/time/MutablePeriod.class
+  2036 Wed Dec 07 13:20:16 IST 2016 org/joda/time/Partial$Property.class
+  9172 Wed Dec 07 13:20:16 IST 2016 org/joda/time/Partial.class
+ 13409 Wed Dec 07 13:20:16 IST 2016 org/joda/time/Period.class
+  9051 Wed Dec 07 13:20:16 IST 2016 org/joda/time/PeriodType.class
+   920 Wed Dec 07 13:20:16 IST 2016 org/joda/time/ReadableDateTime.class
+   585 Wed Dec 07 13:20:16 IST 2016 org/joda/time/ReadableDuration.class
+   743 Wed Dec 07 13:20:16 IST 2016 org/joda/time/ReadableInstant.class
+   881 Wed Dec 07 13:20:16 IST 2016 org/joda/time/ReadableInterval.class
+   764 Wed Dec 07 13:20:16 IST 2016 org/joda/time/ReadablePartial.class
+   609 Wed Dec 07 13:20:16 IST 2016 org/joda/time/ReadablePeriod.class
+   834 Wed Dec 07 13:20:16 IST 2016 org/joda/time/ReadWritableDateTime.class
+   678 Wed Dec 07 13:20:16 IST 2016 org/joda/time/ReadWritableInstant.class
+   705 Wed Dec 07 13:20:16 IST 2016 org/joda/time/ReadWritableInterval.class
+   753 Wed Dec 07 13:20:16 IST 2016 org/joda/time/ReadWritablePeriod.class
+  5440 Wed Dec 07 13:20:16 IST 2016 org/joda/time/Seconds.class
+  2274 Wed Dec 07 13:20:16 IST 2016 org/joda/time/TimeOfDay$Property.class
+  8802 Wed Dec 07 13:20:16 IST 2016 org/joda/time/TimeOfDay.class
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/
+  1167 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/CachedDateTimeZone$Info.class
+  2521 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/CachedDateTimeZone.class
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Abidjan
+   171 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Accra
+    68 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Addis_Ababa
+   308 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Algiers
+    89 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Asmara
+    62 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Bamako
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Bangui
+    79 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Banjul
+    58 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Bissau
+    43 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Blantyre
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Brazzaville
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Bujumbura
+   906 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Cairo
+   300 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Casablanca
+   390 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Ceuta
+    65 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Conakry
+    58 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Dakar
+    73 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Dar_es_Salaam
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Djibouti
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Douala
+    58 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/El_Aaiun
+   299 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Freetown
+    79 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Gaborone
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Harare
+    92 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Johannesburg
+   288 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Juba
+    86 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Kampala
+   288 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Khartoum
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Kigali
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Kinshasa
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Lagos
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Libreville
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Lome
+    67 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Luanda
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Lubumbashi
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Lusaka
+    58 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Malabo
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Maputo
+    71 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Maseru
+    47 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Mbabane
+    66 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Mogadishu
+    88 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Monrovia
+    86 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Nairobi
+    66 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Ndjamena
+    65 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Niamey
+    65 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Nouakchott
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Ouagadougou
+    58 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Porto-Novo
+    62 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Sao_Tome
+   300 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Tripoli
+   297 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Tunis
+   144 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Windhoek
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/
+   708 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Adak
+   711 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Anchorage
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Anguilla
+    58 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Antigua
+   778 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Araguaina
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Argentina/
+   486 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Argentina/Buenos_Aires
+   492 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Argentina/Catamarca
+   492 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Argentina/Cordoba
+   485 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Argentina/Jujuy
+   499 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Argentina/La_Rioja
+   499 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Argentina/Mendoza
+   492 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Argentina/Rio_Gallegos
+   478 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Argentina/Salta
+   499 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Argentina/San_Juan
+   506 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Argentina/San_Luis
+   506 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Argentina/Tucuman
+   492 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Argentina/Ushuaia
+    58 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Aruba
+   610 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Asuncion
+   108 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Atikokan
+   472 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Bahia
+   358 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Bahia_Banderas
+   128 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Barbados
+   248 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Belem
+   435 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Belize
+    96 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Blanc-Sablon
+   276 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Boa_Vista
+    87 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Bogota
+   725 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Boise
+   532 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Cambridge_Bay
+   974 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Campo_Grande
+   197 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Cancun
+    81 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Caracas
+    53 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Cayenne
+    67 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Cayman
+  1315 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Chicago
+   218 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Chihuahua
+   129 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Costa_Rica
+    65 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Creston
+   960 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Cuiaba
+    58 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Curacao
+   288 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Danmarkshavn
+   564 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Dawson
+   465 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Dawson_Creek
+   764 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Denver
+   637 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Detroit
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Dominica
+   737 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Edmonton
+   274 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Eirunepe
+    79 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/El_Salvador
+   315 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Fortaleza
+   639 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Glace_Bay
+   316 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Godthab
+  1193 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Goose_Bay
+   503 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Grand_Turk
+    43 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Grenada
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Guadeloupe
+   107 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Guatemala
+    64 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Guayaquil
+    85 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Guyana
+  1255 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Halifax
+   832 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Havana
+   155 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Hermosillo
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Indiana/
+   361 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Indiana/Indianapolis
+   741 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Indiana/Knox
+   389 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Indiana/Marengo
+   494 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Indiana/Petersburg
+   375 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Indiana/Tell_City
+   235 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Indiana/Vevay
+   389 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Indiana/Vincennes
+   424 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Indiana/Winamac
+   491 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Inuvik
+   513 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Iqaluit
+   212 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Jamaica
+   700 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Juneau
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Kentucky/
+   914 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Kentucky/Louisville
+   704 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Kentucky/Monticello
+    89 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/La_Paz
+   166 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Lima
+   960 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Los_Angeles
+   332 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Maceio
+   175 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Managua
+   262 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Manaus
+    87 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Martinique
+   297 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Matamoros
+   236 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Mazatlan
+   665 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Menominee
+   192 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Merida
+   314 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Metlakatla
+   274 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Mexico_City
+   386 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Miquelon
+  1113 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Moncton
+   187 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Monterrey
+   589 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Montevideo
+  1290 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Montreal
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Montserrat
+   692 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Nassau
+  1310 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/New_York
+   604 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Nipigon
+   707 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Nome
+   318 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Noronha
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/North_Dakota/
+   774 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/North_Dakota/Beulah
+   718 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/North_Dakota/Center
+   718 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/North_Dakota/New_Salem
+   330 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Ojinaga
+    67 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Panama
+   530 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Pangnirtung
+   103 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Paramaribo
+   125 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Phoenix
+   322 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Port-au-Prince
+   248 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Porto_Velho
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Port_of_Spain
+    77 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Puerto_Rico
+   604 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Rainy_River
+   484 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Rankin_Inlet
+   318 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Recife
+   430 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Regina
+   491 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Resolute
+   260 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Rio_Branco
+   260 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Santarem
+   636 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Santa_Isabel
+   879 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Santiago
+   186 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Santo_Domingo
+   974 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Sao_Paulo
+   327 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Scoresbysund
+   695 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Sitka
+  1734 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/St_Johns
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/St_Kitts
+    61 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/St_Lucia
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/St_Thomas
+    67 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/St_Vincent
+   220 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Swift_Current
+    93 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Tegucigalpa
+   314 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Thule
+   634 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Thunder_Bay
+   748 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Tijuana
+  1290 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Toronto
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Tortola
+   989 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Vancouver
+   564 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Whitehorse
+   961 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Winnipeg
+   690 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Yakutat
+   510 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Yellowknife
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Antarctica/
+    71 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Antarctica/Casey
+    80 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Antarctica/Davis
+    57 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Antarctica/DumontDUrville
+   701 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Antarctica/Macquarie
+    45 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Antarctica/Mawson
+   547 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Antarctica/McMurdo
+   612 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Antarctica/Palmer
+    38 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Antarctica/Rothera
+    38 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Antarctica/Syowa
+    38 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Antarctica/Vostok
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Aden
+   383 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Almaty
+   554 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Amman
+   495 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Anadyr
+   416 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Aqtau
+   403 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Aqtobe
+   234 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Ashgabat
+   436 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Baghdad
+    58 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Bahrain
+   301 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Baku
+    67 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Bangkok
+   523 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Beirut
+   422 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Bishkek
+    53 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Brunei
+   379 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Choibalsan
+   148 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Chongqing
+   120 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Colombo
+   771 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Damascus
+   132 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Dhaka
+    84 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Dili
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Dubai
+   220 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Dushanbe
+   713 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Gaza
+   169 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Harbin
+   727 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Hebron
+   533 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Hong_Kong
+   369 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Hovd
+    81 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Ho_Chi_Minh
+   516 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Irkutsk
+   125 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Jakarta
+    65 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Jayapura
+   964 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Jerusalem
+    53 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Kabul
+   495 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Kamchatka
+   133 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Karachi
+   155 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Kashgar
+    64 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Kathmandu
+    94 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Kolkata
+   495 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Krasnoyarsk
+   136 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Kuala_Lumpur
+   212 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Kuching
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Kuwait
+   344 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Macau
+   495 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Magadan
+    86 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Makassar
+   123 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Manila
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Muscat
+   421 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Nicosia
+   508 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Novokuznetsk
+   502 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Novosibirsk
+   495 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Omsk
+   410 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Oral
+    81 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Phnom_Penh
+   119 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Pontianak
+    78 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Pyongyang
+    58 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Qatar
+   410 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Qyzylorda
+    92 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Rangoon
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Riyadh
+   512 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Sakhalin
+   239 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Samarkand
+   135 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Seoul
+   163 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Shanghai
+   143 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Singapore
+   328 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Taipei
+   233 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Tashkent
+   437 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Tbilisi
+   760 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Tehran
+    58 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Thimphu
+   125 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Tokyo
+   369 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Ulaanbaatar
+   148 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Urumqi
+    81 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Vientiane
+   503 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Vladivostok
+   495 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Yakutsk
+   508 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Yekaterinburg
+   496 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Yerevan
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Atlantic/
+  1074 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Atlantic/Azores
+   552 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Atlantic/Bermuda
+   329 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Atlantic/Canary
+    73 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Atlantic/Cape_Verde
+   302 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Atlantic/Faroe
+  1078 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Atlantic/Madeira
+   519 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Atlantic/Reykjavik
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Atlantic/South_Georgia
+   549 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Atlantic/Stanley
+    67 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Atlantic/St_Helena
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Australia/
+   678 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Australia/Adelaide
+   170 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Australia/Brisbane
+   690 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Australia/Broken_Hill
+   664 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Australia/Currie
+   121 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Australia/Darwin
+   300 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Australia/Eucla
+   720 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Australia/Hobart
+   198 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Australia/Lindeman
+   491 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Australia/Lord_Howe
+   671 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Australia/Melbourne
+   184 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Australia/Perth
+   671 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Australia/Sydney
+   435 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/CET
+   688 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/CST6CDT
+   337 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/EET
+     8 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/EST
+   688 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/EST5EDT
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/
+     8 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT
+    10 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT+1
+    11 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT+10
+    11 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT+11
+    11 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT+12
+    10 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT+2
+    10 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT+3
+    10 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT+4
+    10 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT+5
+    10 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT+6
+    10 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT+7
+    10 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT+8
+    10 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT+9
+    10 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT-1
+    11 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT-10
+    11 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT-11
+    11 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT-12
+    11 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT-13
+    11 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT-14
+    10 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT-2
+    10 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT-3
+    10 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT-4
+    10 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT-5
+    10 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT-6
+    10 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT-7
+    10 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT-8
+    10 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT-9
+     8 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/UCT
+     8 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/UTC
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/
+  1210 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Amsterdam
+   258 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Andorra
+   488 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Athens
+   327 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Belgrade
+   504 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Berlin
+   817 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Brussels
+   477 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Bucharest
+   568 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Budapest
+   530 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Chisinau
+   449 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Copenhagen
+  1109 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Dublin
+   899 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Gibraltar
+   337 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Helsinki
+   936 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Istanbul
+   614 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Kaliningrad
+   365 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Kiev
+  1068 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Lisbon
+  1188 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/London
+   789 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Luxembourg
+   662 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Madrid
+   680 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Malta
+   558 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Minsk
+   823 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Monaco
+   664 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Moscow
+   481 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Oslo
+   816 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Paris
+   505 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Prague
+   525 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Riga
+   701 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Rome
+   515 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Samara
+   397 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Simferopol
+   418 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Sofia
+   351 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Stockholm
+   477 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Tallinn
+   428 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Tirane
+   358 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Uzhgorod
+   302 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Vaduz
+   470 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Vienna
+   481 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Vilnius
+   507 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Volgograd
+   671 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Warsaw
+   383 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Zaporozhye
+   351 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Zurich
+     8 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/HST
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Indian/
+    66 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Indian/Antananarivo
+    53 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Indian/Chagos
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Indian/Christmas
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Indian/Cocos
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Indian/Comoro
+    37 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Indian/Kerguelen
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Indian/Mahe
+    61 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Indian/Maldives
+    77 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Indian/Mauritius
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Indian/Mayotte
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Indian/Reunion
+   435 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/MET
+     8 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/MST
+   688 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/MST7MDT
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/
+   149 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Apia
+   751 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Auckland
+   983 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Chatham
+    47 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Chuuk
+   761 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Easter
+   192 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Efate
+    61 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Enderbury
+    53 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Fakaofo
+   148 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Fiji
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Funafuti
+    59 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Galapagos
+    47 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Gambier
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Guadalcanal
+    69 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Guam
+    86 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Honolulu
+     8 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Johnston
+    67 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Kiritimati
+    61 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Kosrae
+    66 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Kwajalein
+    53 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Majuro
+    44 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Marquesas
+    89 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Midway
+    72 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Nauru
+    66 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Niue
+    64 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Norfolk
+    94 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Noumea
+    99 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Pago_Pago
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Palau
+    58 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Pitcairn
+    47 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Pohnpei
+    68 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Port_Moresby
+   235 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Rarotonga
+    76 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Saipan
+    47 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Tahiti
+    47 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Tarawa
+   107 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Tongatapu
+    47 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Wake
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Wallis
+   688 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/PST8PDT
+   337 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/WET
+ 11641 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/ZoneInfoMap
+  2958 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/DateTimeZoneBuilder$DSTZone.class
+  3813 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/DateTimeZoneBuilder$OfYear.class
+  7904 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/DateTimeZoneBuilder$PrecalculatedZone.class
+  2241 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/DateTimeZoneBuilder$Recurrence.class
+  1621 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/DateTimeZoneBuilder$Rule.class
+  4224 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/DateTimeZoneBuilder$RuleSet.class
+  1489 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/DateTimeZoneBuilder$Transition.class
+  6974 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/DateTimeZoneBuilder.class
+  2161 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/DefaultNameProvider.class
+  1822 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/FixedDateTimeZone.class
+   240 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/NameProvider.class
+   289 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/Provider.class
+   758 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/UTCProvider.class
+  3103 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/ZoneInfoCompiler$DateTimeOfYear.class
+  2260 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/ZoneInfoCompiler$Rule.class
+  1201 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/ZoneInfoCompiler$RuleSet.class
+  3458 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/ZoneInfoCompiler$Zone.class
+ 11585 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/ZoneInfoCompiler.class
+  5184 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/ZoneInfoProvider.class
+  5415 Wed Dec 07 13:20:16 IST 2016 org/joda/time/Weeks.class
+  1857 Wed Dec 07 13:20:16 IST 2016 org/joda/time/YearMonth$Property.class
+  8789 Wed Dec 07 13:20:16 IST 2016 org/joda/time/YearMonth.class
+  2180 Wed Dec 07 13:20:16 IST 2016 org/joda/time/YearMonthDay$Property.class
+  8757 Wed Dec 07 13:20:16 IST 2016 org/joda/time/YearMonthDay.class
+  4373 Wed Dec 07 13:20:16 IST 2016 org/joda/time/Years.class
+     0 Wed Dec 07 13:20:16 IST 2016 META-INF/maven/joda-time/
+     0 Wed Dec 07 13:20:16 IST 2016 META-INF/maven/joda-time/joda-time/
+ 16170 Wed Dec 07 13:20:16 IST 2016 META-INF/maven/joda-time/joda-time/pom.xml
+   106 Wed Dec 07 13:20:16 IST 2016 META-INF/maven/joda-time/joda-time/pom.properties
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-Maven/Spring-Maven-Getting-Started
+$ java -jar target/gs-maven-0.1.0.jar
+The current local time is: 13:20:28.538
+Hello world!
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-Maven/Spring-Maven-Getting-Started
+$ jar tvf target/gs-maven-0.1.0-shaded.jar
+   162 Wed Dec 07 13:20:16 IST 2016 META-INF/MANIFEST.MF
+     0 Wed Dec 07 13:20:16 IST 2016 META-INF/
+     0 Wed Dec 07 13:20:16 IST 2016 hello/
+   369 Wed Dec 07 13:20:16 IST 2016 hello/Greeter.class
+   988 Wed Dec 07 13:20:16 IST 2016 hello/HelloWorld.class
+     0 Wed Dec 07 13:20:16 IST 2016 META-INF/maven/
+     0 Wed Dec 07 13:20:16 IST 2016 META-INF/maven/org.springframework/
+     0 Wed Dec 07 13:20:16 IST 2016 META-INF/maven/org.springframework/gs-maven/
+  1482 Wed Dec 07 13:20:16 IST 2016 META-INF/maven/org.springframework/gs-maven/pom.xml
+   117 Wed Dec 07 13:20:16 IST 2016 META-INF/maven/org.springframework/gs-maven/pom.properties
+ 11560 Wed Dec 07 13:20:16 IST 2016 META-INF/LICENSE.txt
+   316 Wed Dec 07 13:20:16 IST 2016 META-INF/NOTICE.txt
+     0 Wed Dec 07 13:20:16 IST 2016 org/
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/base/
+  3886 Wed Dec 07 13:20:16 IST 2016 org/joda/time/base/AbstractDateTime.class
+  2026 Wed Dec 07 13:20:16 IST 2016 org/joda/time/base/AbstractDuration.class
+  4505 Wed Dec 07 13:20:16 IST 2016 org/joda/time/base/AbstractInstant.class
+  4039 Wed Dec 07 13:20:16 IST 2016 org/joda/time/base/AbstractInterval.class
+  4352 Wed Dec 07 13:20:16 IST 2016 org/joda/time/base/AbstractPartial.class
+  2274 Wed Dec 07 13:20:16 IST 2016 org/joda/time/base/AbstractPeriod.class
+  2878 Wed Dec 07 13:20:16 IST 2016 org/joda/time/base/BaseDateTime.class
+  2843 Wed Dec 07 13:20:16 IST 2016 org/joda/time/base/BaseDuration.class
+  3353 Wed Dec 07 13:20:16 IST 2016 org/joda/time/base/BaseInterval.class
+   328 Wed Dec 07 13:20:16 IST 2016 org/joda/time/base/BaseLocal.class
+  3740 Wed Dec 07 13:20:16 IST 2016 org/joda/time/base/BasePartial.class
+   523 Wed Dec 07 13:20:16 IST 2016 org/joda/time/base/BasePeriod$1.class
+  8038 Wed Dec 07 13:20:16 IST 2016 org/joda/time/base/BasePeriod.class
+  5017 Wed Dec 07 13:20:16 IST 2016 org/joda/time/base/BaseSingleFieldPeriod.class
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/
+  3166 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/AssembledChronology$Fields.class
+  6842 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/AssembledChronology.class
+  6647 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/BaseChronology.class
+  1295 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/BasicChronology$HalfdayField.class
+   418 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/BasicChronology$YearInfo.class
+ 10647 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/BasicChronology.class
+  2106 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/BasicDayOfMonthDateTimeField.class
+  1962 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/BasicDayOfYearDateTimeField.class
+  1844 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/BasicFixedMonthChronology.class
+  2391 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/BasicGJChronology.class
+  4799 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/BasicMonthOfYearDateTimeField.class
+  2183 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/BasicSingleEraDateTimeField.class
+  2169 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/BasicWeekOfWeekyearDateTimeField.class
+  2864 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/BasicWeekyearDateTimeField.class
+  2472 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/BasicYearDateTimeField.class
+  4347 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/BuddhistChronology.class
+  4462 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/CopticChronology.class
+  4461 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/EthiopicChronology.class
+  5792 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/GJChronology$CutoverField.class
+  2626 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/GJChronology$ImpreciseCutoverField.class
+  1164 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/GJChronology$LinkedDurationField.class
+  9797 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/GJChronology.class
+  1953 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/GJDayOfWeekDateTimeField.class
+  2621 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/GJEraDateTimeField.class
+  5882 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/GJLocaleSymbols.class
+  1231 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/GJMonthOfYearDateTimeField.class
+  2036 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/GJYearOfEraDateTimeField.class
+  3886 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/GregorianChronology.class
+   956 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/IslamicChronology$LeapYearPatternType.class
+  7280 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/IslamicChronology.class
+  1112 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/ISOChronology$Stub.class
+  4004 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/ISOChronology.class
+  2078 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/ISOYearOfEraDateTimeField.class
+  4570 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/JulianChronology.class
+  3248 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/LenientChronology.class
+  3634 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/LimitChronology$LimitDateTimeField.class
+  1655 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/LimitChronology$LimitDurationField.class
+  1949 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/LimitChronology$LimitException.class
+  6949 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/LimitChronology.class
+  3127 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/StrictChronology.class
+  5124 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/ZonedChronology$ZonedDateTimeField.class
+  2546 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/ZonedChronology$ZonedDurationField.class
+  6016 Wed Dec 07 13:20:16 IST 2016 org/joda/time/chrono/ZonedChronology.class
+  1617 Wed Dec 07 13:20:16 IST 2016 org/joda/time/Chronology.class
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/
+  1990 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/AbstractConverter.class
+  2467 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/CalendarConverter.class
+   215 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/Converter.class
+  7859 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/ConverterManager.class
+   606 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/ConverterSet$Entry.class
+  3713 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/ConverterSet.class
+   770 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/DateConverter.class
+   228 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/DurationConverter.class
+   435 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/InstantConverter.class
+   359 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/IntervalConverter.class
+   903 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/LongConverter.class
+  1451 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/NullConverter.class
+   597 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/PartialConverter.class
+   347 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/PeriodConverter.class
+  1282 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/ReadableDurationConverter.class
+  1610 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/ReadableInstantConverter.class
+  1941 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/ReadableIntervalConverter.class
+  1612 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/ReadablePartialConverter.class
+  1023 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/ReadablePeriodConverter.class
+  5005 Wed Dec 07 13:20:16 IST 2016 org/joda/time/convert/StringConverter.class
+  3125 Wed Dec 07 13:20:16 IST 2016 org/joda/time/DateMidnight$Property.class
+  9414 Wed Dec 07 13:20:16 IST 2016 org/joda/time/DateMidnight.class
+  3587 Wed Dec 07 13:20:16 IST 2016 org/joda/time/DateTime$Property.class
+ 12739 Wed Dec 07 13:20:16 IST 2016 org/joda/time/DateTime.class
+  3374 Wed Dec 07 13:20:16 IST 2016 org/joda/time/DateTimeComparator.class
+  1503 Wed Dec 07 13:20:16 IST 2016 org/joda/time/DateTimeConstants.class
+  1750 Wed Dec 07 13:20:16 IST 2016 org/joda/time/DateTimeField.class
+  3195 Wed Dec 07 13:20:16 IST 2016 org/joda/time/DateTimeFieldType$StandardDateTimeFieldType.class
+  6406 Wed Dec 07 13:20:16 IST 2016 org/joda/time/DateTimeFieldType.class
+   508 Wed Dec 07 13:20:16 IST 2016 org/joda/time/DateTimeUtils$FixedMillisProvider.class
+   243 Wed Dec 07 13:20:16 IST 2016 org/joda/time/DateTimeUtils$MillisProvider.class
+   566 Wed Dec 07 13:20:16 IST 2016 org/joda/time/DateTimeUtils$OffsetMillisProvider.class
+   509 Wed Dec 07 13:20:16 IST 2016 org/joda/time/DateTimeUtils$SystemMillisProvider.class
+  6593 Wed Dec 07 13:20:16 IST 2016 org/joda/time/DateTimeUtils.class
+   830 Wed Dec 07 13:20:16 IST 2016 org/joda/time/DateTimeZone$1.class
+  1039 Wed Dec 07 13:20:16 IST 2016 org/joda/time/DateTimeZone$Stub.class
+ 12933 Wed Dec 07 13:20:16 IST 2016 org/joda/time/DateTimeZone.class
+  5624 Wed Dec 07 13:20:16 IST 2016 org/joda/time/Days.class
+  3334 Wed Dec 07 13:20:16 IST 2016 org/joda/time/Duration.class
+  1065 Wed Dec 07 13:20:16 IST 2016 org/joda/time/DurationField.class
+  1994 Wed Dec 07 13:20:16 IST 2016 org/joda/time/DurationFieldType$StandardDurationFieldType.class
+  2662 Wed Dec 07 13:20:16 IST 2016 org/joda/time/DurationFieldType.class
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/
+  3062 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/AbstractPartialFieldProperty.class
+  4267 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/AbstractReadableInstantFieldProperty.class
+  6424 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/BaseDateTimeField.class
+  1870 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/BaseDurationField.class
+  1471 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/DecoratedDateTimeField.class
+  1416 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/DecoratedDurationField.class
+  5121 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/DelegatedDateTimeField.class
+  2888 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/DelegatedDurationField.class
+  2918 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/DividedDateTimeField.class
+  3178 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/FieldUtils.class
+  1346 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/ImpreciseDateTimeField$LinkedDurationField.class
+  1494 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/ImpreciseDateTimeField.class
+  1560 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/LenientDateTimeField.class
+  2174 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/MillisDurationField.class
+  2632 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/OffsetDateTimeField.class
+  1657 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/PreciseDateTimeField.class
+  1744 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/PreciseDurationDateTimeField.class
+  1383 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/PreciseDurationField.class
+  2794 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/RemainderDateTimeField.class
+  2210 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/ScaledDurationField.class
+  1679 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/SkipDateTimeField.class
+  1420 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/SkipUndoDateTimeField.class
+  1003 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/StrictDateTimeField.class
+  5220 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/UnsupportedDateTimeField.class
+  3164 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/UnsupportedDurationField.class
+  2642 Wed Dec 07 13:20:16 IST 2016 org/joda/time/field/ZeroIsMaxDateTimeField.class
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/
+  3548 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeFormat$StyleFormatter.class
+  7872 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeFormat.class
+ 10131 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeFormatter.class
+  1773 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeFormatterBuilder$CharacterLiteral.class
+  3545 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeFormatterBuilder$Composite.class
+   878 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeFormatterBuilder$FixedNumber.class
+  4726 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeFormatterBuilder$Fraction.class
+  1379 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeFormatterBuilder$MatchingParser.class
+  1677 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeFormatterBuilder$NumberFormatter.class
+  2236 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeFormatterBuilder$PaddedNumber.class
+  1684 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeFormatterBuilder$StringLiteral.class
+  5137 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeFormatterBuilder$TextField.class
+  3271 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeFormatterBuilder$TimeZoneId.class
+  2915 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeFormatterBuilder$TimeZoneName.class
+  4397 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeFormatterBuilder$TimeZoneOffset.class
+  3797 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeFormatterBuilder$TwoDigitYear.class
+  2137 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeFormatterBuilder$UnpaddedNumber.class
+ 12269 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeFormatterBuilder.class
+   255 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeParser.class
+  1597 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeParserBucket$SavedField.class
+  1984 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeParserBucket$SavedState.class
+  7467 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimeParserBucket.class
+   620 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/DateTimePrinter.class
+  4008 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/FormatUtils.class
+ 14577 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/ISODateTimeFormat.class
+  1923 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/ISOPeriodFormat.class
+   650 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/messages.properties
+   621 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/messages_da.properties
+   660 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/messages_de.properties
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/messages_en.properties
+   645 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/messages_es.properties
+   660 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/messages_fr.properties
+   658 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/messages_ja.properties
+   649 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/messages_nl.properties
+   647 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/messages_pt.properties
+  2916 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/PeriodFormat.class
+  3973 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/PeriodFormatter.class
+  2729 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/PeriodFormatterBuilder$Composite.class
+  1310 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/PeriodFormatterBuilder$CompositeAffix.class
+  7455 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/PeriodFormatterBuilder$FieldFormatter.class
+  1617 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/PeriodFormatterBuilder$Literal.class
+   486 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/PeriodFormatterBuilder$PeriodFieldAffix.class
+  1584 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/PeriodFormatterBuilder$PluralAffix.class
+  3993 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/PeriodFormatterBuilder$Separator.class
+  1421 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/PeriodFormatterBuilder$SimpleAffix.class
+  9756 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/PeriodFormatterBuilder.class
+   223 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/PeriodParser.class
+   521 Wed Dec 07 13:20:16 IST 2016 org/joda/time/format/PeriodPrinter.class
+  5691 Wed Dec 07 13:20:16 IST 2016 org/joda/time/Hours.class
+  4218 Wed Dec 07 13:20:16 IST 2016 org/joda/time/IllegalFieldValueException.class
+  1406 Wed Dec 07 13:20:16 IST 2016 org/joda/time/IllegalInstantException.class
+  3223 Wed Dec 07 13:20:16 IST 2016 org/joda/time/Instant.class
+  4055 Wed Dec 07 13:20:16 IST 2016 org/joda/time/Interval.class
+   324 Wed Dec 07 13:20:16 IST 2016 org/joda/time/JodaTimePermission.class
+  3035 Wed Dec 07 13:20:16 IST 2016 org/joda/time/LocalDate$Property.class
+ 16389 Wed Dec 07 13:20:16 IST 2016 org/joda/time/LocalDate.class
+  3158 Wed Dec 07 13:20:16 IST 2016 org/joda/time/LocalDateTime$Property.class
+ 16831 Wed Dec 07 13:20:16 IST 2016 org/joda/time/LocalDateTime.class
+  3449 Wed Dec 07 13:20:16 IST 2016 org/joda/time/LocalTime$Property.class
+ 12577 Wed Dec 07 13:20:16 IST 2016 org/joda/time/LocalTime.class
+  5433 Wed Dec 07 13:20:16 IST 2016 org/joda/time/Minutes.class
+  1846 Wed Dec 07 13:20:16 IST 2016 org/joda/time/MonthDay$Property.class
+  8824 Wed Dec 07 13:20:16 IST 2016 org/joda/time/MonthDay.class
+  4905 Wed Dec 07 13:20:16 IST 2016 org/joda/time/Months.class
+  2916 Wed Dec 07 13:20:16 IST 2016 org/joda/time/MutableDateTime$Property.class
+ 11732 Wed Dec 07 13:20:16 IST 2016 org/joda/time/MutableDateTime.class
+  3895 Wed Dec 07 13:20:16 IST 2016 org/joda/time/MutableInterval.class
+  8411 Wed Dec 07 13:20:16 IST 2016 org/joda/time/MutablePeriod.class
+  2036 Wed Dec 07 13:20:16 IST 2016 org/joda/time/Partial$Property.class
+  9172 Wed Dec 07 13:20:16 IST 2016 org/joda/time/Partial.class
+ 13409 Wed Dec 07 13:20:16 IST 2016 org/joda/time/Period.class
+  9051 Wed Dec 07 13:20:16 IST 2016 org/joda/time/PeriodType.class
+   920 Wed Dec 07 13:20:16 IST 2016 org/joda/time/ReadableDateTime.class
+   585 Wed Dec 07 13:20:16 IST 2016 org/joda/time/ReadableDuration.class
+   743 Wed Dec 07 13:20:16 IST 2016 org/joda/time/ReadableInstant.class
+   881 Wed Dec 07 13:20:16 IST 2016 org/joda/time/ReadableInterval.class
+   764 Wed Dec 07 13:20:16 IST 2016 org/joda/time/ReadablePartial.class
+   609 Wed Dec 07 13:20:16 IST 2016 org/joda/time/ReadablePeriod.class
+   834 Wed Dec 07 13:20:16 IST 2016 org/joda/time/ReadWritableDateTime.class
+   678 Wed Dec 07 13:20:16 IST 2016 org/joda/time/ReadWritableInstant.class
+   705 Wed Dec 07 13:20:16 IST 2016 org/joda/time/ReadWritableInterval.class
+   753 Wed Dec 07 13:20:16 IST 2016 org/joda/time/ReadWritablePeriod.class
+  5440 Wed Dec 07 13:20:16 IST 2016 org/joda/time/Seconds.class
+  2274 Wed Dec 07 13:20:16 IST 2016 org/joda/time/TimeOfDay$Property.class
+  8802 Wed Dec 07 13:20:16 IST 2016 org/joda/time/TimeOfDay.class
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/
+  1167 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/CachedDateTimeZone$Info.class
+  2521 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/CachedDateTimeZone.class
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Abidjan
+   171 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Accra
+    68 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Addis_Ababa
+   308 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Algiers
+    89 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Asmara
+    62 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Bamako
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Bangui
+    79 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Banjul
+    58 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Bissau
+    43 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Blantyre
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Brazzaville
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Bujumbura
+   906 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Cairo
+   300 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Casablanca
+   390 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Ceuta
+    65 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Conakry
+    58 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Dakar
+    73 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Dar_es_Salaam
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Djibouti
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Douala
+    58 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/El_Aaiun
+   299 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Freetown
+    79 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Gaborone
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Harare
+    92 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Johannesburg
+   288 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Juba
+    86 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Kampala
+   288 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Khartoum
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Kigali
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Kinshasa
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Lagos
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Libreville
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Lome
+    67 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Luanda
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Lubumbashi
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Lusaka
+    58 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Malabo
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Maputo
+    71 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Maseru
+    47 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Mbabane
+    66 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Mogadishu
+    88 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Monrovia
+    86 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Nairobi
+    66 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Ndjamena
+    65 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Niamey
+    65 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Nouakchott
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Ouagadougou
+    58 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Porto-Novo
+    62 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Sao_Tome
+   300 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Tripoli
+   297 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Tunis
+   144 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Africa/Windhoek
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/
+   708 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Adak
+   711 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Anchorage
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Anguilla
+    58 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Antigua
+   778 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Araguaina
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Argentina/
+   486 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Argentina/Buenos_Aires
+   492 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Argentina/Catamarca
+   492 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Argentina/Cordoba
+   485 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Argentina/Jujuy
+   499 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Argentina/La_Rioja
+   499 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Argentina/Mendoza
+   492 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Argentina/Rio_Gallegos
+   478 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Argentina/Salta
+   499 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Argentina/San_Juan
+   506 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Argentina/San_Luis
+   506 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Argentina/Tucuman
+   492 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Argentina/Ushuaia
+    58 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Aruba
+   610 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Asuncion
+   108 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Atikokan
+   472 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Bahia
+   358 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Bahia_Banderas
+   128 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Barbados
+   248 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Belem
+   435 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Belize
+    96 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Blanc-Sablon
+   276 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Boa_Vista
+    87 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Bogota
+   725 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Boise
+   532 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Cambridge_Bay
+   974 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Campo_Grande
+   197 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Cancun
+    81 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Caracas
+    53 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Cayenne
+    67 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Cayman
+  1315 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Chicago
+   218 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Chihuahua
+   129 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Costa_Rica
+    65 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Creston
+   960 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Cuiaba
+    58 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Curacao
+   288 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Danmarkshavn
+   564 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Dawson
+   465 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Dawson_Creek
+   764 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Denver
+   637 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Detroit
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Dominica
+   737 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Edmonton
+   274 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Eirunepe
+    79 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/El_Salvador
+   315 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Fortaleza
+   639 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Glace_Bay
+   316 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Godthab
+  1193 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Goose_Bay
+   503 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Grand_Turk
+    43 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Grenada
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Guadeloupe
+   107 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Guatemala
+    64 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Guayaquil
+    85 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Guyana
+  1255 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Halifax
+   832 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Havana
+   155 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Hermosillo
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Indiana/
+   361 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Indiana/Indianapolis
+   741 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Indiana/Knox
+   389 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Indiana/Marengo
+   494 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Indiana/Petersburg
+   375 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Indiana/Tell_City
+   235 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Indiana/Vevay
+   389 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Indiana/Vincennes
+   424 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Indiana/Winamac
+   491 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Inuvik
+   513 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Iqaluit
+   212 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Jamaica
+   700 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Juneau
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Kentucky/
+   914 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Kentucky/Louisville
+   704 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Kentucky/Monticello
+    89 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/La_Paz
+   166 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Lima
+   960 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Los_Angeles
+   332 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Maceio
+   175 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Managua
+   262 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Manaus
+    87 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Martinique
+   297 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Matamoros
+   236 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Mazatlan
+   665 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Menominee
+   192 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Merida
+   314 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Metlakatla
+   274 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Mexico_City
+   386 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Miquelon
+  1113 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Moncton
+   187 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Monterrey
+   589 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Montevideo
+  1290 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Montreal
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Montserrat
+   692 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Nassau
+  1310 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/New_York
+   604 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Nipigon
+   707 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Nome
+   318 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Noronha
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/North_Dakota/
+   774 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/North_Dakota/Beulah
+   718 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/North_Dakota/Center
+   718 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/North_Dakota/New_Salem
+   330 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Ojinaga
+    67 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Panama
+   530 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Pangnirtung
+   103 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Paramaribo
+   125 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Phoenix
+   322 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Port-au-Prince
+   248 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Porto_Velho
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Port_of_Spain
+    77 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Puerto_Rico
+   604 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Rainy_River
+   484 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Rankin_Inlet
+   318 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Recife
+   430 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Regina
+   491 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Resolute
+   260 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Rio_Branco
+   260 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Santarem
+   636 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Santa_Isabel
+   879 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Santiago
+   186 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Santo_Domingo
+   974 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Sao_Paulo
+   327 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Scoresbysund
+   695 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Sitka
+  1734 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/St_Johns
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/St_Kitts
+    61 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/St_Lucia
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/St_Thomas
+    67 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/St_Vincent
+   220 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Swift_Current
+    93 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Tegucigalpa
+   314 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Thule
+   634 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Thunder_Bay
+   748 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Tijuana
+  1290 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Toronto
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Tortola
+   989 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Vancouver
+   564 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Whitehorse
+   961 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Winnipeg
+   690 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Yakutat
+   510 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/America/Yellowknife
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Antarctica/
+    71 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Antarctica/Casey
+    80 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Antarctica/Davis
+    57 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Antarctica/DumontDUrville
+   701 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Antarctica/Macquarie
+    45 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Antarctica/Mawson
+   547 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Antarctica/McMurdo
+   612 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Antarctica/Palmer
+    38 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Antarctica/Rothera
+    38 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Antarctica/Syowa
+    38 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Antarctica/Vostok
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Aden
+   383 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Almaty
+   554 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Amman
+   495 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Anadyr
+   416 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Aqtau
+   403 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Aqtobe
+   234 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Ashgabat
+   436 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Baghdad
+    58 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Bahrain
+   301 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Baku
+    67 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Bangkok
+   523 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Beirut
+   422 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Bishkek
+    53 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Brunei
+   379 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Choibalsan
+   148 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Chongqing
+   120 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Colombo
+   771 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Damascus
+   132 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Dhaka
+    84 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Dili
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Dubai
+   220 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Dushanbe
+   713 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Gaza
+   169 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Harbin
+   727 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Hebron
+   533 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Hong_Kong
+   369 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Hovd
+    81 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Ho_Chi_Minh
+   516 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Irkutsk
+   125 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Jakarta
+    65 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Jayapura
+   964 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Jerusalem
+    53 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Kabul
+   495 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Kamchatka
+   133 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Karachi
+   155 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Kashgar
+    64 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Kathmandu
+    94 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Kolkata
+   495 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Krasnoyarsk
+   136 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Kuala_Lumpur
+   212 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Kuching
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Kuwait
+   344 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Macau
+   495 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Magadan
+    86 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Makassar
+   123 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Manila
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Muscat
+   421 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Nicosia
+   508 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Novokuznetsk
+   502 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Novosibirsk
+   495 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Omsk
+   410 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Oral
+    81 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Phnom_Penh
+   119 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Pontianak
+    78 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Pyongyang
+    58 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Qatar
+   410 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Qyzylorda
+    92 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Rangoon
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Riyadh
+   512 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Sakhalin
+   239 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Samarkand
+   135 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Seoul
+   163 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Shanghai
+   143 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Singapore
+   328 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Taipei
+   233 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Tashkent
+   437 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Tbilisi
+   760 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Tehran
+    58 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Thimphu
+   125 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Tokyo
+   369 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Ulaanbaatar
+   148 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Urumqi
+    81 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Vientiane
+   503 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Vladivostok
+   495 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Yakutsk
+   508 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Yekaterinburg
+   496 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Asia/Yerevan
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Atlantic/
+  1074 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Atlantic/Azores
+   552 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Atlantic/Bermuda
+   329 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Atlantic/Canary
+    73 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Atlantic/Cape_Verde
+   302 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Atlantic/Faroe
+  1078 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Atlantic/Madeira
+   519 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Atlantic/Reykjavik
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Atlantic/South_Georgia
+   549 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Atlantic/Stanley
+    67 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Atlantic/St_Helena
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Australia/
+   678 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Australia/Adelaide
+   170 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Australia/Brisbane
+   690 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Australia/Broken_Hill
+   664 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Australia/Currie
+   121 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Australia/Darwin
+   300 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Australia/Eucla
+   720 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Australia/Hobart
+   198 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Australia/Lindeman
+   491 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Australia/Lord_Howe
+   671 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Australia/Melbourne
+   184 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Australia/Perth
+   671 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Australia/Sydney
+   435 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/CET
+   688 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/CST6CDT
+   337 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/EET
+     8 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/EST
+   688 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/EST5EDT
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/
+     8 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT
+    10 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT+1
+    11 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT+10
+    11 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT+11
+    11 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT+12
+    10 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT+2
+    10 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT+3
+    10 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT+4
+    10 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT+5
+    10 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT+6
+    10 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT+7
+    10 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT+8
+    10 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT+9
+    10 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT-1
+    11 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT-10
+    11 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT-11
+    11 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT-12
+    11 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT-13
+    11 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT-14
+    10 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT-2
+    10 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT-3
+    10 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT-4
+    10 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT-5
+    10 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT-6
+    10 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT-7
+    10 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT-8
+    10 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/GMT-9
+     8 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/UCT
+     8 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Etc/UTC
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/
+  1210 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Amsterdam
+   258 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Andorra
+   488 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Athens
+   327 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Belgrade
+   504 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Berlin
+   817 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Brussels
+   477 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Bucharest
+   568 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Budapest
+   530 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Chisinau
+   449 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Copenhagen
+  1109 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Dublin
+   899 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Gibraltar
+   337 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Helsinki
+   936 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Istanbul
+   614 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Kaliningrad
+   365 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Kiev
+  1068 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Lisbon
+  1188 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/London
+   789 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Luxembourg
+   662 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Madrid
+   680 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Malta
+   558 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Minsk
+   823 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Monaco
+   664 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Moscow
+   481 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Oslo
+   816 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Paris
+   505 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Prague
+   525 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Riga
+   701 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Rome
+   515 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Samara
+   397 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Simferopol
+   418 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Sofia
+   351 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Stockholm
+   477 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Tallinn
+   428 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Tirane
+   358 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Uzhgorod
+   302 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Vaduz
+   470 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Vienna
+   481 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Vilnius
+   507 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Volgograd
+   671 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Warsaw
+   383 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Zaporozhye
+   351 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Europe/Zurich
+     8 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/HST
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Indian/
+    66 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Indian/Antananarivo
+    53 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Indian/Chagos
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Indian/Christmas
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Indian/Cocos
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Indian/Comoro
+    37 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Indian/Kerguelen
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Indian/Mahe
+    61 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Indian/Maldives
+    77 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Indian/Mauritius
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Indian/Mayotte
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Indian/Reunion
+   435 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/MET
+     8 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/MST
+   688 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/MST7MDT
+     0 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/
+   149 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Apia
+   751 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Auckland
+   983 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Chatham
+    47 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Chuuk
+   761 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Easter
+   192 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Efate
+    61 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Enderbury
+    53 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Fakaofo
+   148 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Fiji
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Funafuti
+    59 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Galapagos
+    47 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Gambier
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Guadalcanal
+    69 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Guam
+    86 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Honolulu
+     8 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Johnston
+    67 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Kiritimati
+    61 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Kosrae
+    66 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Kwajalein
+    53 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Majuro
+    44 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Marquesas
+    89 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Midway
+    72 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Nauru
+    66 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Niue
+    64 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Norfolk
+    94 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Noumea
+    99 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Pago_Pago
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Palau
+    58 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Pitcairn
+    47 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Pohnpei
+    68 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Port_Moresby
+   235 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Rarotonga
+    76 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Saipan
+    47 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Tahiti
+    47 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Tarawa
+   107 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Tongatapu
+    47 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Wake
+    46 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/Pacific/Wallis
+   688 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/PST8PDT
+   337 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/WET
+ 11641 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/data/ZoneInfoMap
+  2958 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/DateTimeZoneBuilder$DSTZone.class
+  3813 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/DateTimeZoneBuilder$OfYear.class
+  7904 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/DateTimeZoneBuilder$PrecalculatedZone.class
+  2241 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/DateTimeZoneBuilder$Recurrence.class
+  1621 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/DateTimeZoneBuilder$Rule.class
+  4224 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/DateTimeZoneBuilder$RuleSet.class
+  1489 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/DateTimeZoneBuilder$Transition.class
+  6974 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/DateTimeZoneBuilder.class
+  2161 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/DefaultNameProvider.class
+  1822 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/FixedDateTimeZone.class
+   240 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/NameProvider.class
+   289 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/Provider.class
+   758 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/UTCProvider.class
+  3103 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/ZoneInfoCompiler$DateTimeOfYear.class
+  2260 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/ZoneInfoCompiler$Rule.class
+  1201 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/ZoneInfoCompiler$RuleSet.class
+  3458 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/ZoneInfoCompiler$Zone.class
+ 11585 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/ZoneInfoCompiler.class
+  5184 Wed Dec 07 13:20:16 IST 2016 org/joda/time/tz/ZoneInfoProvider.class
+  5415 Wed Dec 07 13:20:16 IST 2016 org/joda/time/Weeks.class
+  1857 Wed Dec 07 13:20:16 IST 2016 org/joda/time/YearMonth$Property.class
+  8789 Wed Dec 07 13:20:16 IST 2016 org/joda/time/YearMonth.class
+  2180 Wed Dec 07 13:20:16 IST 2016 org/joda/time/YearMonthDay$Property.class
+  8757 Wed Dec 07 13:20:16 IST 2016 org/joda/time/YearMonthDay.class
+  4373 Wed Dec 07 13:20:16 IST 2016 org/joda/time/Years.class
+     0 Wed Dec 07 13:20:16 IST 2016 META-INF/maven/joda-time/
+     0 Wed Dec 07 13:20:16 IST 2016 META-INF/maven/joda-time/joda-time/
+ 16170 Wed Dec 07 13:20:16 IST 2016 META-INF/maven/joda-time/joda-time/pom.xml
+   106 Wed Dec 07 13:20:16 IST 2016 META-INF/maven/joda-time/joda-time/pom.properties
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-Maven/Spring-Maven-Getting-Started
+$ java -jar target/gs-maven-0.1.0-shaded.jar
+The current local time is: 13:20:39.680
+Hello world!
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-Maven/Spring-Maven-Getting-Started
+$ jar tvf target/original-gs-maven-0.1.0.jar
+     0 Wed Dec 07 13:20:16 IST 2016 META-INF/
+   132 Wed Dec 07 13:20:14 IST 2016 META-INF/MANIFEST.MF
+     0 Wed Dec 07 13:20:02 IST 2016 hello/
+   369 Wed Dec 07 13:20:02 IST 2016 hello/Greeter.class
+   988 Wed Dec 07 13:20:02 IST 2016 hello/HelloWorld.class
+     0 Wed Dec 07 13:20:16 IST 2016 META-INF/maven/
+     0 Wed Dec 07 13:20:16 IST 2016 META-INF/maven/org.springframework/
+     0 Wed Dec 07 13:20:16 IST 2016 META-INF/maven/org.springframework/gs-maven/
+  1482 Wed Dec 07 13:18:58 IST 2016 META-INF/maven/org.springframework/gs-maven/pom.xml
+   117 Wed Dec 07 13:15:48 IST 2016 META-INF/maven/org.springframework/gs-maven/pom.properties
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-Maven/Spring-Maven-Getting-Started
+$ java -jar target/original-gs-maven-0.1.0.jar
+no main manifest attribute, in target/original-gs-maven-0.1.0.jar
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-Maven/Spring-Maven-Getting-Started
+$

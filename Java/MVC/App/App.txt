@@ -1,0 +1,37 @@
+
+https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/basic_app_embedded_tomcat/basic_app-tomcat-embedded.html#section6
+
+$ java -version
+
+$ mvn -v
+
+$ cd "C:\Users\Rajani\Desktop\2018\Working\Java\Java-MVC-Maven"
+
+$ mvn archetype:generate -DarchetypeArtifactId=maven-archetype-webapp -DarchetypeGroupId=org.apache.maven.archetypes -DinteractiveMode=false -DgroupId=com.example.employees -DartifactId=employees-app -DarchetypeVersion=1.0
+
+$ cd employees-app
+
+[
+$ mvn eclipse:eclipse
+]
+
+$ cd "C:\Users\Rajani\Desktop\2018\Working\Java\Java-MVC-Maven\employees-app"
+
+$ mvn clean compile
+
+$ mvn package
+
+
+$ cd target
+$ java -jar employees-app-1.0-SNAPSHOT-jar-with-dependencies.jar
+
+# OR
+
+$ java -jar target/employees-app-1.0-SNAPSHOT-jar-with-dependencies.jar
+
+http://localhost:8089/employee?searchAction=searchByName&employeeName=Williams
+
+http://localhost:8089/employee?searchAction=searchByName&employeeName=Williams
+
+
+http://localhost:8080/employee

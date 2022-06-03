@@ -1,0 +1,7 @@
+package com.ps.springm1;
+
+public class BankAppConfig {
+
+    @Bean
+    public CreditCard
+}

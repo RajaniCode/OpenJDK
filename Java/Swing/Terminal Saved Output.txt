@@ -1,0 +1,28 @@
+Last login: Mon May 30 00:07:53 on ttys000
+autopoint		git			msgattrib		msgexec			msgunfmt		recode-sr-latin
+brew			git-cvsserver		msgcat			msgfilter		msguniq			xgettext
+envsubst		git-receive-pack	msgcmp			msgfmt			ngettext
+gettext			git-shell		msgcomm			msggrep			pcre2-config
+gettext.sh		git-upload-archive	msgconv			msginit			pcre2grep
+gettextize		git-upload-pack		msgen			msgmerge		pcre2test
+rajaniapple@Rajanis-MacBook-Pro ~ % java --version
+openjdk 17.0.2 2022-01-18
+OpenJDK Runtime Environment (build 17.0.2+8-86)
+OpenJDK 64-Bit Server VM (build 17.0.2+8-86, mixed mode, sharing)
+rajaniapple@Rajanis-MacBook-Pro ~ % cd /Users/rajaniapple/Desktop/GitHub/JavaUpdate/Swing
+rajaniapple@Rajanis-MacBook-Pro Swing % javac start/HelloWorldSwing.java                     
+rajaniapple@Rajanis-MacBook-Pro Swing % java start.HelloWorldSwing                           
+rajaniapple@Rajanis-MacBook-Pro Swing % 
+
+
+
+
+
+
+
+
+
+
+
+
+

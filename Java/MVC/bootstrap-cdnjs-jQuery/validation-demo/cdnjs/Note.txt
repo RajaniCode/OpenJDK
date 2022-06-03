@@ -1,0 +1,4 @@
+https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js
+https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js
+https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.js
+https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js

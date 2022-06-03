@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="samples.StackSuite" time="0.343" tests="2" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Tech2021\Scala\Maven\Example\NonInteractive\example\target\test-classes;C:\Tech2021\Scala\Maven\Example\NonInteractive\example\target\classes;C:\Users\Rajani\.m2\repository\org\scala-lang\scala-library\2.12.15\scala-library-2.12.15.jar;C:\Users\Rajani\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\Rajani\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Rajani\.m2\repository\org\scalatest\scalatest_2.12\3.0.5\scalatest_2.12-3.0.5.jar;C:\Users\Rajani\.m2\repository\org\scalactic\scalactic_2.12\3.0.5\scalactic_2.12-3.0.5.jar;C:\Users\Rajani\.m2\repository\org\scala-lang\scala-reflect\2.12.4\scala-reflect-2.12.4.jar;C:\Users\Rajani\.m2\repository\org\scala-lang\modules\scala-xml_2.12\1.0.6\scala-xml_2.12-1.0.6.jar;C:\Users\Rajani\.m2\repository\org\specs2\specs2-core_2.12\4.2.0\specs2-core_2.12-4.2.0.jar;C:\Users\Rajani\.m2\repository\org\specs2\specs2-matcher_2.12\4.2.0\specs2-matcher_2.12-4.2.0.jar;C:\Users\Rajani\.m2\repository\org\specs2\specs2-common_2.12\4.2.0\specs2-common_2.12-4.2.0.jar;C:\Users\Rajani\.m2\repository\org\specs2\specs2-fp_2.12\4.2.0\specs2-fp_2.12-4.2.0.jar;C:\Users\Rajani\.m2\repository\org\scala-lang\modules\scala-parser-combinators_2.12\1.1.0\scala-parser-combinators_2.12-1.1.0.jar;C:\Users\Rajani\.m2\repository\org\scala-sbt\test-interface\1.0\test-interface-1.0.jar;C:\Users\Rajani\.m2\repository\org\specs2\specs2-junit_2.12\4.2.0\specs2-junit_2.12-4.2.0.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="os.name" value="Windows 8.1"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.boot.library.path" value="C:\Users\Rajani\Downloads\Java\JDK\OpenJDK\openjdk-17.0.1_windows-x64_bin\jdk-17.0.1\bin"/>
+    <property name="sun.java.command" value="C:\Users\Rajani\AppData\Local\Temp\surefire13156894893225416745\surefirebooter17324310852103356466.jar C:\Users\Rajani\AppData\Local\Temp\surefire13156894893225416745 2021-12-11T11-42-27_280-jvmRun1 surefire7874859865163046293tmp surefire_014465353024859470937tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="test" value="samples.StackSuite"/>
+    <property name="surefire.test.class.path" value="C:\Tech2021\Scala\Maven\Example\NonInteractive\example\target\test-classes;C:\Tech2021\Scala\Maven\Example\NonInteractive\example\target\classes;C:\Users\Rajani\.m2\repository\org\scala-lang\scala-library\2.12.15\scala-library-2.12.15.jar;C:\Users\Rajani\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\Rajani\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Rajani\.m2\repository\org\scalatest\scalatest_2.12\3.0.5\scalatest_2.12-3.0.5.jar;C:\Users\Rajani\.m2\repository\org\scalactic\scalactic_2.12\3.0.5\scalactic_2.12-3.0.5.jar;C:\Users\Rajani\.m2\repository\org\scala-lang\scala-reflect\2.12.4\scala-reflect-2.12.4.jar;C:\Users\Rajani\.m2\repository\org\scala-lang\modules\scala-xml_2.12\1.0.6\scala-xml_2.12-1.0.6.jar;C:\Users\Rajani\.m2\repository\org\specs2\specs2-core_2.12\4.2.0\specs2-core_2.12-4.2.0.jar;C:\Users\Rajani\.m2\repository\org\specs2\specs2-matcher_2.12\4.2.0\specs2-matcher_2.12-4.2.0.jar;C:\Users\Rajani\.m2\repository\org\specs2\specs2-common_2.12\4.2.0\specs2-common_2.12-4.2.0.jar;C:\Users\Rajani\.m2\repository\org\specs2\specs2-fp_2.12\4.2.0\specs2-fp_2.12-4.2.0.jar;C:\Users\Rajani\.m2\repository\org\scala-lang\modules\scala-parser-combinators_2.12\1.1.0\scala-parser-combinators_2.12-1.1.0.jar;C:\Users\Rajani\.m2\repository\org\scala-sbt\test-interface\1.0\test-interface-1.0.jar;C:\Users\Rajani\.m2\repository\org\specs2\specs2-junit_2.12\4.2.0\specs2-junit_2.12-4.2.0.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Rajani"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2021-10-19"/>
+    <property name="java.home" value="C:\Users\Rajani\Downloads\Java\JDK\OpenJDK\openjdk-17.0.1_windows-x64_bin\jdk-17.0.1"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Tech2021\Scala\Maven\Example\NonInteractive\example"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\Rajani\AppData\Local\Temp\surefire13156894893225416745\surefirebooter17324310852103356466.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.1+12-39"/>
+    <property name="user.name" value="Rajani"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="6.3"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\Rajani\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\Rajani\AppData\Local\Temp\"/>
+    <property name="java.version" value="17.0.1"/>
+    <property name="user.dir" value="C:\Tech2021\Scala\Maven\Example\NonInteractive\example"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Users\Rajani\Downloads\Java\JDK\OpenJDK\openjdk-17.0.1_windows-x64_bin\jdk-17.0.1\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\Rajani\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Rajani\bin;C:\Program Files (x86)\Intel\iCLS Client;C:\Program Files\Intel\iCLS Client;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\Intel\WiFi\bin;C:\Program Files\Common Files\Intel\WirelessCommon;C:\Users\Rajani\Desktop\2019\Downloads\Wget\wget-1.20.3-win64;C:\Python38\Scripts;C:\Python38;C:\ProgramData\chocolatey\bin;C:\Program Files\dotnet;C:\Program Files\Microsoft SQL Server\130\Tools\Binn;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Roslyn;C:\Users\Rajani\Desktop\2019\Downloads\CS\NuGet\5.3.1;C:\Program Files\MongoDB\Server\4.2\bin;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn;C:\Program Files\Git\cmd;C:\Program Files\PowerShell\7;C:\Program Files\Azure Data Studio\bin;C:\Program Files\Microsoft SQL Server\150\Tools\Binn;C:\Program Files (x86)\dotnet;C:\Users\Rajani\AppData\Local\Programs\Python\Launcher;C:\Users\Rajani\scoop\shims;C:\Ruby30-x64\bin;C:\Users\Rajani\.dotnet\tools;C:\Users\Rajani\AppData\Local\Programs\Fiddler;C:\Users\Rajani\.dotnet\tools;C:\Program Files\Azure Data Studio\bin;C:\Users\Rajani\Downloads\MongoDB\mongosh-1.1.2-x64;C:\Users\Rajani\.dotnet\tools;C:\Users\Rajani\AppData\Local\atom\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl;C:\Users\Rajani\Downloads\Java\JDK\OpenJDK\openjdk-17.0.1_windows-x64_bin\jdk-17.0.1\bin\;C:\Users\Rajani\Downloads\Java\Apache Maven\apache-maven-3.8.4-bin\apache-maven-3.8.4\bin\;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="17.0.1+12-39"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="stackShouldPopValuesIinLastInFirstOutOrder" classname="samples.StackSuite" time="0.265"/>
+  <testcase name="stackShouldThrowRuntimeExceptionIfAnEmptyArrayStackIsPopped" classname="samples.StackSuite" time="0"/>
+</testsuite>

@@ -1,0 +1,74 @@
+
+# https://github.com/spring-guides/tut-bookmarks/archive/master.zip
+
+$ java -version
+
+$ mvn -v
+
+$ mvn package
+
+[services.msc Stop Tomcat]
+$ mvn test
+
+# Using HTTPS (SSL/TLS) to prevent Man-in-the-Middle Attacks
+
+Spring Boot provides an embedded web server (Apache Tomcat, by default) that can be configured programmatically to do anything that the standalone Apache Tomcat webserver can do. In the past, it required several tedious steps to configure HTTPS (SSL/TLS). Now, Spring Boot makes it super simple to do that declaratively. First, create the following:
+
+security/src/main/resources/application-https.properties
+
+# Configure the server to run with SSL/TLS and using HTTPS
+server.port = 8443
+server.ssl.key-store = classpath:tomcat.keystore
+server.ssl.key-store-password = password
+server.ssl.key-password = password
+This property file is only activated when the app is run when SPRING_PROFILES_ACTIVE configured with profile https.
+HTTPS requires a signed certificate certificate and a certificate password which we provide using property values. To do so, we can use the JDK’s keytool like this:
+
+$ keytool -genkey -alias bookmarks -keyalg RSA -keystore src/main/resources/tomcat.keystore
+Enter keystore password: password
+Re-enter new password: password
+What is your first and last name?
+  [Unknown]:  Josh Long
+What is the name of your organizational unit?
+  [Unknown]:  Spring Team
+What is the name of your organization?
+  [Unknown]:  Pivotal
+What is the name of your City or Locality?
+  [Unknown]:  IoT
+What is the name of your State or Province?
+  [Unknown]:  Earth
+What is the two-letter country code for this unit?
+  [Unknown]:  US
+Is CN=Josh Long, OU=Spring Team, O=Pivotal, L=IoT, ST=Earth, C=US correct?
+  [no]:  yes
+
+Enter key password for <learningspringboot>
+	(RETURN if same as keystore password): <RETURN>
+
+$ mvn test
+
+$ mvn exec:java
+
+[
+$ cd rest
+
+$ jar tvf target/rest-0.0.1-SNAPSHOT.jar
+
+$ java -jar target/rest-0.0.1-SNAPSHOT.jar
+
+$ cd ..
+
+$ cd model
+
+$ jar tvf target/model-0.0.1-SNAPSHOT.jar
+
+$ java -jar target/model-0.0.1-SNAPSHOT.jar
+
+$ cd ..
+
+$ cd hateoas
+
+$ jar tvf target/hateoas-0.0.1-SNAPSHOT.jar
+
+$ java -jar target/hateoas-0.0.1-SNAPSHOT.jar
+]

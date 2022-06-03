@@ -1,0 +1,199 @@
+MVC
+
+Controller - Servlet - LoginServlet
+
+Business Service - AuthenticationService
+
+Model - Authentication Result
+
+View - Login Page, Success Page
+
+
+//login.jsp
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Login Page</title>
+</head>
+<body>
+<form action="login" method="post">
+<label>User ID:</label><input type="text" name="userId"></input>
+<br/><br/>
+<label>Password:</label><input type="password" name="password"></input>
+<br/><br/>
+<input type="submit"></input>
+</form>
+</body>
+</html>
+
+
+//User.java
+package org.mvc.helloworld.dto;
+
+public class User {
+	private String userName;
+	private String userId;
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	public String getUserId() {
+		return userId;
+	}
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}	
+}
+
+
+//LoginService.java
+package org.mvc.helloworld.service;
+
+import java.util.HashMap;
+
+import org.mvc.helloworld.dto.User;
+
+public class LoginService {
+	HashMap<String, String> users = new HashMap<String, String>();
+	
+	public LoginService(){	
+		//Dummy data instead of data from Data Source
+		users.put("jamesgosling", "James Gosling");
+		users.put("sunoracle", "Sun Oracle");
+	}
+	
+	//Model: boolean //Business Service Method: authenticate
+	public boolean authenticate(String userId, String password) {	
+		if (password == null || password.trim().isEmpty()) {
+			return false;			
+		}
+		return true;
+	}
+	
+	//Model: User //Business Service Method: getUserDetails
+	public User getUserDetails(String userId) {
+		User usr = new User();
+		usr.setUserName(users.get(userId));
+		usr.setUserId(userId);		
+		return usr;
+	}
+}
+
+
+//success.jsp
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@ page import="java.text.SimpleDateFormat" %>
+	<%@ page import="java.util.Date" %>
+	<%@ page import="org.mvc.helloworld.dto.User" %>
+	
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Success</title>
+</head>
+<body>
+
+<p>Date and Time: <%= new SimpleDateFormat("EEEE, MMMM d, yyyy, h:mm a z").format(new Date()) %></p>
+
+<br>
+
+<% 
+String placeholder;
+%>
+
+<%-- <% 
+placeholder = (String) session.getAttribute("sessionMessage");
+%> --%>
+
+<% 
+placeholder = (String) request.getAttribute("dispatchMessage");
+%>
+
+<%=placeholder %>
+
+<% 
+User usr;
+%>
+
+<%-- <% 
+usr = (User) session.getAttribute("user");
+%> --%>
+ 
+ 
+<% 
+usr = (User) request.getAttribute("user");
+%>
+  
+ 
+Hello <%=usr.getUserName() %>!
+
+</body>
+</html>
+
+
+//LoginServlet.java
+package org.mvc.helloworld;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.mvc.helloworld.dto.User;
+import org.mvc.helloworld.service.LoginService;
+
+/**
+ * Servlet implementation class LoginServlet
+ */
+@WebServlet("/login")
+public class LoginServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		String userId = request.getParameter("userId");
+		String password = request.getParameter("password");
+		
+		LoginService serviceLogin = new LoginService();
+		boolean result = serviceLogin.authenticate(userId, password);
+		
+		if (result) {
+			User usr = serviceLogin.getUserDetails(userId);
+			if (usr.getUserName() == null) {
+				response.sendRedirect("login.jsp");
+				return;
+			}
+			//Redirect on client			
+			/*
+			request.getSession().setAttribute("user", usr);
+			request.getSession().setAttribute("sessionMessage", "Here's session message!");
+			response.sendRedirect("success.jsp");
+			*/			
+			
+			//Redirect on server	
+			request.setAttribute("user", usr);
+			request.setAttribute("dispatchMessage", "Here's dispatch message!");					
+			RequestDispatcher dispatcher = request.getRequestDispatcher("success.jsp");
+			dispatcher.forward(request, response);
+			
+			return;
+		} else {
+			response.sendRedirect("login.jsp");
+			return;		
+		}	
+	}
+}

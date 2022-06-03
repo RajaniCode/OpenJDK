@@ -1,0 +1,346 @@
+#jdbc:mysql://localhost:3306
+#root
+#My$ql@Server#5.7
+
+/*
+Root Account Password: My$ql@Server#5.7
+
+MySQL User Details
+Username: aspire
+Host: localhost
+Role: DB Admin
+Authentication: MySQL
+Password: My$ql@Server#5.7.14
+*/
+
+DROP DATABASE IF EXISTS `websystique`;
+CREATE DATABASE `websystique`;
+USE `websystique`;
+
+DROP TABLE IF EXISTS `STUDENT`;
+CREATE TABLE `STUDENT`(
+   `id` INT NOT NULL AUTO_INCREMENT,
+   `first_name` VARCHAR(30) NOT NULL,
+   `last_name`  VARCHAR(30) NOT NULL,
+   `section`    VARCHAR(30) NOT NULL,
+   PRIMARY KEY (`id`)
+);
+
+SELECT * FROM `STUDENT`;
+
+$ cd "E:\Working\Java\Hibernate\Samples\HibernateStandAloneDemo"
+
+$ mvn eclipse:eclipse
+
+
+$ mvn package
+
+
+# pom.xml
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.5.0</version>
+                <configuration>
+                    <mainClass>com.websystique.hibernate.HibernateStandAloneDemo</mainClass>
+                    <cleanupDaemonThreads>false</cleanupDaemonThreads>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+# HibernateStandAloneDemo/src/main/resources/hibernate.cfg.xml # <property name="show_sql">true</property>
+
+<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/websystique</property>
+<property name="hibernate.connection.username">root</property>
+<property name="hibernate.connection.password">My$ql@Server#5.7</property>
+
+<mapping class="com.websystique.hibernate.HibernateStandAloneDemo"></mapping>
+
+$ mvn eclipse:eclipse
+
+
+$ mvn package
+
+
+$ mvn exec:java
+
+
+# Git Bash
+
+Aspire@Acer MINGW64 /
+$ java -version
+java version "1.8.0_102"
+Java(TM) SE Runtime Environment (build 1.8.0_102-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.102-b14, mixed mode)
+
+Aspire@Acer MINGW64 /
+$ mvn -version
+Apache Maven 3.3.9 (bb52d8502b132ec0a5a3f4c09453c07478323dc5; 2015-11-10T22:11:47+05:30)
+Maven home: C:\Program Files\Apache Software Foundation\apache-maven-3.3.9
+Java version: 1.8.0_102, vendor: Oracle Corporation
+Java home: C:\Program Files\Java\jdk1.8.0_102\jre
+Default locale: en_US, platform encoding: Cp1252
+OS name: "windows 8.1", version: "6.3", arch: "amd64", family: "dos"
+
+Aspire@Acer MINGW64 /
+$ winpty mysql -u root -p
+Enter password: ****************
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 31
+Server version: 5.7.14-log MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2016, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> SELECT VERSION();
++------------+
+| VERSION()  |
++------------+
+| 5.7.14-log |
++------------+
+1 row in set (0.00 sec)
+
+mysql> quit;
+Bye
+
+Aspire@Acer MINGW64 /
+$ cd "E:\Working\Java\Hibernate\Samples\HibernateStandAloneDemo"
+
+Aspire@Acer MINGW64 /e/Working/Java/Hibernate/Samples/HibernateStandAloneDemo
+$ mvn eclipse:eclipse
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building HibernateStandAloneDemo 1.0.0
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] >>> maven-eclipse-plugin:2.10:eclipse (default-cli) > generate-resources @ HibernateStandAloneDemo >>>
+[INFO]
+[INFO] <<< maven-eclipse-plugin:2.10:eclipse (default-cli) < generate-resources @ HibernateStandAloneDemo <<<
+[INFO]
+[INFO] --- maven-eclipse-plugin:2.10:eclipse (default-cli) @ HibernateStandAloneDemo ---
+[INFO] Using Eclipse Workspace: null
+[INFO] Adding default classpath container: org.eclipse.jdt.launching.JRE_CONTAINER
+Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-core/4.3.6.Final/hibernate-core-4.3.6.Final.pom
+Downloaded: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-core/4.3.6.Final/hibernate-core-4.3.6.Final.pom (4 KB at 0.5 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/jboss/logging/jboss-logging/3.1.3.GA/jboss-logging-3.1.3.GA.pom
+Downloaded: https://repo.maven.apache.org/maven2/org/jboss/logging/jboss-logging/3.1.3.GA/jboss-logging-3.1.3.GA.pom (5 KB at 3.4 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/9/jboss-parent-9.pom
+Downloaded: https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/9/jboss-parent-9.pom (28 KB at 13.4 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/jboss/logging/jboss-logging-annotations/1.2.0.Beta1/jboss-logging-annotations-1.2.0.Beta1.pom
+Downloaded: https://repo.maven.apache.org/maven2/org/jboss/logging/jboss-logging-annotations/1.2.0.Beta1/jboss-logging-annotations-1.2.0.Beta1.pom (2 KB at 1.3 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/jboss/logging/jboss-logging-tools-parent/1.2.0.Beta1/jboss-logging-tools-parent-1.2.0.Beta1.pom
+Downloaded: https://repo.maven.apache.org/maven2/org/jboss/logging/jboss-logging-tools-parent/1.2.0.Beta1/jboss-logging-tools-parent-1.2.0.Beta1.pom (4 KB at 2.5 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/10/jboss-parent-10.pom
+Downloaded: https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/10/jboss-parent-10.pom (30 KB at 16.5 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.0.0.Final/jboss-transaction-api_1.2_spec-1.0.0.Final.pom
+Downloaded: https://repo.maven.apache.org/maven2/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.0.0.Final/jboss-transaction-api_1.2_spec-1.0.0.Final.pom (5 KB at 3.0 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/hibernate/common/hibernate-commons-annotations/4.0.5.Final/hibernate-commons-annotations-4.0.5.Final.pom
+Downloaded: https://repo.maven.apache.org/maven2/org/hibernate/common/hibernate-commons-annotations/4.0.5.Final/hibernate-commons-annotations-4.0.5.Final.pom (3 KB at 1.7 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.pom
+Downloaded: https://repo.maven.apache.org/maven2/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.pom (10 KB at 6.5 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/jboss/jandex/1.1.0.Final/jandex-1.1.0.Final.pom
+Downloaded: https://repo.maven.apache.org/maven2/org/jboss/jandex/1.1.0.Final/jandex-1.1.0.Final.pom (3 KB at 1.6 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/5/jboss-parent-5.pom
+Downloaded: https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/5/jboss-parent-5.pom (19 KB at 14.0 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/mysql/mysql-connector-java/5.1.31/mysql-connector-java-5.1.31.pom
+Downloaded: https://repo.maven.apache.org/maven2/mysql/mysql-connector-java/5.1.31/mysql-connector-java-5.1.31.pom (2 KB at 0.7 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-core/4.3.6.Final/hibernate-core-4.3.6.Final.jar
+Downloaded: https://repo.maven.apache.org/maven2/org/hibernate/hibernate-core/4.3.6.Final/hibernate-core-4.3.6.Final.jar (5131 KB at 25.4 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/jboss/logging/jboss-logging/3.1.3.GA/jboss-logging-3.1.3.GA.jar
+Downloaded: https://repo.maven.apache.org/maven2/org/jboss/logging/jboss-logging/3.1.3.GA/jboss-logging-3.1.3.GA.jar (56 KB at 10.0 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/jboss/logging/jboss-logging-annotations/1.2.0.Beta1/jboss-logging-annotations-1.2.0.Beta1.jar
+Downloaded: https://repo.maven.apache.org/maven2/org/jboss/logging/jboss-logging-annotations/1.2.0.Beta1/jboss-logging-annotations-1.2.0.Beta1.jar (12 KB at 7.5 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.0.0.Final/jboss-transaction-api_1.2_spec-1.0.0.Final.jar
+Downloaded: https://repo.maven.apache.org/maven2/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.0.0.Final/jboss-transaction-api_1.2_spec-1.0.0.Final.jar (28 KB at 5.2 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/hibernate/common/hibernate-commons-annotations/4.0.5.Final/hibernate-commons-annotations-4.0.5.Final.jar
+Downloaded: https://repo.maven.apache.org/maven2/org/hibernate/common/hibernate-commons-annotations/4.0.5.Final/hibernate-commons-annotations-4.0.5.Final.jar (74 KB at 5.9 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar
+Downloaded: https://repo.maven.apache.org/maven2/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar (698 KB at 44.2 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/jboss/jandex/1.1.0.Final/jandex-1.1.0.Final.jar
+Downloaded: https://repo.maven.apache.org/maven2/org/jboss/jandex/1.1.0.Final/jandex-1.1.0.Final.jar (75 KB at 52.6 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/mysql/mysql-connector-java/5.1.31/mysql-connector-java-5.1.31.jar
+Downloaded: https://repo.maven.apache.org/maven2/mysql/mysql-connector-java/5.1.31/mysql-connector-java-5.1.31.jar (943 KB at 104.9 KB/sec)
+[INFO] Not writing settings - defaults suffice
+[INFO] File E:\Working\Java\Hibernate\Samples\HibernateStandAloneDemo\.project already exists.
+       Additional settings will be preserved, run mvn eclipse:clean if you want old settings to be removed.
+[INFO] Wrote Eclipse project for "HibernateStandAloneDemo" to E:\Working\Java\Hibernate\Samples\HibernateStandAloneDemo.
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 04:40 min
+[INFO] Finished at: 2016-11-06T13:10:58+05:30
+[INFO] Final Memory: 13M/256M
+[INFO] ------------------------------------------------------------------------
+
+Aspire@Acer MINGW64 /e/Working/Java/Hibernate/Samples/HibernateStandAloneDemo
+$ mvn package
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building HibernateStandAloneDemo 1.0.0
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ HibernateStandAloneDemo ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 2 resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ HibernateStandAloneDemo ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 3 source files to E:\Working\Java\Hibernate\Samples\HibernateStandAloneDemo\target\classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ HibernateStandAloneDemo ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory E:\Working\Java\Hibernate\Samples\HibernateStandAloneDemo\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ HibernateStandAloneDemo ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ HibernateStandAloneDemo ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ HibernateStandAloneDemo ---
+[INFO] Building jar: E:\Working\Java\Hibernate\Samples\HibernateStandAloneDemo\target\HibernateStandAloneDemo-1.0.0.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 4.766 s
+[INFO] Finished at: 2016-11-06T13:11:42+05:30
+[INFO] Final Memory: 16M/258M
+[INFO] ------------------------------------------------------------------------
+
+Aspire@Acer MINGW64 /e/Working/Java/Hibernate/Samples/HibernateStandAloneDemo
+$ mvn eclipse:eclipse
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building HibernateStandAloneDemo 1.0.0
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] >>> maven-eclipse-plugin:2.10:eclipse (default-cli) > generate-resources @ HibernateStandAloneDemo >>>
+[INFO]
+[INFO] <<< maven-eclipse-plugin:2.10:eclipse (default-cli) < generate-resources @ HibernateStandAloneDemo <<<
+[INFO]
+[INFO] --- maven-eclipse-plugin:2.10:eclipse (default-cli) @ HibernateStandAloneDemo ---
+[INFO] Using Eclipse Workspace: null
+[INFO] Adding default classpath container: org.eclipse.jdt.launching.JRE_CONTAINER
+[INFO] Not writing settings - defaults suffice
+[INFO] File E:\Working\Java\Hibernate\Samples\HibernateStandAloneDemo\.project already exists.
+       Additional settings will be preserved, run mvn eclipse:clean if you want old settings to be removed.
+[INFO] Wrote Eclipse project for "HibernateStandAloneDemo" to E:\Working\Java\Hibernate\Samples\HibernateStandAloneDemo.
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3.219 s
+[INFO] Finished at: 2016-11-06T13:33:25+05:30
+[INFO] Final Memory: 12M/245M
+[INFO] ------------------------------------------------------------------------
+
+Aspire@Acer MINGW64 /e/Working/Java/Hibernate/Samples/HibernateStandAloneDemo
+$ mvn package
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building HibernateStandAloneDemo 1.0.0
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ HibernateStandAloneDemo ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 2 resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ HibernateStandAloneDemo ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ HibernateStandAloneDemo ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory E:\Working\Java\Hibernate\Samples\HibernateStandAloneDemo\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ HibernateStandAloneDemo ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ HibernateStandAloneDemo ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ HibernateStandAloneDemo ---
+[INFO] Building jar: E:\Working\Java\Hibernate\Samples\HibernateStandAloneDemo\target\HibernateStandAloneDemo-1.0.0.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 2.891 s
+[INFO] Finished at: 2016-11-06T13:33:43+05:30
+[INFO] Final Memory: 10M/245M
+[INFO] ------------------------------------------------------------------------
+
+Aspire@Acer MINGW64 /e/Working/Java/Hibernate/Samples/HibernateStandAloneDemo
+$ mvn exec:java
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building HibernateStandAloneDemo 1.0.0
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- exec-maven-plugin:1.5.0:java (default-cli) @ HibernateStandAloneDemo ---
+Nov 06, 2016 1:34:00 PM org.hibernate.annotations.common.reflection.java.JavaReflectionManager <clinit>
+INFO: HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+Nov 06, 2016 1:34:00 PM org.hibernate.Version logVersion
+INFO: HHH000412: Hibernate Core {4.3.6.Final}
+Nov 06, 2016 1:34:00 PM org.hibernate.cfg.Environment <clinit>
+INFO: HHH000206: hibernate.properties not found
+Nov 06, 2016 1:34:00 PM org.hibernate.cfg.Environment buildBytecodeProvider
+INFO: HHH000021: Bytecode provider name : javassist
+Nov 06, 2016 1:34:00 PM org.hibernate.cfg.Configuration configure
+INFO: HHH000043: Configuring from resource: /hibernate.cfg.xml
+Nov 06, 2016 1:34:00 PM org.hibernate.cfg.Configuration getConfigurationInputStream
+INFO: HHH000040: Configuration resource: /hibernate.cfg.xml
+Nov 06, 2016 1:34:01 PM org.hibernate.cfg.Configuration addResource
+INFO: HHH000221: Reading mappings from resource: com/websystique/hibernate/model/Student.hbm.xml
+Nov 06, 2016 1:34:01 PM org.hibernate.cfg.Configuration doConfigure
+INFO: HHH000041: Configured SessionFactory: null
+Nov 06, 2016 1:34:01 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+WARN: HHH000402: Using Hibernate built-in connection pool (not for production use!)
+Nov 06, 2016 1:34:01 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/websystique]
+Nov 06, 2016 1:34:01 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH000046: Connection properties: {user=root, password=****}
+Nov 06, 2016 1:34:01 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH000006: Autocommit mode: false
+Nov 06, 2016 1:34:01 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000115: Hibernate connection pool size: 20 (min=1)
+Nov 06, 2016 1:34:02 PM org.hibernate.dialect.Dialect <init>
+INFO: HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+Nov 06, 2016 1:34:02 PM org.hibernate.engine.transaction.internal.TransactionFactoryInitiator initiateService
+INFO: HHH000399: Using default transaction strategy (direct JDBC transactions)
+Nov 06, 2016 1:34:02 PM org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory <init>
+INFO: HHH000397: Using ASTQueryTranslatorFactory
+Hibernate: insert into STUDENT (FIRST_NAME, LAST_NAME, SECTION) values (?, ?, ?)
+Hibernate: insert into STUDENT (FIRST_NAME, LAST_NAME, SECTION) values (?, ?, ?)
+Hibernate: insert into STUDENT (FIRST_NAME, LAST_NAME, SECTION) values (?, ?, ?)
+Hibernate: insert into STUDENT (FIRST_NAME, LAST_NAME, SECTION) values (?, ?, ?)
+Hibernate: select student0_.id as id1_0_, student0_.FIRST_NAME as FIRST_NA2_0_, student0_.LAST_NAME as LAST_NAM3_0_, student0_.SECTION as SECTION4_0_ from STUDENT student0_ order by student0_.FIRST_NAME ASC
+List of all persisted students >>>
+Persisted Student :Student [id=4, firstName=Bill, lastName=Laurent, section=Maths]
+Persisted Student :Student [id=2, firstName=Joshua, lastName=Brill, section=Science]
+Persisted Student :Student [id=3, firstName=Peter, lastName=Pan, section=Physics]
+Persisted Student :Student [id=1, firstName=Sam, lastName=Disilva, section=Maths]
+Hibernate: select student0_.id as id1_0_0_, student0_.FIRST_NAME as FIRST_NA2_0_0_, student0_.LAST_NAME as LAST_NAM3_0_0_, student0_.SECTION as SECTION4_0_0_ from STUDENT student0_ where student0_.id=?
+Hibernate: update STUDENT set FIRST_NAME=?, LAST_NAME=?, SECTION=? where id=?
+Hibernate: select student0_.id as id1_0_0_, student0_.FIRST_NAME as FIRST_NA2_0_0_, student0_.LAST_NAME as LAST_NAM3_0_0_, student0_.SECTION as SECTION4_0_0_ from STUDENT student0_ where student0_.id=?
+Hibernate: delete from STUDENT where id=?
+Hibernate: select student0_.id as id1_0_, student0_.FIRST_NAME as FIRST_NA2_0_, student0_.LAST_NAME as LAST_NAM3_0_, student0_.SECTION as SECTION4_0_ from STUDENT student0_ order by student0_.FIRST_NAME ASC
+List of all remained persisted students >>>
+Persisted Student :Student [id=4, firstName=Bill, lastName=Laurent, section=ARTS]
+Persisted Student :Student [id=3, firstName=Peter, lastName=Pan, section=Physics]
+Persisted Student :Student [id=1, firstName=Sam, lastName=Disilva, section=Maths]
+

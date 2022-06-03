@@ -1,0 +1,69 @@
+Initializing new SSH agent...
+succeeded
+Identity added: /c/Users/Aspire/.ssh/id_rsa (/c/Users/Aspire/.ssh/id_rsa)
+
+Aspire@Acer MINGW64 /
+$ cd "E:\Working\Java\JAX-WS\Example\Python\Python2.7\PySimpleSOAP\Google Code Archive\Downloads\PySimpleSOAP-1.10"
+
+Aspire@Acer MINGW64 /e/Working/Java/JAX-WS/Example/Python/Python2.7/PySimpleSOAP/Google Code Archive/Downloads/PySimpleSOAP-1.10
+$ python --version
+Python 2.7.11
+
+Aspire@Acer MINGW64 /e/Working/Java/JAX-WS/Example/Python/Python2.7/PySimpleSOAP/Google Code Archive/Downloads/PySimpleSOAP-1.10
+$ python setup.py install
+running install
+running bdist_egg
+running egg_info
+writing PySimpleSOAP.egg-info\PKG-INFO
+writing top-level names to PySimpleSOAP.egg-info\top_level.txt
+writing dependency_links to PySimpleSOAP.egg-info\dependency_links.txt
+reading manifest file 'PySimpleSOAP.egg-info\SOURCES.txt'
+writing manifest file 'PySimpleSOAP.egg-info\SOURCES.txt'
+installing library code to build\bdist.win-amd64\egg
+running install_lib
+running build_py
+creating build
+creating build\lib
+creating build\lib\pysimplesoap
+copying pysimplesoap\client.py -> build\lib\pysimplesoap
+copying pysimplesoap\helpers.py -> build\lib\pysimplesoap
+copying pysimplesoap\server.py -> build\lib\pysimplesoap
+copying pysimplesoap\simplexml.py -> build\lib\pysimplesoap
+copying pysimplesoap\transport.py -> build\lib\pysimplesoap
+copying pysimplesoap\__init__.py -> build\lib\pysimplesoap
+creating build\bdist.win-amd64
+creating build\bdist.win-amd64\egg
+creating build\bdist.win-amd64\egg\pysimplesoap
+copying build\lib\pysimplesoap\client.py -> build\bdist.win-amd64\egg\pysimplesoap
+copying build\lib\pysimplesoap\helpers.py -> build\bdist.win-amd64\egg\pysimplesoap
+copying build\lib\pysimplesoap\server.py -> build\bdist.win-amd64\egg\pysimplesoap
+copying build\lib\pysimplesoap\simplexml.py -> build\bdist.win-amd64\egg\pysimplesoap
+copying build\lib\pysimplesoap\transport.py -> build\bdist.win-amd64\egg\pysimplesoap
+copying build\lib\pysimplesoap\__init__.py -> build\bdist.win-amd64\egg\pysimplesoap
+byte-compiling build\bdist.win-amd64\egg\pysimplesoap\client.py to client.pyc
+byte-compiling build\bdist.win-amd64\egg\pysimplesoap\helpers.py to helpers.pyc
+byte-compiling build\bdist.win-amd64\egg\pysimplesoap\server.py to server.pyc
+byte-compiling build\bdist.win-amd64\egg\pysimplesoap\simplexml.py to simplexml.pyc
+byte-compiling build\bdist.win-amd64\egg\pysimplesoap\transport.py to transport.pyc
+byte-compiling build\bdist.win-amd64\egg\pysimplesoap\__init__.py to __init__.pyc
+creating build\bdist.win-amd64\egg\EGG-INFO
+copying PySimpleSOAP.egg-info\PKG-INFO -> build\bdist.win-amd64\egg\EGG-INFO
+copying PySimpleSOAP.egg-info\SOURCES.txt -> build\bdist.win-amd64\egg\EGG-INFO
+copying PySimpleSOAP.egg-info\dependency_links.txt -> build\bdist.win-amd64\egg\EGG-INFO
+copying PySimpleSOAP.egg-info\top_level.txt -> build\bdist.win-amd64\egg\EGG-INFO
+C:\Python27\lib\distutils\dist.py:267: UserWarning: Unknown distribution option: 'console'
+  warnings.warn(msg)
+zip_safe flag not set; analyzing archive contents...
+creating dist
+creating 'dist\PySimpleSOAP-1.10-py2.7.egg' and adding 'build\bdist.win-amd64\egg' to it
+removing 'build\bdist.win-amd64\egg' (and everything under it)
+Processing PySimpleSOAP-1.10-py2.7.egg
+Copying PySimpleSOAP-1.10-py2.7.egg to c:\python27\lib\site-packages
+Adding PySimpleSOAP 1.10 to easy-install.pth file
+
+Installed c:\python27\lib\site-packages\pysimplesoap-1.10-py2.7.egg
+Processing dependencies for PySimpleSOAP==1.10
+Finished processing dependencies for PySimpleSOAP==1.10
+
+Aspire@Acer MINGW64 /e/Working/Java/JAX-WS/Example/Python/Python2.7/PySimpleSOAP/Google Code Archive/Downloads/PySimpleSOAP-1.10
+$

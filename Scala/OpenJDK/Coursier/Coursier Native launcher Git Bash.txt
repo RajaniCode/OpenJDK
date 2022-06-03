@@ -1,0 +1,113 @@
+
+Rajani@Samsung MINGW64 /c/Tech2021/Scala/Coursier
+$ mkdir -p "C:\Users\Rajani\Downloads\Scala\Scala3\Bitsadmin\Native"
+
+Rajani@Samsung MINGW64 /c/Tech2021/Scala/Coursier
+$ cd "C:\Users\Rajani\Downloads\Scala\Scala3\Bitsadmin\Native"
+
+Rajani@Samsung MINGW64 ~/Downloads/Scala/Scala3/Bitsadmin/Native
+$ cmd
+Microsoft Windows [Version 6.3.9600]
+(c) 2013 Microsoft Corporation. All rights reserved.
+
+C:\Users\Rajani\Downloads\Scala\Scala3\Bitsadmin\Native>bitsadmin /transfer cs-cli https://git.io/coursier-cli-windows-exe "C:\Users\Rajani\Downloads\Scala\Scala3\Bitsadmin\Native\cs.exe"
+bitsadmin /transfer cs-cli https://git.io/coursier-cli-windows-exe "C:\Users\Rajani\Downloads\Scala\Scala3\Bitsadmin\Native\cs.exe"
+
+BITSADMIN version 3.0 [ 7.7.9600 ]
+BITS administration utility.
+(C) Copyright 2000-2006 Microsoft Corp.
+
+BITSAdmin is deprecated and is not guaranteed to be available in future versions of Windows.
+Administrative tools for the BITS service are now provided by BITS PowerShell cmdlets.
+
+Transfer complete.
+
+C:\Users\Rajani\Downloads\Scala\Scala3\Bitsadmin\Native>"C:\Users\Rajani\Downloads\Scala\Scala3\Bitsadmin\Native\cs.exe" --help
+"C:\Users\Rajani\Downloads\Scala\Scala3\Bitsadmin\Native\cs.exe" --help
+Coursier 2.0.13
+Usage: cs [options] [command] [command-options]
+
+Available commands: bootstrap, channel, complete, fetch, get, install, java, java-home, launch, list, publish, resolve, setup, uninstall, update
+
+Type  cs command --help  for help on an individual command
+
+C:\Users\Rajani\Downloads\Scala\Scala3\Bitsadmin\Native>exit
+exit
+
+Rajani@Samsung MINGW64 ~/Downloads/Scala/Scala3/Bitsadmin/Native
+$ "C:\Users\Rajani\Downloads\Scala\Scala3\Bitsadmin\Native\cs.exe" --help
+Coursier 2.0.13
+Usage: cs [options] [command] [command-options]
+
+Available commands: bootstrap, channel, complete, fetch, get, install, java, java-home, launch, list, publish, resolve, setup, uninstall, update
+
+Type  cs command --help  for help on an individual command
+
+Rajani@Samsung MINGW64 ~/Downloads/Scala/Scala3/Bitsadmin/Native
+$ export PATH=$PATH:"/C/Users/Rajani/Downloads/Java/JDK/OpenJDK/openjdk-17.0.1_windows-x64_bin/jdk-17.0.1/bin/:/C/Users/Rajani/Downloads/Java/Apache Maven/apache-maven-3.8.4-bin/apache-maven-3.8.4/bin/:/C/Users/Rajani/Downloads/Scala/Scala3/Bitsadmin/Native/"
+
+Rajani@Samsung MINGW64 ~/Downloads/Scala/Scala3/Bitsadmin/Native
+$ java --version
+openjdk 17.0.1 2021-10-19
+OpenJDK Runtime Environment (build 17.0.1+12-39)
+OpenJDK 64-Bit Server VM (build 17.0.1+12-39, mixed mode, sharing)
+
+Rajani@Samsung MINGW64 ~/Downloads/Scala/Scala3/Bitsadmin/Native
+$ mvn --version
+Apache Maven 3.8.4 (9b656c72d54e5bacbed989b64718c159fe39b537)
+Maven home: C:\Users\Rajani\Downloads\Java\Apache Maven\apache-maven-3.8.4-bin\apache-maven-3.8.4
+Java version: 17.0.1, vendor: Oracle Corporation, runtime: C:\Users\Rajani\Downloads\Java\JDK\OpenJDK\openjdk-17.0.1_windows-x64_bin\jdk-17.0.1
+Default locale: en_IN, platform encoding: Cp1252
+OS name: "windows 8.1", version: "6.3", arch: "amd64", family: "windows"
+
+Rajani@Samsung MINGW64 ~/Downloads/Scala/Scala3/Bitsadmin/Native
+$ cs --version
+2.0.13
+
+Rajani@Samsung MINGW64 ~/Downloads/Scala/Scala3/Bitsadmin/Native
+$ cs install scala3-compiler
+Checking https://repo1.maven.org/maven2/io/get-coursier/apps/maven-metadata.xml
+Checked https://repo1.maven.org/maven2/io/get-coursier/apps/maven-metadata.xml
+Checking https://repo1.maven.org/maven2/org/scala-lang/scala3-compiler_3/maven-metadata.xml
+Checked https://repo1.maven.org/maven2/org/scala-lang/scala3-compiler_3/maven-metadata.xml
+Warning: C:\Users\Rajani\AppData\Local\Coursier\data\bin is not in your PATH
+
+Rajani@Samsung MINGW64 ~/Downloads/Scala/Scala3/Bitsadmin/Native
+$ export PATH=$PATH:"/C/Users/Rajani/Downloads/Java/JDK/OpenJDK/openjdk-17.0.1_windows-x64_bin/jdk-17.0.1/bin/:/C/Users/Rajani/Downloads/Java/Apache Maven/apache-maven-3.8.4-bin/apache-maven-3.8.4/bin/:/C/Users/Rajani/Downloads/Scala/Scala3/Bitsadmin/Native/:/C/Users/Rajani/AppData/Local/Coursier/data/bin/"
+
+Rajani@Samsung MINGW64 ~/Downloads/Scala/Scala3/Bitsadmin/Native
+$ echo $PATH
+/c/Users/Rajani/bin:/mingw64/bin:/usr/local/bin:/usr/bin:/bin:/mingw64/bin:/usr/bin:/c/Users/Rajani/bin:/c/Program Files (x86)/Intel/iCLS Client:/c/Program Files/Intel/iCLS Client:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/c/Program Files/Intel/Intel(R) Management Engine Components/IPT:/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT:/c/Program Files (x86)/Intel/OpenCL SDK/2.0/bin/x86:/c/Program Files (x86)/Intel/OpenCL SDK/2.0/bin/x64:/c/Program Files/Intel/WiFi/bin:/c/Program Files/Common Files/Intel/WirelessCommon:/c/Users/Rajani/Desktop/2019/Downloads/Wget/wget-1.20.3-win64:/c/Python38/Scripts:/c/Python38:/c/ProgramData/chocolatey/bin:/c/Program Files/dotnet:/c/Program Files/Microsoft SQL Server/130/Tools/Binn:/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn:/c/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/Roslyn:/c/Users/Rajani/Desktop/2019/Downloads/CS/NuGet/5.3.1:/c/Program Files/MongoDB/Server/4.2/bin:/c/Program Files (x86)/Microsoft SQL Server/150/DTS/Binn:/cmd:/c/Program Files/PowerShell/7:/c/Program Files/Azure Data Studio/bin:/c/Program Files/Microsoft SQL Server/150/Tools/Binn:/c/Program Files (x86)/dotnet:/c/Users/Rajani/AppData/Local/Programs/Python/Launcher:/c/Users/Rajani/scoop/shims:/c/Ruby30-x64/bin:/c/Users/Rajani/.dotnet/tools:/c/Users/Rajani/AppData/Local/Programs/Fiddler:/c/Users/Rajani/.dotnet/tools:/c/Program Files/Azure Data Studio/bin:/c/Users/Rajani/Downloads/MongoDB/mongosh-1.1.2-x64:/c/Users/Rajani/.dotnet/tools:/c/Users/Rajani/AppData/Local/atom/bin:/usr/bin/vendor_perl:/usr/bin/core_perl:/C/Users/Rajani/Downloads/Java/JDK/OpenJDK/openjdk-17.0.1_windows-x64_bin/jdk-17.0.1/bin/:/C/Users/Rajani/Downloads/Java/Apache Maven/apache-maven-3.8.4-bin/apache-maven-3.8.4/bin/:/C/Users/Rajani/Downloads/Scala/Scala3/Bitsadmin/Native/:/C/Users/Rajani/Downloads/Java/JDK/OpenJDK/openjdk-17.0.1_windows-x64_bin/jdk-17.0.1/bin/:/C/Users/Rajani/Downloads/Java/Apache Maven/apache-maven-3.8.4-bin/apache-maven-3.8.4/bin/:/C/Users/Rajani/Downloads/Scala/Scala3/Bitsadmin/Native/:/C/Users/Rajani/AppData/Local/Coursier/data/bin/
+
+Rajani@Samsung MINGW64 ~/Downloads/Scala/Scala3/Bitsadmin/Native
+$ cs install scala3
+Checking https://repo1.maven.org/maven2/io/get-coursier/apps/maven-metadata.xml
+Checked https://repo1.maven.org/maven2/io/get-coursier/apps/maven-metadata.xml
+Checking https://repo1.maven.org/maven2/org/scala-lang/scala3-compiler_3/maven-metadata.xml
+Checked https://repo1.maven.org/maven2/org/scala-lang/scala3-compiler_3/maven-metadata.xml
+Warning: C:\Users\Rajani\AppData\Local\Coursier\data\bin is not in your PATH
+
+Rajani@Samsung MINGW64 ~/Downloads/Scala/Scala3/Bitsadmin/Native
+$ scala3.bat
+Welcome to Scala 3.1.2-RC1-bin-20211208-d6fe4b4-NIGHTLY-git-d6fe4b4 (17.0.1, Java OpenJDK 64-Bit Server VM).
+Type in expressions for evaluation. Or try :help.
+
+scala> :help
+The REPL has several commands available:
+
+:help                    print this summary
+:load <path>             interpret lines in a file
+:quit                    exit the interpreter
+:type <expression>       evaluate the type of the given expression
+:doc <expression>        print the documentation for the given expression
+:imports                 show import history
+:reset                   reset the repl to its initial state, forgetting all session entries
+
+
+scala> println("Hello, world!")
+Hello, world!
+
+scala> :exit
+
+Rajani@Samsung MINGW64 ~/Downloads/Scala/Scala3/Bitsadmin/Native
+$

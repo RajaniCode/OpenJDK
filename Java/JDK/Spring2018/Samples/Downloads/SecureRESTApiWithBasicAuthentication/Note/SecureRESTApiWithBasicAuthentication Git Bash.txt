@@ -1,0 +1,225 @@
+
+Aspire@Acer MINGW64 ~
+$ java -version
+java version "1.8.0_102"
+Java(TM) SE Runtime Environment (build 1.8.0_102-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.102-b14, mixed mode)
+
+Aspire@Acer MINGW64 ~
+$ mvn -v
+Apache Maven 3.3.9 (bb52d8502b132ec0a5a3f4c09453c07478323dc5; 2015-11-10T22:11:47+05:30)
+Maven home: C:\Program Files\Apache Software Foundation\apache-maven-3.3.9
+Java version: 1.8.0_102, vendor: Oracle Corporation
+Java home: C:\Program Files\Java\jdk1.8.0_102\jre
+Default locale: en_US, platform encoding: Cp1252
+OS name: "windows 8.1", version: "6.3", arch: "amd64", family: "dos"
+
+Aspire@Acer MINGW64 ~
+$ cd "E:\Working\Java\Spring\Samples\SecureRESTApiWithBasicAuthentication"
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Samples/SecureRESTApiWithBasicAuthentication
+$ mvn eclipse:eclipse
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building SecureRESTApiWithBasicAuthentication 1.0.0
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] >>> maven-eclipse-plugin:2.10:eclipse (default-cli) > generate-resources @ SecureRESTApiWithBasicAuthentication >>>
+[INFO]
+[INFO] <<< maven-eclipse-plugin:2.10:eclipse (default-cli) < generate-resources @ SecureRESTApiWithBasicAuthentication <<<
+[INFO]
+[INFO] --- maven-eclipse-plugin:2.10:eclipse (default-cli) @ SecureRESTApiWithBasicAuthentication ---
+[INFO] Using Eclipse Workspace: null
+[INFO] Adding default classpath container: org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7
+Downloading: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.10/commons-codec-1.10.pom
+Downloaded: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.10/commons-codec-1.10.pom (12 KB at 3.0 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/35/commons-parent-35.pom
+Downloaded: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/35/commons-parent-35.pom (57 KB at 26.5 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/apache/apache/15/apache-15.pom
+Downloaded: https://repo.maven.apache.org/maven2/org/apache/apache/15/apache-15.pom (15 KB at 13.2 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.10/commons-codec-1.10.jar
+Downloaded: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.10/commons-codec-1.10.jar (278 KB at 88.8 KB/sec)
+[INFO] Wrote settings to E:\Working\Java\Spring\Samples\SecureRESTApiWithBasicAuthentication\.settings\org.eclipse.jdt.core.prefs
+[INFO] Wrote Eclipse project for "SecureRESTApiWithBasicAuthentication" to E:\Working\Java\Spring\Samples\SecureRESTApiWithBasicAuthentication.
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 14.594 s
+[INFO] Finished at: 2016-12-08T11:18:30+05:30
+[INFO] Final Memory: 15M/309M
+[INFO] ------------------------------------------------------------------------
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Samples/SecureRESTApiWithBasicAuthentication
+$ mvn package
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building SecureRESTApiWithBasicAuthentication 1.0.0
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ SecureRESTApiWithBasicAuthentication ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO]
+[INFO] --- maven-compiler-plugin:3.2:compile (default-compile) @ SecureRESTApiWithBasicAuthentication ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 10 source files to E:\Working\Java\Spring\Samples\SecureRESTApiWithBasicAuthentication\target\classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ SecureRESTApiWithBasicAuthentication ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory E:\Working\Java\Spring\Samples\SecureRESTApiWithBasicAuthentication\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.2:testCompile (default-testCompile) @ SecureRESTApiWithBasicAuthentication ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to E:\Working\Java\Spring\Samples\SecureRESTApiWithBasicAuthentication\target\test-classes
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ SecureRESTApiWithBasicAuthentication ---
+[INFO]
+[INFO] --- maven-war-plugin:2.4:war (default-war) @ SecureRESTApiWithBasicAuthentication ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [SecureRESTApiWithBasicAuthentication] in [E:\Working\Java\Spring\Samples\SecureRESTApiWithBasicAuthentication\target\SecureRESTApiWithBasicAuthentication]
+[INFO] Processing war project
+[INFO] Copying webapp resources [E:\Working\Java\Spring\Samples\SecureRESTApiWithBasicAuthentication\src\main\webapp]
+[INFO] Webapp assembled in [648 msecs]
+[INFO] Building war: E:\Working\Java\Spring\Samples\SecureRESTApiWithBasicAuthentication\target\SecureRESTApiWithBasicAuthentication.war
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 7.808 s
+[INFO] Finished at: 2016-12-08T11:19:37+05:30
+[INFO] Final Memory: 20M/261M
+[INFO] ------------------------------------------------------------------------
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Samples/SecureRESTApiWithBasicAuthentication
+$ jar tvf target/SecureRESTApiWithBasicAuthentication.war
+     0 Thu Dec 08 11:19:38 IST 2016 META-INF/
+   132 Thu Dec 08 11:19:36 IST 2016 META-INF/MANIFEST.MF
+     0 Thu Dec 08 11:19:36 IST 2016 WEB-INF/
+     0 Thu Dec 08 11:19:36 IST 2016 WEB-INF/classes/
+     0 Thu Dec 08 11:19:36 IST 2016 WEB-INF/classes/com/
+     0 Thu Dec 08 11:19:36 IST 2016 WEB-INF/classes/com/websystique/
+     0 Thu Dec 08 11:19:36 IST 2016 WEB-INF/classes/com/websystique/springmvc/
+     0 Thu Dec 08 11:19:36 IST 2016 WEB-INF/classes/com/websystique/springmvc/configuration/
+     0 Thu Dec 08 11:19:36 IST 2016 WEB-INF/classes/com/websystique/springmvc/controller/
+     0 Thu Dec 08 11:19:36 IST 2016 WEB-INF/classes/com/websystique/springmvc/model/
+     0 Thu Dec 08 11:19:36 IST 2016 WEB-INF/classes/com/websystique/springmvc/security/
+     0 Thu Dec 08 11:19:36 IST 2016 WEB-INF/classes/com/websystique/springmvc/service/
+     0 Thu Dec 08 11:19:38 IST 2016 WEB-INF/lib/
+  1937 Thu Dec 08 11:19:34 IST 2016 WEB-INF/classes/com/websystique/springmvc/configuration/CORSFilter.class
+   654 Thu Dec 08 11:19:34 IST 2016 WEB-INF/classes/com/websystique/springmvc/configuration/HelloWorldConfiguration.class
+  1184 Thu Dec 08 11:19:34 IST 2016 WEB-INF/classes/com/websystique/springmvc/configuration/HelloWorldInitializer.class
+  5902 Thu Dec 08 11:19:34 IST 2016 WEB-INF/classes/com/websystique/springmvc/controller/HelloWorldRestController.class
+  2389 Thu Dec 08 11:19:34 IST 2016 WEB-INF/classes/com/websystique/springmvc/model/User.class
+  1880 Thu Dec 08 11:19:34 IST 2016 WEB-INF/classes/com/websystique/springmvc/security/CustomBasicAuthenticationEntryPoint.class
+  5732 Thu Dec 08 11:19:34 IST 2016 WEB-INF/classes/com/websystique/springmvc/security/SecurityConfiguration.class
+   460 Thu Dec 08 11:19:34 IST 2016 WEB-INF/classes/com/websystique/springmvc/security/SecurityWebApplicationInitializer.class
+   620 Thu Dec 08 11:19:34 IST 2016 WEB-INF/classes/com/websystique/springmvc/service/UserService.class
+  3346 Thu Dec 08 11:19:34 IST 2016 WEB-INF/classes/com/websystique/springmvc/service/UserServiceImpl.class
+  4467 Thu Dec 08 10:45:08 IST 2016 WEB-INF/lib/aopalliance-1.0.jar
+284184 Thu Dec 08 11:18:30 IST 2016 WEB-INF/lib/commons-codec-1.10.jar
+ 61829 Thu Dec 08 10:44:32 IST 2016 WEB-INF/lib/commons-logging-1.2.jar
+ 50894 Thu Dec 08 10:45:34 IST 2016 WEB-INF/lib/jackson-annotations-2.7.0.jar
+252894 Thu Dec 08 10:45:36 IST 2016 WEB-INF/lib/jackson-core-2.7.5.jar
+1205152 Thu Dec 08 10:45:32 IST 2016 WEB-INF/lib/jackson-databind-2.7.5.jar
+ 94752 Thu Dec 08 10:45:36 IST 2016 WEB-INF/lib/jackson-dataformat-xml-2.7.5.jar
+ 34577 Thu Dec 08 10:45:38 IST 2016 WEB-INF/lib/jackson-module-jaxb-annotations-2.7.5.jar
+ 95806 Thu Dec 08 10:45:42 IST 2016 WEB-INF/lib/javax.servlet-api-3.1.0.jar
+379791 Thu Dec 08 10:44:42 IST 2016 WEB-INF/lib/spring-aop-4.3.1.RELEASE.jar
+754397 Thu Dec 08 10:44:46 IST 2016 WEB-INF/lib/spring-beans-4.3.1.RELEASE.jar
+1132904 Thu Dec 08 10:44:54 IST 2016 WEB-INF/lib/spring-context-4.3.1.RELEASE.jar
+1109894 Thu Dec 08 10:44:32 IST 2016 WEB-INF/lib/spring-core-4.3.1.RELEASE.jar
+263712 Thu Dec 08 10:44:56 IST 2016 WEB-INF/lib/spring-expression-4.3.1.RELEASE.jar
+534210 Thu Dec 08 10:45:14 IST 2016 WEB-INF/lib/spring-security-config-4.1.1.RELEASE.jar
+376168 Thu Dec 08 10:45:10 IST 2016 WEB-INF/lib/spring-security-core-4.1.1.RELEASE.jar
+359649 Thu Dec 08 10:45:06 IST 2016 WEB-INF/lib/spring-security-web-4.1.1.RELEASE.jar
+810635 Thu Dec 08 10:44:38 IST 2016 WEB-INF/lib/spring-web-4.3.1.RELEASE.jar
+913866 Thu Dec 08 10:45:02 IST 2016 WEB-INF/lib/spring-webmvc-4.3.1.RELEASE.jar
+161867 Thu Dec 08 10:45:40 IST 2016 WEB-INF/lib/stax2-api-3.1.4.jar
+  4049 Thu Dec 08 10:44:38 IST 2016 META-INF/maven/com.websystique.springmvc/SecureRESTApiWithBasicAuthentication/pom.xml
+   151 Thu Dec 08 11:19:38 IST 2016 META-INF/maven/com.websystique.springmvc/SecureRESTApiWithBasicAuthentication/pom.properties
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Samples/SecureRESTApiWithBasicAuthentication
+$ cp "E:\Working\Java\Spring\Samples\SecureRESTApiWithBasicAuthentication\target\SecureRESTApiWithBasicAuthentication.war" "C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps"
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Samples/SecureRESTApiWithBasicAuthentication
+$ mvn -Dexec.mainClass=com.websystique.springmvc.SpringRestClient -Dexec.classpathScope=test test-compile exec:java
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building SecureRESTApiWithBasicAuthentication 1.0.0
+[INFO] ------------------------------------------------------------------------
+Downloading: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.10/commons-codec-1.10.pom
+Downloaded: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.10/commons-codec-1.10.pom (12 KB at 0.7 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.10/commons-codec-1.10.jar
+Downloaded: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.10/commons-codec-1.10.jar (278 KB at 6.8 KB/sec)
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ SecureRESTApiWithBasicAuthentication ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO]
+[INFO] --- maven-compiler-plugin:3.2:compile (default-compile) @ SecureRESTApiWithBasicAuthentication ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ SecureRESTApiWithBasicAuthentication ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory E:\Working\Java\Spring\Samples\SecureRESTApiWithBasicAuthentication\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.2:testCompile (default-testCompile) @ SecureRESTApiWithBasicAuthentication ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- exec-maven-plugin:1.5.0:java (default-cli) @ SecureRESTApiWithBasicAuthentication ---
+
+Testing listAllUsers API-----------
+User : id=1, Name=Sam, Age=30, Salary=70000.0
+User : id=2, Name=Tom, Age=40, Salary=50000.0
+User : id=3, Name=Jerome, Age=45, Salary=30000.0
+User : id=4, Name=Silvia, Age=50, Salary=40000.0
+
+Testing getUser API----------
+User [id=1, name=Sam, age=30, salary=70000.0]
+
+Testing create User API----------
+Location : http://localhost:8080/SecureRESTApiWithBasicAuthentication/user/5
+
+Testing listAllUsers API-----------
+User : id=1, Name=Sam, Age=30, Salary=70000.0
+User : id=2, Name=Tom, Age=40, Salary=50000.0
+User : id=3, Name=Jerome, Age=45, Salary=30000.0
+User : id=4, Name=Silvia, Age=50, Salary=40000.0
+User : id=5, Name=Sarah, Age=51, Salary=134.0
+
+Testing update User API----------
+User [id=1, name=Tomy, age=33, salary=70000.0]
+
+Testing listAllUsers API-----------
+User : id=1, Name=Tomy, Age=33, Salary=70000.0
+User : id=2, Name=Tom, Age=40, Salary=50000.0
+User : id=3, Name=Jerome, Age=45, Salary=30000.0
+User : id=4, Name=Silvia, Age=50, Salary=40000.0
+User : id=5, Name=Sarah, Age=51, Salary=134.0
+
+Testing delete User API----------
+
+Testing listAllUsers API-----------
+User : id=1, Name=Tomy, Age=33, Salary=70000.0
+User : id=2, Name=Tom, Age=40, Salary=50000.0
+User : id=4, Name=Silvia, Age=50, Salary=40000.0
+User : id=5, Name=Sarah, Age=51, Salary=134.0
+
+Testing all delete Users API----------
+
+Testing listAllUsers API-----------
+No user exist----------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 01:05 min
+[INFO] Finished at: 2016-12-08T14:22:50+05:30
+[INFO] Final Memory: 20M/245M
+[INFO] ------------------------------------------------------------------------
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Samples/SecureRESTApiWithBasicAuthentication
+$
+

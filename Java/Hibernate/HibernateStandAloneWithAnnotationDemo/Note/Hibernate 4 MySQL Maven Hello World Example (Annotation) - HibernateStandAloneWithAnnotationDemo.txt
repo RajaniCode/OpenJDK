@@ -1,0 +1,379 @@
+#jdbc:mysql://localhost:3306
+#root
+#My$ql@Server#5.7
+
+/*
+Root Account Password: My$ql@Server#5.7
+
+MySQL User Details
+Username: aspire
+Host: localhost
+Role: DB Admin
+Authentication: MySQL
+Password: My$ql@Server#5.7.14
+*/
+
+DROP DATABASE IF EXISTS `websystique`;
+CREATE DATABASE `websystique`;
+USE `websystique`;
+
+DROP TABLE IF EXISTS `STUDENT`;
+CREATE TABLE `STUDENT`(
+   `id` INT NOT NULL auto_increment PRIMARY KEY,
+   `first_name` VARCHAR(30) NOT NULL,
+   `last_name`  VARCHAR(30) NOT NULL,
+   `section`    VARCHAR(30) NOT NULL 
+);
+
+SELECT * FROM `STUDENT`;
+
+$ mvn eclipse:eclipse
+
+
+$ mvn package
+
+
+# HibernateStandAloneWithAnnotationDemo/pom.xml
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.5.0</version>
+                <configuration>
+                    <mainClass>com.websystique.hibernate.HibernateStandAloneDemo</mainClass>
+                    <cleanupDaemonThreads>false</cleanupDaemonThreads>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+# HibernateStandAloneWithAnnotationDemo/src/main/resources/hibernate.cfg.xml # <property name="show_sql">true</property>
+
+<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/websystique</property>
+<property name="hibernate.connection.username">root</property>
+<property name="hibernate.connection.password">My$ql@Server#5.7</property>
+
+<mapping class="com.websystique.hibernate.HibernateStandAloneDemo"></mapping>
+
+$ cd "E:\Working\Java\Hibernate\Samples\HibernateStandAloneWithAnnotationDemo"
+
+$ mvn eclipse:eclipse
+
+
+$ mvn package
+
+
+$ mvn exec:java
+
+
+# Git Bash
+
+Aspire@Acer MINGW64 /
+$ java -version
+java version "1.8.0_102"
+Java(TM) SE Runtime Environment (build 1.8.0_102-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.102-b14, mixed mode)
+
+Aspire@Acer MINGW64 /
+$ mvn -version
+Apache Maven 3.3.9 (bb52d8502b132ec0a5a3f4c09453c07478323dc5; 2015-11-10T22:11:47+05:30)
+Maven home: C:\Program Files\Apache Software Foundation\apache-maven-3.3.9
+Java version: 1.8.0_102, vendor: Oracle Corporation
+Java home: C:\Program Files\Java\jdk1.8.0_102\jre
+Default locale: en_US, platform encoding: Cp1252
+OS name: "windows 8.1", version: "6.3", arch: "amd64", family: "dos"
+
+Aspire@Acer MINGW64 /
+$ winpty mysql -u root -p
+Enter password: ****************
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 31
+Server version: 5.7.14-log MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2016, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> SELECT VERSION();
++------------+
+| VERSION()  |
++------------+
+| 5.7.14-log |
++------------+
+1 row in set (0.00 sec)
+
+mysql> quit;
+Bye
+
+Aspire@Acer MINGW64 /
+$ cd "E:\Working\Java\Hibernate\Samples\HibernateStandAloneWithAnnotationDemo"
+
+Aspire@Acer MINGW64 /e/Working/Java/Hibernate/Samples/HibernateStandAloneWithAnnotationDemo
+$ mvn eclipse:eclipse
+
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building HibernateStandAloneWithAnnotationDemo 1.0.0
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] >>> maven-eclipse-plugin:2.10:eclipse (default-cli) > generate-resources @ HibernateStandAloneWithAnnotationDemo >>>
+[INFO]
+[INFO] <<< maven-eclipse-plugin:2.10:eclipse (default-cli) < generate-resources @ HibernateStandAloneWithAnnotationDemo <<<
+[INFO]
+[INFO] --- maven-eclipse-plugin:2.10:eclipse (default-cli) @ HibernateStandAloneWithAnnotationDemo ---
+[INFO] Using Eclipse Workspace: null
+[INFO] Adding default classpath container: org.eclipse.jdt.launching.JRE_CONTAINER
+[INFO] Not writing settings - defaults suffice
+[INFO] File E:\Working\Java\Hibernate\Samples\HibernateStandAloneWithAnnotationDemo\.project already exists.
+       Additional settings will be preserved, run mvn eclipse:clean if you want old settings to be removed.
+[INFO] Wrote Eclipse project for "HibernateStandAloneWithAnnotationDemo" to E:\Working\Java\Hibernate\Samples\HibernateStandAloneWithAnnotationDemo.
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 2.922 s
+[INFO] Finished at: 2016-11-06T14:09:14+05:30
+[INFO] Final Memory: 13M/309M
+[INFO] ------------------------------------------------------------------------
+
+Aspire@Acer MINGW64 /e/Working/Java/Hibernate/Samples/HibernateStandAloneWithAnnotationDemo
+$ mvn package
+
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building HibernateStandAloneWithAnnotationDemo 1.0.0
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ HibernateStandAloneWithAnnotationDemo ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 1 resource
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ HibernateStandAloneWithAnnotationDemo ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 3 source files to E:\Working\Java\Hibernate\Samples\HibernateStandAloneWithAnnotationDemo\target\classes
+[WARNING] /E:/Working/Java/Hibernate/Samples/HibernateStandAloneWithAnnotationDemo/src/main/java/com/websystique/hibernate/HibernateUtil.java: E:\Working\Java\Hibernate\Samples\HibernateStandAloneWithAnnotationDemo\src\main\java\com\websystique\hibernate\HibernateUtil.java uses or overrides a deprecated API.
+[WARNING] /E:/Working/Java/Hibernate/Samples/HibernateStandAloneWithAnnotationDemo/src/main/java/com/websystique/hibernate/HibernateUtil.java: Recompile with -Xlint:deprecation for details.
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ HibernateStandAloneWithAnnotationDemo ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory E:\Working\Java\Hibernate\Samples\HibernateStandAloneWithAnnotationDemo\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ HibernateStandAloneWithAnnotationDemo ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ HibernateStandAloneWithAnnotationDemo ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ HibernateStandAloneWithAnnotationDemo ---
+[INFO] Building jar: E:\Working\Java\Hibernate\Samples\HibernateStandAloneWithAnnotationDemo\target\HibernateStandAloneWithAnnotationDemo-1.0.0.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 4.641 s
+[INFO] Finished at: 2016-11-06T14:09:42+05:30
+[INFO] Final Memory: 17M/263M
+[INFO] ------------------------------------------------------------------------
+
+Aspire@Acer MINGW64 /e/Working/Java/Hibernate/Samples/HibernateStandAloneWithAnnotationDemo
+$ mvn eclipse:eclipse
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building HibernateStandAloneWithAnnotationDemo 1.0.0
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] >>> maven-eclipse-plugin:2.10:eclipse (default-cli) > generate-resources @ HibernateStandAloneWithAnnotationDemo >>>
+[INFO]
+[INFO] <<< maven-eclipse-plugin:2.10:eclipse (default-cli) < generate-resources @ HibernateStandAloneWithAnnotationDemo <<<
+[INFO]
+[INFO] --- maven-eclipse-plugin:2.10:eclipse (default-cli) @ HibernateStandAloneWithAnnotationDemo ---
+[INFO] Using Eclipse Workspace: null
+[INFO] Adding default classpath container: org.eclipse.jdt.launching.JRE_CONTAINER
+[INFO] Not writing settings - defaults suffice
+[INFO] File E:\Working\Java\Hibernate\Samples\HibernateStandAloneWithAnnotationDemo\.project already exists.
+       Additional settings will be preserved, run mvn eclipse:clean if you want old settings to be removed.
+[INFO] Wrote Eclipse project for "HibernateStandAloneWithAnnotationDemo" to E:\Working\Java\Hibernate\Samples\HibernateStandAloneWithAnnotationDemo.
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 2.844 s
+[INFO] Finished at: 2016-11-06T14:13:39+05:30
+[INFO] Final Memory: 12M/245M
+[INFO] ------------------------------------------------------------------------
+
+Aspire@Acer MINGW64 /e/Working/Java/Hibernate/Samples/HibernateStandAloneWithAnnotationDemo
+$ mvn package
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building HibernateStandAloneWithAnnotationDemo 1.0.0
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ HibernateStandAloneWithAnnotationDemo ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 1 resource
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ HibernateStandAloneWithAnnotationDemo ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ HibernateStandAloneWithAnnotationDemo ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory E:\Working\Java\Hibernate\Samples\HibernateStandAloneWithAnnotationDemo\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ HibernateStandAloneWithAnnotationDemo ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ HibernateStandAloneWithAnnotationDemo ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ HibernateStandAloneWithAnnotationDemo ---
+[INFO] Building jar: E:\Working\Java\Hibernate\Samples\HibernateStandAloneWithAnnotationDemo\target\HibernateStandAloneWithAnnotationDemo-1.0.0.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 2.938 s
+[INFO] Finished at: 2016-11-06T14:13:49+05:30
+[INFO] Final Memory: 10M/245M
+[INFO] ------------------------------------------------------------------------
+
+Aspire@Acer MINGW64 /e/Working/Java/Hibernate/Samples/HibernateStandAloneWithAnnotationDemo
+$ mvn exec:java
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building HibernateStandAloneWithAnnotationDemo 1.0.0
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- exec-maven-plugin:1.5.0:java (default-cli) @ HibernateStandAloneWithAnnotationDemo ---
+Nov 06, 2016 2:14:27 PM org.hibernate.annotations.common.reflection.java.JavaReflectionManager <clinit>
+INFO: HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+Nov 06, 2016 2:14:27 PM org.hibernate.Version logVersion
+INFO: HHH000412: Hibernate Core {4.3.6.Final}
+Nov 06, 2016 2:14:27 PM org.hibernate.cfg.Environment <clinit>
+INFO: HHH000206: hibernate.properties not found
+Nov 06, 2016 2:14:27 PM org.hibernate.cfg.Environment buildBytecodeProvider
+INFO: HHH000021: Bytecode provider name : javassist
+Nov 06, 2016 2:14:27 PM org.hibernate.cfg.Configuration configure
+INFO: HHH000043: Configuring from resource: /hibernate.cfg.xml
+Nov 06, 2016 2:14:27 PM org.hibernate.cfg.Configuration getConfigurationInputStream
+INFO: HHH000040: Configuration resource: /hibernate.cfg.xml
+Nov 06, 2016 2:14:27 PM org.hibernate.cfg.Configuration doConfigure
+INFO: HHH000041: Configured SessionFactory: null
+Nov 06, 2016 2:14:28 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+WARN: HHH000402: Using Hibernate built-in connection pool (not for production use!)
+Nov 06, 2016 2:14:28 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/websystique]
+Nov 06, 2016 2:14:28 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH000046: Connection properties: {user=root, password=****}
+Nov 06, 2016 2:14:28 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH000006: Autocommit mode: false
+Nov 06, 2016 2:14:28 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000115: Hibernate connection pool size: 20 (min=1)
+Nov 06, 2016 2:14:29 PM org.hibernate.dialect.Dialect <init>
+INFO: HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+Nov 06, 2016 2:14:29 PM org.hibernate.engine.transaction.internal.TransactionFactoryInitiator initiateService
+INFO: HHH000399: Using default transaction strategy (direct JDBC transactions)
+Nov 06, 2016 2:14:29 PM org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory <init>
+INFO: HHH000397: Using ASTQueryTranslatorFactory
+Hibernate:
+    insert
+    into
+        STUDENT
+        (FIRST_NAME, LAST_NAME, SECTION)
+    values
+        (?, ?, ?)
+Hibernate:
+    insert
+    into
+        STUDENT
+        (FIRST_NAME, LAST_NAME, SECTION)
+    values
+        (?, ?, ?)
+Hibernate:
+    insert
+    into
+        STUDENT
+        (FIRST_NAME, LAST_NAME, SECTION)
+    values
+        (?, ?, ?)
+Hibernate:
+    insert
+    into
+        STUDENT
+        (FIRST_NAME, LAST_NAME, SECTION)
+    values
+        (?, ?, ?)
+Hibernate:
+    select
+        student0_.id as id1_0_,
+        student0_.FIRST_NAME as FIRST_NA2_0_,
+        student0_.LAST_NAME as LAST_NAM3_0_,
+        student0_.SECTION as SECTION4_0_
+    from
+        STUDENT student0_
+    order by
+        student0_.FIRST_NAME ASC
+List of all persisted students >>>
+Persisted Student :Student [id=4, firstName=Bill, lastName=Laurent, section=Maths]
+Persisted Student :Student [id=2, firstName=Joshua, lastName=Brill, section=Science]
+Persisted Student :Student [id=3, firstName=Peter, lastName=Pan, section=Physics]
+Persisted Student :Student [id=1, firstName=Sam, lastName=Disilva, section=Maths]
+Hibernate:
+    select
+        student0_.id as id1_0_0_,
+        student0_.FIRST_NAME as FIRST_NA2_0_0_,
+        student0_.LAST_NAME as LAST_NAM3_0_0_,
+        student0_.SECTION as SECTION4_0_0_
+    from
+        STUDENT student0_
+    where
+        student0_.id=?
+Hibernate:
+    update
+        STUDENT
+    set
+        FIRST_NAME=?,
+        LAST_NAME=?,
+        SECTION=?
+    where
+        id=?
+Hibernate:
+    select
+        student0_.id as id1_0_0_,
+        student0_.FIRST_NAME as FIRST_NA2_0_0_,
+        student0_.LAST_NAME as LAST_NAM3_0_0_,
+        student0_.SECTION as SECTION4_0_0_
+    from
+        STUDENT student0_
+    where
+        student0_.id=?
+Hibernate:
+    delete
+    from
+        STUDENT
+    where
+        id=?
+Hibernate:
+    select
+        student0_.id as id1_0_,
+        student0_.FIRST_NAME as FIRST_NA2_0_,
+        student0_.LAST_NAME as LAST_NAM3_0_,
+        student0_.SECTION as SECTION4_0_
+    from
+        STUDENT student0_
+    order by
+        student0_.FIRST_NAME ASC
+List of all remained persisted students >>>
+Persisted Student :Student [id=4, firstName=Bill, lastName=Laurent, section=ARTS]
+Persisted Student :Student [id=3, firstName=Peter, lastName=Pan, section=Physics]
+Persisted Student :Student [id=1, firstName=Sam, lastName=Disilva, section=Maths]

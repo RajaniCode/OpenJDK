@@ -1,0 +1,149 @@
+
+$ java -version
+
+$ mvn -v
+
+
+# SPRING INITIALIZR
+
+http://start.spring.io/
+http://start.spring.io/#
+
+Generate a Maven Project with Spring Boot 1.4.2
+
+Project Metadata
+[Artifact coordinates]
+Group 
+com.example
+Artifact 
+demo
+
+Dependencies
+[Search via autocomplete [http://start.spring.io/] or Select check boxes [http://start.spring.io/#]]
+Web
+JPA
+H2
+
+Generate Project <alt + enter>
+
+Unzip demo.zip
+
+# pom.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.example</groupId>
+	<artifactId>demo</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>demo</name>
+	<description>Demo project for Spring Boot</description>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.4.2.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+
+</project>
+
+# src/main/java/com/example/DemoApplication.java
+package com.example;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class DemoApplication {
+
+	public static void main(String[] args) {
+                System.out.println("This is a demo."); //
+		SpringApplication.run(DemoApplication.class, args);
+	}
+}
+
+
+$ cd "E:\Working\Java\Spring\Spring-REST\Spring-REST-Services\demo"
+
+$ mvn package
+
+[services.msc Stop Tomcat]
+$ mvn spring-boot:run
+
+http://localhost:8080/
+404
+
+$ jar tvf target/demo-0.0.1-SNAPSHOT.jar
+
+$ java -jar target/demo-0.0.1-SNAPSHOT.jar
+
+http://localhost:8080/
+404
+
+# http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#howto-change-the-http-port
+
+$ java -jar target/demo-0.0.1-SNAPSHOT.jar --server.port=8181
+
+http://localhost:8181/
+404
+
+# OR
+
+# src/main/resources/application.properties
+
+server.port=8181
+
+$ mvn package
+
+$ mvn spring-boot:run
+
+http://localhost:8181/
+
+$ jar tvf target/demo-0.0.1-SNAPSHOT.jar
+
+$ java -jar target/demo-0.0.1-SNAPSHOT.jar
+
+http://localhost:8181/
+404

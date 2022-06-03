@@ -1,0 +1,243 @@
+
+Aspire@Acer MINGW64 /
+$ java -version
+java version "1.8.0_102"
+Java(TM) SE Runtime Environment (build 1.8.0_102-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.102-b14, mixed mode)
+
+Aspire@Acer MINGW64 /
+$ mvn -v
+Apache Maven 3.3.9 (bb52d8502b132ec0a5a3f4c09453c07478323dc5; 2015-11-10T22:11:47+05:30)
+Maven home: C:\Program Files\Apache Software Foundation\apache-maven-3.3.9
+Java version: 1.8.0_102, vendor: Oracle Corporation
+Java home: C:\Program Files\Java\jdk1.8.0_102\jre
+Default locale: en_US, platform encoding: Cp1252
+OS name: "windows 8.1", version: "6.3", arch: "amd64", family: "dos"
+
+Aspire@Acer MINGW64 /
+$ cd "E:\Working\Java\Spring\Spring-REST\Spring-RESTful-Web-Service"
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-REST/Spring-RESTful-Web-Service
+$ mkdir -p src/main/java/hello
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-REST/Spring-RESTful-Web-Service
+$ touch pom.xml
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-REST/Spring-RESTful-Web-Service
+$ touch src/main/java/hello/Greeting.java
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-REST/Spring-RESTful-Web-Service
+$ touch src/main/java/hello/GreetingController.java
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-REST/Spring-RESTful-Web-Service
+$ touch src/main/java/hello/Application.java
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-REST/Spring-RESTful-Web-Service
+$ mvn package
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building gs-rest-service 0.1.0
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gs-rest-service ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory E:\Working\Java\Spring\Spring-REST\Spring-RESTful-Web-Service\src\main\resources
+[INFO] skip non existing resourceDirectory E:\Working\Java\Spring\Spring-REST\Spring-RESTful-Web-Service\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ gs-rest-service ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 3 source files to E:\Working\Java\Spring\Spring-REST\Spring-RESTful-Web-Service\target\classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ gs-rest-service ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory E:\Working\Java\Spring\Spring-REST\Spring-RESTful-Web-Service\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ gs-rest-service ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ gs-rest-service ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:2.6:jar (default-jar) @ gs-rest-service ---
+[INFO] Building jar: E:\Working\Java\Spring\Spring-REST\Spring-RESTful-Web-Service\target\gs-rest-service-0.1.0.jar
+[INFO]
+[INFO] --- spring-boot-maven-plugin:1.4.2.RELEASE:repackage (default) @ gs-rest-service ---
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 8.605 s
+[INFO] Finished at: 2016-12-07T09:41:40+05:30
+[INFO] Final Memory: 28M/309M
+[INFO] ------------------------------------------------------------------------
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-REST/Spring-RESTful-Web-Service
+$ mvn dependency:tree
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building gs-rest-service 0.1.0
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-dependency-plugin:2.10:tree (default-cli) @ gs-rest-service ---
+[INFO] org.springframework:gs-rest-service:jar:0.1.0
+[INFO] +- org.springframework.boot:spring-boot-starter-web:jar:1.4.2.RELEASE:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter:jar:1.4.2.RELEASE:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot:jar:1.4.2.RELEASE:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-autoconfigure:jar:1.4.2.RELEASE:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-starter-logging:jar:1.4.2.RELEASE:compile
+[INFO] |  |  |  +- ch.qos.logback:logback-classic:jar:1.1.7:compile
+[INFO] |  |  |  |  \- ch.qos.logback:logback-core:jar:1.1.7:compile
+[INFO] |  |  |  +- org.slf4j:jcl-over-slf4j:jar:1.7.21:compile
+[INFO] |  |  |  +- org.slf4j:jul-to-slf4j:jar:1.7.21:compile
+[INFO] |  |  |  \- org.slf4j:log4j-over-slf4j:jar:1.7.21:compile
+[INFO] |  |  \- org.yaml:snakeyaml:jar:1.17:runtime
+[INFO] |  +- org.springframework.boot:spring-boot-starter-tomcat:jar:1.4.2.RELEASE:compile
+[INFO] |  |  +- org.apache.tomcat.embed:tomcat-embed-core:jar:8.5.6:compile
+[INFO] |  |  +- org.apache.tomcat.embed:tomcat-embed-el:jar:8.5.6:compile
+[INFO] |  |  \- org.apache.tomcat.embed:tomcat-embed-websocket:jar:8.5.6:compile
+[INFO] |  +- org.hibernate:hibernate-validator:jar:5.2.4.Final:compile
+[INFO] |  |  +- javax.validation:validation-api:jar:1.1.0.Final:compile
+[INFO] |  |  +- org.jboss.logging:jboss-logging:jar:3.3.0.Final:compile
+[INFO] |  |  \- com.fasterxml:classmate:jar:1.3.3:compile
+[INFO] |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.8.4:compile
+[INFO] |  |  +- com.fasterxml.jackson.core:jackson-annotations:jar:2.8.4:compile
+[INFO] |  |  \- com.fasterxml.jackson.core:jackson-core:jar:2.8.4:compile
+[INFO] |  +- org.springframework:spring-web:jar:4.3.4.RELEASE:compile
+[INFO] |  |  +- org.springframework:spring-aop:jar:4.3.4.RELEASE:compile
+[INFO] |  |  +- org.springframework:spring-beans:jar:4.3.4.RELEASE:compile
+[INFO] |  |  \- org.springframework:spring-context:jar:4.3.4.RELEASE:compile
+[INFO] |  \- org.springframework:spring-webmvc:jar:4.3.4.RELEASE:compile
+[INFO] |     \- org.springframework:spring-expression:jar:4.3.4.RELEASE:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-test:jar:1.4.2.RELEASE:test
+[INFO] |  +- org.springframework.boot:spring-boot-test:jar:1.4.2.RELEASE:test
+[INFO] |  +- org.springframework.boot:spring-boot-test-autoconfigure:jar:1.4.2.RELEASE:test
+[INFO] |  +- junit:junit:jar:4.12:test
+[INFO] |  +- org.assertj:assertj-core:jar:2.5.0:test
+[INFO] |  +- org.mockito:mockito-core:jar:1.10.19:test
+[INFO] |  |  \- org.objenesis:objenesis:jar:2.1:test
+[INFO] |  +- org.hamcrest:hamcrest-core:jar:1.3:test
+[INFO] |  +- org.hamcrest:hamcrest-library:jar:1.3:test
+[INFO] |  +- org.skyscreamer:jsonassert:jar:1.3.0:test
+[INFO] |  |  \- org.json:json:jar:20140107:test
+[INFO] |  +- org.springframework:spring-core:jar:4.3.4.RELEASE:compile
+[INFO] |  \- org.springframework:spring-test:jar:4.3.4.RELEASE:test
+[INFO] \- com.jayway.jsonpath:json-path:jar:2.2.0:test
+[INFO]    +- net.minidev:json-smart:jar:2.2.1:test
+[INFO]    |  \- net.minidev:accessors-smart:jar:1.1:test
+[INFO]    |     \- org.ow2.asm:asm:jar:5.0.3:test
+[INFO]    \- org.slf4j:slf4j-api:jar:1.7.21:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 4.344 s
+[INFO] Finished at: 2016-12-07T09:42:53+05:30
+[INFO] Final Memory: 21M/309M
+[INFO] ------------------------------------------------------------------------
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-REST/Spring-RESTful-Web-Service
+$ mvn spring-boot:run
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building gs-rest-service 0.1.0
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] >>> spring-boot-maven-plugin:1.4.2.RELEASE:run (default-cli) > test-compile @ gs-rest-service >>>
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gs-rest-service ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory E:\Working\Java\Spring\Spring-REST\Spring-RESTful-Web-Service\src\main\resources
+[INFO] skip non existing resourceDirectory E:\Working\Java\Spring\Spring-REST\Spring-RESTful-Web-Service\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ gs-rest-service ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ gs-rest-service ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory E:\Working\Java\Spring\Spring-REST\Spring-RESTful-Web-Service\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ gs-rest-service ---
+[INFO] No sources to compile
+[INFO]
+[INFO] <<< spring-boot-maven-plugin:1.4.2.RELEASE:run (default-cli) < test-compile @ gs-rest-service <<<
+[INFO]
+[INFO] --- spring-boot-maven-plugin:1.4.2.RELEASE:run (default-cli) @ gs-rest-service ---
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.4.2.RELEASE)
+
+2016-12-07 09:43:09.209  INFO 5864 --- [           main] hello.Application                        : Starting Application on Acer with PID 5864 (E:\Working\Java\Spring\Spring-REST\Spring-RESTful-Web-Service\target\classes started by Aspire in E:\Working\Java\Spring\Spring-REST\Spring-RESTful-Web-Service)
+2016-12-07 09:43:09.209  INFO 5864 --- [           main] hello.Application                        : No active profile set, falling back to default profiles: default
+2016-12-07 09:43:09.381  INFO 5864 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4d993f90: startup date [Wed Dec 07 09:43:09 IST 2016]; root of context hierarchy
+2016-12-07 09:43:13.552  INFO 5864 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-12-07 09:43:13.584  INFO 5864 --- [           main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-12-07 09:43:13.584  INFO 5864 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-12-07 09:43:13.787  INFO 5864 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-12-07 09:43:13.787  INFO 5864 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4422 ms
+2016-12-07 09:43:14.193  INFO 5864 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-12-07 09:43:14.209  INFO 5864 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-12-07 09:43:14.209  INFO 5864 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-12-07 09:43:14.209  INFO 5864 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-12-07 09:43:14.209  INFO 5864 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-12-07 09:43:15.091  INFO 5864 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4d993f90: startup date [Wed Dec 07 09:43:09 IST 2016]; root of context hierarchy
+2016-12-07 09:43:15.294  INFO 5864 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/greeting]}" onto public hello.Greeting hello.GreetingController.greeting(java.lang.String)
+2016-12-07 09:43:15.310  INFO 5864 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-12-07 09:43:15.310  INFO 5864 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-12-07 09:43:15.388  INFO 5864 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-07 09:43:15.388  INFO 5864 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-07 09:43:15.497  INFO 5864 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-07 09:43:15.929  INFO 5864 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-12-07 09:43:16.083  INFO 5864 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-12-07 09:43:16.095  INFO 5864 --- [           main] hello.Application                        : Started Application in 8.307 seconds (JVM running for 15.315)
+2016-12-07 09:43:25.876  INFO 5864 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-12-07 09:43:25.877  INFO 5864 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-12-07 09:43:25.926  INFO 5864 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 49 ms
+
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-REST/Spring-RESTful-Web-Service
+$ java -jar target/gs-rest-service-0.1.0.jar
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.4.2.RELEASE)
+
+2016-12-07 09:46:33.612  INFO 5944 --- [           main] hello.Application                        : Starting Application v0.1.0 on Acer with PID 5944 (E:\Working\Java\Spring\Spring-REST\Spring-RESTful-Web-Service\target\gs-rest-service-0.1.0.jar started by Aspire in E:\Working\Java\Spring\Spring-REST\Spring-RESTful-Web-Service)
+2016-12-07 09:46:33.627  INFO 5944 --- [           main] hello.Application                        : No active profile set, falling back to default profiles: default
+2016-12-07 09:46:34.002  INFO 5944 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@69663380: startup date [Wed Dec 07 09:46:33 IST 2016]; root of context hierarchy
+2016-12-07 09:46:39.077  INFO 5944 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-12-07 09:46:39.109  INFO 5944 --- [           main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-12-07 09:46:39.124  INFO 5944 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2016-12-07 09:46:39.374  INFO 5944 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-12-07 09:46:39.374  INFO 5944 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5387 ms
+2016-12-07 09:46:39.977  INFO 5944 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-12-07 09:46:39.989  INFO 5944 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-12-07 09:46:39.990  INFO 5944 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-12-07 09:46:39.990  INFO 5944 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-12-07 09:46:39.991  INFO 5944 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-12-07 09:46:41.281  INFO 5944 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@69663380: startup date [Wed Dec 07 09:46:33 IST 2016]; root of context hierarchy
+2016-12-07 09:46:41.571  INFO 5944 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/greeting]}" onto public hello.Greeting hello.GreetingController.greeting(java.lang.String)
+2016-12-07 09:46:41.587  INFO 5944 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-12-07 09:46:41.588  INFO 5944 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-12-07 09:46:41.711  INFO 5944 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-07 09:46:41.712  INFO 5944 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-07 09:46:41.879  INFO 5944 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-07 09:46:42.654  INFO 5944 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-12-07 09:46:42.918  INFO 5944 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-12-07 09:46:42.940  INFO 5944 --- [           main] hello.Application                        : Started Application in 10.918 seconds (JVM running for 12.12)
+2016-12-07 09:46:43.139  INFO 5944 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-12-07 09:46:43.140  INFO 5944 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-12-07 09:46:43.229  INFO 5944 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 88 ms
+
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-REST/Spring-RESTful-Web-Service
+$

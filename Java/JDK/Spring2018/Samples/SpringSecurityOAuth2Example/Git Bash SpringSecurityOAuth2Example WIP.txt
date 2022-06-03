@@ -1,0 +1,231 @@
+
+Rajani@RajaniSamsungPC MINGW64 /
+$ java -version
+java version "10.0.2" 2018-07-17
+Java(TM) SE Runtime Environment 18.3 (build 10.0.2+13)
+Java HotSpot(TM) 64-Bit Server VM 18.3 (build 10.0.2+13, mixed mode)
+
+Rajani@RajaniSamsungPC MINGW64 /
+$ mvn -v
+Apache Maven 3.5.4 (1edded0938998edf8bf061f1ceb3cfdeccf443fe; 2018-06-18T00:03:14+05:30)
+Maven home: C:\Program Files\Apache Software Foundation\apache-maven-3.5.4
+Java version: 10.0.2, vendor: Oracle Corporation, runtime: C:\Program Files\Java\jdk-10.0.2
+Default locale: en_US, platform encoding: Cp1252
+OS name: "windows 8", version: "6.2", arch: "amd64", family: "windows"
+
+Rajani@RajaniSamsungPC MINGW64 /
+$ cd "C:\Users\Rajani\Desktop\2018\Working\Java\Spring\Samples\SpringSecurityOAuth2Example\SpringSecurityOAuth2Example"
+
+Rajani@RajaniSamsungPC MINGW64 ~/Desktop/2018/Working/Java/Spring/Samples/SpringSecurityOAuth2Example/SpringSecurityOAuth2Example
+$ mvn package
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ----------< com.rajani.springmvc:SpringSecurityOAuth2Example >----------
+[INFO] Building SpringSecurityOAuth2Example 1.0.0
+[INFO] --------------------------------[ war ]---------------------------------
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/security/oauth/spring-security-oauth2/2.0.10.RELEASE/spring-security-oauth2-2.0.10.RELEASE.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/security/oauth/spring-security-oauth2/2.0.10.RELEASE/spring-security-oauth2-2.0.10.RELEASE.pom (6.2 kB at 2.2 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/security/oauth/spring-security-oauth-parent/2.0.10.RELEASE/spring-security-oauth-parent-2.0.10.RELEASE.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/security/oauth/spring-security-oauth-parent/2.0.10.RELEASE/spring-security-oauth-parent-2.0.10.RELEASE.pom (16 kB at 20 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-beans/4.0.9.RELEASE/spring-beans-4.0.9.RELEASE.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-beans/4.0.9.RELEASE/spring-beans-4.0.9.RELEASE.pom (2.3 kB at 4.3 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-core/4.0.9.RELEASE/spring-core-4.0.9.RELEASE.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-core/4.0.9.RELEASE/spring-core-4.0.9.RELEASE.pom (2.3 kB at 4.4 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.pom (18 kB at 31 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-context/4.0.9.RELEASE/spring-context-4.0.9.RELEASE.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-context/4.0.9.RELEASE/spring-context-4.0.9.RELEASE.pom (4.8 kB at 9.1 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-aop/4.0.9.RELEASE/spring-aop-4.0.9.RELEASE.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-aop/4.0.9.RELEASE/spring-aop-4.0.9.RELEASE.pom (2.7 kB at 5.0 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-expression/4.0.9.RELEASE/spring-expression-4.0.9.RELEASE.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-expression/4.0.9.RELEASE/spring-expression-4.0.9.RELEASE.pom (1.7 kB at 3.2 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-webmvc/4.0.9.RELEASE/spring-webmvc-4.0.9.RELEASE.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-webmvc/4.0.9.RELEASE/spring-webmvc-4.0.9.RELEASE.pom (11 kB at 20 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-web/4.0.9.RELEASE/spring-web-4.0.9.RELEASE.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-web/4.0.9.RELEASE/spring-web-4.0.9.RELEASE.pom (6.2 kB at 12 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-core/3.2.8.RELEASE/spring-security-core-3.2.8.RELEASE.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-core/3.2.8.RELEASE/spring-security-core-3.2.8.RELEASE.pom (8.7 kB at 8.4 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-aop/3.2.13.RELEASE/spring-aop-3.2.13.RELEASE.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-aop/3.2.13.RELEASE/spring-aop-3.2.13.RELEASE.pom (2.5 kB at 2.8 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-beans/3.2.13.RELEASE/spring-beans-3.2.13.RELEASE.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-beans/3.2.13.RELEASE/spring-beans-3.2.13.RELEASE.pom (1.9 kB at 2.2 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-core/3.2.13.RELEASE/spring-core-3.2.13.RELEASE.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-core/3.2.13.RELEASE/spring-core-3.2.13.RELEASE.pom (2.2 kB at 2.8 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-context/3.2.13.RELEASE/spring-context-3.2.13.RELEASE.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-context/3.2.13.RELEASE/spring-context-3.2.13.RELEASE.pom (4.9 kB at 9.2 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-expression/3.2.13.RELEASE/spring-expression-3.2.13.RELEASE.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-expression/3.2.13.RELEASE/spring-expression-3.2.13.RELEASE.pom (1.6 kB at 2.9 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-config/3.2.8.RELEASE/spring-security-config-3.2.8.RELEASE.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-config/3.2.8.RELEASE/spring-security-config-3.2.8.RELEASE.pom (13 kB at 23 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-web/3.2.8.RELEASE/spring-security-web-3.2.8.RELEASE.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-web/3.2.8.RELEASE/spring-security-web-3.2.8.RELEASE.pom (7.7 kB at 14 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-web/3.2.13.RELEASE/spring-web-3.2.13.RELEASE.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-web/3.2.13.RELEASE/spring-web-3.2.13.RELEASE.pom (7.0 kB at 13 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.9/commons-codec-1.9.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.9/commons-codec-1.9.pom (12 kB at 19 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/32/commons-parent-32.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/32/commons-parent-32.pom (53 kB at 68 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.pom (1.5 kB at 2.8 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.pom (1.3 kB at 2.4 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/security/oauth/spring-security-oauth2/2.0.10.RELEASE/spring-security-oauth2-2.0.10.RELEASE.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.jar
+Downloading from central: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.9/commons-codec-1.9.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.jar (232 kB at 225 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.9/commons-codec-1.9.jar (264 kB at 95 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.jar (781 kB at 259 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/security/oauth/spring-security-oauth2/2.0.10.RELEASE/spring-security-oauth2-2.0.10.RELEASE.jar (454 kB at 133 kB/s)
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ SpringSecurityOAuth2Example ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO]
+[INFO] --- maven-compiler-plugin:3.2:compile (default-compile) @ SpringSecurityOAuth2Example ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 13 source files to C:\Users\Rajani\Desktop\2018\Working\Java\Spring\Samples\SpringSecurityOAuth2Example\SpringSecurityOAuth2Example\target\classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ SpringSecurityOAuth2Example ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\Rajani\Desktop\2018\Working\Java\Spring\Samples\SpringSecurityOAuth2Example\SpringSecurityOAuth2Example\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.2:testCompile (default-testCompile) @ SpringSecurityOAuth2Example ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to C:\Users\Rajani\Desktop\2018\Working\Java\Spring\Samples\SpringSecurityOAuth2Example\SpringSecurityOAuth2Example\target\test-classes
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ SpringSecurityOAuth2Example ---
+[INFO]
+[INFO] --- maven-war-plugin:2.4:war (default-war) @ SpringSecurityOAuth2Example ---
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.thoughtworks.xstream.converters.collections.TreeMapConverter (file:/C:/Users/Rajani/.m2/repository/com/thoughtworks/xstream/xstream/1.4.2/xstream-1.4.2.jar) to field java.util.TreeMap.comparator
+WARNING: Please consider reporting this to the maintainers of com.thoughtworks.xstream.converters.collections.TreeMapConverter
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[INFO] Packaging webapp
+[INFO] Assembling webapp [SpringSecurityOAuth2Example] in [C:\Users\Rajani\Desktop\2018\Working\Java\Spring\Samples\SpringSecurityOAuth2Example\SpringSecurityOAuth2Example\target\SpringSecurityOAuth2Example]
+[INFO] Processing war project
+[INFO] Copying webapp resources [C:\Users\Rajani\Desktop\2018\Working\Java\Spring\Samples\SpringSecurityOAuth2Example\SpringSecurityOAuth2Example\src\main\webapp]
+[INFO] Webapp assembled in [625 msecs]
+[INFO] Building war: C:\Users\Rajani\Desktop\2018\Working\Java\Spring\Samples\SpringSecurityOAuth2Example\SpringSecurityOAuth2Example\target\SpringSecurityOAuth2Example.war
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 27.502 s
+[INFO] Finished at: 2018-09-23T20:04:59+05:30
+[INFO] ------------------------------------------------------------------------
+
+Rajani@RajaniSamsungPC MINGW64 ~/Desktop/2018/Working/Java/Spring/Samples/SpringSecurityOAuth2Example/SpringSecurityOAuth2Example
+$ jar tvf target/SpringSecurityOAuth2Example.war
+     0 Sun Sep 23 20:05:00 IST 2018 META-INF/
+   129 Sun Sep 23 20:04:58 IST 2018 META-INF/MANIFEST.MF
+     0 Sun Sep 23 20:05:00 IST 2018 WEB-INF/
+     0 Sun Sep 23 20:05:00 IST 2018 WEB-INF/classes/
+     0 Sun Sep 23 20:05:00 IST 2018 WEB-INF/classes/com/
+     0 Sun Sep 23 20:05:00 IST 2018 WEB-INF/classes/com/rajani/
+     0 Sun Sep 23 20:05:00 IST 2018 WEB-INF/classes/com/rajani/springmvc/
+     0 Sun Sep 23 20:05:00 IST 2018 WEB-INF/classes/com/rajani/springmvc/configuration/
+     0 Sun Sep 23 20:05:00 IST 2018 WEB-INF/classes/com/rajani/springmvc/controller/
+     0 Sun Sep 23 20:05:00 IST 2018 WEB-INF/classes/com/rajani/springmvc/model/
+     0 Sun Sep 23 20:05:00 IST 2018 WEB-INF/classes/com/rajani/springmvc/security/
+     0 Sun Sep 23 20:05:00 IST 2018 WEB-INF/classes/com/rajani/springmvc/service/
+     0 Sun Sep 23 20:05:00 IST 2018 WEB-INF/lib/
+  1927 Sun Sep 23 20:04:58 IST 2018 WEB-INF/classes/com/rajani/springmvc/configuration/CORSFilter.class
+   639 Sun Sep 23 20:04:58 IST 2018 WEB-INF/classes/com/rajani/springmvc/configuration/HelloWorldConfiguration.class
+  1164 Sun Sep 23 20:04:58 IST 2018 WEB-INF/classes/com/rajani/springmvc/configuration/HelloWorldInitializer.class
+  5806 Sun Sep 23 20:04:58 IST 2018 WEB-INF/classes/com/rajani/springmvc/controller/HelloWorldRestController.class
+  1813 Sun Sep 23 20:04:58 IST 2018 WEB-INF/classes/com/rajani/springmvc/model/AuthTokenInfo.class
+  2190 Sun Sep 23 20:04:58 IST 2018 WEB-INF/classes/com/rajani/springmvc/model/User.class
+  4948 Sun Sep 23 20:04:58 IST 2018 WEB-INF/classes/com/rajani/springmvc/security/AuthorizationServerConfiguration.class
+  1125 Sun Sep 23 20:04:58 IST 2018 WEB-INF/classes/com/rajani/springmvc/security/MethodSecurityConfig.class
+  6040 Sun Sep 23 20:04:58 IST 2018 WEB-INF/classes/com/rajani/springmvc/security/OAuth2SecurityConfiguration.class
+  3992 Sun Sep 23 20:04:58 IST 2018 WEB-INF/classes/com/rajani/springmvc/security/ResourceServerConfiguration.class
+   450 Sun Sep 23 20:04:58 IST 2018 WEB-INF/classes/com/rajani/springmvc/security/SecurityWebApplicationInitializer.class
+   590 Sun Sep 23 20:04:58 IST 2018 WEB-INF/classes/com/rajani/springmvc/service/UserService.class
+  3283 Sun Sep 23 20:04:58 IST 2018 WEB-INF/classes/com/rajani/springmvc/service/UserServiceImpl.class
+  4467 Sun Sep 23 19:06:32 IST 2018 WEB-INF/lib/aopalliance-1.0.jar
+263965 Sun Sep 23 20:04:54 IST 2018 WEB-INF/lib/commons-codec-1.9.jar
+ 61829 Sun Sep 23 19:06:30 IST 2018 WEB-INF/lib/commons-logging-1.2.jar
+ 50894 Sun Sep 23 19:06:34 IST 2018 WEB-INF/lib/jackson-annotations-2.7.0.jar
+252894 Sun Sep 23 19:06:36 IST 2018 WEB-INF/lib/jackson-core-2.7.5.jar
+232248 Sun Sep 23 20:04:52 IST 2018 WEB-INF/lib/jackson-core-asl-1.9.13.jar
+1205152 Sun Sep 23 19:06:36 IST 2018 WEB-INF/lib/jackson-databind-2.7.5.jar
+ 94752 Sun Sep 23 19:06:36 IST 2018 WEB-INF/lib/jackson-dataformat-xml-2.7.5.jar
+780664 Sun Sep 23 20:04:54 IST 2018 WEB-INF/lib/jackson-mapper-asl-1.9.13.jar
+ 34577 Sun Sep 23 19:06:36 IST 2018 WEB-INF/lib/jackson-module-jaxb-annotations-2.7.5.jar
+ 95806 Sun Sep 23 19:06:36 IST 2018 WEB-INF/lib/javax.servlet-api-3.1.0.jar
+379791 Sun Sep 23 19:06:32 IST 2018 WEB-INF/lib/spring-aop-4.3.1.RELEASE.jar
+754397 Sun Sep 23 19:06:32 IST 2018 WEB-INF/lib/spring-beans-4.3.1.RELEASE.jar
+1132904 Sun Sep 23 19:06:34 IST 2018 WEB-INF/lib/spring-context-4.3.1.RELEASE.jar
+1109894 Sun Sep 23 19:06:32 IST 2018 WEB-INF/lib/spring-core-4.3.1.RELEASE.jar
+263712 Sun Sep 23 19:06:34 IST 2018 WEB-INF/lib/spring-expression-4.3.1.RELEASE.jar
+534210 Sun Sep 23 19:06:34 IST 2018 WEB-INF/lib/spring-security-config-4.1.1.RELEASE.jar
+376168 Sun Sep 23 19:06:34 IST 2018 WEB-INF/lib/spring-security-core-4.1.1.RELEASE.jar
+453610 Sun Sep 23 20:04:54 IST 2018 WEB-INF/lib/spring-security-oauth2-2.0.10.RELEASE.jar
+359649 Sun Sep 23 19:06:34 IST 2018 WEB-INF/lib/spring-security-web-4.1.1.RELEASE.jar
+810635 Sun Sep 23 19:06:32 IST 2018 WEB-INF/lib/spring-web-4.3.1.RELEASE.jar
+913866 Sun Sep 23 19:06:36 IST 2018 WEB-INF/lib/spring-webmvc-4.3.1.RELEASE.jar
+161867 Sun Sep 23 19:06:36 IST 2018 WEB-INF/lib/stax2-api-3.1.4.jar
+  3952 Sun Sep 23 19:59:58 IST 2018 META-INF/maven/com.rajani.springmvc/SpringSecurityOAuth2Example/pom.xml
+   137 Sun Sep 23 20:05:00 IST 2018 META-INF/maven/com.rajani.springmvc/SpringSecurityOAuth2Example/pom.properties
+
+Rajani@RajaniSamsungPC MINGW64 ~/Desktop/2018/Working/Java/Spring/Samples/SpringSecurityOAuth2Example/SpringSecurityOAuth2Example
+$ cp "C:\Users\Rajani\Desktop\2018\Working\Java\Spring\Samples\SpringSecurityOAuth2Example\SpringSecurityOAuth2Example\target\SpringSecurityOAuth2Example.war" "C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps"
+
+Rajani@RajaniSamsungPC MINGW64 ~/Desktop/2018/Working/Java/Spring/Samples/SpringSecurityOAuth2Example/SpringSecurityOAuth2Example
+$ mvn -Dexec.mainClass=com.rajani.springmvc.SpringRestClient -Dexec.classpathScope=test test-compile exec:java
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ----------< com.rajani.springmvc:SpringSecurityOAuth2Example >----------
+[INFO] Building SpringSecurityOAuth2Example 1.0.0
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ SpringSecurityOAuth2Example ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO]
+[INFO] --- maven-compiler-plugin:3.2:compile (default-compile) @ SpringSecurityOAuth2Example ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ SpringSecurityOAuth2Example ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\Rajani\Desktop\2018\Working\Java\Spring\Samples\SpringSecurityOAuth2Example\SpringSecurityOAuth2Example\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.2:testCompile (default-testCompile) @ SpringSecurityOAuth2Example ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- exec-maven-plugin:1.6.0:java (default-cli) @ SpringSecurityOAuth2Example ---
+[WARNING]
+org.springframework.web.client.HttpClientErrorException: 404 null
+    at org.springframework.web.client.DefaultResponseErrorHandler.handleError (DefaultResponseErrorHandler.java:91)
+    at org.springframework.web.client.RestTemplate.handleResponse (RestTemplate.java:667)
+    at org.springframework.web.client.RestTemplate.doExecute (RestTemplate.java:620)
+    at org.springframework.web.client.RestTemplate.execute (RestTemplate.java:580)
+    at org.springframework.web.client.RestTemplate.exchange (RestTemplate.java:498)
+    at com.rajani.springmvc.SpringRestClient.sendTokenRequest (SpringRestClient.java:59)
+    at com.rajani.springmvc.SpringRestClient.main (SpringRestClient.java:172)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:564)
+    at org.codehaus.mojo.exec.ExecJavaMojo$1.run (ExecJavaMojo.java:282)
+    at java.lang.Thread.run (Thread.java:844)
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3.094 s
+[INFO] Finished at: 2018-09-23T20:06:12+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.codehaus.mojo:exec-maven-plugin:1.6.0:java (default-cli) on project SpringSecurityOAuth2Example: An exception occured while executing the Java class. 404 null -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+
+Rajani@RajaniSamsungPC MINGW64 ~/Desktop/2018/Working/Java/Spring/Samples/SpringSecurityOAuth2Example/SpringSecurityOAuth2Example
+$ grep -r -i "websystique"
+
+Rajani@RajaniSamsungPC MINGW64 ~/Desktop/2018/Working/Java/Spring/Samples/SpringSecurityOAuth2Example/SpringSecurityOAuth2Example
+$

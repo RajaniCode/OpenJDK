@@ -1,0 +1,9 @@
+com\websystique\spring\configuration\HibernateConfiguration.class
+com\websystique\spring\model\Employee.class
+com\websystique\spring\service\EmployeeServiceImpl.class
+com\websystique\spring\dao\EmployeeDaoImpl.class
+com\websystique\spring\AppMain.class
+com\websystique\spring\dao\AbstractDao.class
+com\websystique\spring\dao\EmployeeDao.class
+com\websystique\spring\configuration\AppConfig.class
+com\websystique\spring\service\EmployeeService.class

@@ -1,0 +1,295 @@
+# Java # Apache Maven # $ java --version $ mvn --version
+$ export PATH=$PATH:"/C/Users/Rajani/Downloads/Java/JDK/OpenJDK/openjdk-17.0.1_windows-x64_bin/jdk-17.0.1/bin/:/C/Users/Rajani/Downloads/Java/Apache Maven/apache-maven-3.8.4-bin/apache-maven-3.8.4/bin/"
+
+# Java # Apache Maven # > java --version > mvn --version
+> set path=%path%;C:\Users\Rajani\Downloads\Java\JDK\OpenJDK\openjdk-17.0.1_windows-x64_bin\jdk-17.0.1\bin\;C:\Users\Rajani\Downloads\Java\Apache Maven\apache-maven-3.8.4-bin\apache-maven-3.8.4\bin\
+
+java --version
+
+mvn --version
+
+[
+# Interactive
+[
+mvn archetype:generate
+...
+Choose archetype:
+...
+1075: remote -> dev.qinx:scala-archetype (An up-to-date Maven Archetype for Scala)
+...
+1544: remote -> net.alchim31.maven:scala-archetype-simple (The maven-scala-plugin is used for compiling/testing/running/documenting scala code in maven.)
+...
+[# Choose a number or apply filter (format: [groupId:]artifactId, case sensitive contains): :] 1544
+[# Choose net.alchim31.maven:scala-archetype-simple version:]
+[# 1: 1.4]
+[# 2: 1.5]
+[# 3: 1.6]
+[# Choose a number: 3:] 3
+[# Define value for property 'groupId':] samples
+[# Define value for property 'artifactId':] example
+[# Define value for property 'version' 1.0-SNAPSHOT: :] 0.0.1
+[# Define value for property 'package' samples: :] samples
+[# Confirm properties configuration:
+[# groupId: samples]
+[# artifactId: example]
+[# version: 0.0.1]
+[# package: samples]
+[# Y: :] Y
+]
+]
+
+# Noninteractive
+mvn archetype:generate -B \
+    -DarchetypeGroupId=net.alchim31.maven \
+    -DarchetypeArtifactId=scala-archetype-simple \
+    -DgroupId=samples \
+    -DartifactId=example \
+    -Dversion=0.0.1 \
+    -Dpackage=samples
+
+cd example
+
+# Creating a Jar # samples
+# pom.xml
+# pom.xml
+[
+  <build>
+    ...
+    <plugins>
+      ...
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <version>2.4</version>
+        <configuration>
+          <descriptorRefs>
+            <descriptorRef>jar-with-dependencies</descriptorRef>
+          </descriptorRefs>
+          <archive>
+            <manifest>
+              <mainClass>samples.MainClass</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+    </plugins>
+  </build>
+]
+# scala.version 2.12.15 # instead of # 2.12.6
+# [ERROR] Caused by: java.io.IOError: java.lang.RuntimeException: /packages cannot be represented as URI
+# pom.xml
+  <properties>
+    ...
+    <!--<scala.version>2.12.6</scala.version>-->
+    <scala.version>2.12.15</scala.version>
+    ...
+  </properties>
+# skipTests false # instead of # true
+# [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.21.0:test (default-test) on project example: No tests were executed!  (Set -DfailIfNoTests=false to ignore this error.)
+# <failIfNoTests>false</failIfNoTests>
+        <configuration>
+          <!-- Tests will be run with scalatest-maven-plugin instead -->
+          <!--<skipTests>true</skipTests>-->
+          <skipTests>false</skipTests>
+          <failIfNoTests>false</failIfNoTests>
+        </configuration>
+# pom.xml
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>samples</groupId>
+  <artifactId>example</artifactId>
+  <version>0.0.1</version>
+  <name>${project.artifactId}</name>
+  <description>My wonderfull scala app</description>
+  <inceptionYear>2018</inceptionYear>
+  <licenses>
+    <license>
+      <name>My License</name>
+      <url>http://....</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <encoding>UTF-8</encoding>
+    <!--<scala.version>2.12.6</scala.version>-->
+    <scala.version>2.12.15</scala.version>
+    <scala.compat.version>2.12</scala.compat.version>
+    <spec2.version>4.2.0</spec2.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.scala-lang</groupId>
+      <artifactId>scala-library</artifactId>
+      <version>${scala.version}</version>
+    </dependency>
+
+    <!-- Test -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.scalatest</groupId>
+      <artifactId>scalatest_${scala.compat.version}</artifactId>
+      <version>3.0.5</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.specs2</groupId>
+      <artifactId>specs2-core_${scala.compat.version}</artifactId>
+      <version>${spec2.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.specs2</groupId>
+      <artifactId>specs2-junit_${scala.compat.version}</artifactId>
+      <version>${spec2.version}</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <sourceDirectory>src/main/scala</sourceDirectory>
+    <testSourceDirectory>src/test/scala</testSourceDirectory>
+    <plugins>
+      <plugin>
+        <!-- see http://davidb.github.com/scala-maven-plugin -->
+        <groupId>net.alchim31.maven</groupId>
+        <artifactId>scala-maven-plugin</artifactId>
+        <version>3.3.2</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>compile</goal>
+              <goal>testCompile</goal>
+            </goals>
+            <configuration>
+              <args>
+                <arg>-dependencyfile</arg>
+                <arg>${project.build.directory}/.scala_dependencies</arg>
+              </args>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.21.0</version>
+        <configuration>
+          <!-- Tests will be run with scalatest-maven-plugin instead -->
+          <!--<skipTests>true</skipTests>-->
+          <skipTests>false</skipTests>
+          <failIfNoTests>false</failIfNoTests>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <version>2.4</version>
+        <configuration>
+          <descriptorRefs>
+            <descriptorRef>jar-with-dependencies</descriptorRef>
+          </descriptorRefs>
+          <archive>
+            <manifest>
+              <mainClass>samples.MainClass</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
+
+mvn package
+
+jar tvf target/example-0.0.1-jar-with-dependencies.jar
+
+mvn scala:compile
+
+mvn scala:testCompile
+
+mvn scala:run -DmainClass=samples.App
+
+mvn -Dtest=AppTest test
+
+mvn -Dtest=samples.AppTest test
+
+mvn -Dtest=samples.MySpecTest test
+
+mvn -Dtest=samples.StackSuite test
+
+mvn -Dtest=samples.ListSuite test
+
+# [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.21.0:test (default-test) on project example: No tests were executed!  (Set -DfailIfNoTests=false to ignore this error.)
+# <failIfNoTests>false</failIfNoTests>
+mvn -Dtest=samples.ExampleSpec test
+
+# copy all libraries and dependencies to the target/dependency folder
+mvn dependency:copy-dependencies
+[
+[WARNING] The artifact xml-apis:xml-apis:jar:2.0.2 has been relocated to xml-apis:xml-apis:jar:1.0.b2
+https://mvnrepository.com/artifact/xml-apis/xml-apis/2.0.2
+XML APIs » 2.0.2
+Note: This artifact was moved to: xml-apis » xml-apis » 1.0.b2
+]
+
+[
+mvn clean
+mvn compile
+mvn test
+]
+
+[
+# Java # Run
+java -cp target/example-0.0.1-jar-with-dependencies.jar samples.App
+]
+
+# Scala 2 # Java $ java --version $ scala --version
+$ export PATH=$PATH:"/C/Users/Rajani/Downloads/Java/JDK/OpenJDK/openjdk-17.0.1_windows-x64_bin/jdk-17.0.1/bin/:/C/Users/Rajani/Downloads/Scala/Scala2/scala-2.13.7/bin/"
+
+# Scala 2 # Java > java --version > scala --version
+> set path=%path%;C:\Users\Rajani\Downloads\Java\JDK\OpenJDK\openjdk-17.0.1_windows-x64_bin\jdk-17.0.1\bin\;C:\Users\Rajani\Downloads\Scala\Scala2\scala-2.13.7\bin\
+
+# Verify classpath # Ignore Compilation
+[
+scalac -cp target/classes/samples src/test/scala/samples/AppTest.scala
+
+scalac -cp target/classes/samples src/test/scala/samples/MySpecTest.scala
+
+scalac -cp target/classes/samples src/test/scala/samples/StackSuite.scala
+]
+
+mvn package
+
+[
+mvn clean
+]
+
+mvn scala:compile
+
+mvn scala:run -DmainClass=com.organization.App

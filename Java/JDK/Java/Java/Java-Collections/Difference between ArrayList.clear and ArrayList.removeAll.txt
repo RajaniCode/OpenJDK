@@ -1,0 +1,31 @@
+Difference between ArrayList.clear() and ArrayList.removeAll()
+
+Assuming that arraylist is defined as ArrayList<String> arraylist, is arraylist.removeAll(arraylist) equivalent to arraylist.clear()?
+
+Clear's source code:
+
+public void clear() {
+    modCount++;
+
+    // Let gc do its work
+    for (int i = 0; i < size; i++)
+        elementData[i] = null;
+
+    size = 0;
+}
+Remove All's source code (As defined in AbstractCollection):
+
+public boolean removeAll(Collection<?> c) {
+    boolean modified = false;
+    Iterator<?> e = iterator();
+    while (e.hasNext()) {
+        if (c.contains(e.next())) {
+            e.remove();
+            modified = true;
+        }
+    }
+    return modified;
+}
+Clear is much faster since it doesn't have to deal with all those extra method calls.
+
+And as Atrey points out, c.contains(..) increases the time complexity of removeAll to O(n^2) as opposed to clear's O(n).

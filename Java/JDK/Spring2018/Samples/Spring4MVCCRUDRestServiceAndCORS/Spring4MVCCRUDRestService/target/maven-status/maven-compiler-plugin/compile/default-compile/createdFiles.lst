@@ -1,0 +1,6 @@
+com\rajani\springmvc\configuration\HelloWorldInitializer.class
+com\rajani\springmvc\service\UserService.class
+com\rajani\springmvc\configuration\HelloWorldConfiguration.class
+com\rajani\springmvc\service\UserServiceImpl.class
+com\rajani\springmvc\model\User.class
+com\rajani\springmvc\controller\HelloWorldRestController.class

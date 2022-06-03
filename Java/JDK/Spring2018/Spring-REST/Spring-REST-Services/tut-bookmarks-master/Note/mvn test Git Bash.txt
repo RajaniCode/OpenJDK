@@ -1,0 +1,529 @@
+
+Aspire@Acer MINGW64 ~
+$ java -version
+java version "1.8.0_102"
+Java(TM) SE Runtime Environment (build 1.8.0_102-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.102-b14, mixed mode)
+
+Aspire@Acer MINGW64 ~
+$ mvn -versiob
+Apache Maven 3.3.9 (bb52d8502b132ec0a5a3f4c09453c07478323dc5; 2015-11-10T22:11:47+05:30)
+Maven home: C:\Program Files\Apache Software Foundation\apache-maven-3.3.9
+Java version: 1.8.0_102, vendor: Oracle Corporation
+Java home: C:\Program Files\Java\jdk1.8.0_102\jre
+Default locale: en_US, platform encoding: Cp1252
+OS name: "windows 8.1", version: "6.3", arch: "amd64", family: "dos"
+
+Aspire@Acer MINGW64 ~
+$ cd "E:\Working\Java\Spring\Spring-REST\Spring-REST-Services\tut-bookmarks-master"
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-REST/Spring-REST-Services/tut-bookmarks-master
+$ mvn test
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO]
+[INFO] bookmarks
+[INFO] model
+[INFO] rest
+[INFO] security
+[INFO] hateoas
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building bookmarks 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building model 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ model ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory E:\Working\Java\Spring\Spring-REST\Spring-REST-Services\tut-bookmarks-master\model\src\main\resources
+[INFO] skip non existing resourceDirectory E:\Working\Java\Spring\Spring-REST\Spring-REST-Services\tut-bookmarks-master\model\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ model ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ model ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory E:\Working\Java\Spring\Spring-REST\Spring-REST-Services\tut-bookmarks-master\model\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ model ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ model ---
+[INFO] No tests to run.
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building rest 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rest ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory E:\Working\Java\Spring\Spring-REST\Spring-REST-Services\tut-bookmarks-master\rest\src\main\resources
+[INFO] skip non existing resourceDirectory E:\Working\Java\Spring\Spring-REST\Spring-REST-Services\tut-bookmarks-master\rest\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ rest ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rest ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory E:\Working\Java\Spring\Spring-REST\Spring-REST-Services\tut-bookmarks-master\rest\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ rest ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to E:\Working\Java\Spring\Spring-REST\Spring-REST-Services\tut-bookmarks-master\rest\target\test-classes
+[WARNING] /E:/Working/Java/Spring/Spring-REST/Spring-REST-Services/tut-bookmarks-master/rest/src/test/java/bookmarks/BookmarkRestControllerTest.java: E:\Working\Java\Spring\Spring-REST\Spring-REST-Services\tut-bookmarks-master\rest\src\test\java\bookmarks\BookmarkRestControllerTest.java uses unchecked or unsafe operations.
+[WARNING] /E:/Working/Java/Spring/Spring-REST/Spring-REST-Services/tut-bookmarks-master/rest/src/test/java/bookmarks/BookmarkRestControllerTest.java: Recompile with -Xlint:unchecked for details.
+[INFO]
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ rest ---
+[INFO] Surefire report directory: E:\Working\Java\Spring\Spring-REST\Spring-REST-Services\tut-bookmarks-master\rest\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+00:03:39.465 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class bookmarks.BookmarkRestControllerTest]
+00:03:39.480 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+00:03:39.511 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+00:03:39.527 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [bookmarks.BookmarkRestControllerTest] from class [org.springframework.test.context.web.WebTestContextBootstrapper]
+00:03:39.605 [main] DEBUG org.springframework.test.context.web.WebTestContextBootstrapper - Found explicit ContextLoader class [org.springframework.boot.test.SpringApplicationContextLoader] for context configuration attributes [ContextConfigurationAttributes@cb644e declaringClass = 'bookmarks.BookmarkRestControllerTest', classes = '{class bookmarks.Application}', locations = '{}', inheritLocations = true, initializers = '{}', inheritInitializers = true, name = [null], contextLoaderClass = 'org.springframework.boot.test.SpringApplicationContextLoader']
+00:03:39.621 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [bookmarks.BookmarkRestControllerTest]: class path resource [bookmarks/BookmarkRestControllerTest-context.xml] does not exist
+00:03:39.636 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [bookmarks.BookmarkRestControllerTest]: class path resource [bookmarks/BookmarkRestControllerTestContext.groovy] does not exist
+00:03:39.636 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [bookmarks.BookmarkRestControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+00:03:39.636 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [bookmarks.BookmarkRestControllerTest]
+00:03:39.652 [main] DEBUG org.springframework.test.context.web.WebTestContextBootstrapper - @TestExecutionListeners is not present for class [bookmarks.BookmarkRestControllerTest]: using defaults.
+00:03:39.683 [main] INFO org.springframework.test.context.web.WebTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+00:03:39.777 [main] INFO org.springframework.test.context.web.WebTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@23faf8f2, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2d6eabae, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4e7dc304, org.springframework.test.context.support.DirtiesContextTestExecutionListener@64729b1e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@10bbd20a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@48503868]
+00:03:39.793 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [bookmarks.BookmarkRestControllerTest]
+00:03:39.793 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [bookmarks.BookmarkRestControllerTest]
+Running bookmarks.BookmarkRestControllerTest
+00:03:39.793 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class bookmarks.BookmarkRestControllerTest]
+00:03:39.793 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+00:03:39.793 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+00:03:39.793 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [bookmarks.BookmarkRestControllerTest] from class [org.springframework.test.context.web.WebTestContextBootstrapper]
+00:03:39.824 [main] DEBUG org.springframework.test.context.web.WebTestContextBootstrapper - Found explicit ContextLoader class [org.springframework.boot.test.SpringApplicationContextLoader] for context configuration attributes [ContextConfigurationAttributes@2833cc44 declaringClass = 'bookmarks.BookmarkRestControllerTest', classes = '{class bookmarks.Application}', locations = '{}', inheritLocations = true, initializers = '{}', inheritInitializers = true, name = [null], contextLoaderClass = 'org.springframework.boot.test.SpringApplicationContextLoader']
+00:03:39.824 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [bookmarks.BookmarkRestControllerTest]: class path resource [bookmarks/BookmarkRestControllerTest-context.xml] does not exist
+00:03:39.824 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [bookmarks.BookmarkRestControllerTest]: class path resource [bookmarks/BookmarkRestControllerTestContext.groovy] does not exist
+00:03:39.824 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [bookmarks.BookmarkRestControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+00:03:39.824 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [bookmarks.BookmarkRestControllerTest]
+00:03:39.824 [main] DEBUG org.springframework.test.context.web.WebTestContextBootstrapper - @TestExecutionListeners is not present for class [bookmarks.BookmarkRestControllerTest]: using defaults.
+00:03:39.840 [main] INFO org.springframework.test.context.web.WebTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+00:03:39.840 [main] INFO org.springframework.test.context.web.WebTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4493d195, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2781e022, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@57e1b0c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4232c52b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1877ab81, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@305fd85d]
+00:03:39.840 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [bookmarks.BookmarkRestControllerTest]
+00:03:39.840 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [bookmarks.BookmarkRestControllerTest]
+00:03:39.840 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [bookmarks.BookmarkRestControllerTest]
+00:03:39.840 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [bookmarks.BookmarkRestControllerTest]
+00:03:39.855 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@2bbf4b8b testClass = BookmarkRestControllerTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@30a3107a testClass = BookmarkRestControllerTest, locations = '{}', classes = '{class bookmarks.Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.SpringApplicationContextLoader', parent = [null]]], class annotated with @DirtiesContext [false] with mode [null].
+00:03:39.855 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [bookmarks.BookmarkRestControllerTest]
+00:03:39.855 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [bookmarks.BookmarkRestControllerTest]
+00:03:40.090 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+00:03:40.105 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+00:03:40.105 [main] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+00:03:40.121 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [integrationTest] PropertySource with search precedence immediately lower than [systemEnvironment]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.3.5.RELEASE)
+
+2016-12-10 00:03:40.949  INFO 4596 --- [           main] bookmarks.BookmarkRestControllerTest     : Starting BookmarkRestControllerTest on Acer with PID 4596 (E:\Working\Java\Spring\Spring-REST\Spring-REST-Services\tut-bookmarks-master\rest\target\test-classes started by Aspire in E:\Working\Java\Spring\Spring-REST\Spring-REST-Services\tut-bookmarks-master\rest)
+2016-12-10 00:03:40.965  INFO 4596 --- [           main] bookmarks.BookmarkRestControllerTest     : No active profile set, falling back to default profiles: default
+2016-12-10 00:03:41.168  INFO 4596 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6aeb35e6: startup date [Sat Dec 10 00:03:41 IST 2016]; root of context hierarchy
+2016-12-10 00:03:45.556  INFO 4596 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fb6cd6de] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-12-10 00:03:46.915  INFO 4596 --- [           main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-12-10 00:03:46.993  INFO 4596 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+        name: default
+        ...]
+2016-12-10 00:03:47.196  INFO 4596 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {4.3.11.Final}
+2016-12-10 00:03:47.196  INFO 4596 --- [           main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-12-10 00:03:47.196  INFO 4596 --- [           main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-12-10 00:03:47.790  INFO 4596 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-12-10 00:03:48.071  INFO 4596 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-12-10 00:03:48.525  INFO 4596 --- [           main] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory
+2016-12-10 00:03:49.540  INFO 4596 --- [           main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-12-10 00:03:49.587  INFO 4596 --- [           main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-12-10 00:03:51.806  INFO 4596 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@6aeb35e6: startup date [Sat Dec 10 00:03:41 IST 2016]; root of context hierarchy
+2016-12-10 00:03:52.040  INFO 4596 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{userId}/bookmarks],methods=[POST]}" onto org.springframework.http.ResponseEntity<?> bookmarks.BookmarkRestController.add(java.lang.String,bookmarks.Bookmark)
+2016-12-10 00:03:52.040  INFO 4596 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{userId}/bookmarks],methods=[GET]}" onto java.util.Collection<bookmarks.Bookmark> bookmarks.BookmarkRestController.readBookmarks(java.lang.String)
+2016-12-10 00:03:52.040  INFO 4596 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{userId}/bookmarks/{bookmarkId}],methods=[GET]}" onto bookmarks.Bookmark bookmarks.BookmarkRestController.readBookmark(java.lang.String,java.lang.Long)
+2016-12-10 00:03:52.056  INFO 4596 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-12-10 00:03:52.056  INFO 4596 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-12-10 00:03:52.165  INFO 4596 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-10 00:03:52.165  INFO 4596 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-10 00:03:52.290  INFO 4596 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-10 00:03:53.025  INFO 4596 --- [           main] b.a.s.AuthenticationManagerConfiguration :
+
+Using default security password: e7e4dc34-dac3-45ba-ba6d-aa42c81828f8
+
+2016-12-10 00:03:53.197  INFO 4596 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/css/**'], []
+2016-12-10 00:03:53.212  INFO 4596 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/js/**'], []
+2016-12-10 00:03:53.212  INFO 4596 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/images/**'], []
+2016-12-10 00:03:53.212  INFO 4596 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**/favicon.ico'], []
+2016-12-10 00:03:53.212  INFO 4596 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/error'], []
+2016-12-10 00:03:53.431  INFO 4596 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@15586843, org.springframework.security.web.context.SecurityContextPersistenceFilter@25d911a, org.springframework.security.web.header.HeaderWriterFilter@11d2714a, org.springframework.security.web.authentication.logout.LogoutFilter@6c6c2a73, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@62b0bf85, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@489f62a3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@388f1258, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4fbb1144, org.springframework.security.web.session.SessionManagementFilter@3ea48c37, org.springframework.security.web.access.ExceptionTranslationFilter@14ed7ddf, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@b3fc6d8]
+2016-12-10 00:03:54.119  INFO 4596 --- [           main] bookmarks.BookmarkRestControllerTest     : Started BookmarkRestControllerTest in 13.967 seconds (JVM running for 15.622)
+2016-12-10 00:03:54.197  INFO 4596 --- [           main] o.s.b.test.SpringBootMockServletContext  : Initializing Spring FrameworkServlet ''
+2016-12-10 00:03:54.197  INFO 4596 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2016-12-10 00:03:54.228  INFO 4596 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 31 ms
+bookmarkJson###############################################################################################
+mockHttpOutputMessage###############################################################################################
+{"id":null,"uri":"http://spring.io","description":"a bookmark to the best resource for Spring news and information"}
+mockHttpOutputMessage###############################################################################################
+{"id":null,"uri":"http://spring.io","description":"a bookmark to the best resource for Spring news and information"}
+bookmarkJson###############################################################################################
+createBookmark###############################################################################################
+No response json
+createBookmark###############################################################################################
+2016-12-10 00:03:55.072  INFO 4596 --- [           main] o.s.b.test.SpringBootMockServletContext  : Initializing Spring FrameworkServlet ''
+2016-12-10 00:03:55.072  INFO 4596 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2016-12-10 00:03:55.087  INFO 4596 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 15 ms
+readBookmarks###############################################################################################
+[{"id":20,"uri":"http://bookmark.com/1/bdussault","description":"A description"},{"id":21,"uri":"http://bookmark.com/2/bdussault","description":"A description"}]
+readBookmarks###############################################################################################
+2016-12-10 00:03:55.400  INFO 4596 --- [           main] o.s.b.test.SpringBootMockServletContext  : Initializing Spring FrameworkServlet ''
+2016-12-10 00:03:55.400  INFO 4596 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2016-12-10 00:03:55.400  INFO 4596 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 0 ms
+mockHttpOutputMessage###############################################################################################
+{"id":null,"uri":null,"description":null}
+mockHttpOutputMessage###############################################################################################
+2016-12-10 00:03:55.462  INFO 4596 --- [           main] o.s.b.test.SpringBootMockServletContext  : Initializing Spring FrameworkServlet ''
+2016-12-10 00:03:55.462  INFO 4596 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2016-12-10 00:03:55.462  INFO 4596 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 0 ms
+readSingleBookmark###############################################################################################
+{"id":24,"uri":"http://bookmark.com/1/bdussault","description":"A description"}
+readSingleBookmark###############################################################################################
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.763 sec - in bookmarks.BookmarkRestControllerTest
+2016-12-10 00:03:55.572  INFO 4596 --- [       Thread-2] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@6aeb35e6: startup date [Sat Dec 10 00:03:41 IST 2016]; root of context hierarchy
+2016-12-10 00:03:55.665  INFO 4596 --- [       Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2016-12-10 00:03:55.665  INFO 4596 --- [       Thread-2] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-12-10 00:03:55.697  INFO 4596 --- [       Thread-2] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+
+Results :
+
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building security 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ security ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] Copying 3 resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ security ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ security ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory E:\Working\Java\Spring\Spring-REST\Spring-REST-Services\tut-bookmarks-master\security\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ security ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ security ---
+[INFO] Surefire report directory: E:\Working\Java\Spring\Spring-REST\Spring-REST-Services\tut-bookmarks-master\security\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+00:03:57.350 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class security.ApplicationTests]
+00:03:57.365 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+00:03:57.381 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+00:03:57.412 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [security.ApplicationTests] from class [org.springframework.test.context.web.WebTestContextBootstrapper]
+00:03:57.490 [main] DEBUG org.springframework.test.context.web.WebTestContextBootstrapper - Found explicit ContextLoader class [org.springframework.boot.test.SpringApplicationContextLoader] for context configuration attributes [ContextConfigurationAttributes@402a079c declaringClass = 'security.ApplicationTests', classes = '{class bookmarks.Application}', locations = '{}', inheritLocations = true, initializers = '{}', inheritInitializers = true, name = [null], contextLoaderClass = 'org.springframework.boot.test.SpringApplicationContextLoader']
+00:03:57.506 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [security.ApplicationTests]: class path resource [security/ApplicationTests-context.xml] does not exist
+00:03:57.506 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [security.ApplicationTests]: class path resource [security/ApplicationTestsContext.groovy] does not exist
+00:03:57.506 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [security.ApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+00:03:57.506 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [security.ApplicationTests]
+00:03:57.569 [main] INFO org.springframework.test.context.web.WebTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.boot.test.IntegrationTestPropertiesListener@4f970963, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@61f8bee4, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7b49cea0, org.springframework.test.context.support.DirtiesContextTestExecutionListener@887af79, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7fac631b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5b87ed94]
+00:03:57.569 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [security.ApplicationTests]
+00:03:57.569 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [security.ApplicationTests]
+Running security.ApplicationTests
+00:03:57.569 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class security.ApplicationTests]
+00:03:57.569 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+00:03:57.569 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+00:03:57.584 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [security.ApplicationTests] from class [org.springframework.test.context.web.WebTestContextBootstrapper]
+00:03:57.584 [main] DEBUG org.springframework.test.context.web.WebTestContextBootstrapper - Found explicit ContextLoader class [org.springframework.boot.test.SpringApplicationContextLoader] for context configuration attributes [ContextConfigurationAttributes@3cef309d declaringClass = 'security.ApplicationTests', classes = '{class bookmarks.Application}', locations = '{}', inheritLocations = true, initializers = '{}', inheritInitializers = true, name = [null], contextLoaderClass = 'org.springframework.boot.test.SpringApplicationContextLoader']
+00:03:57.584 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [security.ApplicationTests]: class path resource [security/ApplicationTests-context.xml] does not exist
+00:03:57.584 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [security.ApplicationTests]: class path resource [security/ApplicationTestsContext.groovy] does not exist
+00:03:57.584 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [security.ApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+00:03:57.584 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [security.ApplicationTests]
+00:03:57.584 [main] INFO org.springframework.test.context.web.WebTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.boot.test.IntegrationTestPropertiesListener@32709393, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3d99d22e, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@49fc609f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@cd2dae5, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3a883ce7, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4973813a]
+00:03:57.584 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [security.ApplicationTests]
+00:03:57.584 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [security.ApplicationTests]
+00:03:57.600 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [security.ApplicationTests]
+00:03:57.600 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [security.ApplicationTests]
+00:03:57.600 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@6737fd8f testClass = ApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@72b6cbcc testClass = ApplicationTests, locations = '{}', classes = '{class bookmarks.Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.SpringApplicationContextLoader', parent = [null]]], class annotated with @DirtiesContext [false] with mode [null].
+00:03:57.600 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [security.ApplicationTests]
+00:03:57.600 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [security.ApplicationTests]
+00:03:57.600 [main] DEBUG org.springframework.test.util.ReflectionTestUtils - Getting field 'mergedContextConfiguration' from target object [[DefaultTestContext@6737fd8f testClass = ApplicationTests, testInstance = security.ApplicationTests@5d76b067, testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@72b6cbcc testClass = ApplicationTests, locations = '{}', classes = '{class bookmarks.Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.SpringApplicationContextLoader', parent = [null]]]] or target class [class org.springframework.test.context.support.DefaultTestContext]
+00:03:57.615 [main] DEBUG org.springframework.test.util.ReflectionTestUtils - Setting field 'propertySourceProperties' of type [null] on target object [[WebMergedContextConfiguration@72b6cbcc testClass = ApplicationTests, locations = '{}', classes = '{class bookmarks.Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.SpringApplicationContextLoader', parent = [null]]] or target class [class org.springframework.test.context.web.WebMergedContextConfiguration] to value [[Ljava.lang.String;@614ddd49]
+00:03:57.615 [main] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@6737fd8f testClass = ApplicationTests, testInstance = security.ApplicationTests@5d76b067, testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@72b6cbcc testClass = ApplicationTests, locations = '{}', classes = '{class bookmarks.Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{server.port=0, org.springframework.boot.test.IntegrationTest=true}', resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.SpringApplicationContextLoader', parent = [null]]]].
+00:03:57.803 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+00:03:57.803 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+00:03:57.803 [main] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+00:03:57.803 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [integrationTest] PropertySource with search precedence immediately lower than [systemEnvironment]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.3.5.RELEASE)
+
+2016-12-10 00:03:58.522  INFO 1136 --- [           main] security.ApplicationTests                : Starting ApplicationTests on Acer with PID 1136 (E:\Working\Java\Spring\Spring-REST\Spring-REST-Services\tut-bookmarks-master\security\target\test-classes started by Aspire in E:\Working\Java\Spring\Spring-REST\Spring-REST-Services\tut-bookmarks-master\security)
+2016-12-10 00:03:58.537  INFO 1136 --- [           main] security.ApplicationTests                : No active profile set, falling back to default profiles: default
+2016-12-10 00:03:58.662  INFO 1136 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@79924b: startup date [Sat Dec 10 00:03:58 IST 2016]; root of context hierarchy
+2016-12-10 00:04:02.303  WARN 1136 --- [           main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerEndpointsConfiguration$TokenKeyEndpointRegistrar' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2016-12-10 00:04:03.147  INFO 1136 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$92b4b70d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-12-10 00:04:04.459  INFO 1136 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 0 (http)
+2016-12-10 00:04:04.506  INFO 1136 --- [           main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-12-10 00:04:04.506  INFO 1136 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.33
+2016-12-10 00:04:04.835  INFO 1136 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-12-10 00:04:04.835  INFO 1136 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6173 ms
+2016-12-10 00:04:05.866  INFO 1136 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-12-10 00:04:05.866  INFO 1136 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-12-10 00:04:05.866  INFO 1136 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-12-10 00:04:05.866  INFO 1136 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'requestContextFilter' to: [/*]
+2016-12-10 00:04:05.866  INFO 1136 --- [ost-startStop-1] .e.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2016-12-10 00:04:05.866  INFO 1136 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'object' to: [/*]
+2016-12-10 00:04:05.866  INFO 1136 --- [ost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2016-12-10 00:04:07.241  INFO 1136 --- [ost-startStop-1] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-12-10 00:04:07.288  INFO 1136 --- [ost-startStop-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+        name: default
+        ...]
+2016-12-10 00:04:07.491  INFO 1136 --- [ost-startStop-1] org.hibernate.Version                    : HHH000412: Hibernate Core {4.3.11.Final}
+2016-12-10 00:04:07.507  INFO 1136 --- [ost-startStop-1] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-12-10 00:04:07.507  INFO 1136 --- [ost-startStop-1] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-12-10 00:04:08.194  INFO 1136 --- [ost-startStop-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-12-10 00:04:08.413  INFO 1136 --- [ost-startStop-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-12-10 00:04:08.741  INFO 1136 --- [ost-startStop-1] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory
+2016-12-10 00:04:09.335  INFO 1136 --- [ost-startStop-1] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-12-10 00:04:09.397  INFO 1136 --- [ost-startStop-1] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-12-10 00:04:10.960  INFO 1136 --- [ost-startStop-1] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/authorize]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.security.oauth2.provider.endpoint.AuthorizationEndpoint.authorize(java.util.Map<java.lang.String, java.lang.Object>,java.util.Map<java.lang.String, java.lang.String>,org.springframework.web.bind.support.SessionStatus,java.security.Principal)
+2016-12-10 00:04:10.975  INFO 1136 --- [ost-startStop-1] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/authorize],methods=[POST],params=[user_oauth_approval]}" onto public org.springframework.web.servlet.View org.springframework.security.oauth2.provider.endpoint.AuthorizationEndpoint.approveOrDeny(java.util.Map<java.lang.String, java.lang.String>,java.util.Map<java.lang.String, ?>,org.springframework.web.bind.support.SessionStatus,java.security.Principal)
+2016-12-10 00:04:10.975  INFO 1136 --- [ost-startStop-1] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/token],methods=[GET]}" onto public org.springframework.http.ResponseEntity<org.springframework.security.oauth2.common.OAuth2AccessToken> org.springframework.security.oauth2.provider.endpoint.TokenEndpoint.getAccessToken(java.security.Principal,java.util.Map<java.lang.String, java.lang.String>) throws org.springframework.web.HttpRequestMethodNotSupportedException
+2016-12-10 00:04:10.975  INFO 1136 --- [ost-startStop-1] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/token],methods=[POST]}" onto public org.springframework.http.ResponseEntity<org.springframework.security.oauth2.common.OAuth2AccessToken> org.springframework.security.oauth2.provider.endpoint.TokenEndpoint.postAccessToken(java.security.Principal,java.util.Map<java.lang.String, java.lang.String>) throws org.springframework.web.HttpRequestMethodNotSupportedException
+2016-12-10 00:04:10.975  INFO 1136 --- [ost-startStop-1] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/check_token]}" onto public java.util.Map<java.lang.String, ?> org.springframework.security.oauth2.provider.endpoint.CheckTokenEndpoint.checkToken(java.lang.String)
+2016-12-10 00:04:10.991  INFO 1136 --- [ost-startStop-1] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/confirm_access]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.security.oauth2.provider.endpoint.WhitelabelApprovalEndpoint.getAccessConfirmation(java.util.Map<java.lang.String, java.lang.Object>,javax.servlet.http.HttpServletRequest) throws java.lang.Exception
+2016-12-10 00:04:11.007  INFO 1136 --- [ost-startStop-1] .s.o.p.e.FrameworkEndpointHandlerMapping : Mapped "{[/oauth/error]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.security.oauth2.provider.endpoint.WhitelabelErrorEndpoint.handleError(javax.servlet.http.HttpServletRequest)
+2016-12-10 00:04:11.100  INFO 1136 --- [ost-startStop-1] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/css/**'], []
+2016-12-10 00:04:11.100  INFO 1136 --- [ost-startStop-1] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/js/**'], []
+2016-12-10 00:04:11.100  INFO 1136 --- [ost-startStop-1] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/images/**'], []
+2016-12-10 00:04:11.100  INFO 1136 --- [ost-startStop-1] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**/favicon.ico'], []
+2016-12-10 00:04:11.100  INFO 1136 --- [ost-startStop-1] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/error'], []
+2016-12-10 00:04:11.319  INFO 1136 --- [ost-startStop-1] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@42c08aa9, org.springframework.security.web.context.SecurityContextPersistenceFilter@278cac2b, org.springframework.security.web.header.HeaderWriterFilter@5e8eadc5, org.springframework.security.web.authentication.logout.LogoutFilter@2c302899, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@144cf414, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@103c6913, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@606b1ab4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@31df3ab1, org.springframework.security.web.session.SessionManagementFilter@6a6e0fe5, org.springframework.security.web.access.ExceptionTranslationFilter@33cffe7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@901fca2]
+2016-12-10 00:04:11.382  INFO 1136 --- [ost-startStop-1] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfiguration$NotOAuthRequestMatcher@10d0b554, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@372af136, org.springframework.security.web.context.SecurityContextPersistenceFilter@724acadf, org.springframework.security.web.header.HeaderWriterFilter@2db4f98e, org.springframework.security.web.authentication.logout.LogoutFilter@7f403347, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@2854054d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6ba3feb3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@61d102c0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@28b4b826, org.springframework.security.web.session.SessionManagementFilter@445b4a8f, org.springframework.security.web.access.ExceptionTranslationFilter@463a27f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@213a51b2]
+2016-12-10 00:04:11.429  INFO 1136 --- [ost-startStop-1] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3fa9ba2e, org.springframework.security.web.context.SecurityContextPersistenceFilter@d8b0391, org.springframework.security.web.header.HeaderWriterFilter@7f58713, org.springframework.security.web.authentication.logout.LogoutFilter@36284d6c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@63ea47b3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@18be509e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@33d89185, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2fd2cac2, org.springframework.security.web.session.SessionManagementFilter@674c473d, org.springframework.security.web.access.ExceptionTranslationFilter@132924c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@496375a3]
+2016-12-10 00:04:12.054  INFO 1136 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@79924b: startup date [Sat Dec 10 00:03:58 IST 2016]; root of context hierarchy
+2016-12-10 00:04:12.194  INFO 1136 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/bookmarks],methods=[POST]}" onto org.springframework.http.ResponseEntity<?> bookmarks.BookmarkRestController.add(java.security.Principal,bookmarks.Bookmark)
+2016-12-10 00:04:12.194  INFO 1136 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/bookmarks/{bookmarkId}],methods=[GET]}" onto bookmarks.BookmarkResource bookmarks.BookmarkRestController.readBookmark(java.security.Principal,java.lang.Long)
+2016-12-10 00:04:12.194  INFO 1136 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/bookmarks],methods=[GET]}" onto org.springframework.hateoas.Resources<bookmarks.BookmarkResource> bookmarks.BookmarkRestController.readBookmarks(java.security.Principal)
+2016-12-10 00:04:12.210  INFO 1136 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-12-10 00:04:12.210  INFO 1136 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-12-10 00:04:12.319  INFO 1136 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-10 00:04:12.319  INFO 1136 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-10 00:04:12.413  INFO 1136 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in bookmarkControllerAdvice
+2016-12-10 00:04:12.491  INFO 1136 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-10 00:04:13.272  INFO 1136 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 52634 (http)
+2016-12-10 00:04:13.554  INFO 1136 --- [           main] security.ApplicationTests                : Started ApplicationTests in 15.735 seconds (JVM running for 17.202)
+request###############################################################################################
+{username=[jlong], password=[password], grant_type=[password]}
+request###############################################################################################
+2016-12-10 00:04:13.788  INFO 1136 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-12-10 00:04:13.788  INFO 1136 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-12-10 00:04:13.819  INFO 1136 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 31 ms
+Post###############################################################################################
+http://localhost:52634/oauth/token
+Post###############################################################################################
+token###############################################################################################
+{access_token=23ce2fdd-081f-45d1-bc75-0a581d9b951b, token_type=bearer, refresh_token=c189376b-3c90-4ddc-8824-bbf4a143f947, expires_in=43199, scope=write}
+token###############################################################################################
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.011 sec - in security.ApplicationTests
+2016-12-10 00:04:14.580  INFO 1136 --- [       Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@79924b: startup date [Sat Dec 10 00:03:58 IST 2016]; root of context hierarchy
+2016-12-10 00:04:14.596  INFO 1136 --- [       Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2016-12-10 00:04:14.596  INFO 1136 --- [       Thread-3] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-12-10 00:04:14.612  INFO 1136 --- [       Thread-3] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building hateoas 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ hateoas ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory E:\Working\Java\Spring\Spring-REST\Spring-REST-Services\tut-bookmarks-master\hateoas\src\main\resources
+[INFO] skip non existing resourceDirectory E:\Working\Java\Spring\Spring-REST\Spring-REST-Services\tut-bookmarks-master\hateoas\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ hateoas ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ hateoas ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory E:\Working\Java\Spring\Spring-REST\Spring-REST-Services\tut-bookmarks-master\hateoas\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ hateoas ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to E:\Working\Java\Spring\Spring-REST\Spring-REST-Services\tut-bookmarks-master\hateoas\target\test-classes
+[WARNING] /E:/Working/Java/Spring/Spring-REST/Spring-REST-Services/tut-bookmarks-master/hateoas/src/test/java/bookmarks/BookmarkRestControllerTest.java: E:\Working\Java\Spring\Spring-REST\Spring-REST-Services\tut-bookmarks-master\hateoas\src\test\java\bookmarks\BookmarkRestControllerTest.java uses unchecked or unsafe operations.
+[WARNING] /E:/Working/Java/Spring/Spring-REST/Spring-REST-Services/tut-bookmarks-master/hateoas/src/test/java/bookmarks/BookmarkRestControllerTest.java: Recompile with -Xlint:unchecked for details.
+[INFO]
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ hateoas ---
+[INFO] Surefire report directory: E:\Working\Java\Spring\Spring-REST\Spring-REST-Services\tut-bookmarks-master\hateoas\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+00:04:17.347 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class bookmarks.BookmarkRestControllerTest]
+00:04:17.362 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+00:04:17.378 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+00:04:17.393 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [bookmarks.BookmarkRestControllerTest] from class [org.springframework.test.context.web.WebTestContextBootstrapper]
+00:04:17.456 [main] DEBUG org.springframework.test.context.web.WebTestContextBootstrapper - Found explicit ContextLoader class [org.springframework.boot.test.SpringApplicationContextLoader] for context configuration attributes [ContextConfigurationAttributes@56ef9176 declaringClass = 'bookmarks.BookmarkRestControllerTest', classes = '{class bookmarks.Application}', locations = '{}', inheritLocations = true, initializers = '{}', inheritInitializers = true, name = [null], contextLoaderClass = 'org.springframework.boot.test.SpringApplicationContextLoader']
+00:04:17.472 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [bookmarks.BookmarkRestControllerTest]: class path resource [bookmarks/BookmarkRestControllerTest-context.xml] does not exist
+00:04:17.472 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [bookmarks.BookmarkRestControllerTest]: class path resource [bookmarks/BookmarkRestControllerTestContext.groovy] does not exist
+00:04:17.472 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [bookmarks.BookmarkRestControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+00:04:17.472 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [bookmarks.BookmarkRestControllerTest]
+00:04:17.487 [main] DEBUG org.springframework.test.context.web.WebTestContextBootstrapper - @TestExecutionListeners is not present for class [bookmarks.BookmarkRestControllerTest]: using defaults.
+00:04:17.503 [main] INFO org.springframework.test.context.web.WebTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+00:04:17.550 [main] INFO org.springframework.test.context.web.WebTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4e7dc304, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@64729b1e, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@10bbd20a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@48503868, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6895a785, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@184f6be2]
+00:04:17.550 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [bookmarks.BookmarkRestControllerTest]
+00:04:17.565 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [bookmarks.BookmarkRestControllerTest]
+Running bookmarks.BookmarkRestControllerTest
+00:04:17.565 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class bookmarks.BookmarkRestControllerTest]
+00:04:17.565 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+00:04:17.565 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+00:04:17.565 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [bookmarks.BookmarkRestControllerTest] from class [org.springframework.test.context.web.WebTestContextBootstrapper]
+00:04:17.581 [main] DEBUG org.springframework.test.context.web.WebTestContextBootstrapper - Found explicit ContextLoader class [org.springframework.boot.test.SpringApplicationContextLoader] for context configuration attributes [ContextConfigurationAttributes@27a8c74e declaringClass = 'bookmarks.BookmarkRestControllerTest', classes = '{class bookmarks.Application}', locations = '{}', inheritLocations = true, initializers = '{}', inheritInitializers = true, name = [null], contextLoaderClass = 'org.springframework.boot.test.SpringApplicationContextLoader']
+00:04:17.581 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [bookmarks.BookmarkRestControllerTest]: class path resource [bookmarks/BookmarkRestControllerTest-context.xml] does not exist
+00:04:17.581 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [bookmarks.BookmarkRestControllerTest]: class path resource [bookmarks/BookmarkRestControllerTestContext.groovy] does not exist
+00:04:17.581 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [bookmarks.BookmarkRestControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+00:04:17.581 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [bookmarks.BookmarkRestControllerTest]
+00:04:17.581 [main] DEBUG org.springframework.test.context.web.WebTestContextBootstrapper - @TestExecutionListeners is not present for class [bookmarks.BookmarkRestControllerTest]: using defaults.
+00:04:17.581 [main] INFO org.springframework.test.context.web.WebTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+00:04:17.581 [main] INFO org.springframework.test.context.web.WebTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@57e1b0c, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4232c52b, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1877ab81, org.springframework.test.context.support.DirtiesContextTestExecutionListener@305fd85d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@458c1321, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@11438d26]
+00:04:17.597 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [bookmarks.BookmarkRestControllerTest]
+00:04:17.597 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [bookmarks.BookmarkRestControllerTest]
+00:04:17.597 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [bookmarks.BookmarkRestControllerTest]
+00:04:17.597 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [bookmarks.BookmarkRestControllerTest]
+00:04:17.597 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@33c7e1bb testClass = BookmarkRestControllerTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@34c4973 testClass = BookmarkRestControllerTest, locations = '{}', classes = '{class bookmarks.Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.SpringApplicationContextLoader', parent = [null]]], class annotated with @DirtiesContext [false] with mode [null].
+00:04:17.612 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [bookmarks.BookmarkRestControllerTest]
+00:04:17.612 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [bookmarks.BookmarkRestControllerTest]
+00:04:17.800 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+00:04:17.800 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+00:04:17.800 [main] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+00:04:17.815 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [integrationTest] PropertySource with search precedence immediately lower than [systemEnvironment]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.3.5.RELEASE)
+
+2016-12-10 00:04:18.487  INFO 4484 --- [           main] bookmarks.BookmarkRestControllerTest     : Starting BookmarkRestControllerTest on Acer with PID 4484 (E:\Working\Java\Spring\Spring-REST\Spring-REST-Services\tut-bookmarks-master\hateoas\target\test-classes started by Aspire in E:\Working\Java\Spring\Spring-REST\Spring-REST-Services\tut-bookmarks-master\hateoas)
+2016-12-10 00:04:18.487  INFO 4484 --- [           main] bookmarks.BookmarkRestControllerTest     : No active profile set, falling back to default profiles: default
+2016-12-10 00:04:18.706  INFO 4484 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@74f0ea28: startup date [Sat Dec 10 00:04:18 IST 2016]; root of context hierarchy
+2016-12-10 00:04:23.003  INFO 4484 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3be07cae] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-12-10 00:04:24.378  INFO 4484 --- [           main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-12-10 00:04:24.441  INFO 4484 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+        name: default
+        ...]
+2016-12-10 00:04:24.628  INFO 4484 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {4.3.11.Final}
+2016-12-10 00:04:24.628  INFO 4484 --- [           main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-12-10 00:04:24.628  INFO 4484 --- [           main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-12-10 00:04:25.066  INFO 4484 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-12-10 00:04:25.253  INFO 4484 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-12-10 00:04:25.675  INFO 4484 --- [           main] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory
+2016-12-10 00:04:26.597  INFO 4484 --- [           main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-12-10 00:04:26.644  INFO 4484 --- [           main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-12-10 00:04:28.800  INFO 4484 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@74f0ea28: startup date [Sat Dec 10 00:04:18 IST 2016]; root of context hierarchy
+2016-12-10 00:04:28.988  INFO 4484 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{userId}/bookmarks],methods=[POST]}" onto org.springframework.http.ResponseEntity<?> bookmarks.BookmarkRestController.add(java.lang.String,bookmarks.Bookmark)
+2016-12-10 00:04:28.988  INFO 4484 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{userId}/bookmarks],methods=[GET]}" onto org.springframework.hateoas.Resources<bookmarks.BookmarkResource> bookmarks.BookmarkRestController.readBookmarks(java.lang.String)
+2016-12-10 00:04:28.988  INFO 4484 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/{userId}/bookmarks/{bookmarkId}],methods=[GET]}" onto bookmarks.BookmarkResource bookmarks.BookmarkRestController.readBookmark(java.lang.String,java.lang.Long)
+2016-12-10 00:04:29.003  INFO 4484 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-12-10 00:04:29.003  INFO 4484 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-12-10 00:04:29.097  INFO 4484 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-10 00:04:29.097  INFO 4484 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-10 00:04:29.144  INFO 4484 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in bookmarkControllerAdvice
+2016-12-10 00:04:29.206  INFO 4484 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-12-10 00:04:29.878  INFO 4484 --- [           main] b.a.s.AuthenticationManagerConfiguration :
+
+Using default security password: 2f5bb372-c0cd-4e00-bf90-4f26290d5afd
+
+2016-12-10 00:04:30.019  INFO 4484 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/css/**'], []
+2016-12-10 00:04:30.019  INFO 4484 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/js/**'], []
+2016-12-10 00:04:30.019  INFO 4484 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/images/**'], []
+2016-12-10 00:04:30.019  INFO 4484 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/**/favicon.ico'], []
+2016-12-10 00:04:30.019  INFO 4484 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/error'], []
+2016-12-10 00:04:30.183  INFO 4484 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3095d401, org.springframework.security.web.context.SecurityContextPersistenceFilter@3ef2b8e5, org.springframework.security.web.header.HeaderWriterFilter@4cfcac13, org.springframework.security.web.authentication.logout.LogoutFilter@701d2b59, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6ea66c33, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5d717f19, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7d284f15, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2037f12b, org.springframework.security.web.session.SessionManagementFilter@4276ad40, org.springframework.security.web.access.ExceptionTranslationFilter@598657cd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@38c10190]
+2016-12-10 00:04:31.027  INFO 4484 --- [           main] bookmarks.BookmarkRestControllerTest     : Started BookmarkRestControllerTest in 13.196 seconds (JVM running for 14.9)
+2016-12-10 00:04:31.121  INFO 4484 --- [           main] o.s.b.test.SpringBootMockServletContext  : Initializing Spring FrameworkServlet ''
+2016-12-10 00:04:31.121  INFO 4484 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2016-12-10 00:04:31.152  INFO 4484 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 31 ms
+bookmarkJson###############################################################################################
+mockHttpOutputMessage###############################################################################################
+{"id":null,"uri":"http://spring.io","description":"a bookmark to the best resource for Spring news and information"}
+mockHttpOutputMessage###############################################################################################
+{"id":null,"uri":"http://spring.io","description":"a bookmark to the best resource for Spring news and information"}
+bookmarkJson###############################################################################################
+createBookmark###############################################################################################
+No response json
+createBookmark###############################################################################################
+2016-12-10 00:04:32.089  INFO 4484 --- [           main] o.s.b.test.SpringBootMockServletContext  : Initializing Spring FrameworkServlet ''
+2016-12-10 00:04:32.089  INFO 4484 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2016-12-10 00:04:32.105  INFO 4484 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 16 ms
+readBookmarks###############################################################################################
+{"_embedded":{"bookmarkResourceList":[{"bookmark":{"id":20,"uri":"http://bookmark.com/1/bdussault","description":"A description"},"_links":{"bookmark-uri":{"href":"http://bookmark.com/1/bdussault"},"bookmarks":{"href":"http://localhost/bdussault/bookmarks"},"self":{"href":"http://localhost/bdussault/bookmarks/20"}}},{"bookmark":{"id":21,"uri":"http://bookmark.com/2/bdussault","description":"A description"},"_links":{"bookmark-uri":{"href":"http://bookmark.com/2/bdussault"},"bookmarks":{"href":"http://localhost/bdussault/bookmarks"},"self":{"href":"http://localhost/bdussault/bookmarks/21"}}}]}}
+readBookmarks###############################################################################################
+2016-12-10 00:04:32.527  INFO 4484 --- [           main] o.s.b.test.SpringBootMockServletContext  : Initializing Spring FrameworkServlet ''
+2016-12-10 00:04:32.527  INFO 4484 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2016-12-10 00:04:32.527  INFO 4484 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 0 ms
+mockHttpOutputMessage###############################################################################################
+{"id":null,"uri":null,"description":null}
+mockHttpOutputMessage###############################################################################################
+2016-12-10 00:04:32.621  INFO 4484 --- [           main] o.s.b.test.SpringBootMockServletContext  : Initializing Spring FrameworkServlet ''
+2016-12-10 00:04:32.621  INFO 4484 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2016-12-10 00:04:32.652  INFO 4484 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 31 ms
+readSingleBookmark###############################################################################################
+{"bookmark":{"id":24,"uri":"http://bookmark.com/1/bdussault","description":"A description"},"_links":{"bookmark-uri":{"href":"http://bookmark.com/1/bdussault"},"bookmarks":{"href":"http://localhost/bdussault/bookmarks"},"self":{"href":"http://localhost/bdussault/bookmarks/24"}}}
+readSingleBookmark###############################################################################################
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.165 sec - in bookmarks.BookmarkRestControllerTest
+2016-12-10 00:04:32.746  INFO 4484 --- [       Thread-2] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@74f0ea28: startup date [Sat Dec 10 00:04:18 IST 2016]; root of context hierarchy
+2016-12-10 00:04:32.761  INFO 4484 --- [       Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2016-12-10 00:04:32.777  INFO 4484 --- [       Thread-2] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-12-10 00:04:32.808  INFO 4484 --- [       Thread-2] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+
+Results :
+
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO]
+[INFO] bookmarks .......................................... SUCCESS [  0.000 s]
+[INFO] model .............................................. SUCCESS [  2.641 s]
+[INFO] rest ............................................... SUCCESS [ 21.310 s]
+[INFO] security ........................................... SUCCESS [ 18.899 s]
+[INFO] hateoas ............................................ SUCCESS [ 18.150 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 01:01 min
+[INFO] Finished at: 2016-12-10T00:04:32+05:30
+[INFO] Final Memory: 30M/323M
+[INFO] ------------------------------------------------------------------------
+
+Aspire@Acer MINGW64 /e/Working/Java/Spring/Spring-REST/Spring-REST-Services/tut-bookmarks-master
+$

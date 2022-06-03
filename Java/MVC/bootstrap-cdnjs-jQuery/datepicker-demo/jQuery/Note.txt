@@ -1,0 +1,5 @@
+http://code.jquery.com/
+
+http://code.jquery.com/ui/
+
+https://jquery.com/download/

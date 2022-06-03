@@ -1,0 +1,14 @@
+https://projects.spring.io/spring-framework/
+
+The Spring Framework provides a comprehensive programming and configuration model for modern Java-based enterprise applications - on any kind of deployment platform. A key element of Spring is infrastructural support at the application level: Spring focuses on the "plumbing" of enterprise applications so that teams can focus on application-level business logic, without unnecessary ties to specific deployment environments.
+
+Features
+
+• Dependency Injection
+• Aspect-Oriented Programming including Spring's declarative transaction management
+• Spring MVC web application and RESTful web service framework
+• Foundational support for JDBC, JPA, JMS
+
+https://en.wikipedia.org/wiki/Spring_Framework
+
+The Spring Framework is an application framework and inversion of control container for the Java platform. The framework's core features can be used by any Java application, but there are extensions for building web applications on top of the Java EE platform. Although the framework does not impose any specific programming model, it has become popular in the Java community as an alternative to, replacement for, or even addition to the Enterprise JavaBeans (EJB) model. The Spring Framework is open source.

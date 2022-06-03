@@ -1,0 +1,10 @@
+E:\Working\Java\Spring\Samples\SecureRESTApiWithBasicAuthentication\src\main\java\com\websystique\springmvc\security\SecurityConfiguration.java
+E:\Working\Java\Spring\Samples\SecureRESTApiWithBasicAuthentication\src\main\java\com\websystique\springmvc\security\SecurityWebApplicationInitializer.java
+E:\Working\Java\Spring\Samples\SecureRESTApiWithBasicAuthentication\src\main\java\com\websystique\springmvc\controller\HelloWorldRestController.java
+E:\Working\Java\Spring\Samples\SecureRESTApiWithBasicAuthentication\src\main\java\com\websystique\springmvc\configuration\CORSFilter.java
+E:\Working\Java\Spring\Samples\SecureRESTApiWithBasicAuthentication\src\main\java\com\websystique\springmvc\model\User.java
+E:\Working\Java\Spring\Samples\SecureRESTApiWithBasicAuthentication\src\main\java\com\websystique\springmvc\configuration\HelloWorldInitializer.java
+E:\Working\Java\Spring\Samples\SecureRESTApiWithBasicAuthentication\src\main\java\com\websystique\springmvc\service\UserService.java
+E:\Working\Java\Spring\Samples\SecureRESTApiWithBasicAuthentication\src\main\java\com\websystique\springmvc\service\UserServiceImpl.java
+E:\Working\Java\Spring\Samples\SecureRESTApiWithBasicAuthentication\src\main\java\com\websystique\springmvc\security\CustomBasicAuthenticationEntryPoint.java
+E:\Working\Java\Spring\Samples\SecureRESTApiWithBasicAuthentication\src\main\java\com\websystique\springmvc\configuration\HelloWorldConfiguration.java

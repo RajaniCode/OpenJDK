@@ -1,0 +1,291 @@
+$ java -version
+java version "1.8.0_102"
+Java(TM) SE Runtime Environment (build 1.8.0_102-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.102-b14, mixed mode)
+
+$ cd "E:\Working\Java\TODO\Jar"
+
+$ javac Program.java
+
+$ jar cvf program.jar Program.class
+added manifest
+adding: Program.class(in = 421) (out= 293)(deflated 30%)
+
+$ jar tf program.jar
+META-INF/
+META-INF/MANIFEST.MF
+Program.class
+
+[
+> del Program.class
+]
+
+$ rm -rf Program.class
+
+$ jar xvf program.jar
+  created: META-INF/
+ inflated: META-INF/MANIFEST.MF
+ inflated: Program.class
+
+[
+> dir Program.class
+]
+
+$ ls Program.class
+Program.class
+
+[
+> type META-INF\MANIFEST.MF
+]
+
+$ unzip -q -c program.jar META-INF/MANIFEST.MF 
+[
+-q will suppress verbose output from the unzip program
+-c will extract to stdout
+$ unzip -q -c program.jar META-INF/MANIFEST.MF > test
+]
+
+$ jar cfm program.jar META-INF/MANIFEST.MF Program.class
+
+$ jar cfe program.jar Program Program.class
+
+$ java -jar program.jar
+
+
+# Signing JAR Files
+https://docs.oracle.com/javase/tutorial/deployment/jar/signing.html
+Example
+
+Let's look at a couple of examples of signing a JAR file with the Jarsigner tool. In these examples, we will assume the following:
+
+Your alias is "johndoe".
+The keystore you want to use is in a file named "mykeys" in the current working directory.
+The TSA that you want to use to time stamp the signature is located at [http://tsa.url.example.com] http://timestamp.comodoca.com/rfc3161.
+[http://certhelp.ksoftware.net/support/solutions/articles/17164-how-do-i-sign-and-timestamp-a-java-jar-file]
+Under these assumptions, you could use this command to sign a JAR file named [app.jar] program.jar:
+
+[
+# Generate Keys
+http://docs.oracle.com/javase/tutorial/security/toolsign/step3.html
+[
+keytool -genkey -alias signFiles -keystore examplestore
+]
+
+$ keytool -genkey -alias johndoe -keystore mykeys
+[
+Enter keystore password:  Java 1.8.0_102
+Re-enter new password: Java 1.8.0_102
+What is your first and last name?
+  [Unknown]:  John Doe
+What is the name of your organizational unit?
+  [Unknown]:  ExampleUnit
+What is the name of your organization?
+  [Unknown]:  ExampleOrganization
+What is the name of your City or Locality?
+  [Unknown]:  Cupertino
+What is the name of your State or Province?
+  [Unknown]:  CA
+What is the two-letter country code for this unit?
+  [Unknown]:  US
+Is CN=John Doe, OU=ExampleUnit, O=ExampleOrganization, L=Cupertino, ST=CA, C=US correct?
+  [no]:  y
+
+Enter key password for <johndoe>
+        (RETURN if same as keystore password):  jdk 1.8.0_102
+Re-enter new password: jdk 1.8.0_102
+]
+]
+
+[
+jarsigner -keystore mykeys -tsa http://tsa.url.example.com app.jar johndoe
+]
+
+$ jarsigner -keystore mykeys -tsa http://timestamp.comodoca.com/rfc3161 program.jar johndoe
+[
+Enter Passphrase for keystore: Java 1.8.0_102
+Enter key password for johndoe: jdk 1.8.0_102
+jar signed.
+
+Warning:
+The signer certificate will expire within six months.
+]
+You will be prompted to enter the passwords for both the keystore and your alias. Because this command doesn't make use of the -sigfile option, the .SF and .DSA files it creates would be named JOHNDOE.SF and JOHNDOE.DSA. Because the command doesn't use the -signedjar option, the resulting signed file will overwrite the original version of [app.jar] program.jar.
+
+[
+Let's look at what would happen if you used a different combination of options:
+[
+jarsigner -keystore mykeys -sigfile SIG -signedjar SignedApp.jar -tsacert testalias app.jar johndoe
+]
+
+jarsigner -keystore examplestore -sigfile SIG -signedjar SignedProgram.jar -tsacert testalias program.jar johndoe
+[
+jarsigner: Certificate not found for: testalias.  testalias must reference a valid KeyStore entry containing an X.509 public key certificate for the Timestamping Authority.
+]
+]
+
+# Verifying Signed JAR Files
+https://docs.oracle.com/javase/tutorial/deployment/jar/verify.html
+[
+jarsigner -verify jar-file
+]
+
+jarsigner -verify program.jar
+[
+jar verified.
+
+Warning:
+This jar contains entries whose certificate chain is not validated.
+
+Re-run with the -verbose and -certs options for more details.
+]
+
+$ jarsigner -verify -verbose -certs program.jar
+[
+s        154 Thu Mar 02 17:06:02 IST 2017 META-INF/MANIFEST.MF
+
+      [entry was signed on 3/2/17 5:06 PM]
+      X.509, CN=John Doe, OU=ExampleUnit, O=ExampleOrganization, L=Cupertino, ST=CA, C=US
+      [certificate is valid from 3/2/17 5:01 PM to 5/31/17 5:01 PM]
+      [CertPath not validated: Path does not chain with any of the trust anchors]
+
+         316 Thu Mar 02 17:06:08 IST 2017 META-INF/JOHNDOE.SF
+        3283 Thu Mar 02 17:06:08 IST 2017 META-INF/JOHNDOE.DSA
+           0 Thu Mar 02 16:56:32 IST 2017 META-INF/
+sm       421 Thu Mar 02 16:56:24 IST 2017 Program.class
+
+      [entry was signed on 3/2/17 5:06 PM]
+      X.509, CN=John Doe, OU=ExampleUnit, O=ExampleOrganization, L=Cupertino, ST=CA, C=US
+      [certificate is valid from 3/2/17 5:01 PM to 5/31/17 5:01 PM]
+      [CertPath not validated: Path does not chain with any of the trust anchors]
+
+
+  s = signature was verified
+  m = entry is listed in manifest
+  k = at least one certificate was found in keystore
+  i = at least one certificate was found in identity scope
+
+jar verified.
+
+Warning:
+This jar contains entries whose certificate chain is not validated.
+]
+
+
+# Git Bash # jarsigner
+
+Aspire@Acer MINGW64 ~
+$ java -version
+java version "1.8.0_102"
+Java(TM) SE Runtime Environment (build 1.8.0_102-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.102-b14, mixed mode)
+
+Aspire@Acer MINGW64 ~
+$ cd "E:\Working\Java\TODO\Jar"
+
+Aspire@Acer MINGW64 /e/Working/Java/TODO/Jar
+$ javac Program.java
+
+Aspire@Acer MINGW64 /e/Working/Java/TODO/Jar
+$ jar cvf program.jar Program.class
+added manifest
+adding: Program.class(in = 421) (out= 293)(deflated 30%)
+
+Aspire@Acer MINGW64 /e/Working/Java/TODO/Jar
+$ jar tf program.jar
+META-INF/
+META-INF/MANIFEST.MF
+Program.class
+
+Aspire@Acer MINGW64 /e/Working/Java/TODO/Jar
+$ rm -rf Program.class
+
+Aspire@Acer MINGW64 /e/Working/Java/TODO/Jar
+$ jar xvf program.jar
+  created: META-INF/
+ inflated: META-INF/MANIFEST.MF
+ inflated: Program.class
+
+Aspire@Acer MINGW64 /e/Working/Java/TODO/Jar
+$ ls Program.class
+Program.class
+
+Aspire@Acer MINGW64 /e/Working/Java/TODO/Jar
+$ unzip -q -c program.jar META-INF/MANIFEST.MF
+Manifest-Version: 1.0
+Created-By: 1.8.0_102 (Oracle Corporation)
+
+
+Aspire@Acer MINGW64 /e/Working/Java/TODO/Jar
+$ keytool -genkey -alias johndoe -keystore mykeys
+Enter keystore password:  Java 1.8.0_102
+Re-enter new password: Java 1.8.0_102
+What is your first and last name?
+  [Unknown]:  John Doe
+What is the name of your organizational unit?
+  [Unknown]:  ExampleUnit
+What is the name of your organization?
+  [Unknown]:  ExampleOrganization
+What is the name of your City or Locality?
+  [Unknown]:  Cupertino
+What is the name of your State or Province?
+  [Unknown]:  CA
+What is the two-letter country code for this unit?
+  [Unknown]:  US
+Is CN=John Doe, OU=ExampleUnit, O=ExampleOrganization, L=Cupertino, ST=CA, C=US correct?
+  [no]:  y
+
+Enter key password for <johndoe>
+        (RETURN if same as keystore password):  jdk 1.8.0_102
+Re-enter new password: jdk 1.8.0_102
+
+Aspire@Acer MINGW64 /e/Working/Java/TODO/Jar
+$ jarsigner -keystore mykeys -tsa http://timestamp.comodoca.com/rfc3161 program.jar johndoe
+Enter Passphrase for keystore: Java 1.8.0_102
+Enter key password for johndoe: jdk 1.8.0_102
+jar signed.
+
+Warning:
+The signer certificate will expire within six months.
+
+Aspire@Acer MINGW64 /e/Working/Java/TODO/Jar
+$ jarsigner -verify program.jar
+jar verified.
+
+Warning:
+This jar contains entries whose certificate chain is not validated.
+
+Re-run with the -verbose and -certs options for more details.
+
+Aspire@Acer MINGW64 /e/Working/Java/TODO/Jar
+$ jarsigner -verify -verbose -certs program.jar
+
+s        154 Thu Mar 02 17:06:02 IST 2017 META-INF/MANIFEST.MF
+
+      [entry was signed on 3/2/17 5:06 PM]
+      X.509, CN=John Doe, OU=ExampleUnit, O=ExampleOrganization, L=Cupertino, ST=CA, C=US
+      [certificate is valid from 3/2/17 5:01 PM to 5/31/17 5:01 PM]
+      [CertPath not validated: Path does not chain with any of the trust anchors]
+
+         316 Thu Mar 02 17:06:08 IST 2017 META-INF/JOHNDOE.SF
+        3283 Thu Mar 02 17:06:08 IST 2017 META-INF/JOHNDOE.DSA
+           0 Thu Mar 02 16:56:32 IST 2017 META-INF/
+sm       421 Thu Mar 02 16:56:24 IST 2017 Program.class
+
+      [entry was signed on 3/2/17 5:06 PM]
+      X.509, CN=John Doe, OU=ExampleUnit, O=ExampleOrganization, L=Cupertino, ST=CA, C=US
+      [certificate is valid from 3/2/17 5:01 PM to 5/31/17 5:01 PM]
+      [CertPath not validated: Path does not chain with any of the trust anchors]
+
+
+  s = signature was verified
+  m = entry is listed in manifest
+  k = at least one certificate was found in keystore
+  i = at least one certificate was found in identity scope
+
+jar verified.
+
+Warning:
+This jar contains entries whose certificate chain is not validated.
+
+Aspire@Acer MINGW64 /e/Working/Java/TODO/Jar
+$

@@ -1,0 +1,259 @@
+
+$ java -version
+
+$ mvn -v
+
+$ cd "C:\Users\Rajani\Desktop\2018\Working\Java\Spring\Samples\SpringSecurityOAuth2Example\SpringSecurityOAuth2Example"
+
+# SpringSecurityOAuth2Example/pom.xml
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.rajani.springmvc</groupId>
+    <artifactId>SpringSecurityOAuth2Example</artifactId>
+    <version>1.0.0</version>
+    <packaging>war</packaging>
+
+    <name>SpringSecurityOAuth2Example</name>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <springframework.version>4.3.1.RELEASE</springframework.version>
+        <springsecurity.version>4.1.1.RELEASE</springsecurity.version>
+        <springsecurityoauth2.version>2.0.10.RELEASE</springsecurityoauth2.version>
+        <jackson.library>2.7.5</jackson.library>
+    </properties>
+
+    <dependencies>
+        <!-- Spring -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${springframework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${springframework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${springframework.version}</version>
+        </dependency>
+
+        <!-- Spring Security -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>${springsecurity.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>${springsecurity.version}</version>
+        </dependency>
+
+        <!-- Spring Security OAuth2-->
+        <dependency>
+            <groupId>org.springframework.security.oauth</groupId>
+            <artifactId>spring-security-oauth2</artifactId>
+            <version>${springsecurityoauth2.version}</version>
+        </dependency>
+
+        <!-- Jackson libraries -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.library}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-xml</artifactId>
+            <version>${jackson.library}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.2</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.4</version>
+                <configuration>
+                    <warSourceDirectory>src/main/webapp</warSourceDirectory>
+                    <warName>SpringSecurityOAuth2Example</warName>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+        </plugins>
+        <finalName>SpringSecurityOAuth2Example</finalName>
+    </build>
+</project>
+
+
+[
+$ mvn eclipse:eclipse
+]
+
+$ mvn package
+
+
+$ jar tvf target/SpringSecurityOAuth2Example.war
+
+
+# Copy File
+$ cp "C:\Users\Rajani\Desktop\2018\Working\Java\Spring\Samples\SpringSecurityOAuth2Example\SpringSecurityOAuth2Example\target\SpringSecurityOAuth2Example.war" "C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps"
+
+# When war file is copied to Tomcat webapps, the corresponding folder is also copied to Tomcat webapps
+[
+# Copy Folder 
+$ cp -r "C:\Users\Rajani\Desktop\2018\Working\Java\Spring\Samples\SpringSecurityOAuth2Example\SpringSecurityOAuth2Example\target\SpringSecurityOAuth2Example" "C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps"
+]
+
+# Restart Tomcat server [services.msc]
+# SpringRestClient
+mvn -Dexec.mainClass=com.rajani.springmvc.SpringRestClient -Dexec.classpathScope=test test-compile exec:java
+
+
+[
+[Try to access a resource without any auth info, and get a 401.]
+# GET 
+http://localhost:8080/SpringSecurityOAuth2Example/user/
+
+[Ask for tokens[access+refresh] using HTTP POST on /oauth/token, with grant_type=password,and resource owners credentials as req-params. Additionally, send client credentials in Authorization header.]
+# POST 
+http://localhost:8080/SpringSecurityOAuth2Example/oauth/token?grant_type=password&username=bill&password=abc123
+
+[Ask for a new access token via valid refresh-token, using HTTP POST on /oauth/token, with grant_type=refresh_token,and sending actual refresh token. Additionally, send client credentials in Authorization header.]
+# POST 
+http://localhost:8080/SpringSecurityOAuth2Example/oauth/token?grant_type=refresh_token&refresh_token=094b7d23-973f-4cc1-83ad-8ffd43de1845
+
+[Access the resource by providing an access token using access_token query param with request.]
+# GET 
+http://localhost:8080/SpringSecurityOAuth2Example/user/?access_token=3525d0e4-d881-49e7-9f91-bcfd18259109
+]
+
+
+# Postman
+# Request name:
+SpringSecurityOAuth2Example
+# Select a collection of folder to save to:
+SpringSecurityOAuth2Example
+# Postman
+[Try to access a resource without any auth info, and get a 401.]
+GET 
+http://localhost:8080/SpringSecurityOAuth2Example/user/
+
+# Response
+# Body
+<!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">h1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} h2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} h3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} body {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} b {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} p {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;} a {color:black;} a.name {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1><hr class="line" /><p><b>Type</b> Status Report</p><p><b>Message</b> &#47;SpringSecurityOAuth2Example&#47;user&#47;</p><p><b>Description</b> The origin server did not find a current representation for the target resource or is not willing to disclose that one exists.</p><hr class="line" /><h3>Apache Tomcat/9.0.12</h3></body></html>
+
+# Postman
+[Get the tokens. First add an authorization header with client credentials [my-trusted-client/secret].]
+# POST 
+http://localhost:8080/SpringSecurityOAuth2Example/oauth/token?grant_type=password&username=bill&password=abc123
+
+Headers
+Name:
+my-trusted-client
+Value: 
+secret
+
+Basic auth
+Username:
+my-trusted-client
+Password:
+secret
+
+# Response
+# Body
+<DefaultOAuth2AccessToken xmlns=""><access_token>14ed5ee5-36e6-4b83-a628-03bffeeb8f2b</access_token><token_type>bearer</token_type><refresh_token>4c48f7a6-eeac-4de2-a0b0-e14445645f4c</refresh_token><expires_in>119</expires_in><scope>read write trust</scope></DefaultOAuth2AccessToken>
+
+
+# Postman
+[Send the Post request, to receive the response containing access-token as well as refresh-token.]
+[
+Username:
+my-trusted-client
+Password:
+secret
+]
+# POST 
+http://localhost:8080/SpringSecurityOAuth2Example/oauth/token?grant_type=refresh_token&refresh_token=4c48f7a6-eeac-4de2-a0b0-e14445645f4c
+
+# Response
+# Body
+<DefaultOAuth2AccessToken xmlns=""><access_token>f1e08292-766e-4ad9-9ee2-b61054d1b5bf</access_token><token_type>bearer</token_type><refresh_token>4c48f7a6-eeac-4de2-a0b0-e14445645f4c</refresh_token><expires_in>119</expires_in><scope>read write trust</scope></DefaultOAuth2AccessToken>
+
+
+# Postman
+[Use access-token [valid for 2 minutes] to access resources.]
+# GET 
+http://localhost:8080/SpringSecurityOAuth2Example/user/?access_token=f1e08292-766e-4ad9-9ee2-b61054d1b5bf
+
+# Response
+# Body
+<List xmlns=""><item><id>1</id><name>Sam</name><age>30</age><salary>70000.0</salary></item><item><id>2</id><name>Tom</name><age>40</age><salary>50000.0</salary></item><item><id>3</id><name>Jerome</name><age>45</age><salary>30000.0</salary></item><item><id>4</id><name>Silvia</name><age>50</age><salary>40000.0</salary></item></List>
+
+
+# Postman
+[After 2 minutes, access-token gets expired, further resource requests will fail.]
+# GET 
+http://localhost:8080/SpringSecurityOAuth2Example/user/?access_token=f1e08292-766e-4ad9-9ee2-b61054d1b5bf
+
+# Response
+# Body
+<InvalidTokenException xmlns=""><error>invalid_token</error><error_description>Access token expired: f1e08292-766e-4ad9-9ee2-b61054d1b5bf</error_description></InvalidTokenException>
+
+
+# Postman
+[Fire a post to with refresh-token to get a brand-new access-token.]
+# POST 
+http://localhost:8080/SpringSecurityOAuth2Example/oauth/token?grant_type=refresh_token&refresh_token=4c48f7a6-eeac-4de2-a0b0-e14445645f4c
+
+# Response
+# Body
+<DefaultOAuth2AccessToken xmlns=""><access_token>72814fa8-4daf-41f1-919b-99217746c20b</access_token><token_type>bearer</token_type><refresh_token>4c48f7a6-eeac-4de2-a0b0-e14445645f4c</refresh_token><expires_in>119</expires_in><scope>read write trust</scope></DefaultOAuth2AccessToken>
+
+
+# Postman
+[Use the new access-token to access the resources.]
+# GET 
+http://localhost:8080/SpringSecurityOAuth2Example/user/?access_token=72814fa8-4daf-41f1-919b-99217746c20b
+
+# Response
+# Body
+<List xmlns=""><item><id>1</id><name>Sam</name><age>30</age><salary>70000.0</salary></item><item><id>2</id><name>Tom</name><age>40</age><salary>50000.0</salary></item><item><id>3</id><name>Jerome</name><age>45</age><salary>30000.0</salary></item><item><id>4</id><name>Silvia</name><age>50</age><salary>40000.0</salary></item></List>
+
+
+# Postman
+[Refresh-token expires too [10 minutes], hence the refresh request will fail.] 
+[
+Username:
+my-trusted-client
+Password:
+secret
+]
+# POST 
+http://localhost:8080/SpringSecurityOAuth2Example/oauth/token?grant_type=refresh_token&refresh_token=4c48f7a6-eeac-4de2-a0b0-e14445645f4c
+
+# Response
+# Body
+<InvalidTokenException xmlns=""><error>invalid_token</error><error_description>Invalid refresh token (expired): 4c48f7a6-eeac-4de2-a0b0-e14445645f4c</error_description></InvalidTokenException>

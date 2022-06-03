@@ -1,0 +1,639 @@
+Last login: Thu Jun  2 16:42:18 on ttys000
+autopoint		git			git-upload-pack		msgen			msgmerge		pcre2test
+brew			git-cvsserver		msgattrib		msgexec			msgunfmt		recode-sr-latin
+envsubst		git-lfs			msgcat			msgfilter		msguniq			xgettext
+gettext			git-receive-pack	msgcmp			msgfmt			ngettext
+gettext.sh		git-shell		msgcomm			msggrep			pcre2-config
+gettextize		git-upload-archive	msgconv			msginit			pcre2grep
+rajaniapple@Rajanis-MacBook-Pro ~ % java --version                                                                                                       
+openjdk 17.0.2 2022-01-18
+OpenJDK Runtime Environment (build 17.0.2+8-86)
+OpenJDK 64-Bit Server VM (build 17.0.2+8-86, mixed mode, sharing)
+rajaniapple@Rajanis-MacBook-Pro ~ % jar --version                                                                                                        
+jar 17.0.2
+rajaniapple@Rajanis-MacBook-Pro ~ % cd /Users/rajaniapple/Desktop/GitHub/JavaUpdate/Java\ Algorithms\ and\ Data\ Structures/Algorithms/Standard\ Libraries 
+rajaniapple@Rajanis-MacBook-Pro Standard Libraries % jar tvf stdlib.jar         
+     0 Tue May 24 15:53:08 IST 2022 META-INF/
+    64 Tue May 24 15:53:08 IST 2022 META-INF/MANIFEST.MF
+ 11876 Thu Apr 23 18:59:24 IST 2020 BinaryIn.java
+  9978 Thu Apr 23 19:01:18 IST 2020 BinaryOut.java
+  9832 Thu Apr 23 18:58:54 IST 2020 BinaryStdIn.java
+  8915 Thu Apr 23 19:01:30 IST 2020 BinaryStdOut.java
+ 58590 Sat Feb 05 15:18:02 IST 2022 Draw.java
+  2523 Thu May 19 09:18:46 IST 2022 DrawListener.java
+ 18381 Mon May 23 10:21:04 IST 2022 GrayscalePicture.java
+ 29099 Wed Oct 28 06:51:42 IST 2020 In.java
+  7655 Fri Oct 20 14:09:40 IST 2017 Out.java
+ 19435 Mon May 23 10:21:22 IST 2022 Picture.java
+  3733 Wed Jun 13 10:06:52 IST 2018 PlayMusic.java
+  7405 Fri Oct 20 14:09:40 IST 2017 StdArrayIO.java
+ 24812 Tue May 24 12:31:08 IST 2022 StdAudio.java
+ 80613 Mon May 23 10:24:30 IST 2022 StdDraw.java
+ 26389 Thu Jan 28 02:55:32 IST 2021 StdIn.java
+ 13814 Fri Oct 20 14:09:40 IST 2017 StdInTest.java
+  8579 Sat Jun 01 19:41:12 IST 2019 StdOut.java
+  8484 Sat May 21 20:34:50 IST 2022 StdPicture.java
+ 23661 Sat Sep 18 16:42:34 IST 2021 StdRandom.java
+ 17297 Mon Oct 22 12:04:08 IST 2018 StdStats.java
+  1502 Fri Oct 20 14:09:40 IST 2017 StopwatchCPU.java
+  2549 Fri Oct 20 14:09:40 IST 2017 Stopwatch.java
+  1986 Fri May 10 10:57:28 IST 2019 TestIntroCS.java
+  4629 Fri May 10 10:57:52 IST 2019 UnicodeTest.java
+  5629 Tue May 24 15:53:06 IST 2022 BinaryIn.class
+  5306 Tue May 24 15:53:06 IST 2022 BinaryOut.class
+  4024 Tue May 24 15:53:06 IST 2022 BinaryStdIn.class
+  4527 Tue May 24 15:53:06 IST 2022 BinaryStdOut.class
+ 28404 Tue May 24 15:53:06 IST 2022 Draw.class
+   839 Tue May 24 15:53:06 IST 2022 DrawListener.class
+  1496 Tue May 24 15:53:06 IST 2022 Draw$RetinaImageIcon.class
+ 10079 Tue May 24 15:53:06 IST 2022 GrayscalePicture.class
+ 13524 Tue May 24 15:53:06 IST 2022 In.class
+  4351 Tue May 24 15:53:06 IST 2022 Out.class
+ 10192 Tue May 24 15:53:08 IST 2022 Picture.class
+   548 Tue May 24 15:53:08 IST 2022 PlayMusic$1.class
+  4427 Tue May 24 15:53:08 IST 2022 PlayMusic.class
+  3715 Tue May 24 15:53:08 IST 2022 StdArrayIO.class
+   704 Tue May 24 15:53:08 IST 2022 StdAudio$1.class
+   704 Sat Feb 12 22:55:42 IST 2022 StdAudio$2.class
+  2442 Tue May 24 15:53:08 IST 2022 StdAudio$BackgroundRunnable.class
+ 10582 Tue May 24 15:53:08 IST 2022 StdAudio.class
+ 25973 Tue May 24 15:53:08 IST 2022 StdDraw.class
+  1508 Tue May 24 15:53:08 IST 2022 StdDraw$RetinaImageIcon.class
+  8790 Tue May 24 15:53:08 IST 2022 StdIn.class
+ 10877 Tue May 24 15:53:08 IST 2022 StdInTest.class
+  3402 Tue May 24 15:53:08 IST 2022 StdOut.class
+  2418 Tue May 24 15:53:08 IST 2022 StdPicture.class
+  9044 Tue May 24 15:53:08 IST 2022 StdRandom.class
+  6156 Tue May 24 15:53:08 IST 2022 StdStats.class
+  1349 Tue May 24 15:53:08 IST 2022 Stopwatch.class
+   774 Tue May 24 15:53:08 IST 2022 StopwatchCPU.class
+  1474 Tue May 24 15:53:08 IST 2022 TestIntroCS.class
+  1757 Tue May 24 15:53:08 IST 2022 UnicodeTest.class
+    40 Sat Nov 24 08:11:38 IST 2007 InTest.txt
+ 66925 Wed Feb 25 11:11:22 IST 2009 mandrill.jpg
+rajaniapple@Rajanis-MacBook-Pro Standard Libraries % jar xf stdlib.jar          
+rajaniapple@Rajanis-MacBook-Pro Standard Libraries % rm -rf mandrill.jpg
+rajaniapple@Rajanis-MacBook-Pro Standard Libraries % rm -rf META-INF
+rajaniapple@Rajanis-MacBook-Pro Standard Libraries % rm -rf *.class     
+rajaniapple@Rajanis-MacBook-Pro Standard Libraries % rm -rf *.java                                                                                      rajaniapple@Rajanis-MacBook-Pro Standard Libraries % unzip stdlib.jar -d stdlib/
+Archive:  stdlib.jar
+   creating: stdlib/META-INF/
+  inflating: stdlib/META-INF/MANIFEST.MF  
+  inflating: stdlib/BinaryIn.java    
+  inflating: stdlib/BinaryOut.java   
+  inflating: stdlib/BinaryStdIn.java  
+  inflating: stdlib/BinaryStdOut.java  
+  inflating: stdlib/Draw.java        
+  inflating: stdlib/DrawListener.java  
+  inflating: stdlib/GrayscalePicture.java  
+  inflating: stdlib/In.java          
+  inflating: stdlib/Out.java         
+  inflating: stdlib/Picture.java     
+  inflating: stdlib/PlayMusic.java   
+  inflating: stdlib/StdArrayIO.java  
+  inflating: stdlib/StdAudio.java    
+  inflating: stdlib/StdDraw.java     
+  inflating: stdlib/StdIn.java       
+  inflating: stdlib/StdInTest.java   
+  inflating: stdlib/StdOut.java      
+  inflating: stdlib/StdPicture.java  
+  inflating: stdlib/StdRandom.java   
+  inflating: stdlib/StdStats.java    
+  inflating: stdlib/StopwatchCPU.java  
+  inflating: stdlib/Stopwatch.java   
+  inflating: stdlib/TestIntroCS.java  
+  inflating: stdlib/UnicodeTest.java  
+  inflating: stdlib/BinaryIn.class   
+  inflating: stdlib/BinaryOut.class  
+  inflating: stdlib/BinaryStdIn.class  
+  inflating: stdlib/BinaryStdOut.class  
+  inflating: stdlib/Draw.class       
+  inflating: stdlib/DrawListener.class  
+  inflating: stdlib/Draw$RetinaImageIcon.class  
+  inflating: stdlib/GrayscalePicture.class  
+  inflating: stdlib/In.class         
+  inflating: stdlib/Out.class        
+  inflating: stdlib/Picture.class    
+  inflating: stdlib/PlayMusic$1.class  
+  inflating: stdlib/PlayMusic.class  
+  inflating: stdlib/StdArrayIO.class  
+  inflating: stdlib/StdAudio$1.class  
+  inflating: stdlib/StdAudio$2.class  
+  inflating: stdlib/StdAudio$BackgroundRunnable.class  
+  inflating: stdlib/StdAudio.class   
+  inflating: stdlib/StdDraw.class    
+  inflating: stdlib/StdDraw$RetinaImageIcon.class  
+  inflating: stdlib/StdIn.class      
+  inflating: stdlib/StdInTest.class  
+  inflating: stdlib/StdOut.class     
+  inflating: stdlib/StdPicture.class  
+  inflating: stdlib/StdRandom.class  
+  inflating: stdlib/StdStats.class   
+  inflating: stdlib/Stopwatch.class  
+  inflating: stdlib/StopwatchCPU.class  
+  inflating: stdlib/TestIntroCS.class  
+  inflating: stdlib/UnicodeTest.class  
+  inflating: stdlib/InTest.txt       
+  inflating: stdlib/mandrill.jpg     
+rajaniapple@Rajanis-MacBook-Pro ~ % cd /Users/rajaniapple/Desktop/GitHub/JavaUpdate/Java\ Algorithms\ and\ Data\ Structures/Algorithms/Java\ Algorithms\ and\ Clients
+rajaniapple@Rajanis-MacBook-Pro Java Algorithms and Clients % unzip algs4.jar -d algs4/   
+Archive:  algs4.jar
+   creating: algs4/META-INF/
+  inflating: algs4/META-INF/MANIFEST.MF  
+  inflating: algs4/COPYING           
+  inflating: algs4/edu/princeton/cs/algs4/Accumulator.java  
+  inflating: algs4/edu/princeton/cs/algs4/AcyclicLP.java  
+  inflating: algs4/edu/princeton/cs/algs4/AcyclicSP.java  
+  inflating: algs4/edu/princeton/cs/algs4/AdjMatrixEdgeWeightedDigraph.java  
+  inflating: algs4/edu/princeton/cs/algs4/AllowFilter.java  
+  inflating: algs4/edu/princeton/cs/algs4/Allowlist.java  
+  inflating: algs4/edu/princeton/cs/algs4/Alphabet.java  
+  inflating: algs4/edu/princeton/cs/algs4/AmericanFlag.java  
+  inflating: algs4/edu/princeton/cs/algs4/AmericanFlagX.java  
+  inflating: algs4/edu/princeton/cs/algs4/Arbitrage.java  
+  inflating: algs4/edu/princeton/cs/algs4/AssignmentProblem.java  
+  inflating: algs4/edu/princeton/cs/algs4/Average.java  
+  inflating: algs4/edu/princeton/cs/algs4/AVLTreeST.java  
+  inflating: algs4/edu/princeton/cs/algs4/Bag.java  
+  inflating: algs4/edu/princeton/cs/algs4/BellmanFordSP.java  
+  inflating: algs4/edu/princeton/cs/algs4/BinaryDump.java  
+  inflating: algs4/edu/princeton/cs/algs4/BinaryIn.java  
+  inflating: algs4/edu/princeton/cs/algs4/BinaryInsertion.java  
+  inflating: algs4/edu/princeton/cs/algs4/BinaryOut.java  
+  inflating: algs4/edu/princeton/cs/algs4/BinarySearch.java  
+  inflating: algs4/edu/princeton/cs/algs4/BinarySearchST.java  
+  inflating: algs4/edu/princeton/cs/algs4/BinaryStdIn.java  
+  inflating: algs4/edu/princeton/cs/algs4/BinaryStdOut.java  
+  inflating: algs4/edu/princeton/cs/algs4/BinomialMinPQ.java  
+  inflating: algs4/edu/princeton/cs/algs4/Bipartite.java  
+  inflating: algs4/edu/princeton/cs/algs4/BipartiteMatching.java  
+  inflating: algs4/edu/princeton/cs/algs4/BipartiteX.java  
+  inflating: algs4/edu/princeton/cs/algs4/BlockFilter.java  
+  inflating: algs4/edu/princeton/cs/algs4/BoruvkaMST.java  
+  inflating: algs4/edu/princeton/cs/algs4/BoyerMoore.java  
+  inflating: algs4/edu/princeton/cs/algs4/BreadthFirstDirectedPaths.java  
+  inflating: algs4/edu/princeton/cs/algs4/BreadthFirstPaths.java  
+  inflating: algs4/edu/princeton/cs/algs4/BST.java  
+  inflating: algs4/edu/princeton/cs/algs4/BTree.java  
+  inflating: algs4/edu/princeton/cs/algs4/Cat.java  
+  inflating: algs4/edu/princeton/cs/algs4/CC.java  
+  inflating: algs4/edu/princeton/cs/algs4/ClosestPair.java  
+  inflating: algs4/edu/princeton/cs/algs4/CollisionSystem.java  
+  inflating: algs4/edu/princeton/cs/algs4/Complex.java  
+  inflating: algs4/edu/princeton/cs/algs4/Counter.java  
+  inflating: algs4/edu/princeton/cs/algs4/Count.java  
+  inflating: algs4/edu/princeton/cs/algs4/CPM.java  
+  inflating: algs4/edu/princeton/cs/algs4/Cycle.java  
+  inflating: algs4/edu/princeton/cs/algs4/Date.java  
+  inflating: algs4/edu/princeton/cs/algs4/DeDup.java  
+  inflating: algs4/edu/princeton/cs/algs4/DegreesOfSeparation.java  
+  inflating: algs4/edu/princeton/cs/algs4/DepthFirstDirectedPaths.java  
+  inflating: algs4/edu/princeton/cs/algs4/DepthFirstOrder.java  
+  inflating: algs4/edu/princeton/cs/algs4/DepthFirstPaths.java  
+  inflating: algs4/edu/princeton/cs/algs4/DepthFirstSearch.java  
+  inflating: algs4/edu/princeton/cs/algs4/DigraphGenerator.java  
+  inflating: algs4/edu/princeton/cs/algs4/Digraph.java  
+  inflating: algs4/edu/princeton/cs/algs4/DijkstraAllPairsSP.java  
+  inflating: algs4/edu/princeton/cs/algs4/DijkstraSP.java  
+  inflating: algs4/edu/princeton/cs/algs4/DijkstraUndirectedSP.java  
+  inflating: algs4/edu/princeton/cs/algs4/DirectedCycle.java  
+  inflating: algs4/edu/princeton/cs/algs4/DirectedCycleX.java  
+  inflating: algs4/edu/princeton/cs/algs4/DirectedDFS.java  
+  inflating: algs4/edu/princeton/cs/algs4/DirectedEdge.java  
+  inflating: algs4/edu/princeton/cs/algs4/DirectedEulerianCycle.java  
+  inflating: algs4/edu/princeton/cs/algs4/DirectedEulerianPath.java  
+  inflating: algs4/edu/princeton/cs/algs4/DoublingRatio.java  
+  inflating: algs4/edu/princeton/cs/algs4/DoublingTest.java  
+  inflating: algs4/edu/princeton/cs/algs4/Draw.java  
+  inflating: algs4/edu/princeton/cs/algs4/DrawListener.java  
+  inflating: algs4/edu/princeton/cs/algs4/Edge.java  
+  inflating: algs4/edu/princeton/cs/algs4/EdgeWeightedDigraph.java  
+  inflating: algs4/edu/princeton/cs/algs4/EdgeWeightedDirectedCycle.java  
+  inflating: algs4/edu/princeton/cs/algs4/EdgeWeightedGraph.java  
+  inflating: algs4/edu/princeton/cs/algs4/EulerianCycle.java  
+  inflating: algs4/edu/princeton/cs/algs4/EulerianPath.java  
+  inflating: algs4/edu/princeton/cs/algs4/FarthestPair.java  
+  inflating: algs4/edu/princeton/cs/algs4/FenwickTree.java  
+  inflating: algs4/edu/princeton/cs/algs4/FFT.java  
+  inflating: algs4/edu/princeton/cs/algs4/FibonacciMinPQ.java  
+  inflating: algs4/edu/princeton/cs/algs4/FileIndex.java  
+  inflating: algs4/edu/princeton/cs/algs4/FlowEdge.java  
+  inflating: algs4/edu/princeton/cs/algs4/FlowNetwork.java  
+  inflating: algs4/edu/princeton/cs/algs4/FloydWarshall.java  
+  inflating: algs4/edu/princeton/cs/algs4/FordFulkerson.java  
+  inflating: algs4/edu/princeton/cs/algs4/FrequencyCounter.java  
+  inflating: algs4/edu/princeton/cs/algs4/GabowSCC.java  
+  inflating: algs4/edu/princeton/cs/algs4/GaussianElimination.java  
+  inflating: algs4/edu/princeton/cs/algs4/GaussJordanElimination.java  
+  inflating: algs4/edu/princeton/cs/algs4/Genome.java  
+  inflating: algs4/edu/princeton/cs/algs4/GlobalMincut.java  
+  inflating: algs4/edu/princeton/cs/algs4/GrahamScan.java  
+  inflating: algs4/edu/princeton/cs/algs4/GraphGenerator.java  
+  inflating: algs4/edu/princeton/cs/algs4/Graph.java  
+  inflating: algs4/edu/princeton/cs/algs4/GrayscalePicture.java  
+  inflating: algs4/edu/princeton/cs/algs4/GREP.java  
+  inflating: algs4/edu/princeton/cs/algs4/Heap.java  
+  inflating: algs4/edu/princeton/cs/algs4/HexDump.java  
+  inflating: algs4/edu/princeton/cs/algs4/HopcroftKarp.java  
+  inflating: algs4/edu/princeton/cs/algs4/Huffman.java  
+  inflating: algs4/edu/princeton/cs/algs4/IndexBinomialMinPQ.java  
+  inflating: algs4/edu/princeton/cs/algs4/IndexFibonacciMinPQ.java  
+  inflating: algs4/edu/princeton/cs/algs4/IndexMaxPQ.java  
+  inflating: algs4/edu/princeton/cs/algs4/IndexMinPQ.java  
+  inflating: algs4/edu/princeton/cs/algs4/IndexMultiwayMinPQ.java  
+  inflating: algs4/edu/princeton/cs/algs4/In.java  
+  inflating: algs4/edu/princeton/cs/algs4/InplaceMSD.java  
+  inflating: algs4/edu/princeton/cs/algs4/Insertion.java  
+  inflating: algs4/edu/princeton/cs/algs4/InsertionX.java  
+  inflating: algs4/edu/princeton/cs/algs4/Interval1D.java  
+  inflating: algs4/edu/princeton/cs/algs4/Interval2D.java  
+  inflating: algs4/edu/princeton/cs/algs4/Inversions.java  
+  inflating: algs4/edu/princeton/cs/algs4/KMP.java  
+  inflating: algs4/edu/princeton/cs/algs4/Knuth.java  
+  inflating: algs4/edu/princeton/cs/algs4/KosarajuSharirSCC.java  
+  inflating: algs4/edu/princeton/cs/algs4/KruskalMST.java  
+  inflating: algs4/edu/princeton/cs/algs4/KWIK.java  
+  inflating: algs4/edu/princeton/cs/algs4/LazyPrimMST.java  
+  inflating: algs4/edu/princeton/cs/algs4/LinearProbingHashST.java  
+  inflating: algs4/edu/princeton/cs/algs4/LinearProgramming.java  
+  inflating: algs4/edu/princeton/cs/algs4/LinearRegression.java  
+  inflating: algs4/edu/princeton/cs/algs4/LinkedBag.java  
+  inflating: algs4/edu/princeton/cs/algs4/LinkedQueue.java  
+  inflating: algs4/edu/princeton/cs/algs4/LinkedStack.java  
+  inflating: algs4/edu/princeton/cs/algs4/LongestCommonSubstring.java  
+  inflating: algs4/edu/princeton/cs/algs4/LongestRepeatedSubstring.java  
+  inflating: algs4/edu/princeton/cs/algs4/LookupCSV.java  
+  inflating: algs4/edu/princeton/cs/algs4/LookupIndex.java  
+  inflating: algs4/edu/princeton/cs/algs4/LSD.java  
+  inflating: algs4/edu/princeton/cs/algs4/LZW.java  
+  inflating: algs4/edu/princeton/cs/algs4/MaxPQ.java  
+  inflating: algs4/edu/princeton/cs/algs4/MergeBU.java  
+  inflating: algs4/edu/princeton/cs/algs4/Merge.java  
+  inflating: algs4/edu/princeton/cs/algs4/MergeX.java  
+  inflating: algs4/edu/princeton/cs/algs4/MinPQ.java  
+  inflating: algs4/edu/princeton/cs/algs4/MSD.java  
+  inflating: algs4/edu/princeton/cs/algs4/Multiway.java  
+  inflating: algs4/edu/princeton/cs/algs4/MultiwayMinPQ.java  
+  inflating: algs4/edu/princeton/cs/algs4/NFA.java  
+  inflating: algs4/edu/princeton/cs/algs4/NonrecursiveDFS.java  
+  inflating: algs4/edu/princeton/cs/algs4/NonrecursiveDirectedDFS.java  
+  inflating: algs4/edu/princeton/cs/algs4/Out.java  
+  inflating: algs4/edu/princeton/cs/algs4/Particle.java  
+  inflating: algs4/edu/princeton/cs/algs4/PatriciaSET.java  
+  inflating: algs4/edu/princeton/cs/algs4/PatriciaST.java  
+  inflating: algs4/edu/princeton/cs/algs4/PictureDump.java  
+  inflating: algs4/edu/princeton/cs/algs4/Picture.java  
+  inflating: algs4/edu/princeton/cs/algs4/Point2D.java  
+  inflating: algs4/edu/princeton/cs/algs4/Polynomial.java  
+  inflating: algs4/edu/princeton/cs/algs4/PrimMST.java  
+  inflating: algs4/edu/princeton/cs/algs4/Queue.java  
+  inflating: algs4/edu/princeton/cs/algs4/Quick3string.java  
+  inflating: algs4/edu/princeton/cs/algs4/Quick3way.java  
+  inflating: algs4/edu/princeton/cs/algs4/QuickBentleyMcIlroy.java  
+  inflating: algs4/edu/princeton/cs/algs4/QuickFindUF.java  
+  inflating: algs4/edu/princeton/cs/algs4/Quick.java  
+  inflating: algs4/edu/princeton/cs/algs4/QuickUnionUF.java  
+  inflating: algs4/edu/princeton/cs/algs4/QuickX.java  
+  inflating: algs4/edu/princeton/cs/algs4/RabinKarp.java  
+  inflating: algs4/edu/princeton/cs/algs4/RandomSeq.java  
+  inflating: algs4/edu/princeton/cs/algs4/RectHV.java  
+  inflating: algs4/edu/princeton/cs/algs4/RedBlackBST.java  
+  inflating: algs4/edu/princeton/cs/algs4/ResizingArrayBag.java  
+  inflating: algs4/edu/princeton/cs/algs4/ResizingArrayQueue.java  
+  inflating: algs4/edu/princeton/cs/algs4/ResizingArrayStack.java  
+  inflating: algs4/edu/princeton/cs/algs4/RunLength.java  
+  inflating: algs4/edu/princeton/cs/algs4/SegmentTree.java  
+  inflating: algs4/edu/princeton/cs/algs4/Selection.java  
+  inflating: algs4/edu/princeton/cs/algs4/SeparateChainingHashST.java  
+  inflating: algs4/edu/princeton/cs/algs4/SequentialSearchST.java  
+  inflating: algs4/edu/princeton/cs/algs4/SET.java  
+  inflating: algs4/edu/princeton/cs/algs4/Shell.java  
+  inflating: algs4/edu/princeton/cs/algs4/SparseVector.java  
+  inflating: algs4/edu/princeton/cs/algs4/Stack.java  
+  inflating: algs4/edu/princeton/cs/algs4/StaticSETofInts.java  
+  inflating: algs4/edu/princeton/cs/algs4/StdArrayIO.java  
+  inflating: algs4/edu/princeton/cs/algs4/StdAudio.java  
+  inflating: algs4/edu/princeton/cs/algs4/StdDraw.java  
+  inflating: algs4/edu/princeton/cs/algs4/StdIn.java  
+  inflating: algs4/edu/princeton/cs/algs4/StdOut.java  
+  inflating: algs4/edu/princeton/cs/algs4/StdRandom.java  
+  inflating: algs4/edu/princeton/cs/algs4/StdStats.java  
+  inflating: algs4/edu/princeton/cs/algs4/ST.java  
+  inflating: algs4/edu/princeton/cs/algs4/StopwatchCPU.java  
+  inflating: algs4/edu/princeton/cs/algs4/Stopwatch.java  
+  inflating: algs4/edu/princeton/cs/algs4/SuffixArray.java  
+  inflating: algs4/edu/princeton/cs/algs4/SuffixArrayX.java  
+  inflating: algs4/edu/princeton/cs/algs4/SymbolDigraph.java  
+  inflating: algs4/edu/princeton/cs/algs4/SymbolGraph.java  
+  inflating: algs4/edu/princeton/cs/algs4/TarjanSCC.java  
+  inflating: algs4/edu/princeton/cs/algs4/ThreeSumFast.java  
+  inflating: algs4/edu/princeton/cs/algs4/ThreeSum.java  
+  inflating: algs4/edu/princeton/cs/algs4/TopM.java  
+  inflating: algs4/edu/princeton/cs/algs4/Topological.java  
+  inflating: algs4/edu/princeton/cs/algs4/TopologicalX.java  
+  inflating: algs4/edu/princeton/cs/algs4/Transaction.java  
+  inflating: algs4/edu/princeton/cs/algs4/TransitiveClosure.java  
+  inflating: algs4/edu/princeton/cs/algs4/TrieSET.java  
+  inflating: algs4/edu/princeton/cs/algs4/TrieST.java  
+  inflating: algs4/edu/princeton/cs/algs4/TST.java  
+  inflating: algs4/edu/princeton/cs/algs4/TwoPersonZeroSumGame.java  
+  inflating: algs4/edu/princeton/cs/algs4/UF.java  
+  inflating: algs4/edu/princeton/cs/algs4/Vector.java  
+  inflating: algs4/edu/princeton/cs/algs4/WeightedQuickUnionUF.java  
+  inflating: algs4/edu/princeton/cs/algs4/Accumulator.class  
+  inflating: algs4/edu/princeton/cs/algs4/AcyclicLP.class  
+  inflating: algs4/edu/princeton/cs/algs4/AcyclicSP.class  
+  inflating: algs4/edu/princeton/cs/algs4/AdjMatrixEdgeWeightedDigraph$AdjIterator.class  
+  inflating: algs4/edu/princeton/cs/algs4/AdjMatrixEdgeWeightedDigraph.class  
+  inflating: algs4/edu/princeton/cs/algs4/AllowFilter.class  
+  inflating: algs4/edu/princeton/cs/algs4/Allowlist.class  
+  inflating: algs4/edu/princeton/cs/algs4/Alphabet.class  
+  inflating: algs4/edu/princeton/cs/algs4/AmericanFlag.class  
+  inflating: algs4/edu/princeton/cs/algs4/AmericanFlagX.class  
+  inflating: algs4/edu/princeton/cs/algs4/Arbitrage.class  
+  inflating: algs4/edu/princeton/cs/algs4/AssignmentProblem.class  
+  inflating: algs4/edu/princeton/cs/algs4/Average.class  
+  inflating: algs4/edu/princeton/cs/algs4/AVLTreeST.class  
+  inflating: algs4/edu/princeton/cs/algs4/AVLTreeST$Node.class  
+  inflating: algs4/edu/princeton/cs/algs4/Bag$1.class  
+  inflating: algs4/edu/princeton/cs/algs4/Bag.class  
+  inflating: algs4/edu/princeton/cs/algs4/Bag$LinkedIterator.class  
+  inflating: algs4/edu/princeton/cs/algs4/Bag$Node.class  
+  inflating: algs4/edu/princeton/cs/algs4/BellmanFordSP.class  
+  inflating: algs4/edu/princeton/cs/algs4/BinaryDump.class  
+  inflating: algs4/edu/princeton/cs/algs4/BinaryIn.class  
+  inflating: algs4/edu/princeton/cs/algs4/BinaryInsertion.class  
+  inflating: algs4/edu/princeton/cs/algs4/BinaryOut.class  
+  inflating: algs4/edu/princeton/cs/algs4/BinarySearch.class  
+  inflating: algs4/edu/princeton/cs/algs4/BinarySearchST.class  
+  inflating: algs4/edu/princeton/cs/algs4/BinaryStdIn.class  
+  inflating: algs4/edu/princeton/cs/algs4/BinaryStdOut.class  
+  inflating: algs4/edu/princeton/cs/algs4/BinomialMinPQ$1.class  
+  inflating: algs4/edu/princeton/cs/algs4/BinomialMinPQ.class  
+  inflating: algs4/edu/princeton/cs/algs4/BinomialMinPQ$MyComparator.class  
+  inflating: algs4/edu/princeton/cs/algs4/BinomialMinPQ$MyIterator.class  
+  inflating: algs4/edu/princeton/cs/algs4/BinomialMinPQ$Node.class  
+  inflating: algs4/edu/princeton/cs/algs4/Bipartite.class  
+  inflating: algs4/edu/princeton/cs/algs4/BipartiteMatching.class  
+  inflating: algs4/edu/princeton/cs/algs4/BipartiteX.class  
+  inflating: algs4/edu/princeton/cs/algs4/BlockFilter.class  
+  inflating: algs4/edu/princeton/cs/algs4/BoruvkaMST.class  
+  inflating: algs4/edu/princeton/cs/algs4/BoyerMoore.class  
+  inflating: algs4/edu/princeton/cs/algs4/BreadthFirstDirectedPaths.class  
+  inflating: algs4/edu/princeton/cs/algs4/BreadthFirstPaths.class  
+  inflating: algs4/edu/princeton/cs/algs4/BST.class  
+  inflating: algs4/edu/princeton/cs/algs4/BST$Node.class  
+  inflating: algs4/edu/princeton/cs/algs4/BTree$1.class  
+  inflating: algs4/edu/princeton/cs/algs4/BTree.class  
+  inflating: algs4/edu/princeton/cs/algs4/BTree$Entry.class  
+  inflating: algs4/edu/princeton/cs/algs4/BTree$Node.class  
+  inflating: algs4/edu/princeton/cs/algs4/Cat.class  
+  inflating: algs4/edu/princeton/cs/algs4/CC.class  
+  inflating: algs4/edu/princeton/cs/algs4/ClosestPair.class  
+  inflating: algs4/edu/princeton/cs/algs4/CollisionSystem.class  
+  inflating: algs4/edu/princeton/cs/algs4/CollisionSystem$Event.class  
+  inflating: algs4/edu/princeton/cs/algs4/Complex.class  
+  inflating: algs4/edu/princeton/cs/algs4/Count.class  
+  inflating: algs4/edu/princeton/cs/algs4/Counter.class  
+  inflating: algs4/edu/princeton/cs/algs4/CPM.class  
+  inflating: algs4/edu/princeton/cs/algs4/Cycle.class  
+  inflating: algs4/edu/princeton/cs/algs4/Date.class  
+  inflating: algs4/edu/princeton/cs/algs4/DeDup.class  
+  inflating: algs4/edu/princeton/cs/algs4/DegreesOfSeparation.class  
+  inflating: algs4/edu/princeton/cs/algs4/DepthFirstDirectedPaths.class  
+  inflating: algs4/edu/princeton/cs/algs4/DepthFirstOrder.class  
+  inflating: algs4/edu/princeton/cs/algs4/DepthFirstPaths.class  
+  inflating: algs4/edu/princeton/cs/algs4/DepthFirstSearch.class  
+  inflating: algs4/edu/princeton/cs/algs4/Digraph.class  
+  inflating: algs4/edu/princeton/cs/algs4/DigraphGenerator$1.class  
+  inflating: algs4/edu/princeton/cs/algs4/DigraphGenerator.class  
+  inflating: algs4/edu/princeton/cs/algs4/DigraphGenerator$Edge.class  
+  inflating: algs4/edu/princeton/cs/algs4/DijkstraAllPairsSP.class  
+  inflating: algs4/edu/princeton/cs/algs4/DijkstraSP.class  
+  inflating: algs4/edu/princeton/cs/algs4/DijkstraUndirectedSP.class  
+  inflating: algs4/edu/princeton/cs/algs4/DirectedCycle.class  
+  inflating: algs4/edu/princeton/cs/algs4/DirectedCycleX.class  
+  inflating: algs4/edu/princeton/cs/algs4/DirectedDFS.class  
+  inflating: algs4/edu/princeton/cs/algs4/DirectedEdge.class  
+  inflating: algs4/edu/princeton/cs/algs4/DirectedEulerianCycle.class  
+  inflating: algs4/edu/princeton/cs/algs4/DirectedEulerianPath.class  
+  inflating: algs4/edu/princeton/cs/algs4/DoublingRatio.class  
+  inflating: algs4/edu/princeton/cs/algs4/DoublingTest.class  
+  inflating: algs4/edu/princeton/cs/algs4/Draw.class  
+  inflating: algs4/edu/princeton/cs/algs4/DrawListener.class  
+  inflating: algs4/edu/princeton/cs/algs4/Draw$RetinaImageIcon.class  
+  inflating: algs4/edu/princeton/cs/algs4/Edge.class  
+  inflating: algs4/edu/princeton/cs/algs4/EdgeWeightedDigraph.class  
+  inflating: algs4/edu/princeton/cs/algs4/EdgeWeightedDirectedCycle.class  
+  inflating: algs4/edu/princeton/cs/algs4/EdgeWeightedGraph.class  
+  inflating: algs4/edu/princeton/cs/algs4/EulerianCycle.class  
+  inflating: algs4/edu/princeton/cs/algs4/EulerianCycle$Edge.class  
+  inflating: algs4/edu/princeton/cs/algs4/EulerianPath.class  
+  inflating: algs4/edu/princeton/cs/algs4/EulerianPath$Edge.class  
+  inflating: algs4/edu/princeton/cs/algs4/FarthestPair.class  
+  inflating: algs4/edu/princeton/cs/algs4/FenwickTree.class  
+  inflating: algs4/edu/princeton/cs/algs4/FFT.class  
+  inflating: algs4/edu/princeton/cs/algs4/FibonacciMinPQ$1.class  
+  inflating: algs4/edu/princeton/cs/algs4/FibonacciMinPQ.class  
+  inflating: algs4/edu/princeton/cs/algs4/FibonacciMinPQ$MyComparator.class  
+  inflating: algs4/edu/princeton/cs/algs4/FibonacciMinPQ$MyIterator.class  
+  inflating: algs4/edu/princeton/cs/algs4/FibonacciMinPQ$Node.class  
+  inflating: algs4/edu/princeton/cs/algs4/FileIndex.class  
+  inflating: algs4/edu/princeton/cs/algs4/FlowEdge.class  
+  inflating: algs4/edu/princeton/cs/algs4/FlowNetwork.class  
+  inflating: algs4/edu/princeton/cs/algs4/FloydWarshall.class  
+  inflating: algs4/edu/princeton/cs/algs4/FordFulkerson.class  
+  inflating: algs4/edu/princeton/cs/algs4/FrequencyCounter.class  
+  inflating: algs4/edu/princeton/cs/algs4/GabowSCC.class  
+  inflating: algs4/edu/princeton/cs/algs4/GaussianElimination.class  
+  inflating: algs4/edu/princeton/cs/algs4/GaussJordanElimination.class  
+  inflating: algs4/edu/princeton/cs/algs4/Genome.class  
+  inflating: algs4/edu/princeton/cs/algs4/GlobalMincut.class  
+  inflating: algs4/edu/princeton/cs/algs4/GlobalMincut$CutPhase.class  
+  inflating: algs4/edu/princeton/cs/algs4/GrahamScan.class  
+  inflating: algs4/edu/princeton/cs/algs4/Graph.class  
+  inflating: algs4/edu/princeton/cs/algs4/GraphGenerator$1.class  
+  inflating: algs4/edu/princeton/cs/algs4/GraphGenerator.class  
+  inflating: algs4/edu/princeton/cs/algs4/GraphGenerator$Edge.class  
+  inflating: algs4/edu/princeton/cs/algs4/GrayscalePicture.class  
+  inflating: algs4/edu/princeton/cs/algs4/GREP.class  
+  inflating: algs4/edu/princeton/cs/algs4/Heap.class  
+  inflating: algs4/edu/princeton/cs/algs4/HexDump.class  
+  inflating: algs4/edu/princeton/cs/algs4/HopcroftKarp.class  
+  inflating: algs4/edu/princeton/cs/algs4/Huffman.class  
+  inflating: algs4/edu/princeton/cs/algs4/Huffman$Node.class  
+  inflating: algs4/edu/princeton/cs/algs4/In.class  
+  inflating: algs4/edu/princeton/cs/algs4/IndexBinomialMinPQ$1.class  
+  inflating: algs4/edu/princeton/cs/algs4/IndexBinomialMinPQ.class  
+  inflating: algs4/edu/princeton/cs/algs4/IndexBinomialMinPQ$MyComparator.class  
+  inflating: algs4/edu/princeton/cs/algs4/IndexBinomialMinPQ$MyIterator.class  
+  inflating: algs4/edu/princeton/cs/algs4/IndexBinomialMinPQ$Node.class  
+  inflating: algs4/edu/princeton/cs/algs4/IndexFibonacciMinPQ$1.class  
+  inflating: algs4/edu/princeton/cs/algs4/IndexFibonacciMinPQ.class  
+  inflating: algs4/edu/princeton/cs/algs4/IndexFibonacciMinPQ$MyComparator.class  
+  inflating: algs4/edu/princeton/cs/algs4/IndexFibonacciMinPQ$MyIterator.class  
+  inflating: algs4/edu/princeton/cs/algs4/IndexFibonacciMinPQ$Node.class  
+  inflating: algs4/edu/princeton/cs/algs4/IndexMaxPQ.class  
+  inflating: algs4/edu/princeton/cs/algs4/IndexMaxPQ$HeapIterator.class  
+  inflating: algs4/edu/princeton/cs/algs4/IndexMinPQ.class  
+  inflating: algs4/edu/princeton/cs/algs4/IndexMinPQ$HeapIterator.class  
+  inflating: algs4/edu/princeton/cs/algs4/IndexMultiwayMinPQ$1.class  
+  inflating: algs4/edu/princeton/cs/algs4/IndexMultiwayMinPQ.class  
+  inflating: algs4/edu/princeton/cs/algs4/IndexMultiwayMinPQ$MyComparator.class  
+  inflating: algs4/edu/princeton/cs/algs4/IndexMultiwayMinPQ$MyIterator.class  
+  inflating: algs4/edu/princeton/cs/algs4/InplaceMSD.class  
+  inflating: algs4/edu/princeton/cs/algs4/Insertion.class  
+  inflating: algs4/edu/princeton/cs/algs4/InsertionX.class  
+  inflating: algs4/edu/princeton/cs/algs4/Interval1D$1.class  
+  inflating: algs4/edu/princeton/cs/algs4/Interval1D.class  
+  inflating: algs4/edu/princeton/cs/algs4/Interval1D$LengthComparator.class  
+  inflating: algs4/edu/princeton/cs/algs4/Interval1D$MaxEndpointComparator.class  
+  inflating: algs4/edu/princeton/cs/algs4/Interval1D$MinEndpointComparator.class  
+  inflating: algs4/edu/princeton/cs/algs4/Interval2D.class  
+  inflating: algs4/edu/princeton/cs/algs4/Inversions.class  
+  inflating: algs4/edu/princeton/cs/algs4/KMP.class  
+  inflating: algs4/edu/princeton/cs/algs4/Knuth.class  
+  inflating: algs4/edu/princeton/cs/algs4/KosarajuSharirSCC.class  
+  inflating: algs4/edu/princeton/cs/algs4/KruskalMST.class  
+  inflating: algs4/edu/princeton/cs/algs4/KWIK.class  
+  inflating: algs4/edu/princeton/cs/algs4/LazyPrimMST.class  
+  inflating: algs4/edu/princeton/cs/algs4/LinearProbingHashST.class  
+  inflating: algs4/edu/princeton/cs/algs4/LinearProgramming.class  
+  inflating: algs4/edu/princeton/cs/algs4/LinearRegression.class  
+  inflating: algs4/edu/princeton/cs/algs4/LinkedBag$1.class  
+  inflating: algs4/edu/princeton/cs/algs4/LinkedBag.class  
+  inflating: algs4/edu/princeton/cs/algs4/LinkedBag$LinkedIterator.class  
+  inflating: algs4/edu/princeton/cs/algs4/LinkedBag$Node.class  
+  inflating: algs4/edu/princeton/cs/algs4/LinkedQueue$1.class  
+  inflating: algs4/edu/princeton/cs/algs4/LinkedQueue.class  
+  inflating: algs4/edu/princeton/cs/algs4/LinkedQueue$LinkedIterator.class  
+  inflating: algs4/edu/princeton/cs/algs4/LinkedQueue$Node.class  
+  inflating: algs4/edu/princeton/cs/algs4/LinkedStack$1.class  
+  inflating: algs4/edu/princeton/cs/algs4/LinkedStack.class  
+  inflating: algs4/edu/princeton/cs/algs4/LinkedStack$LinkedIterator.class  
+  inflating: algs4/edu/princeton/cs/algs4/LinkedStack$Node.class  
+  inflating: algs4/edu/princeton/cs/algs4/LongestCommonSubstring.class  
+  inflating: algs4/edu/princeton/cs/algs4/LongestRepeatedSubstring.class  
+  inflating: algs4/edu/princeton/cs/algs4/LookupCSV.class  
+  inflating: algs4/edu/princeton/cs/algs4/LookupIndex.class  
+  inflating: algs4/edu/princeton/cs/algs4/LSD.class  
+  inflating: algs4/edu/princeton/cs/algs4/LZW.class  
+  inflating: algs4/edu/princeton/cs/algs4/MaxPQ.class  
+  inflating: algs4/edu/princeton/cs/algs4/MaxPQ$HeapIterator.class  
+  inflating: algs4/edu/princeton/cs/algs4/MergeBU.class  
+  inflating: algs4/edu/princeton/cs/algs4/Merge.class  
+  inflating: algs4/edu/princeton/cs/algs4/MergeX.class  
+  inflating: algs4/edu/princeton/cs/algs4/MinPQ.class  
+  inflating: algs4/edu/princeton/cs/algs4/MinPQ$HeapIterator.class  
+  inflating: algs4/edu/princeton/cs/algs4/MSD.class  
+  inflating: algs4/edu/princeton/cs/algs4/Multiway.class  
+  inflating: algs4/edu/princeton/cs/algs4/MultiwayMinPQ$1.class  
+  inflating: algs4/edu/princeton/cs/algs4/MultiwayMinPQ.class  
+  inflating: algs4/edu/princeton/cs/algs4/MultiwayMinPQ$MyComparator.class  
+  inflating: algs4/edu/princeton/cs/algs4/MultiwayMinPQ$MyIterator.class  
+  inflating: algs4/edu/princeton/cs/algs4/NFA.class  
+  inflating: algs4/edu/princeton/cs/algs4/NonrecursiveDFS.class  
+  inflating: algs4/edu/princeton/cs/algs4/NonrecursiveDirectedDFS.class  
+  inflating: algs4/edu/princeton/cs/algs4/Out.class  
+  inflating: algs4/edu/princeton/cs/algs4/Particle.class  
+  inflating: algs4/edu/princeton/cs/algs4/PatriciaSET.class  
+  inflating: algs4/edu/princeton/cs/algs4/PatriciaSET$Node.class  
+  inflating: algs4/edu/princeton/cs/algs4/PatriciaST.class  
+  inflating: algs4/edu/princeton/cs/algs4/PatriciaST$Node.class  
+  inflating: algs4/edu/princeton/cs/algs4/Picture.class  
+  inflating: algs4/edu/princeton/cs/algs4/PictureDump.class  
+  inflating: algs4/edu/princeton/cs/algs4/Point2D$1.class  
+  inflating: algs4/edu/princeton/cs/algs4/Point2D$Atan2Order.class  
+  inflating: algs4/edu/princeton/cs/algs4/Point2D.class  
+  inflating: algs4/edu/princeton/cs/algs4/Point2D$DistanceToOrder.class  
+  inflating: algs4/edu/princeton/cs/algs4/Point2D$PolarOrder.class  
+  inflating: algs4/edu/princeton/cs/algs4/Point2D$ROrder.class  
+  inflating: algs4/edu/princeton/cs/algs4/Point2D$XOrder.class  
+  inflating: algs4/edu/princeton/cs/algs4/Point2D$YOrder.class  
+  inflating: algs4/edu/princeton/cs/algs4/Polynomial.class  
+  inflating: algs4/edu/princeton/cs/algs4/PrimMST.class  
+  inflating: algs4/edu/princeton/cs/algs4/Queue$1.class  
+  inflating: algs4/edu/princeton/cs/algs4/Queue.class  
+  inflating: algs4/edu/princeton/cs/algs4/Queue$LinkedIterator.class  
+  inflating: algs4/edu/princeton/cs/algs4/Queue$Node.class  
+  inflating: algs4/edu/princeton/cs/algs4/Quick3string.class  
+  inflating: algs4/edu/princeton/cs/algs4/Quick3way.class  
+  inflating: algs4/edu/princeton/cs/algs4/QuickBentleyMcIlroy.class  
+  inflating: algs4/edu/princeton/cs/algs4/Quick.class  
+  inflating: algs4/edu/princeton/cs/algs4/QuickFindUF.class  
+  inflating: algs4/edu/princeton/cs/algs4/QuickUnionUF.class  
+  inflating: algs4/edu/princeton/cs/algs4/QuickX.class  
+  inflating: algs4/edu/princeton/cs/algs4/RabinKarp.class  
+  inflating: algs4/edu/princeton/cs/algs4/RandomSeq.class  
+  inflating: algs4/edu/princeton/cs/algs4/RectHV.class  
+  inflating: algs4/edu/princeton/cs/algs4/RedBlackBST.class  
+  inflating: algs4/edu/princeton/cs/algs4/RedBlackBST$Node.class  
+  inflating: algs4/edu/princeton/cs/algs4/ResizingArrayBag$1.class  
+  inflating: algs4/edu/princeton/cs/algs4/ResizingArrayBag$ArrayIterator.class  
+  inflating: algs4/edu/princeton/cs/algs4/ResizingArrayBag.class  
+  inflating: algs4/edu/princeton/cs/algs4/ResizingArrayQueue$1.class  
+  inflating: algs4/edu/princeton/cs/algs4/ResizingArrayQueue$ArrayIterator.class  
+  inflating: algs4/edu/princeton/cs/algs4/ResizingArrayQueue.class  
+  inflating: algs4/edu/princeton/cs/algs4/ResizingArrayStack.class  
+  inflating: algs4/edu/princeton/cs/algs4/ResizingArrayStack$ReverseArrayIterator.class  
+  inflating: algs4/edu/princeton/cs/algs4/RunLength.class  
+  inflating: algs4/edu/princeton/cs/algs4/SegmentTree.class  
+  inflating: algs4/edu/princeton/cs/algs4/SegmentTree$Node.class  
+  inflating: algs4/edu/princeton/cs/algs4/Selection.class  
+  inflating: algs4/edu/princeton/cs/algs4/SeparateChainingHashST.class  
+  inflating: algs4/edu/princeton/cs/algs4/SequentialSearchST.class  
+  inflating: algs4/edu/princeton/cs/algs4/SequentialSearchST$Node.class  
+  inflating: algs4/edu/princeton/cs/algs4/SET.class  
+  inflating: algs4/edu/princeton/cs/algs4/Shell.class  
+  inflating: algs4/edu/princeton/cs/algs4/SparseVector.class  
+  inflating: algs4/edu/princeton/cs/algs4/Stack$1.class  
+  inflating: algs4/edu/princeton/cs/algs4/Stack.class  
+  inflating: algs4/edu/princeton/cs/algs4/Stack$LinkedIterator.class  
+  inflating: algs4/edu/princeton/cs/algs4/Stack$Node.class  
+  inflating: algs4/edu/princeton/cs/algs4/StaticSETofInts.class  
+  inflating: algs4/edu/princeton/cs/algs4/ST.class  
+  inflating: algs4/edu/princeton/cs/algs4/StdArrayIO.class  
+  inflating: algs4/edu/princeton/cs/algs4/StdAudio$1.class  
+  inflating: algs4/edu/princeton/cs/algs4/StdAudio$BackgroundRunnable.class  
+  inflating: algs4/edu/princeton/cs/algs4/StdAudio.class  
+  inflating: algs4/edu/princeton/cs/algs4/StdDraw.class  
+  inflating: algs4/edu/princeton/cs/algs4/StdDraw$RetinaImageIcon.class  
+  inflating: algs4/edu/princeton/cs/algs4/StdIn.class  
+  inflating: algs4/edu/princeton/cs/algs4/StdOut.class  
+  inflating: algs4/edu/princeton/cs/algs4/StdRandom.class  
+  inflating: algs4/edu/princeton/cs/algs4/StdStats.class  
+  inflating: algs4/edu/princeton/cs/algs4/Stopwatch.class  
+  inflating: algs4/edu/princeton/cs/algs4/StopwatchCPU.class  
+  inflating: algs4/edu/princeton/cs/algs4/SuffixArray$1.class  
+  inflating: algs4/edu/princeton/cs/algs4/SuffixArray.class  
+  inflating: algs4/edu/princeton/cs/algs4/SuffixArray$Suffix.class  
+  inflating: algs4/edu/princeton/cs/algs4/SuffixArrayX.class  
+  inflating: algs4/edu/princeton/cs/algs4/SymbolDigraph.class  
+  inflating: algs4/edu/princeton/cs/algs4/SymbolGraph.class  
+  inflating: algs4/edu/princeton/cs/algs4/TarjanSCC.class  
+  inflating: algs4/edu/princeton/cs/algs4/ThreeSum.class  
+  inflating: algs4/edu/princeton/cs/algs4/ThreeSumFast.class  
+  inflating: algs4/edu/princeton/cs/algs4/TopM.class  
+  inflating: algs4/edu/princeton/cs/algs4/Topological.class  
+  inflating: algs4/edu/princeton/cs/algs4/TopologicalX.class  
+  inflating: algs4/edu/princeton/cs/algs4/Transaction.class  
+  inflating: algs4/edu/princeton/cs/algs4/Transaction$HowMuchOrder.class  
+  inflating: algs4/edu/princeton/cs/algs4/Transaction$WhenOrder.class  
+  inflating: algs4/edu/princeton/cs/algs4/Transaction$WhoOrder.class  
+  inflating: algs4/edu/princeton/cs/algs4/TransitiveClosure.class  
+  inflating: algs4/edu/princeton/cs/algs4/TrieSET$1.class  
+  inflating: algs4/edu/princeton/cs/algs4/TrieSET.class  
+  inflating: algs4/edu/princeton/cs/algs4/TrieSET$Node.class  
+  inflating: algs4/edu/princeton/cs/algs4/TrieST$1.class  
+  inflating: algs4/edu/princeton/cs/algs4/TrieST.class  
+  inflating: algs4/edu/princeton/cs/algs4/TrieST$Node.class  
+  inflating: algs4/edu/princeton/cs/algs4/TST$1.class  
+  inflating: algs4/edu/princeton/cs/algs4/TST.class  
+  inflating: algs4/edu/princeton/cs/algs4/TST$Node.class  
+  inflating: algs4/edu/princeton/cs/algs4/TwoPersonZeroSumGame.class  
+  inflating: algs4/edu/princeton/cs/algs4/UF.class  
+  inflating: algs4/edu/princeton/cs/algs4/Vector.class  
+  inflating: algs4/edu/princeton/cs/algs4/WeightedQuickUnionUF.class  
+  inflating: algs4/TestAlgs4.java    
+  inflating: algs4/TestAlgs4.class   
+rajaniapple@Rajanis-MacBook-Pro Java Algorithms and Clients %

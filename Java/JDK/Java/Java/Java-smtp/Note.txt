@@ -1,0 +1,26 @@
+https://java.net/projects/javamail/pages/Home
+
+Git Bash [export]
+
+$ export CLASSPATH="Download/javax.mail.jar;.;"
+
+# OR
+
+$ export CLASSPATH="Download\javax.mail.jar;.;"
+
+$ echo $CLASSPATH
+
+Git CMD [set]
+
+> set CLASSPATH=Download\javax.mail.jar;.;
+
+> echo %CLASSPATH%
+
+javac SMTPGmail.java
+
+java SMTPGmail
+
+
+javac SMTPOutlook.java
+
+java SMTPOutlook

@@ -1,0 +1,22 @@
+The examples in this directory are Copyright (c) 1997 by David Flanagan.
+
+You may study, use, modify, and distribute these examples for any
+non-commercial purpose, as long as the copyright notice at the top of
+each example is retained.
+
+Please note that the examples are provided as-is, with NO WARRANTY OF
+ANY KIND.
+
+The programs in this directory were developed first and foremost as
+examples, and their main purpose is to demonstrate Java programming
+concepts and techniques.  They are not intended as production code, and
+have not been through any kind of rigorous testing or validation.
+Nevertheless, if you find the code useful, and would like to use it in a
+commercial product, you may purchase a commercial use license for a
+nominal fee.  Visit http://www.davidflanagan.com/javaexamples/ for
+information on obtaining such a license.
+
+If you are a trainer or educator with a for-profit educational
+institution, you may use these examples in your courses as long as each
+of your students purchases or is given a copy of _Java Examples in a
+Nutshell_.

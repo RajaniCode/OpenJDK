@@ -1,0 +1,128 @@
+# Native launcher
+
+$ mkdir -p "C:\Users\Rajani\Downloads\Scala\Scala3\Bitsadmin\Native"
+> mkdir "C:\Users\Rajani\Downloads\Scala\Scala3\Bitsadmin\Native"
+
+cmd
+
+# cd "C:\Users\Rajani\Downloads\Scala\Scala3\Bitsadmin\Native"
+
+# cs.exe
+# > bitsadmin /transfer cs-cli https://git.io/coursier-cli-windows-exe "%cd%\cs.exe"
+> bitsadmin /transfer cs-cli https://git.io/coursier-cli-windows-exe "C:\Users\Rajani\Downloads\Scala\Scala3\Bitsadmin\Native\cs.exe"
+
+# > .\cs --help
+> "C:\Users\Rajani\Downloads\Scala\Scala3\Bitsadmin\Native\cs.exe" --help
+> exit
+
+"C:\Users\Rajani\Downloads\Scala\Scala3\Bitsadmin\Native\cs.exe" --help
+
+[
+# Scala # Java # Apache Maven $ java -version $ cs
+$ export PATH=$PATH:"/C/Users/Rajani/Downloads/Java/JDK/OpenJDK/openjdk-17.0.1_windows-x64_bin/jdk-17.0.1/bin/:/C/Users/Rajani/Downloads/Scala/Scala3/Bitsadmin/Native/"
+
+# Scala # Java # Apache Maven > java -version > cs
+> set path=%path%;C:\Users\Rajani\Downloads\Java\JDK\OpenJDK\openjdk-17.0.1_windows-x64_bin\jdk-17.0.1\bin\;C:\Users\Rajani\Downloads\Scala\Scala3\Bitsadmin\Native\
+]
+
+# Scala # Java # Apache Maven $ java -version $ mvn -v $ cs
+$ export PATH=$PATH:"/C/Users/Rajani/Downloads/Java/JDK/OpenJDK/openjdk-17.0.1_windows-x64_bin/jdk-17.0.1/bin/:/C/Users/Rajani/Downloads/Java/Apache Maven/apache-maven-3.8.4-bin/apache-maven-3.8.4/bin/:/C/Users/Rajani/Downloads/Scala/Scala3/Bitsadmin/Native/"
+
+# Scala # Java # Apache Maven > java -version > mvn -v > cs
+> set path=%path%;C:\Users\Rajani\Downloads\Java\JDK\OpenJDK\openjdk-17.0.1_windows-x64_bin\jdk-17.0.1\bin\;C:\Users\Rajani\Downloads\Java\Apache Maven\apache-maven-3.8.4-bin\apache-maven-3.8.4\bin\;C:\Users\Rajani\Downloads\Scala\Scala3\Bitsadmin\Native\
+
+java --version
+
+[
+mvn --version
+]
+
+cs --version
+
+cs install scala3-compiler
+
+# Warning: C:\Users\Rajani\AppData\Local\Coursier\data\bin is not in your PATH
+# Java # Apache Maven $ java -version $ mvn -v $ cs
+$ export PATH=$PATH:"/C/Users/Rajani/Downloads/Java/JDK/OpenJDK/openjdk-17.0.1_windows-x64_bin/jdk-17.0.1/bin/:/C/Users/Rajani/Downloads/Java/Apache Maven/apache-maven-3.8.4-bin/apache-maven-3.8.4/bin/:/C/Users/Rajani/Downloads/Scala/Scala3/Bitsadmin/Native/:/C/Users/Rajani/AppData/Local/Coursier/data/bin/"
+
+# Java # Apache Maven > java -version > mvn -v > cs
+> set path=%path%;C:\Users\Rajani\Downloads\Java\JDK\OpenJDK\openjdk-17.0.1_windows-x64_bin\jdk-17.0.1\bin\;C:\Users\Rajani\Downloads\Java\Apache Maven\apache-maven-3.8.4-bin\apache-maven-3.8.4\bin\;C:\Users\Rajani\Downloads\Scala\Scala3\Bitsadmin\Native\;C:\Users\Rajani\AppData\Local\Coursier\data\bin\
+
+$ echo $PATH
+> path
+
+cs install scala3
+
+scala3.bat
+
+scala> :help
+
+scala> println("Hello, world!")
+
+scala> :quit
+# Or
+scala> :exit
+
+
+
+
+# JAR-based launcher 
+
+$ mkdir -p "C:\Users\Rajani\Downloads\Scala\Scala3\Bitsadmin\JAR"
+> mkdir "C:\Users\Rajani\Downloads\Scala\Scala3\Bitsadmin\JAR"
+
+cmd
+
+# cd "C:\Users\Rajani\Downloads\Scala\Scala3\Bitsadmin\JAR"
+
+# coursier # coursier.bat
+[
+# Install and run the JAR-based coursier launcher from the current directory at the Windows prompt, with
+# > bitsadmin /transfer downloadCoursierCli https://git.io/coursier-cli "%cd%\coursier"
+> bitsadmin /transfer downloadCoursierCli https://git.io/coursier-cli "C:\Users\Rajani\Downloads\Scala\Scala3\Bitsadmin\JAR\coursier"
+
+# > bitsadmin /transfer downloadCoursierBat https://git.io/coursier-bat "%cd%\coursier.bat"
+> bitsadmin /transfer downloadCoursierBat https://git.io/coursier-bat "C:\Users\Rajani\Downloads\Scala\Scala3\Bitsadmin\JAR\coursier.bat"
+
+# Scala # Java $ java -version $ coursier --version
+$ export PATH=$PATH:"/C/Users/Rajani/Downloads/Java/JDK/OpenJDK/openjdk-17.0.1_windows-x64_bin/jdk-17.0.1/bin/:/C/Users/Rajani/Downloads/Scala/Scala3/Bitsadmin/JAR/"
+# Scala # Java # Apache Maven $ java -version $ mvn -v $ coursier --version
+$ export PATH=$PATH:"/C/Users/Rajani/Downloads/Java/JDK/OpenJDK/openjdk-17.0.1_windows-x64_bin/jdk-17.0.1/bin/:/C/Users/Rajani/Downloads/Java/Apache Maven/apache-maven-3.8.4-bin/apache-maven-3.8.4/bin/:/C/Users/Rajani/Downloads/Scala/Scala3/Bitsadmin/JAR/"
+
+# Scala # Java > java -version > coursier --version
+> set path=%path%;C:\Users\Rajani\Downloads\Java\JDK\OpenJDK\openjdk-17.0.1_windows-x64_bin\jdk-17.0.1\bin\;C:\Users\Rajani\Downloads\Scala\Scala3\Bitsadmin\JAR\
+# Scala # Java # Apache Maven > java -version > mvn -v > coursier --version
+> set path=%path%;C:\Users\Rajani\Downloads\Java\JDK\OpenJDK\openjdk-17.0.1_windows-x64_bin\jdk-17.0.1\bin\;C:\Users\Rajani\Downloads\Java\Apache Maven\apache-maven-3.8.4-bin\apache-maven-3.8.4\bin\;C:\Users\Rajani\Downloads\Scala\Scala3\Bitsadmin\JAR\
+
+> coursier --version
+# Run coursier from the same directory, like 
+> coursier resolve io.circe:circe-core_2.12:0.10.0
+> exit
+]
+
+# Note # PATH
+coursier --version
+
+coursier install scala3-compiler
+
+# Warning: C:\Users\Rajani\AppData\Local\Coursier\data\bin is not in your PATH
+# Java # Apache Maven $ java -version $ mvn -v $ coursier --version
+$ export PATH=$PATH:"/C/Users/Rajani/Downloads/Java/JDK/OpenJDK/openjdk-17.0.1_windows-x64_bin/jdk-17.0.1/bin/:/C/Users/Rajani/Downloads/Java/Apache Maven/apache-maven-3.8.4-bin/apache-maven-3.8.4/bin/:/C/Users/Rajani/Downloads/Scala/Scala3/Bitsadmin/JAR/:/C/Users/Rajani/AppData/Local/Coursier/data/bin/"
+
+# Java # Apache Maven > java -version > mvn -v > coursier --version
+> set path=%path%;C:\Users\Rajani\Downloads\Java\JDK\OpenJDK\openjdk-17.0.1_windows-x64_bin\jdk-17.0.1\bin\;C:\Users\Rajani\Downloads\Java\Apache Maven\apache-maven-3.8.4-bin\apache-maven-3.8.4\bin\;C:\Users\Rajani\Downloads\Scala\Scala3\Bitsadmin\JAR\;C:\Users\Rajani\AppData\Local\Coursier\data\bin\
+
+$ echo $PATH
+> path
+
+coursier install scala3
+
+scala3.bat
+
+scala> :help
+
+scala> println("Hello, world!")
+
+scala> :quit
+# Or
+scala> :exit

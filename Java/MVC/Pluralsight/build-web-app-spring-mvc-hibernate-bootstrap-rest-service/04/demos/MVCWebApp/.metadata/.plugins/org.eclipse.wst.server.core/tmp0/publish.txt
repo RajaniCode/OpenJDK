@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Mon Nov 06 13:14:10 IST 2017
+org.eclipse.jst.jee.server\:/binary\:D\:\\PS\ Spring\ MVC\ Demos\\MVCWebApp\\PSBankApp\\WebContent\\WEB-INF\\lib\\spring-web-5.0.1.RELEASE.jar=WEB-INF/lib/spring-web-5.0.1.RELEASE.jar
+org.eclipse.jst.jee.server\:/binary\:D\:\\PS\ Spring\ MVC\ Demos\\MVCWebApp\\PSBankApp\\WebContent\\WEB-INF\\lib\\spring-web-5.0.1.RELEASE-sources.jar=WEB-INF/lib/spring-web-5.0.1.RELEASE-sources.jar

@@ -1,0 +1,23 @@
+Microsoft Windows [Version 10.0.18363.1082]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+C:\Users\rajanis>set path=%path%;C:\Users\rajanis\Downloads\Java\JDK\jdk-15\bin
+
+C:\Users\rajanis>java --version
+openjdk 15 2020-09-15
+OpenJDK Runtime Environment (build 15+36-1562)
+OpenJDK 64-Bit Server VM (build 15+36-1562, mixed mode, sharing)
+
+C:\Users\rajanis>cd "C:\Users\rajanis\Downloads\UML\Umlet\Umlet"
+
+C:\Users\rajanis\Downloads\UML\Umlet\Umlet>java -jar umlet.jar
+log4j:WARN No appenders could be found for logger (com.baselet.control.enums.Program).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+
+C:\Users\rajanis\Downloads\UML\Umlet\Umlet>java -jar umlet.jar "D:\HomeAgain\Migration\UML\HAWSEnroll\HAWSEnroll.uxf"
+log4j:WARN No appenders could be found for logger (com.baselet.control.enums.Program).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+
+C:\Users\rajanis\Downloads\UML\Umlet\Umlet>

@@ -1,0 +1,752 @@
+/*
+--jdbc:postgresql://localhost:5432/sampledb
+--PostgreSQL Password for database superuser
+--PostgreSQL Port
+--5432
+postgres
+P0stgre$ql@Server#9.5
+*/
+
+DROP DATABASE IF EXISTS hibernatedb;
+
+CREATE DATABASE hibernatedb;
+
+-- \connect hibernatedb;
+
+DROP TABLE IF EXISTS users;
+CREATE TABLE users
+(
+    id SERIAL NOT NULL,
+    username VARCHAR(50) NOT NULL, 
+    login_date DATE NOT NULL DEFAULT CURRENT_DATE,
+    login_time TIME NOT NULL DEFAULT CURRENT_TIME,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,    
+    CONSTRAINT pk_id PRIMARY KEY(id),
+    CONSTRAINT idx_username UNIQUE(username)    
+);
+
+SELECT * FROM users;
+
+/*
+
+INSERT INTO users(username, login_date, login_time, created_at, updated_at)
+VALUES('Foo', '2016-11-06', '10:49:35', '2016-11-06 10:49:35.0', '2016-11-06 10:49:35.0');
+
+SELECT * FROM users;
+
+*/
+
+-- P0stgre$ql@Server#9.5
+$ psql -U postgres 
+
+postgres=# SELECT version();
+
+postgres=# \list
+
+postgres=# SELECT current_database();
+
+postgres=# DROP DATABASE IF EXISTS hibernatedb;
+
+postgres=# CREATE DATABASE hibernatedb;
+
+postgres=# \connect hibernatedb;
+
+postgres=# SELECT current_database();
+
+postgres=# SELECT datname FROM pg_database WHERE datistemplate = false;
+
+postgres=# \list
+
+postgres=# \dt
+
+postgres=# DROP TABLE IF EXISTS users;
+
+postgres=# CREATE TABLE users
+(
+    id SERIAL NOT NULL,
+    username VARCHAR(50) NOT NULL, 
+    login_date DATE NOT NULL DEFAULT CURRENT_DATE,
+    login_time TIME NOT NULL DEFAULT CURRENT_TIME,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,    
+    CONSTRAINT pk_id PRIMARY KEY(id),
+    CONSTRAINT idx_username UNIQUE(username)    
+);
+
+postgres=# SELECT table_name FROM information_schema.tables WHERE table_schema = 'public';
+
+postgres=# \dt
+
+postgres=# SELECT * FROM users;
+
+postgres=# \q
+
+Aspire@Acer MINGW64 /
+$ java -version
+java version "1.8.0_102"
+Java(TM) SE Runtime Environment (build 1.8.0_102-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.102-b14, mixed mode)
+
+Aspire@Acer MINGW64 /
+$ mvn -version
+Apache Maven 3.3.9 (bb52d8502b132ec0a5a3f4c09453c07478323dc5; 2015-11-10T22:11:47+05:30)
+Maven home: C:\Program Files\Apache Software Foundation\apache-maven-3.3.9
+Java version: 1.8.0_102, vendor: Oracle Corporation
+Java home: C:\Program Files\Java\jdk1.8.0_102\jre
+Default locale: en_US, platform encoding: Cp1252
+OS name: "windows 8.1", version: "6.3", arch: "amd64", family: "dos"
+
+$ cd "E:\Working\Java\Hibernate\MavenPostgreSQLAnnotation"
+
+$ mvn archetype:generate -DgroupId="com.example.exercise" -DartifactId="HibernatePostgreSQLAnnotationSample" -DarchetypeArtifactId="maven-archetype-quickstart" -DinteractiveMode=false
+
+$ cd HibernatePostgreSQLAnnotationSample
+
+$ mvn eclipse:eclipse
+
+# https://mvnrepository.com/artifact/org.postgresql/postgresql/9.4.1208
+# pom.xml
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>5.2.3.Final</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>9.4.1208</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.5.0</version>
+                <configuration>
+                    <mainClass>com.example.exercise.App</mainClass>
+                    <cleanupDaemonThreads>false</cleanupDaemonThreads>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+# MavenPostgreSQLAnnotation/HibernatePostgreSQLAnnotationSample/pom.xml
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.example.exercise</groupId>
+  <artifactId>HibernatePostgreSQLAnnotationSample</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>HibernatePostgreSQLAnnotationSample</name>
+  <url>http://maven.apache.org</url>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>5.2.3.Final</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>9.4.1208</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.5.0</version>
+                <configuration>
+                    <mainClass>com.example.exercise.App</mainClass>
+                    <cleanupDaemonThreads>false</cleanupDaemonThreads>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
+
+$ mvn eclipse:eclipse
+
+# HibernatePostgreSQLAnnotationSample/src/main/java/com/example/exercise/App.java
+package com.example.exercise;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import java.util.UUID;
+
+public class App 
+{
+    public static void main( String[] args ) throws ParseException {
+        SessionFactory sessionFactory;
+        sessionFactory = new Configuration()
+                .configure() // configures settings from hibernate.cfg.xml
+                .buildSessionFactory();
+ 
+        Session session = sessionFactory.openSession();
+   
+        Transaction tx = session.beginTransaction();
+        Users user = new Users();
+        String uid = UUID.randomUUID().toString();
+        user.setUsername("Foo " + uid); // Unique 
+
+        String strDate = new java.util.Date().toString(); // Sun Nov 06 10:31:54 IST 2016 // Default       
+        SimpleDateFormat format = new SimpleDateFormat("EEE MMM dd HH:mm:ss z yyyy");
+        java.util.Date parsed = format.parse(strDate);
+
+        // SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        // java.util.Date parsed = format.parse("2016-12-31 23:59:59");
+
+        java.sql.Date sqlDate = new java.sql.Date(parsed.getTime());
+        user.setLoginDate(sqlDate); 
+        java.sql.Time sqlTime = new java.sql.Time(parsed.getTime());
+        user.setLoginTime(sqlTime);  
+        java.sql.Timestamp sqlTimestamp = new java.sql.Timestamp(parsed.getTime());
+        user.setCreatedAt(sqlTimestamp);
+        user.setUpdatedAt(sqlTimestamp);
+
+        session.save(user);
+        tx.commit();
+        session.close();
+    }
+}
+
+$ touch src/main/java/com/example/exercise/Users.java
+# HibernatePostgreSQLAnnotationSample/src/main/java/com/example/exercise/Users.java
+package com.example.exercise;
+
+import java.sql.Date;
+import java.sql.Time;
+import java.sql.Timestamp;
+
+// import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="users")
+public class Users {
+    
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @Column(name="id")
+    int id;
+
+    @Column(name="username")
+    String username;
+ 
+    @Column(name="login_date")
+    java.sql.Date loginDate;
+
+    @Column(name="login_time")
+    java.sql.Time loginTime;
+
+    @Column(name="created_at")
+    java.sql.Timestamp createdAt;
+
+    @Column(name="updated_at")
+    java.sql.Timestamp updatedAt;
+
+    public Users () { }
+ 
+    public Users(int id, String username, java.sql.Date loginDate, java.sql.Time loginTime, java.sql.Timestamp createdAt, java.sql.Timestamp updatedAt) {
+        this.id = id;
+        this.username = username;
+        this.loginDate = loginDate;
+        this.loginTime = loginTime;
+        this.createdAt = createdAt;
+	this.updatedAt = updatedAt;
+    }
+ 
+    public int getId() {
+        return id;
+    }
+ 
+    public String getUsername() {
+        return username;
+    }
+ 
+    public void setUsername(String username) {
+        this.username = username;
+    }
+ 
+    public java.sql.Date getLoginDate() {
+        return loginDate;
+    }
+ 
+    public void setLoginDate(java.sql.Date loginDate) {
+        this.loginDate = loginDate;
+    }
+
+    public java.sql.Time getLoginTime() {
+        return loginTime;
+    }
+ 
+    public void setLoginTime(java.sql.Time loginTime) {
+        this.loginTime = loginTime;
+    }
+   
+    public java.sql.Timestamp getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(java.sql.Timestamp createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public java.sql.Timestamp getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(java.sql.Timestamp updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+}
+
+# https://docs.jboss.org/hibernate/orm/5.2/javadocs/org/hibernate/dialect/PostgreSQL95Dialect.html
+$ mkdir src/main/resources
+$ touch src/main/resources/hibernate.cfg.xml
+# HibernatePostgreSQLAnnotationSample/src/main/resources/hibernate.cfg.xml
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:postgresql://localhost:5432/hibernatedb</property>
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+ 
+        <property name="dialect">org.hibernate.dialect.PostgreSQL95Dialect</property>
+ 
+        <property name="connection.username">postgres</property>
+        <property name="connection.password">P0stgre$ql@Server#9.5</property>
+        <!-- DB schema will be updated if needed -->
+        <property name="hbm2ddl.auto">update</property>
+        <property name="show_sql">false</property>
+        <property name="format_sql">false</property>
+
+        <mapping class="com.example.exercise.Users"></mapping>
+ 
+    </session-factory>
+</hibernate-configuration>
+
+$ mvn eclipse:eclipse
+$ mvn package
+
+# <mainClass>com.example.exercise.App</mainClass> # pom.xml
+[
+$ java -cp target/HibernatePostgreSQLAnnotationSample-1.0-SNAPSHOT.jar com.example.exercise.App
+]
+$ mvn exec:java
+
+
+# Git Bash # Maven
+
+Aspire@Acer MINGW64 /
+$ java -version
+java version "1.8.0_102"
+Java(TM) SE Runtime Environment (build 1.8.0_102-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.102-b14, mixed mode)
+
+Aspire@Acer MINGW64 /
+$ mvn -version
+Apache Maven 3.3.9 (bb52d8502b132ec0a5a3f4c09453c07478323dc5; 2015-11-10T22:11:47+05:30)
+Maven home: C:\Program Files\Apache Software Foundation\apache-maven-3.3.9
+Java version: 1.8.0_102, vendor: Oracle Corporation
+Java home: C:\Program Files\Java\jdk1.8.0_102\jre
+Default locale: en_US, platform encoding: Cp1252
+OS name: "windows 8.1", version: "6.3", arch: "amd64", family: "dos"
+
+Aspire@Acer MINGW64 /
+$ cd "E:\Working\Java\Hibernate\MavenPostgreSQLAnnotation"
+
+Aspire@Acer MINGW64 /e/Working/Java/Hibernate/MavenPostgreSQLAnnotation
+$ mvn archetype:generate -DgroupId="com.example.exercise" -DartifactId="HibernatePostgreSQLAnnotationSample" -DarchetypeArtifactId="maven-archetype-quickstart" -DinteractiveMode=false
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Maven Stub Project (No POM) 1
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] >>> maven-archetype-plugin:2.4:generate (default-cli) > generate-sources @ standalone-pom >>>
+[INFO]
+[INFO] <<< maven-archetype-plugin:2.4:generate (default-cli) < generate-sources @ standalone-pom <<<
+[INFO]
+[INFO] --- maven-archetype-plugin:2.4:generate (default-cli) @ standalone-pom ---
+[INFO] Generating project in Batch mode
+[INFO] ----------------------------------------------------------------------------
+[INFO] Using following parameters for creating project from Old (1.x) Archetype: maven-archetype-quickstart:1.0
+[INFO] ----------------------------------------------------------------------------
+[INFO] Parameter: basedir, Value: E:\Working\Java\Hibernate\MavenPostgreSQLAnnotation
+[INFO] Parameter: package, Value: com.example.exercise
+[INFO] Parameter: groupId, Value: com.example.exercise
+[INFO] Parameter: artifactId, Value: HibernatePostgreSQLAnnotationSample
+[INFO] Parameter: packageName, Value: com.example.exercise
+[INFO] Parameter: version, Value: 1.0-SNAPSHOT
+[INFO] project created from Old (1.x) Archetype in dir: E:\Working\Java\Hibernate\MavenPostgreSQLAnnotation\HibernatePostgreSQLAnnotationSample
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 04:52 min
+[INFO] Finished at: 2016-11-06T11:50:31+05:30
+[INFO] Final Memory: 13M/270M
+[INFO] ------------------------------------------------------------------------
+
+Aspire@Acer MINGW64 /e/Working/Java/Hibernate/MavenPostgreSQLAnnotation
+$ cd HibernatePostgreSQLAnnotationSample
+
+Aspire@Acer MINGW64 /e/Working/Java/Hibernate/MavenPostgreSQLAnnotation/HibernatePostgreSQLAnnotationSample
+$ mvn eclipse:eclipse
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building HibernatePostgreSQLAnnotationSample 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] >>> maven-eclipse-plugin:2.10:eclipse (default-cli) > generate-resources @ HibernatePostgreSQLAnnotationSample >>>
+[INFO]
+[INFO] <<< maven-eclipse-plugin:2.10:eclipse (default-cli) < generate-resources @ HibernatePostgreSQLAnnotationSample <<<
+[INFO]
+[INFO] --- maven-eclipse-plugin:2.10:eclipse (default-cli) @ HibernatePostgreSQLAnnotationSample ---
+[INFO] Using Eclipse Workspace: null
+[INFO] Adding default classpath container: org.eclipse.jdt.launching.JRE_CONTAINER
+[INFO] Not writing settings - defaults suffice
+[INFO] Wrote Eclipse project for "HibernatePostgreSQLAnnotationSample" to E:\Working\Java\Hibernate\MavenPostgreSQLAnnotation\HibernatePostgreSQLAnnotationSample.
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 2.625 s
+[INFO] Finished at: 2016-11-06T11:56:51+05:30
+[INFO] Final Memory: 12M/245M
+[INFO] ------------------------------------------------------------------------
+
+Aspire@Acer MINGW64 /e/Working/Java/Hibernate/MavenPostgreSQLAnnotation/HibernatePostgreSQLAnnotationSample
+$ mvn eclipse:eclipse
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building HibernatePostgreSQLAnnotationSample 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] >>> maven-eclipse-plugin:2.10:eclipse (default-cli) > generate-resources @ HibernatePostgreSQLAnnotationSample >>>
+[INFO]
+[INFO] <<< maven-eclipse-plugin:2.10:eclipse (default-cli) < generate-resources @ HibernatePostgreSQLAnnotationSample <<<
+[INFO]
+[INFO] --- maven-eclipse-plugin:2.10:eclipse (default-cli) @ HibernatePostgreSQLAnnotationSample ---
+[INFO] Using Eclipse Workspace: null
+[INFO] Adding default classpath container: org.eclipse.jdt.launching.JRE_CONTAINER
+[INFO] Not writing settings - defaults suffice
+[INFO] File E:\Working\Java\Hibernate\MavenPostgreSQLAnnotation\HibernatePostgreSQLAnnotationSample\.project already exists.
+       Additional settings will be preserved, run mvn eclipse:clean if you want old settings to be removed.
+[INFO] Wrote Eclipse project for "HibernatePostgreSQLAnnotationSample" to E:\Working\Java\Hibernate\MavenPostgreSQLAnnotation\HibernatePostgreSQLAnnotationSample.
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3.204 s
+[INFO] Finished at: 2016-11-06T11:58:11+05:30
+[INFO] Final Memory: 14M/309M
+[INFO] ------------------------------------------------------------------------
+
+Aspire@Acer MINGW64 /e/Working/Java/Hibernate/MavenPostgreSQLAnnotation/HibernatePostgreSQLAnnotationSample
+$ touch src/main/java/com/example/exercise/Users.java
+
+Aspire@Acer MINGW64 /e/Working/Java/Hibernate/MavenPostgreSQLAnnotation/HibernatePostgreSQLAnnotationSample
+$ mkdir src/main/resources
+
+Aspire@Acer MINGW64 /e/Working/Java/Hibernate/MavenPostgreSQLAnnotation/HibernatePostgreSQLAnnotationSample
+$ touch src/main/resources/hibernate.cfg.xml
+
+Aspire@Acer MINGW64 /e/Working/Java/Hibernate/MavenPostgreSQLAnnotation/HibernatePostgreSQLAnnotationSample
+$ mvn eclipse:eclipse
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building HibernatePostgreSQLAnnotationSample 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] >>> maven-eclipse-plugin:2.10:eclipse (default-cli) > generate-resources @ HibernatePostgreSQLAnnotationSample >>>
+[INFO]
+[INFO] <<< maven-eclipse-plugin:2.10:eclipse (default-cli) < generate-resources @ HibernatePostgreSQLAnnotationSample <<<
+[INFO]
+[INFO] --- maven-eclipse-plugin:2.10:eclipse (default-cli) @ HibernatePostgreSQLAnnotationSample ---
+[INFO] Using Eclipse Workspace: null
+[INFO] Adding default classpath container: org.eclipse.jdt.launching.JRE_CONTAINER
+[INFO] Not writing settings - defaults suffice
+[INFO] File E:\Working\Java\Hibernate\MavenPostgreSQLAnnotation\HibernatePostgreSQLAnnotationSample\.project already exists.
+       Additional settings will be preserved, run mvn eclipse:clean if you want old settings to be removed.
+[INFO] Wrote Eclipse project for "HibernatePostgreSQLAnnotationSample" to E:\Working\Java\Hibernate\MavenPostgreSQLAnnotation\HibernatePostgreSQLAnnotationSample.
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3.204 s
+[INFO] Finished at: 2016-11-06T12:00:21+05:30
+[INFO] Final Memory: 12M/309M
+[INFO] ------------------------------------------------------------------------
+
+Aspire@Acer MINGW64 /e/Working/Java/Hibernate/MavenPostgreSQLAnnotation/HibernatePostgreSQLAnnotationSample
+$ mvn package
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building HibernatePostgreSQLAnnotationSample 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ HibernatePostgreSQLAnnotationSample ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 1 resource
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ HibernatePostgreSQLAnnotationSample ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 2 source files to E:\Working\Java\Hibernate\MavenPostgreSQLAnnotation\HibernatePostgreSQLAnnotationSample\target\classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ HibernatePostgreSQLAnnotationSample ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory E:\Working\Java\Hibernate\MavenPostgreSQLAnnotation\HibernatePostgreSQLAnnotationSample\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ HibernatePostgreSQLAnnotationSample ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to E:\Working\Java\Hibernate\MavenPostgreSQLAnnotation\HibernatePostgreSQLAnnotationSample\target\test-classes
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ HibernatePostgreSQLAnnotationSample ---
+[INFO] Surefire report directory: E:\Working\Java\Hibernate\MavenPostgreSQLAnnotation\HibernatePostgreSQLAnnotationSample\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.example.exercise.AppTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.078 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO]
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ HibernatePostgreSQLAnnotationSample ---
+[INFO] Building jar: E:\Working\Java\Hibernate\MavenPostgreSQLAnnotation\HibernatePostgreSQLAnnotationSample\target\HibernatePostgreSQLAnnotationSample-1.0-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 6.392 s
+[INFO] Finished at: 2016-11-06T12:00:41+05:30
+[INFO] Final Memory: 19M/309M
+[INFO] ------------------------------------------------------------------------
+
+Aspire@Acer MINGW64 /e/Working/Java/Hibernate/MavenPostgreSQLAnnotation/HibernatePostgreSQLAnnotationSample
+$ mvn exec:java
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building HibernatePostgreSQLAnnotationSample 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- exec-maven-plugin:1.5.0:java (default-cli) @ HibernatePostgreSQLAnnotationSample ---
+Nov 06, 2016 12:00:55 PM org.hibernate.Version logVersion
+INFO: HHH000412: Hibernate Core {5.2.3.Final}
+Nov 06, 2016 12:00:55 PM org.hibernate.cfg.Environment <clinit>
+INFO: HHH000206: hibernate.properties not found
+Nov 06, 2016 12:00:55 PM org.hibernate.cfg.Environment buildBytecodeProvider
+INFO: HHH000021: Bytecode provider name : javassist
+Nov 06, 2016 12:00:56 PM org.hibernate.annotations.common.reflection.java.JavaReflectionManager <clinit>
+INFO: HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+Nov 06, 2016 12:00:56 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+WARN: HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+Nov 06, 2016 12:00:56 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/hibernatedb]
+Nov 06, 2016 12:00:56 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001001: Connection properties: {user=postgres, password=****}
+Nov 06, 2016 12:00:56 PM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001003: Autocommit mode: false
+Nov 06, 2016 12:00:56 PM org.hibernate.engine.jdbc.connections.internal.PooledConnections <init>
+INFO: HHH000115: Hibernate connection pool size: 20 (min=1)
+Nov 06, 2016 12:00:56 PM org.hibernate.dialect.Dialect <init>
+INFO: HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+Nov 06, 2016 12:00:57 PM org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl useContextualLobCreation
+INFO: HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+Nov 06, 2016 12:00:57 PM org.hibernate.type.BasicTypeRegistry register
+INFO: HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@608828d7
+Nov 06, 2016 12:00:58 PM org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl getIsolatedConnection
+INFO: HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@703db538] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+
+
+Aspire@Acer MINGW64 /e/Working/Java/Hibernate/MavenPostgreSQLAnnotation/HibernatePostgreSQLAnnotationSample
+$
+
+
+# Git Bash # PostgreSQL
+
+
+Aspire@Acer MINGW64 /
+$ psql -U postgres
+psql (9.5.4)
+WARNING: Console code page (437) differs from Windows code page (1252)
+         8-bit characters might not work correctly. See psql reference
+         page "Notes for Windows users" for details.
+Type "help" for help.
+
+postgres=# SELECT version();
+                           version
+-------------------------------------------------------------
+ PostgreSQL 9.5.4, compiled by Visual C++ build 1800, 64-bit
+(1 row)
+
+
+postgres=# \list
+                                                            List of databases
+               Name               |  Owner   | Encoding |          Collate           |           Ctype            |   Access privileges
+----------------------------------+----------+----------+----------------------------+----------------------------+-----------------------
+ customerdb                       | postgres | UTF8     | English_United States.1252 | English_United States.1252 |
+ employeedb                       | postgres | UTF8     | English_United States.1252 | English_United States.1252 |
+ hibernatedb                      | postgres | UTF8     | English_United States.1252 | English_United States.1252 |
+ postgres                         | postgres | UTF8     | English_United States.1252 | English_United States.1252 |
+ ruby-getting-started_development | postgres | UTF8     | English_United States.1252 | English_United States.1252 |
+ template0                        | postgres | UTF8     | English_United States.1252 | English_United States.1252 | =c/postgres          +
+                                  |          |          |                            |                            | postgres=CTc/postgres
+ template1                        | postgres | UTF8     | English_United States.1252 | English_United States.1252 | =c/postgres          +
+                                  |          |          |                            |                            | postgres=CTc/postgres
+(7 rows)
+
+
+postgres=# SELECT current_database();
+ current_database
+------------------
+ postgres
+(1 row)
+
+
+postgres=# DROP DATABASE IF EXISTS hibernatedb;
+DROP DATABASE
+postgres=# CREATE DATABASE hibernatedb;
+CREATE DATABASE
+postgres=# \connect hibernatedb;
+WARNING: Console code page (437) differs from Windows code page (1252)
+         8-bit characters might not work correctly. See psql reference
+         page "Notes for Windows users" for details.
+You are now connected to database "hibernatedb" as user "postgres".
+hibernatedb=# SELECT current_database();
+ current_database
+------------------
+ hibernatedb
+(1 row)
+
+
+hibernatedb=# SELECT datname FROM pg_database WHERE datistemplate = false;
+             datname
+----------------------------------
+ postgres
+ customerdb
+ employeedb
+ ruby-getting-started_development
+ hibernatedb
+(5 rows)
+
+
+hibernatedb=# \list
+                                                            List of databases
+               Name               |  Owner   | Encoding |          Collate           |           Ctype            |   Access privileges
+----------------------------------+----------+----------+----------------------------+----------------------------+-----------------------
+ customerdb                       | postgres | UTF8     | English_United States.1252 | English_United States.1252 |
+ employeedb                       | postgres | UTF8     | English_United States.1252 | English_United States.1252 |
+ hibernatedb                      | postgres | UTF8     | English_United States.1252 | English_United States.1252 |
+ postgres                         | postgres | UTF8     | English_United States.1252 | English_United States.1252 |
+ ruby-getting-started_development | postgres | UTF8     | English_United States.1252 | English_United States.1252 |
+ template0                        | postgres | UTF8     | English_United States.1252 | English_United States.1252 | =c/postgres          +
+                                  |          |          |                            |                            | postgres=CTc/postgres
+ template1                        | postgres | UTF8     | English_United States.1252 | English_United States.1252 | =c/postgres          +
+                                  |          |          |                            |                            | postgres=CTc/postgres
+(7 rows)
+
+
+hibernatedb=# \dt
+No relations found.
+hibernatedb=# DROP TABLE IF EXISTS users;
+NOTICE:  table "users" does not exist, skipping
+DROP TABLE
+hibernatedb=# CREATE TABLE users
+hibernatedb-# (
+hibernatedb(#     id SERIAL NOT NULL,
+hibernatedb(#     username VARCHAR(50) NOT NULL,
+hibernatedb(#     login_date DATE NOT NULL DEFAULT CURRENT_DATE,
+hibernatedb(#     login_time TIME NOT NULL DEFAULT CURRENT_TIME,
+hibernatedb(#     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+hibernatedb(#     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+hibernatedb(#     CONSTRAINT pk_id PRIMARY KEY(id),
+hibernatedb(#     CONSTRAINT idx_username UNIQUE(username)
+hibernatedb(# );
+CREATE TABLE
+hibernatedb=# SELECT table_name FROM information_schema.tables WHERE table_schema = 'public';
+ table_name
+------------
+ users
+(1 row)
+
+
+hibernatedb=# \dt
+         List of relations
+ Schema | Name  | Type  |  Owner
+--------+-------+-------+----------
+ public | users | table | postgres
+(1 row)
+
+
+hibernatedb=# SELECT * FROM users;
+ id | username | login_date | login_time | created_at | updated_at
+----+----------+------------+------------+------------+------------
+(0 rows)
+
+
+hibernatedb=# SELECT * FROM users;
+ id |                 username                 | login_date | login_time |     created_at      |     updated_at
+----+------------------------------------------+------------+------------+---------------------+---------------------
+  1 | Foo 3cd4fd24-69aa-4058-b16c-41598a40a745 | 2016-11-06 | 12:00:58   | 2016-11-06 12:00:58 | 2016-11-06 12:00:58
+(1 row)
+
+
+hibernatedb-# \quit
+
+Aspire@Acer MINGW64 /
+$

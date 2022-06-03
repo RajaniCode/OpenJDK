@@ -1,0 +1,18 @@
+Clojure Maven
+
+[
+  To build (output JARs in target/):
+    mvn package
+
+  To build without testing:
+    mvn package -Dmaven.test.skip=true
+
+  To build and install in local Maven repository:
+    mvn install
+]
+
+  To build a standalone jar with dependencies included:
+    mvn -Plocal -Dmaven.test.skip=true package
+
+  To run with the standalone jar:
+    java -jar clojure.jar

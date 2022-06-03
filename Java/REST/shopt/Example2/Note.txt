@@ -1,0 +1,6 @@
+
+javac -d "e:\Working\Java\Import\Example" Balance.java
+
+javac TestBalance.java
+
+java TestBalance

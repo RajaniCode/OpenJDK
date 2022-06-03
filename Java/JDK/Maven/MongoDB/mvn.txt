@@ -1,0 +1,28 @@
+
+$ mvn
+
+$ mvn archetype:generate
+
+Choose a number or apply filter (format: [groupId:]artifactId, case sensitive contains): 660: <enter for default>
+
+Choose a number: <enter for default>
+
+Define value for property 'groupId': : com.mongodb
+
+Define value for property 'artifactId': : M101J
+
+Define value for property 'version':  1.0-SNAPSHOT: : <enter for default>
+
+Define value for property 'package':  com.mongodb: : <enter for default>
+
+ Y: : <enter for default>
+
+cd M101J
+
+find .
+
+cat pom.xml
+
+find src
+
+cat src/main/java/com/mongodb/App.java

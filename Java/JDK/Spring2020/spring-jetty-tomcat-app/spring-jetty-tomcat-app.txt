@@ -1,0 +1,425 @@
+$ java --version
+
+$ mvn -v
+
+$ cd "D:\RajaniS Master Folder\Java\Spring\2020\spring-jetty-tomcat-app"
+
+# mvn archetype:generate -DgroupId={project-packaging} -DartifactId={project-name} -DarchetypeArtifactId={maven-template} -DinteractiveMode=false
+$ mvn archetype:generate -DgroupId=com.sample.web -DartifactId=spring-jetty-tomcat-app -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
+
+# maven-archetype-webapp is not specific to Spring, hence delete web.xml and index.jsp
+$ cd spring-jetty-tomcat-app
+$ rm -rf src/main/webapp/WEB-INF/web.xml
+$ rm -rf src/main/webapp/index.jsp
+
+# Review generated pom.xml # Note # <finalName>spring-jetty-tomcat-app</finalName>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.sample.web</groupId>
+  <artifactId>spring-jetty-tomcat-app</artifactId>
+  <packaging>war</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>spring-jetty-tomcat-app Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <build>
+    <finalName>spring-jetty-tomcat-app</finalName>
+  </build>
+</project>
+
+# Update pom.xml
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.sample.web</groupId>
+  <artifactId>spring-jetty-tomcat-app</artifactId>
+  <packaging>war</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>spring-jetty-tomcat-app Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <!-- https://maven.apache.org/general.html#encoding-warning -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <spring.version>5.2.9.RELEASE</spring.version>
+  </properties>
+
+  <dependencies>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-test</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+
+    <!-- logging , spring 5 no more bridge, thanks spring-jcl -->
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.2.3</version>
+    </dependency>
+
+    <!-- junit, unit test -->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>5.7.0</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- unit test -->
+    <dependency>
+      <groupId>org.hamcrest</groupId>
+      <artifactId>hamcrest-library</artifactId>
+      <version>2.2</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- for web servlet -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>4.0.1</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- Some containers like Tomcat don't have jstl library -->
+    <!-- # [WARNING] # scanned from multiple locations # jar --> 
+    <!-- # Fix # <scope>provided</scope> # Download # jstl-1.2.jar # target/spring-jetty-tomcat-app/WEB-INF/lib/jstl-1.2.jar -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>jstl</artifactId>
+      <version>1.2</version>
+      <scope>provided</scope>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+    <finalName>spring-jetty-tomcat-app</finalName>
+    <plugins>
+      <!-- http://www.eclipse.org/jetty/documentation/current/jetty-maven-plugin.html -->
+      <!-- # Fix # jetty-9.4.12 [WARNING] Unknown asm implementation version, assuming version 393216 -->
+      <plugin>
+        <groupId>org.eclipse.jetty</groupId>
+        <artifactId>jetty-maven-plugin</artifactId>
+        <version>9.4.31.v20200723</version>
+      </plugin>
+
+      <!-- Default is too old, update to latest to run the latest Spring + jUnit -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.22.2</version>
+      </plugin>
+
+      <!-- Default 2.2 is too old, update to latest -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.3.1</version>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
+
+# Spring MVC + JSP + Logback
+$ mkdir -p src/main/java/com/sample/web/config
+
+$ touch src/main/java/com/sample/web/config/SpringConfig.java
+
+# SpringConfig.java
+package com.sample.web.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.view.InternalResourceViewResolver;
+import org.springframework.web.servlet.view.JstlView;
+
+@EnableWebMvc
+@Configuration
+@ComponentScan({"com.sample.web"})
+public class SpringConfig implements WebMvcConfigurer {
+
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/resources/**")
+                .addResourceLocations("/resources/");
+    }
+
+    @Bean
+    public InternalResourceViewResolver viewResolver() {
+        InternalResourceViewResolver viewResolver
+                = new InternalResourceViewResolver();
+        viewResolver.setViewClass(JstlView.class);
+        viewResolver.setPrefix("/WEB-INF/views/");
+        viewResolver.setSuffix(".jsp");
+        return viewResolver;
+    }
+}
+
+$ touch src/main/java/com/sample/web/WebInitializer.java
+
+# WebInitializer.java
+package com.sample.web;
+
+import com.sample.web.config.SpringConfig;
+import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+
+public class WebInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+
+    @Override
+    protected Class<?>[] getRootConfigClasses() {
+        return null;
+    }
+
+    @Override
+    protected Class<?>[] getServletConfigClasses() {
+        return new Class[]{SpringConfig.class};
+    }
+
+    @Override
+    protected String[] getServletMappings() {
+        return new String[]{"/"};
+    }
+
+}
+
+$ mkdir -p src/main/java/com/sample/web/controller
+
+$ touch src/main/java/com/sample/web/controller/WelcomeController.java
+
+# WelcomeController.java
+package com.sample.web.controller;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import java.util.Date;
+
+@Controller
+public class WelcomeController {
+
+    private final Logger logger = LoggerFactory.getLogger(WelcomeController.class);
+
+    @GetMapping("/")
+    public String index(Model model) {
+        logger.debug("Welcome to sample.com...");
+        model.addAttribute("msg", getMessage());
+        model.addAttribute("today", new Date());
+        return "index";
+
+    }
+
+    public String getMessage() {
+        return "Hello, World!";
+    }
+
+}
+
+$ mkdir -p src/main/webapp/WEB-INF/views
+
+$ touch src/main/webapp/WEB-INF/views/index.jsp
+
+# index.jsp
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<html>
+  <body>
+    <h1>${msg}</h1>
+    <h2>Today is <fmt:formatDate value="${today}" pattern="EEEE, MMMM d, yyyy, h:mm a z" /></h2>
+  </body>
+</html>
+
+$ touch src/main/resources/logback.xml
+
+# logbacl.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+
+            <Pattern>
+                %d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n
+            </Pattern>
+
+        </layout>
+    </appender>
+
+    <logger name="com.sample.web" level="debug"
+            additivity="false">
+        <appender-ref ref="STDOUT"/>
+    </logger>
+
+    <root level="error">
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+</configuration>
+
+$ mkdir -p src/test/java/com/sample/web
+
+$ touch src/test/java/com/sample/web/TestWelcome.java
+
+# TestWelcome.java
+package com.sample.web;
+
+import com.sample.web.config.SpringConfig;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.springframework.test.context.web.WebAppConfiguration;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.springframework.web.context.WebApplicationContext;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+
+//https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/testing.html#integration-testing-annotations-junit-jupiter
+@ExtendWith(SpringExtension.class)
+@WebAppConfiguration
+@ContextConfiguration(classes = SpringConfig.class)
+//@SpringJUnitWebConfig(SpringConfig.class)
+public class TestWelcome {
+
+    private MockMvc mockMvc;
+
+    @Autowired
+    private WebApplicationContext webAppContext;
+
+    @BeforeEach
+    public void setup() {
+        mockMvc = MockMvcBuilders.webAppContextSetup(webAppContext).build();
+    }
+
+    @Test
+    public void testWelcome() throws Exception {
+
+        this.mockMvc.perform(
+                get("/"))
+                .andDo(print())
+                .andExpect(status().isOk())
+                .andExpect(view().name("index"))
+                .andExpect(forwardedUrl("/WEB-INF/views/index.jsp"))
+                .andExpect(model().attribute("msg", "Hello, World!"));
+
+    }
+
+    @Test
+    public void testAbc() {
+        assertEquals(2, 1 + 1);
+    }
+
+}
+
+# Display the project dependencies
+$ mvn dependency:tree
+
+# Jetty
+$ mvn jetty:run
+# OR
+$ mvn -Djetty.port=8085 jetty:run
+
+http://localhost:8080/
+# OR
+http://localhost:8085/
+
+[
+Ctrl + C
+]
+# Kill PID # Separate Git Bash
+$ netstat -ano | findstr :8080
+# OR
+$ netstat -ano | findstr :8085
+$ taskkill -PID <PID> -F
+
+$ mvn test
+# Optional
+[
+$ mvn -Dtest=TestWelcome test
+
+$ mvn -Dtest=TestWelcome#testWelcome test
+
+$ mvn -Dtest=TestWelcome#testAbc test
+]
+
+# Tomcat
+# war
+$ mvn package
+# OR
+$ mvn war:war
+
+# Fix # [WARNING] # scanned from multiple locations # jar
+[
+# pom.xml # <scope>provided</scope>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>jstl</artifactId>
+      <version>1.2</version>
+      <scope>provided</scope>
+    </dependency>
+$ mvn clean
+$ mvn jetty:run
+$ mvn test
+]
+# Download jstl jar and copy to WEB-INF/lib: "D:\RajaniS Master Folder\Java\Spring\2020\spring-jetty-tomcat-app\spring-jetty-tomcat-app\target\spring-jetty-tomcat-app\WEB-INF\lib"
+• jstl-1.2.jar [https://repo1.maven.org/maven2/javax/servlet/jstl/1.2/jstl-1.2.jar]
+# Download File
+[
+$ export PATH=$PATH:"/C/Users/rajanis/Downloads/wget"
+]
+$ wget https://repo1.maven.org/maven2/javax/servlet/jstl/1.2/jstl-1.2.jar
+# Move File
+$ mv "D:\RajaniS Master Folder\Java\Spring\2020\spring-jetty-tomcat-app\spring-jetty-tomcat-app\jstl-1.2.jar" "D:\RajaniS Master Folder\Java\Spring\2020\spring-jetty-tomcat-app\spring-jetty-tomcat-app\target\spring-jetty-tomcat-app\WEB-INF\lib"
+
+$ jar tvf target/spring-jetty-tomcat-app.war
+
+# Copy File
+$ cp "D:\RajaniS Master Folder\Java\Spring\2020\spring-jetty-tomcat-app\spring-jetty-tomcat-app\target\spring-jetty-tomcat-app.war" "C:\Users\rajanis\Downloads\Java\Apache Tomcat\Tomcat 9.0\webapps"
+
+# Copy Folder 
+$ cp -r "D:\RajaniS Master Folder\Java\Spring\2020\spring-jetty-tomcat-app\spring-jetty-tomcat-app\target\spring-jetty-tomcat-app" "C:\Users\rajanis\Downloads\Java\Apache Tomcat\Tomcat 9.0\webapps\spring-jetty-tomcat-app"
+
+$ cd "C:\Users\rajanis\Downloads\Java\Apache Tomcat\Tomcat 9.0\bin"
+
+$ ./startup.sh
+
+[
+$ start http://localhost:8080/
+$ start http://localhost:8080/spring-jetty-tomcat-app/
+]
+$ start http://localhost:5050/
+$ start http://localhost:5050/spring-jetty-tomcat-app/
+
+$ ./shutdown.sh

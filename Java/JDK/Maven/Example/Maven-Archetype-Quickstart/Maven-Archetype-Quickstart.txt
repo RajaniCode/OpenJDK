@@ -1,0 +1,374 @@
+$ java -version
+
+$ mvn -version
+
+$ cd "E:\Working\Java\Maven\Example\Maven-Archetype-Quickstart"
+
+[
+# Interactive
+$ mvn archetype:generate
+[# Choose a number or apply filter (format: [groupId:]artifactId, case sensitive contains): 944:] org.apache.maven.archetypes:maven-archetype-quickstart
+[# 
+Choose archetype:
+1: remote -> org.apache.maven.archetypes:maven-archetype-quickstart (An archetype which contains a sample Maven project.)
+]
+[# Choose a number or apply filter (format: [groupId:]artifactId, case sensitive contains): 1:] 1
+[# 
+Choose org.apache.maven.archetypes:maven-archetype-quickstart version:]
+1: 1.0-alpha-1
+2: 1.0-alpha-2
+3: 1.0-alpha-3
+4: 1.0-alpha-4
+5: 1.0
+6: 1.1
+Choose a number: 6:] 6
+[#
+Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/archetypes/maven-archetype-quickstart/1.1/maven-archetype-quickstart-1.1.pom
+Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/archetypes/maven-archetype-quickstart/1.1/maven-archetype-quickstart-1.1.pom (2 KB at 0.6 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/archetypes/maven-archetype-bundles/4/maven-archetype-bundles-4.pom
+Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/archetypes/maven-archetype-bundles/4/maven-archetype-bundles-4.pom (4 KB at 5.8 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/archetype/maven-archetype/2.0-alpha-5/maven-archetype-2.0-alpha-5.pom
+Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/archetype/maven-archetype/2.0-alpha-5/maven-archetype-2.0-alpha-5.pom (9 KB at 13.2 KB/sec)
+Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/archetypes/maven-archetype-quickstart/1.1/maven-archetype-quickstart-1.1.jar
+Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/archetypes/maven-archetype-quickstart/1.1/maven-archetype-quickstart-1.1.jar (7 KB at 8.8 KB/sec)
+]
+[# Define value for property 'groupId':] com.sample
+[# Define value for property 'artifactId':] playground-project
+[# Define value for property 'version' 1.0-SNAPSHOT: :] 1.0-SNAPSHOT
+[# Define value for property 'package' com.sample: :] com.sample
+[# 
+Confirm properties configuration:
+groupId: com.sample
+artifactId: playground-project
+version: 1.0-SNAPSHOT
+package: com.sample
+ Y: :] Y
+
+# Non interactive
+$ mvn archetype:generate -B \
+    -DarchetypeGroupId=org.apache.maven.archetypes \
+    -DarchetypeArtifactId=maven-archetype-quickstart \
+    -DarchetypeVersion=1.1 \
+    -DgroupId=com.sample \
+    -DartifactId=playground-project \
+    -Dversion=1.0-SNAPSHOT \
+    -Dpackage=com.sample
+
+# playground-project
+  |
+  |`-src
+  | |`--main
+  | | `---java
+  | |  `----com
+  | |   `-----sample
+  | |    `------App.java
+  | |`--test
+  | | `---java
+  | |  `----com
+  | |   `-----sample
+  | |    `------AppTest.java
+   `-pom.xml
+
+$ cd playground-project
+
+$ mvn eclipse:eclipse
+
+$ mvn package
+
+# playground-project
+  |
+  |`-src
+  | |`--main
+  | | `---java
+  | |  `----com
+  | |   `-----sample
+  | |    `------App.java
+  | |`--test
+  | | `---java
+  | |  `----com
+  | |   `-----sample
+  | |    `------AppTest.java
+  |`-target
+  | |`-classes
+  | | `--com
+  | |  `----sample
+  | |`-maven-archiver
+  | | `--pom.properties
+  | |`-maven-status
+  | | `--maven-compiler-plugin
+  | |  `---compile
+  | |  `-----default-compile
+  | |   `------createdFiles.lst
+  | |   `------inputFiles.lst
+  | |  `---testCompile
+  | |  `-----default-testCompile
+  | |   `------createdFiles.lst
+  | |   `------inputFiles.lst
+  | |`-surefire-reports
+  | |  `--com.sample.AppTest.txt
+  | |  `--TEST-com.sample.AppTest.xml
+  | |`-test-classes
+  | | `--com
+  | |  `----sample
+  | |  `-----AppTest.class
+  | |`-playground-project-1.0-SNAPSHOT.jar
+  |`-.classpath
+  |`-.project
+   `-pom.xml
+
+# Note
+[
+# The following will not work
+$ mvn java:compile
+
+$ mvn java:run -DmainClass=com.sample.App
+]
+
+$ java -cp target/playground-project-1.0-SNAPSHOT.jar com.sample.App
+
+$ mvn test
+
+$ mvn -Dtest=AppTest test
+
+$ mvn -Dtest=AppTest#testApp test
+
+########################################################################################################
+
+# pom.xml - Edit JUnit from 3.8.1 to 4.12, Add maven-enforcer-plugin 1.4.1, Java 1.8
+
+# Edit
+
+# JUnit 3.8.1
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+# JUnit 4.12
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+########################################################################################################
+
+# Add 
+
+# maven-enforcer-plugin 1.4.1, Java 1.8
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <version>1.4.1</version>
+        <executions>
+          <execution>
+            <id>enforce-java</id>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <requireJavaVersion>
+                  <version>1.8.0</version>
+                </requireJavaVersion>
+              </rules>    
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+########################################################################################################
+
+# Updated pom.xml
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.sample</groupId>
+  <artifactId>playground-project</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>playground-project</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <version>1.4.1</version>
+        <executions>
+          <execution>
+            <id>enforce-java</id>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <requireJavaVersion>
+                  <version>1.8.0</version>
+                </requireJavaVersion>
+              </rules>    
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
+
+########################################################################################################
+
+$ mvn eclipse:eclipse
+
+########################################################################################################
+
+# AppTest.java, App.java - Edit
+
+# Edit AppTest.java
+
+    public void testApp()
+    {
+        String message = "Hello Wolrd!";
+        App obj = new App();
+        assertTrue(message == "Hello Wolrd!");
+        assertTrue(36 == obj.generateUniqueKey().length());
+    }
+
+########################################################################################################
+
+# Updated AppTest.java
+
+package com.sample;
+
+import junit.framework.Test;
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
+
+/**
+ * Unit test for simple App.
+ */
+public class AppTest 
+    extends TestCase
+{
+    /**
+     * Create the test case
+     *
+     * @param testName name of the test case
+     */
+    public AppTest( String testName )
+    {
+        super( testName );
+    }
+
+    /**
+     * @return the suite of tests being tested
+     */
+    public static Test suite()
+    {
+        return new TestSuite( AppTest.class );
+    }
+
+    /**
+     * Rigourous Test :-)
+     */
+    public void testApp()
+    {
+        String message = "Hello Wolrd!";
+        App obj = new App();
+        assertTrue(message == "Hello Wolrd!");
+        assertTrue(36 == obj.generateUniqueKey().length());
+    }
+}
+
+########################################################################################################
+
+# Edit App.java
+
+import java.util.UUID;
+
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+        App obj = new App();
+        System.out.println("Unique ID : " + obj.generateUniqueKey());
+    }
+
+    public String generateUniqueKey() 
+    {
+        String id = UUID.randomUUID().toString();
+        return id;
+    }
+
+########################################################################################################
+
+# Updated App.java
+
+package com.sample;
+
+import java.util.UUID;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+        App obj = new App();
+        System.out.println("Unique ID : " + obj.generateUniqueKey());
+    }
+
+    public String generateUniqueKey() 
+    {
+        String id = UUID.randomUUID().toString();
+        return id;
+    }
+}
+
+########################################################################################################
+
+$ mvn eclipse:eclipse
+
+$ mvn package
+
+$ java -cp target/playground-project-1.0-SNAPSHOT.jar com.sample.App
+
+$ mvn test
+
+$ mvn -Dtest=AppTest test
+
+$ mvn -Dtest=AppTest#testApp test
+
+########################################################################################################

@@ -1,0 +1,5 @@
+With Bash 4, you can just enable globstar
+shopt -s globstar
+
+and then do
+javac **/*.java

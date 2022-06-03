@@ -1,0 +1,224 @@
+
+$ java -version
+
+$ mvn -v
+
+$ cd "C:\Users\Rajani\Desktop\2018\Working\Java\Spring\Samples\SecureRESTApiWithBasicAuthentication\SecureRESTApiWithBasicAuthentication"
+
+# SpringSecurityOAuth2Example/pom.xml
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.rajani.springmvc</groupId>
+    <artifactId>SecureRESTApiWithBasicAuthentication</artifactId>
+    <version>1.0.0</version>
+    <packaging>war</packaging>
+
+    <name>SecureRESTApiWithBasicAuthentication</name>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <springframework.version>4.3.1.RELEASE</springframework.version>
+        <springsecurity.version>4.1.1.RELEASE</springsecurity.version>
+        <jackson.library>2.7.5</jackson.library>
+    </properties>
+
+    <dependencies>
+        <!-- Spring -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${springframework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${springframework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${springframework.version}</version>
+        </dependency>
+
+        <!-- Spring Security -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>${springsecurity.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>${springsecurity.version}</version>
+        </dependency>
+
+        <!-- Jackson libraries -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.library}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-xml</artifactId>
+            <version>${jackson.library}</version>
+        </dependency>
+        
+        <!-- Servlet -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+        
+        <!-- apache commons codedc -->
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.10</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.2</version>
+                    <configuration>
+                        <source>1.7</source>
+                        <target>1.7</target>
+                    </configuration>
+                </plugin>            
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>2.4</version>
+                    <configuration>
+                        <warSourceDirectory>src/main/webapp</warSourceDirectory>
+                        <warName>SecureRESTApiWithBasicAuthentication</warName>
+                        <failOnMissingWebXml>false</failOnMissingWebXml>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <finalName>SecureRESTApiWithBasicAuthentication</finalName>
+    </build>
+</project>
+
+
+[
+$ mvn eclipse:eclipse
+]
+
+$ mvn package
+
+
+$ jar tvf target/SecureRESTApiWithBasicAuthentication.war
+
+# Copy File
+$ cp "C:\Users\Rajani\Desktop\2018\Working\Java\Spring\Samples\SecureRESTApiWithBasicAuthentication\SecureRESTApiWithBasicAuthentication\target\SecureRESTApiWithBasicAuthentication.war" "C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps"
+
+# When war file is copied to Tomcat webapps, the corresponding folder is also copied to Tomcat webapps
+[
+# Copy Folder 
+$ cp -r "C:\Users\Rajani\Desktop\2018\Working\Java\Spring\Samples\SecureRESTApiWithBasicAuthentication\SecureRESTApiWithBasicAuthentication\target\SecureRESTApiWithBasicAuthentication" "C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps\SecureRESTApiWithBasicAuthentication"
+]
+
+# Restart Tomcat server [services.msc]
+# SpringRestClient
+$ mvn -Dexec.mainClass=com.rajani.springmvc.SpringRestClient -Dexec.classpathScope=test test-compile exec:java
+
+
+# Postman
+# Request name:
+SecureRESTApiWithBasicAuthentication
+# Select a collection or folder to save to:
+SecureRESTApiWithBasicAuthentication
+[Send a request to get the list of users, and get a 401 instead.]
+# GET 
+http://localhost:8080/SecureRESTApiWithBasicAuthentication/user/
+
+# Response
+# Body
+# Pretty
+HTTP Status 401 : Full authentication is required to access this resource
+
+# Postman
+[Select type as 'Basic Auth', fill in username/password [bill/abc123], click on 'Send request'.]
+# GET
+http://localhost:8080/SecureRESTApiWithBasicAuthentication/user/
+
+Basic auth
+Username:
+bill
+Password:
+abc123
+
+# Response
+# Body
+# Pretty
+<List xmlns="">
+    <item>
+        <id>1</id>
+        <name>Sam</name>
+        <age>30</age>
+        <salary>70000.0</salary>
+    </item>
+    <item>
+        <id>2</id>
+        <name>Tom</name>
+        <age>40</age>
+        <salary>50000.0</salary>
+    </item>
+    <item>
+        <id>3</id>
+        <name>Jerome</name>
+        <age>45</age>
+        <salary>30000.0</salary>
+    </item>
+    <item>
+        <id>4</id>
+        <name>Silvia</name>
+        <age>50</age>
+        <salary>40000.0</salary>
+    </item>
+</List>
+
+
+# Browser
+http://localhost:8080/SecureRESTApiWithBasicAuthentication/user/
+User Name:
+bill
+Password:
+abc123
+
+<List xmlns="">
+<item>
+<id>1</id>
+<name>Sam</name>
+<age>30</age>
+<salary>70000.0</salary>
+</item>
+<item>
+<id>2</id>
+<name>Tom</name>
+<age>40</age>
+<salary>50000.0</salary>
+</item>
+<item>
+<id>3</id>
+<name>Jerome</name>
+<age>45</age>
+<salary>30000.0</salary>
+</item>
+<item>
+<id>4</id>
+<name>Silvia</name>
+<age>50</age>
+<salary>40000.0</salary>
+</item>
+</List>
