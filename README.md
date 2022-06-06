@@ -7,6 +7,7 @@ Courtesies:
 https://openjdk.java.net  
 https://oracle.com/java  
 https://spring.io  
+https://tomcat.apache.org  
 https://maven.apache.org  
 https://gradle.org  
 https://docs.oracle.com  
