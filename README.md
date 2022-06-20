@@ -11,6 +11,7 @@ https://tomcat.apache.org
 https://maven.apache.org  
 https://gradle.org  
 https://docs.oracle.com  
+https://hibernate.org  
 https://umlet.com  
 https://scala-lang.org  
 https://clojure.org  
